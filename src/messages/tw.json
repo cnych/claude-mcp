@@ -1,0 +1,894 @@
+{
+  "nav": {
+    "title": "Claude MCP",
+    "servers": "服務目錄",
+    "clients": "客戶端",
+    "documentation": "文件",
+    "blog": "部落格",
+    "specification": "協議規範",
+    "community": "社群",
+    "getting_started": "入門指南",
+    "guides": "使用指南",
+    "advanced": "進階主題",
+    "items": {
+      "introduction": "簡介",
+      "installation": "安裝",
+      "quick_start": "快速開始",
+      "resources": "資源管理",
+      "tools": "工具整合",
+      "messages": "訊息格式",
+      "security": "安全性",
+      "deployment": "部署",
+      "configuration": "設定"
+    }
+  },
+  "home": {
+    "title": "全球技術社群",
+    "description": "Anthropic MCP 協議文件、開發者資源和社群協作的首選平台。",
+    "getStarted": "開始使用",
+    "joinCommunity": "加入社群",
+    "latestDocs": {
+      "title": "Claude MCP 最新學習文件",
+      "description": "及時了解我們最新的 Claude MCP 文件和學習教程",
+      "noDate": "暫無日期",
+      "viewAll": "查看全部文件"
+    }
+  },
+  "Index": {
+    "meta": {
+      "title": "Claude MCP - 模型上下文協議",
+      "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動",
+      "keywords": "AI, 協議, 上下文, 開發環境, Claude",
+      "og": {
+        "title": "Claude MCP - 模型上下文協議",
+        "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動"
+      },
+      "twitter": {
+        "title": "Claude MCP - 模型上下文協議",
+        "description": "一個開放的協議標準，用於在 AI 模型和開發環境間建立統一的上下文互動"
+      }
+    },
+    "hero": {
+      "introducing": "全新發布",
+      "title": "Claude MCP 教程網",
+      "description": "Claude MCP（模型上下文協議）是 Claude 定制的一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動，讓 AI 更好地理解和處理程式碼",
+      "getStarted": "開始使用",
+      "documentation": "查看文件",
+      "videoCourse": "視頻課程"
+    },
+    "overview": {
+      "title": "為什麼選擇 Claude MCP?",
+      "description1": "Claude MCP 提供了一個標準化的方式來處理 AI 模型與開發環境之間的上下文互動",
+      "description2": "通過統一的協議，我們可以讓 AI 更好地理解程式碼結構、專案環境和開發者意圖",
+      "supports": {
+        "systems": "多系統支援",
+        "tools": "工具整合",
+        "environments": "環境適配",
+        "datasets": "資料集支援"
+      },
+      "components": {
+        "title": "核心元件",
+        "spec": "協議規範",
+        "desktop": "桌面整合",
+        "servers": "服務實現"
+      },
+      "architecture": {
+        "title": "架構",
+        "description": "MCP 定義了一個靈活的客戶端-伺服器架構，支援多種傳輸機制和擴展能力。",
+        "diagram": "flowchart TB\n    Client[客戶端]-->|發送請求|Server[伺服器]\n    Server-->|發送回應|Client\n    Server-->|發送通知|Client\n    subgraph 伺服器能力\n        Prompts[提示詞]\n        Resources[資源]\n        Tools[工具]\n    end",
+        "server": {
+          "title": "伺服器功能",
+          "description": "伺服器通過 MCP 提供基礎構建塊，為語言模型添加上下文。這些原語支援客戶端、伺服器和語言模型之間的豐富互動：",
+          "revision": "協議修訂：2024-11-05",
+          "primitives": {
+            "description": "每個原語可以在以下控制層次結構中概括：",
+            "headers": ["原語", "控制", "描述", "範例"],
+            "items": [
+              {
+                "primitive": "提示詞",
+                "control": "使用者控制",
+                "description": "使用者選擇呼叫的互動式模板",
+                "example": "斜槓命令、選單選項"
+              },
+              {
+                "primitive": "資源",
+                "control": "應用控制",
+                "description": "由客戶端附加和管理的上下文資料",
+                "example": "檔案內容、Git 歷史"
+              },
+              {
+                "primitive": "工具",
+                "control": "模型控制",
+                "description": "暴露給語言模型以執行操作的函數",
+                "example": "API POST 請求、檔案寫入"
+              }
+            ]
+          },
+          "features": [
+            {
+              "title": "提示詞",
+              "description": "提示詞是預定義的模板或指令，用於引導語言模型互動。它們可以：",
+              "items": [
+                "定義特定任務的標準化互動模式",
+                "包含動態參數以適應不同場景",
+                "通過使用者介面元素（如命令或按鈕）觸發"
+              ]
+            },
+            {
+              "title": "資源",
+              "description": "資源是為模型提供額外上下文的結構化資料或內容。它們可以：",
+              "items": [
+                "包含檔案內容、程式碼片段或其他結構化資料",
+                "由客戶端應用程式自動管理和更新",
+                "在對話過程中動態添加或移除"
+              ]
+            },
+            {
+              "title": "工具",
+              "description": "工具是允許模型執行操作或檢索資訊的可執行函數。它們可以：",
+              "items": [
+                "執行檔案操作或 API 呼叫",
+                "檢索外部資料或資訊",
+                "修改客戶端狀態或環境"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "protocol": {
+      "title": "Claude MCP 協議設計",
+      "description": "基於 JSON-RPC 2.0 的簡單而強大的協議設計，支援雙向通訊和豐富的上下文互動",
+      "example": "範例",
+      "viewSpec": "查看完整規範",
+      "components": {
+        "resources": {
+          "title": "資源管理",
+          "description": "統一的資源存取介面，支援程式碼、文件等多種資源類型"
+        },
+        "tools": {
+          "title": "工具整合",
+          "description": "靈活的工具整合機制，支援檔案系統、終端等多種工具"
+        },
+        "messages": {
+          "title": "訊息通訊",
+          "description": "標準化的訊息格式，支援豐富的上下文資訊傳遞"
+        }
+      },
+      "features": {
+        "title": "核心特性",
+        "standardized": "標準化",
+        "standardizedDescription": "基於 JSON-RPC 2.0 的標準化協議設計",
+        "extensible": "可擴展",
+        "extensibleDescription": "靈活的擴展機制支援自訂功能",
+        "secure": "安全可靠",
+        "secureDescription": "內建安全機制確保資料傳輸安全"
+      }
+    },
+    "features": {
+      "title": "核心特性",
+      "description": "為 AI 模型提供豐富的上下文支援，讓開發更高效",
+      "docs": {
+        "title": "完整文件",
+        "description": "詳盡的協議文件和範例程式碼"
+      },
+      "community": {
+        "title": "社群支援",
+        "description": "活躍的開發者社群和技術支援"
+      },
+      "ecosystem": {
+        "title": "生態系統",
+        "description": "豐富的工具和插件生態"
+      }
+    },
+    "integration": {
+      "title": "簡單整合",
+      "description": "提供簡單易用的 API 和 SDK，快速整合到您的專案中",
+      "viewGithub": "查看原始碼",
+      "features": {
+        "simple": "簡單易用",
+        "flexible": "靈活可擴展",
+        "secure": "安全可靠",
+        "fast": "高效能"
+      }
+    },
+    "global": {
+      "title": "全球化支援",
+      "description": "支援多語言和多地區，讓全球開發者都能輕鬆使用",
+      "languages": {
+        "en": "English",
+        "zh": "中文",
+        "tw": "繁體中文",
+        "ko": "한국어"
+      },
+      "features": {
+        "community": "全球社群",
+        "documentation": "多語言文件",
+        "support": "本地化支援"
+      }
+    }
+  },
+  "footer": {
+    "description": "Claude MCP 教程網是一個專注於 Claude MCP 協議的學習網站，提供 Claude MCP 協議的詳細介紹、示例代碼和最佳實踐。",
+    "copyright": "保留所有權利。",
+    "sections": {
+      "product": "產品",
+      "community": "社群",
+      "legal": "法律"
+    },
+    "links": {
+      "docs": "文件",
+      "about": "關於",
+      "blog": "部落格",
+      "changelog": "更新日誌",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "feedback": "回饋",
+      "privacy": "隱私政策",
+      "terms": "服務條款"
+    }
+  },
+  "Specification": {
+    "meta": {
+      "title": "MCP 協定規範",
+      "description": "Model Context Protocol 技術規範文件"
+    },
+    "title": "協定規範",
+    "description": "Model Context Protocol 的詳細技術規範",
+    "security": {
+      "title": "安全與信任",
+      "principles": {
+        "title": "核心原則",
+        "items": [
+          "使用者對資料存取的同意與控制",
+          "敏感資訊的保護",
+          "安全的工具執行與授權",
+          "清晰的安全影響文件"
+        ]
+      },
+      "guidelines": {
+        "title": "實施指南",
+        "items": ["建立健全的同意流程", "實施存取控制", "遵循安全最佳實踐"]
+      }
+    },
+    "backToHome": "返回首頁",
+    "version": "版本",
+    "viewGithub": "在 GitHub 上查看",
+    "overview": {
+      "title": "協定概述",
+      "description": "模型上下文協定 (MCP) 遵循客戶端-主機-伺服器架構，其中每個主機可以執行多個客戶端實例。該架構讓使用者能夠跨應用程式整合 AI 能力，同時保持清晰的安全邊界並隔離問題。MCP 基於 JSON-RPC 構建，提供了一個有狀態的會話協定，專注於客戶端和伺服器之間的上下文交換和採樣協調。",
+      "architecture": {
+        "title": "架構",
+        "description": "核心元件架構如下所示：",
+        "diagram": "graph LR\n    subgraph \"應用程式主機進程\"\n        H[主機]\n        C1[客戶端 1]\n        C2[客戶端 2]\n        C3[客戶端 3]\n        H --> C1\n        H --> C2\n        H --> C3\n    end\n\n    subgraph \"本地機器\"\n        S1[伺服器 1<br>檔案 & Git]\n        S2[伺服器 2<br>資料庫]\n        R1[(\"本地<br>資源 A\")]\n        R2[(\"本地<br>資源 B\")]\n\n        C1 --> S1\n        C2 --> S2\n        S1 <--> R1\n        S2 <--> R2\n    end\n\n    subgraph \"網際網路\"\n        S3[伺服器 3<br>外部 API]\n        R3[(\"遠端<br>資源 C\")]\n\n        C3 --> S3\n        S3 <--> R3\n    end",
+        "componentTitle": "元件",
+        "components": {
+          "hosts": "發起連線的 LLM 應用程式",
+          "clients": "主機應用程式中的連接器",
+          "servers": "提供特定功能的服務"
+        },
+        "details": {
+          "title": "元件詳情",
+          "host": {
+            "title": "主機",
+            "description": "主機進程是 MCP 協定的核心協調者。它負責管理客戶端實例的生命週期，控制連線權限，並執行安全策略。主機還負責協調 AI/LLM 整合，確保整個系統的平穩運作。",
+            "features": [
+              "管理客戶端實例的生命週期",
+              "控制連線權限和執行安全策略",
+              "協調 AI/LLM 整合",
+              "確保系統穩定運作"
+            ]
+          },
+          "client": {
+            "title": "客戶端",
+            "description": "客戶端由主機建立，用於維護與伺服器的獨立連線。每個客戶端都與一個伺服器保持 1:1 的關係，確保連線的隔離性和安全性。",
+            "features": [
+              "維護與伺服器的獨立連線",
+              "建立有狀態的會話",
+              "處理協定協商",
+              "管理訊息路由"
+            ]
+          },
+          "server": {
+            "title": "伺服器",
+            "description": "伺服器負責公開資源和工具，可以獨立執行並通過客戶端請求採樣。伺服器可以是本地的也可以是遠端的，為系統提供各種功能。",
+            "features": [
+              "公開特定的資源和工具",
+              "獨立執行和管理",
+              "通過客戶端處理請求",
+              "支援本地和遠端服務"
+            ]
+          }
+        },
+        "principles": {
+          "title": "設計原則",
+          "description": "MCP 建立在以下關鍵設計原則之上：",
+          "items": [
+            {
+              "title": "簡單易實現",
+              "description": "伺服器應該非常容易構建",
+              "features": [
+                "主機應用程式處理複雜的編排職責",
+                "伺服器專注於特定的、定義明確的功能",
+                "簡單的介面最小化實現開銷",
+                "清晰的分離確保程式碼可維護性"
+              ]
+            },
+            {
+              "title": "高度可組合",
+              "description": "伺服器應該具有高度的可組合性",
+              "features": [
+                "每個伺服器獨立提供專注的功能",
+                "多個伺服器可以無縫組合",
+                "共享協定實現互操作性",
+                "模組化設計支援可擴展性"
+              ]
+            },
+            {
+              "title": "安全隔離",
+              "description": "伺服器不應能讀取整個對話，也不應能\"看到\"其他伺服器",
+              "features": [
+                "伺服器僅接收必要的上下文資訊",
+                "完整對話歷史保留在主機",
+                "每個伺服器連線保持隔離",
+                "跨伺服器互動由主機控制",
+                "主機進程執行安全邊界"
+              ]
+            },
+            {
+              "title": "漸進式增強",
+              "description": "伺服器和客戶端的功能可以漸進式添加",
+              "features": [
+                "核心協定提供最小必需功能",
+                "可根據需要協商額外功能",
+                "伺服器和客戶端獨立演進",
+                "協定設計支援未來擴展",
+                "保持向後相容性"
+              ]
+            }
+          ]
+        },
+        "messages": {
+          "title": "協定基礎",
+          "description": "MCP 中的所有訊息必須遵循 JSON-RPC 2.0 規範。協定定義了三種類型的訊息：",
+          "items": [
+            {
+              "title": "請求",
+              "description": "雙向訊息，可以從客戶端發送到伺服器，也可以反向發送",
+              "features": [
+                "必須包含字串或整數類型的 ID",
+                "ID 不能為 null",
+                "在同一會話中，請求方不能重複使用相同的 ID",
+                "可以包含可選的參數物件"
+              ],
+              "codeExample": {
+                "title": "請求範例",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "id": "string | number",
+                  "method": "string",
+                  "param?": {
+                    "key": "value"
+                  }
+                }
+              }
+            },
+            {
+              "title": "回應",
+              "description": "作為對請求的回覆而發送",
+              "features": [
+                "必須包含與對應請求相同的 ID",
+                "必須設定 result 或 error 其中之一，不能同時設定",
+                "錯誤碼必須是整數",
+                "可以包含可選的結果資料"
+              ],
+              "codeExample": {
+                "title": "回應範例",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "id": "string | number",
+                  "result?": {
+                    "[key: string]": "unknown"
+                  },
+                  "error?": {
+                    "code": "number",
+                    "message": "string",
+                    "data?": "unknown"
+                  }
+                }
+              }
+            },
+            {
+              "title": "通知",
+              "description": "不需要回應的單向訊息，可以從客戶端發送到伺服器，也可以反向發送",
+              "features": [
+                "不能包含 ID 欄位",
+                "用於狀態更新和事件通知",
+                "可以包含可選的參數物件",
+                "減少通訊開銷，支援非同步操作"
+              ],
+              "codeExample": {
+                "title": "通知範例",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "method": "string",
+                  "params?": {
+                    "[key: string]": "unknown"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "lifecycle": {
+          "title": "生命週期",
+          "description": "MCP 為客戶端與伺服器連線定義了嚴謹的生命週期，確保正確的能力協商與狀態管理。",
+          "diagram": "sequenceDiagram\n    participant 客戶端\n    participant 伺服器\n\n    Note over 客戶端,伺服器: 初始化階段\n    activate 客戶端\n    客戶端->>+伺服器: 初始化請求\n    伺服器-->>客戶端: 初始化回應\n    客戶端--)伺服器: 初始化完成通知\n\n    Note over 客戶端,伺服器: 操作階段\n    rect rgb(200, 220, 250)\n        note over 客戶端,伺服器: 正常協定操作\n    end\n\n    Note over 客戶端,伺服器: 關閉\n    客戶端--)-伺服器: 斷開連線\n    deactivate 伺服器\n    Note over 客戶端,伺服器: 連線已關閉",
+          "phases": [
+            {
+              "title": "初始化階段",
+              "description": "初始化階段必須是客戶端與伺服器之間的第一次互動。在此階段，雙方：",
+              "features": [
+                "建立協定版本相容性",
+                "交換與協商能力",
+                "共享實作細節"
+              ],
+              "codeExamples": [
+                {
+                  "title": "初始化請求",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "id": 1,
+                    "method": "initialize",
+                    "params": {
+                      "protocolVersion": "2024-11-05",
+                      "capabilities": {
+                        "roots": {
+                          "listChanged": true
+                        },
+                        "sampling": {}
+                      },
+                      "clientInfo": {
+                        "name": "ExampleClient",
+                        "version": "1.0.0"
+                      }
+                    }
+                  }
+                },
+                {
+                  "title": "初始化回應",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "id": 1,
+                    "result": {
+                      "protocolVersion": "2024-11-05",
+                      "capabilities": {
+                        "logging": {},
+                        "prompts": {
+                          "listChanged": true
+                        },
+                        "resources": {
+                          "subscribe": true,
+                          "listChanged": true
+                        },
+                        "tools": {
+                          "listChanged": true
+                        }
+                      },
+                      "serverInfo": {
+                        "name": "ExampleServer",
+                        "version": "1.0.0"
+                      }
+                    }
+                  }
+                },
+                {
+                  "title": "初始化完成通知",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "method": "initialized"
+                  }
+                }
+              ]
+            },
+            {
+              "title": "版本協商",
+              "description": "在初始化請求中，客戶端必須發送其支援的協定版本。",
+              "features": [
+                "客戶端應發送其支援的最新版本",
+                "伺服器必須回應相同版本或其支援的其他版本",
+                "若客戶端不支援伺服器的版本，應斷開連線"
+              ]
+            },
+            {
+              "title": "能力協商",
+              "description": "客戶端與伺服器能力決定會話期間可用的選用協定功能。",
+              "capabilities": {
+                "client": [
+                  {
+                    "name": "roots",
+                    "description": "提供檔案系統根目錄的能力"
+                  },
+                  {
+                    "name": "sampling",
+                    "description": "支援 LLM 取樣請求"
+                  },
+                  {
+                    "name": "experimental",
+                    "description": "描述對非標準實驗性功能的支援"
+                  }
+                ],
+                "server": [
+                  {
+                    "name": "prompts",
+                    "description": "提供提示範本"
+                  },
+                  {
+                    "name": "resources",
+                    "description": "提供可讀資源"
+                  },
+                  {
+                    "name": "tools",
+                    "description": "提供可呼叫工具"
+                  },
+                  {
+                    "name": "logging",
+                    "description": "發出結構化日誌訊息"
+                  },
+                  {
+                    "name": "experimental",
+                    "description": "描述對非標準實驗性功能的支援"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "操作階段",
+              "description": "在操作階段，客戶端與伺服器根據協商的能力交換訊息。",
+              "features": ["遵守協商的協定版本", "僅使用成功協商的能力"]
+            },
+            {
+              "title": "關閉階段",
+              "description": "在關閉階段，連線被優雅地終止。",
+              "features": [
+                "客戶端發送斷開連線通知",
+                "伺服器關閉連線",
+                "清理相關資源"
+              ]
+            }
+          ]
+        },
+        "transports": {
+          "title": "傳輸機制",
+          "description": "MCP 目前定義了兩種標準的客戶端-伺服器通訊傳輸機制：stdio（標準輸入輸出）與基於 SSE 的 HTTP。客戶端應盡可能支援 stdio。此外，客戶端與伺服器也可以以可插拔的方式實作自訂傳輸機制。",
+          "revision": "協定修訂：2024-11-05",
+          "stdio": {
+            "title": "標準輸入輸出（stdio）",
+            "description": "在 stdio 傳輸機制中：",
+            "features": [
+              "客戶端將 MCP 伺服器作為子程序啟動",
+              "伺服器透過標準輸入（stdin）接收 JSON-RPC 訊息，並透過標準輸出（stdout）寫入回應",
+              "訊息以換行符分隔，且不能包含嵌入的換行符",
+              "伺服器可以將 UTF-8 字串寫入標準錯誤（stderr）用於日誌記錄。客戶端可以擷取、轉發或忽略這些日誌",
+              "伺服器不能向標準輸出寫入任何非有效 MCP 訊息的內容",
+              "客戶端不能向伺服器的標準輸入寫入任何非有效 MCP 訊息的內容"
+            ],
+            "diagram": "sequenceDiagram\n    participant 客戶端\n    participant 服務程序\n\n    客戶端->>+服務程序: 啟動子程序\n    loop 訊息交換\n        客戶端->>服務程序: 寫入標準輸入\n        服務程序-->>客戶端: 寫入標準輸出\n        服務程序-->>客戶端: 選用：標準錯誤日誌\n    end\n    客戶端->>服務程序: 關閉標準輸入，終止子程序\n    deactivate 服務程序"
+          },
+          "sse": {
+            "title": "基於 SSE 的 HTTP",
+            "description": "在 SSE 傳輸機制中，伺服器作為獨立程序執行，可以處理多個客戶端連線。",
+            "endpoints": {
+              "title": "伺服器必須提供兩個端點：",
+              "items": [
+                {
+                  "title": "SSE 端點",
+                  "description": "用於客戶端建立連線並接收來自伺服器的訊息"
+                },
+                {
+                  "title": "HTTP POST 端點",
+                  "description": "用於客戶端向伺服器發送訊息"
+                }
+              ]
+            },
+            "requirements": [
+              "當客戶端連線時，伺服器必須發送一個包含客戶端用於發送訊息的 URI 的 endpoint 事件",
+              "所有後續的客戶端訊息必須作為 HTTP POST 請求發送到此端點",
+              "伺服器訊息作為 SSE message 事件發送，訊息內容以 JSON 格式編碼在事件資料中"
+            ],
+            "diagram": "sequenceDiagram\n    participant 客戶端\n    participant 伺服器\n\n    客戶端->>+伺服器: 開啟 SSE 連線\n    伺服器-->>客戶端: endpoint 事件\n    loop 訊息交換\n        客戶端->>伺服器: HTTP POST 訊息\n        伺服器-->>客戶端: SSE message 事件\n    end\n    客戶端->>伺服器: 關閉 SSE 連線\n    deactivate 伺服器"
+          },
+          "custom": {
+            "title": "自訂傳輸機制",
+            "description": "客戶端與伺服器可以實作額外的自訂傳輸機制以滿足其特定需求。協定與傳輸機制無關，可以在任何支援雙向訊息交換的通訊通道上實作。",
+            "requirements": [
+              "選擇支援自訂傳輸機制的實作者必須確保保留 MCP 定義的 JSON-RPC 訊息格式與生命週期要求",
+              "自訂傳輸機制應該記錄其特定的連線建立與訊息交換模式，以幫助實現互通性"
+            ]
+          }
+        },
+        "capabilities": {
+          "title": "核心功能",
+          "clientTitle": "客戶端能力",
+          "serverTitle": "伺服器能力",
+          "items": [
+            "與語言模型共享上下文資訊",
+            "向 AI 系統暴露工具與功能",
+            "建構可組合的整合與工作流程",
+            "實現對資源的安全與受控存取"
+          ]
+        },
+        "communication": {
+          "title": "通訊機制",
+          "description": "使用 JSON-RPC 2.0 進行標準化訊息交換",
+          "features": ["有狀態連線", "能力協商", "安全資料傳輸", "錯誤處理"]
+        }
+      },
+      "baseProtocol": {
+        "title": "基礎協定",
+        "subtitle": "基於 JSON-RPC 2.0",
+        "description": "MCP 基於 JSON-RPC 2.0 協定，提供了一套標準化的請求-回應模式",
+        "methods": {
+          "initialize": {
+            "title": "Initialize",
+            "description": "初始化連線並協商能力"
+          },
+          "ready": {
+            "title": "Ready",
+            "description": "伺服端準備就緒通知"
+          },
+          "shutdown": {
+            "title": "Shutdown",
+            "description": "關閉連線"
+          }
+        }
+      },
+      "serverFeatures": {
+        "title": "伺服器功能",
+        "description": "伺服器提供了透過 MCP 將上下文添加到語言模型的基本構建塊，提供了三個基本原語來管理上下文：提示詞、資源和工具。",
+        "primitives": {
+          "headers": ["原語", "控制", "描述", "範例"],
+          "items": [
+            {
+              "primitive": "提示詞",
+              "control": "系統",
+              "description": "定義模型的行為和角色",
+              "example": "你是一個專業的程式碼審查者"
+            },
+            {
+              "primitive": "資源",
+              "control": "用戶",
+              "description": "提供額外的上下文資訊",
+              "example": "程式碼文件、文件"
+            },
+            {
+              "primitive": "工具",
+              "control": "系統/用戶",
+              "description": "擴展模型的能力",
+              "example": "程式碼搜索、文件編輯"
+            }
+          ]
+        },
+        "features": [
+          {
+            "title": "資源管理",
+            "description": "為AI模型提供上下文和資料",
+            "items": ["支持多種資源類型", "動態資源加載", "資源生命週期管理"]
+          },
+          {
+            "title": "工具集成",
+            "description": "擴展AI模型的能力範圍",
+            "items": [
+              "靈活的工具註冊機制",
+              "工具調用權限控制",
+              "異步工具執行支持"
+            ]
+          },
+          {
+            "title": "上下文控制",
+            "description": "精確控制AI模型的行為",
+            "items": ["系統級提示詞管理", "動態上下文更新", "多輪對話狀態維護"]
+          }
+        ]
+      }
+    }
+  },
+  "Common": {
+    "loading": "載入中...",
+    "error": "發生錯誤",
+    "retry": "重試",
+    "close": "關閉",
+    "save": "儲存",
+    "cancel": "取消",
+    "delete": "刪除",
+    "edit": "編輯",
+    "view": "檢視",
+    "more": "更多",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "finish": "完成",
+    "continue": "繼續",
+    "submit": "提交",
+    "confirm": "確認",
+    "success": "成功",
+    "failed": "失敗",
+    "copied": "已複製",
+    "learnMore": "了解更多"
+  },
+  "Servers": {
+    "title": "Claude MCP 伺服器目錄",
+    "description": "發現最好最熱門的 Claude MCP 伺服器",
+    "viewAll": "查看全部",
+    "noServers": "未找到伺服器",
+    "author": "作者",
+    "links": "連結",
+    "homepage": "主頁",
+    "repository": "程式碼儲存庫",
+    "tags": "標籤",
+    "capabilities": "功能",
+    "filterByTags": "按標籤篩選",
+    "allTags": "全部",
+    "search": "搜尋伺服器",
+    "searchPlaceholder": "輸入關鍵詞搜尋...",
+    "serverDetails": "伺服器詳情",
+    "notFound": "伺服器未找到",
+    "notFoundDescription": "請求的伺服器無法找到。"
+  },
+  "Docs": {
+    "meta": {
+      "title": "MCP 文件",
+      "description": "Cluade MCP 協定文件、開發者資源和社群協作的首選平台。",
+      "og": {
+        "title": "MCP 文件",
+        "description": "Cluade MCP 協定文件、開發者資源和社群協作的首選平台。"
+      },
+      "twitter": {
+        "title": "MCP 文件",
+        "description": "Cluade MCP 協定文件、開發者資源和社群協作的首選平台。"
+      }
+    },
+    "landingPage": {
+        "title": "Model Context Protocol (MCP) 文件中心",
+        "welcome": "歡迎訪問 Model Context Protocol (MCP) 文件中心。請從左側導航選擇具體文件主題，或繼續閱讀下方的概述。",
+        "whatIs": {
+          "title": "什麼是 Model Context Protocol？",
+          "description": "Model Context Protocol (MCP) 是由 Anthropic Claude 推出的開源協議，旨在建立AI模型與開發環境之間的統一上下文互動標準。通過提供標準化的上下文信息訪問方式，MCP 使AI模型能夠更好地理解和處理程式碼，充當它們之間的橋樑，讓開發者能夠通過單一標準連接AI應用和各種資料源。"
+        },
+        "features": {
+          "title": "主要功能與特性",
+          "unifiedInterface": {
+            "title": "統一介面",
+            "description": "提供標準化的API介面，簡化AI與各類上下文信息的互動"
+          },
+          "seamlessIntegration": {
+            "title": "無縫整合",
+            "description": "輕鬆整合到現有開發工作流程中，無需複雜的適配"
+          },
+          "multiSource": {
+            "title": "多源資料支援",
+            "description": "支援從多種來源獲取上下文信息，包括程式碼儲存庫、文件等"
+          },
+          "contextManagement": {
+            "title": "智慧上下文管理",
+            "description": "優化上下文信息的傳遞，提高AI模型理解和生成的品質"
+          },
+          "extensibility": {
+            "title": "擴展性設計",
+            "description": "靈活的架構允許添加新的資料源和功能"
+          }
+        },
+        "useCases": {
+          "title": "使用場景",
+          "codeDevelopment": {
+            "title": "程式碼管理與開發",
+            "description": "通過Claude桌面應用程式和MCP協議，AI可以幫助用戶管理GitHub專案，輕鬆完成從創建專案到提交程式碼請求的複雜任務。"
+          },
+          "documentProcessing": {
+            "title": "智慧文件處理",
+            "description": "MCP使AI能夠理解和處理各種文件格式，提供更精準的內容分析和生成建議。"
+          },
+          "knowledgeIntegration": {
+            "title": "知識庫整合",
+            "description": "將企業內部知識庫與AI模型無縫連接，提供基於企業特定知識的智慧回答和建議。"
+          },
+          "devTools": {
+            "title": "開發工具增強",
+            "description": "為IDE和開發工具提供智慧輔助功能，根據程式碼上下文提供更準確的建議和自動完成。"
+          }
+        },
+        "whyChoose": {
+          "title": "為什麼選擇MCP？",
+          "description": "MCP協議的出現有望徹底解決LLM（大型語言模型）應用難以連接資料的痛點，使前沿模型能夠生成更好、更相關的回應，而無需為每個資料源編寫自定義整合程式碼 - 單一的MCP協議可以處理與多個資料源的連接。"
+        },
+        "getStarted": {
+          "title": "開始使用",
+          "description": "要開始使用MCP，請從左側導航的\"入門指南\"部分查看<introduction>簡介</introduction>。對於想要快速上手的用戶，我們提供了<quickstart>快速入門指南</quickstart>。"
+        },
+        "cta": {
+          "title": "準備好開始探索MCP了嗎？",
+          "subtitle": "查看我們的詳細文件，了解如何將MCP整合到您的專案中。",
+          "exploreButton": "開始探索",
+          "githubButton": "GitHub 儲存庫"
+        }
+      },
+    "nav": {
+      "getting_started": "入門指南",
+      "typescript": "TypeScript",
+      "python": "Python",
+      "guides": "使用指南",
+      "advanced": "進階主題",
+      "previous": "上一節",
+      "next": "下一節",
+      "items": {
+        "introduction": "簡介",
+        "architecture": "架構",
+        "installation": "安裝",
+        "protocol": "協定",
+        "quickstart": "快速開始",
+        "getting_started": "入門指南",
+        "write-ts-server": "MCP 伺服器",
+        "write-ts-client": "MCP 客戶端",
+        "use-llm-dev-mcp": "使用 Cursor/LLM 開發 MCP",
+        "dev-sse-mcp": "開發 SSE 類型的 MCP 服務",
+        "resources": "資源管理",
+        "tools": "工具使用",
+        "messages": "訊息處理",
+        "security": "安全性",
+        "deployment": "部署",
+        "configuration": "配置"
+      }
+    }
+  },
+  "Clients": {
+      "title": "Claude MCP 客戶端",
+      "description": "探索實現模型上下文協議（Claude MCP）的各種客戶端應用",
+      "details": "客戶端詳情",
+      "noClients": "未找到客戶端",
+      "viewAll": "查看所有客戶端",
+      "backToClients": "返回客戶端列表",
+      "author": "開發者",
+      "published": "發佈日期",
+      "platforms": "支援平台",
+      "visitHomepage": "訪問主頁",
+      "viewRepository": "查看程式碼儲存庫",
+      "platformWindows": "Windows",
+      "platformMac": "macOS",
+      "platformLinux": "Linux",
+      "platformWeb": "網頁版",
+      "platformIos": "iOS",
+      "platformAndroid": "Android",
+      "notFound": "未找到客戶端",
+      "notFoundDescription": "請求的客戶端未找到",
+      "search": "搜尋客戶端",
+      "searchPlaceholder": "輸入關鍵詞搜尋..."
+    },
+    "Blog": {
+      "common": {
+        "searchPlaceholder": "搜尋文章...",
+        "allCategories": "全部分類",
+        "noResults": "未找到符合條件的文章",
+        "readMore": "閱讀更多",
+        "backToBlog": "返回博客列表",
+        "shareArticle": "分享這篇文章",
+        "copyLink": "複製連結",
+        "linkCopied": "連結已複製到剪貼板",
+        "relatedPosts": "相關文章",
+        "scrollToTop": "返回頂部",
+        "readingTime": "閱讀時間",
+        "minutesRead": "分鐘閱讀",
+        "tableOfContents": "目錄",
+        "loadingToc": "正在加載目錄..."
+      },
+      "meta": {
+        "title": "博客",
+        "description": "探索我們關於技術、AI、編程和最佳實踐的最新文章和見解"
+      },
+      "page": {
+        "title": "博客洞見",
+        "description": "探索我們關於技術、人工智能、編程和最佳實踐的最新文章和見解，幫助您構建更智能的應用"
+      }
+    }
+  
+}

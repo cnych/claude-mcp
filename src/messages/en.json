@@ -1,0 +1,912 @@
+{
+  "nav": {
+    "title": "Claude MCP",
+    "servers": "Servers",
+    "clients": "Clients",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "specification": "Specification",
+    "community": "Community",
+    "getting_started": "Getting Started",
+    "guides": "Guides",
+    "advanced": "Advanced Topics",
+    "items": {
+      "introduction": "Introduction",
+      "installation": "Installation",
+      "quick_start": "Quick Start",
+      "resources": "Resources",
+      "tools": "Tools",
+      "messages": "Messages",
+      "security": "Security",
+      "deployment": "Deployment",
+      "configuration": "Configuration"
+    }
+  },
+  "home": {
+    "title": "Global Tech Community",
+    "description": "The premier platform for Anthropic MCP protocol documentation, developer resources, and community collaboration.",
+    "getStarted": "Get Started",
+    "joinCommunity": "Join Community",
+    "latestDocs": {
+      "title": "Claude MCP Latest Documentation",
+      "description": "Stay updated with the latest Claude MCP documentation and learning tutorials",
+      "noDate": "No date",
+      "viewAll": "View All Documents"
+    }
+  },
+  "Index": {
+    "meta": {
+      "title": "Claude MCP - Model Context Protocol",
+      "description": "An open protocol standard for establishing unified context interaction between AI models and development environments",
+      "keywords": "AI, Protocol, Context, Development Environment, Claude",
+      "og": {
+        "title": "Model Context Protocol",
+        "description": "An open protocol standard for establishing unified context interaction between AI models and development environments"
+      },
+      "twitter": {
+        "title": "Model Context Protocol",
+        "description": "An open protocol standard for establishing unified context interaction between AI models and development environments"
+      }
+    },
+    "hero": {
+      "introducing": "Introducing",
+      "title": "Claude MCP Tutorial",
+      "description": "Claude MCP (Model Context Protocol) is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, enabling AI to better understand and process code",
+      "getStarted": "Get Started",
+      "documentation": "View Documentation",
+      "videoCourse": "Video Course"
+    },
+    "overview": {
+      "title": "Why Choose Claude MCP?",
+      "description1": "Claude MCP provides a standardized way to handle context interaction between AI models and development environments",
+      "description2": "Through a unified protocol, we can enable AI to better understand code structure, project environment, and developer intent",
+      "supports": {
+        "systems": "Multi-System Support",
+        "tools": "Tool Integration",
+        "environments": "Environment Adaptation",
+        "datasets": "Dataset Support"
+      },
+      "components": {
+        "title": "Core Components",
+        "spec": "Protocol Specification",
+        "desktop": "Desktop Integration",
+        "servers": "Server Implementation"
+      },
+      "architecture": {
+        "title": "Architecture",
+        "description": "Claude MCP defines a flexible client-server architecture that supports multiple transport mechanisms and extensible capabilities.",
+        "diagram": "flowchart TB\n    Client[Client]-->|Send Request|Server[Server]\n    Server-->|Send Response|Client\n    Server-->|Send Notification|Client\n    subgraph Server Capabilities\n        Prompts[Prompts]\n        Resources[Resources]\n        Tools[Tools]\n    end",
+        "server": {
+          "title": "Server Functionality",
+          "description": "The server provides basic building blocks through MCP to add context to language models. These primitives support rich interactions between clients, servers, and language models:",
+          "revision": "Protocol Revision: 2024-11-05",
+          "primitives": {
+            "description": "Each primitive can be summarized in the following control hierarchy:",
+            "headers": ["Primitive", "Control", "Description", "Example"],
+            "items": [
+              {
+                "primitive": "Prompts",
+                "control": "User Control",
+                "description": "User-selected interactive templates for invocation",
+                "example": "Slash commands, menu options"
+              },
+              {
+                "primitive": "Resources",
+                "control": "Application Control",
+                "description": "Context data attached and managed by the client",
+                "example": "File contents, Git history"
+              },
+              {
+                "primitive": "Tools",
+                "control": "Model Control",
+                "description": "Functions exposed to the language model for execution",
+                "example": "API POST requests, file writing"
+              }
+            ]
+          },
+          "features": [
+            {
+              "title": "Prompts",
+              "description": "Prompts are predefined templates or instructions used to guide language model interactions. They can:",
+              "items": [
+                "Define standardized interaction patterns for specific tasks",
+                "Include dynamic parameters to adapt to different scenarios",
+                "Be triggered through user interface elements such as commands or buttons"
+              ]
+            },
+            {
+              "title": "Resources",
+              "description": "Resources are structured data or content that provide additional context for the model. They can:",
+              "items": [
+                "Contain file contents, code snippets, or other structured data",
+                "Be automatically managed and updated by the client application",
+                "Be dynamically added or removed during the conversation"
+              ]
+            },
+            {
+              "title": "Tools",
+              "description": "Tools are executable functions that allow the model to perform actions or retrieve information. They can:",
+              "items": [
+                "Perform file operations or API calls",
+                "Retrieve external data or information",
+                "Modify client state or environment"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "protocol": {
+      "title": "Claude MCP Protocol Design",
+      "description": "Simple yet powerful protocol design based on JSON-RPC 2.0, supporting bidirectional communication and rich context interaction",
+      "example": "Example",
+      "viewSpec": "View Full Specification",
+      "components": {
+        "resources": {
+          "title": "Resource Management",
+          "description": "Unified resource access interface, supporting multiple resource types such as code and documentation"
+        },
+        "tools": {
+          "title": "Tool Integration",
+          "description": "Flexible tool integration mechanism, supporting various tools such as file system and terminal"
+        },
+        "messages": {
+          "title": "Message Communication",
+          "description": "Standardized message format, supporting rich context information transmission"
+        }
+      },
+      "features": {
+        "title": "Core Features",
+        "standardized": "Standardized",
+        "standardizedDescription": "Standardized protocol design based on JSON-RPC 2.0",
+        "extensible": "Extensible",
+        "extensibleDescription": "Flexible extension mechanism supporting custom functionality",
+        "secure": "Secure and Reliable",
+        "secureDescription": "Built-in security mechanisms ensure secure data transmission"
+      }
+    },
+    "features": {
+      "title": "Core Features",
+      "description": "Providing rich context support for AI models, making development more efficient",
+      "docs": {
+        "title": "Complete Documentation",
+        "description": "Comprehensive protocol documentation and sample code"
+      },
+      "community": {
+        "title": "Community Support",
+        "description": "Active developer community and technical support"
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "description": "Rich tool and plugin ecosystem"
+      }
+    },
+    "integration": {
+      "title": "Simple Integration",
+      "description": "Providing simple and easy-to-use APIs and SDKs for quick integration into your projects",
+      "viewGithub": "View Source Code",
+      "features": {
+        "simple": "Simple to Use",
+        "flexible": "Flexible and Extensible",
+        "secure": "Secure and Reliable",
+        "fast": "High Performance"
+      }
+    },
+    "global": {
+      "title": "Global Support",
+      "description": "Supporting multiple languages and regions, making it easy for developers worldwide to use",
+      "languages": {
+        "en": "English",
+        "zh": "中文",
+        "tw": "繁體中文",
+        "ko": "한국어"
+      },
+      "features": {
+        "community": "Global Community",
+        "documentation": "Multilingual Documentation",
+        "support": "Localized Support"
+      }
+    }
+  },
+  "footer": {
+    "description": "MCP Tutorial is a website dedicated to learning the MCP protocol, providing detailed introductions, example codes, and best practices.",
+    "copyright": "All rights reserved.",
+    "sections": {
+      "product": "Product",
+      "community": "Community",
+      "legal": "Legal"
+    },
+    "links": {
+      "docs": "Documentation",
+      "about": "About",
+      "blog": "Blog",
+      "changelog": "Changelog",
+      "github": "GitHub",
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "feedback": "Feedback",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "Specification": {
+    "meta": {
+      "title": "MCP Protocol Specification",
+      "description": "Model Context Protocol Technical Specification Document"
+    },
+    "title": "Protocol Specification",
+    "description": "Detailed technical specification of the Model Context Protocol",
+    "security": {
+      "title": "Security and Trust",
+      "principles": {
+        "title": "Core Principles",
+        "items": [
+          "User consent and control over data access",
+          "Protection of sensitive information",
+          "Secure tool execution and authorization",
+          "Clear documentation of security implications"
+        ]
+      },
+      "guidelines": {
+        "title": "Implementation Guidelines",
+        "items": [
+          "Build robust consent flows",
+          "Implement access controls",
+          "Follow security best practices"
+        ]
+      }
+    },
+    "backToHome": "Back to Home",
+    "version": "Version",
+    "viewGithub": "View on GitHub",
+    "overview": {
+      "title": "Protocol Overview",
+      "description": "The Model Context Protocol (MCP) follows a client-host-server architecture where each host can run multiple client instances. This architecture enables users to integrate AI capabilities across applications while maintaining clear security boundaries and isolating concerns. MCP is built on JSON-RPC and provides a stateful session protocol focused on context exchange and sampling coordination between clients and servers.",
+      "architecture": {
+        "title": "Architecture",
+        "description": "The core component architecture is shown below:",
+        "diagram": "graph LR\n    subgraph \"Application Host Process\"\n        H[Host]\n        C1[Client 1]\n        C2[Client 2]\n        C3[Client 3]\n        H --> C1\n        H --> C2\n        H --> C3\n    end\n\n    subgraph \"Local Machine\"\n        S1[Server 1<br>Files & Git]\n        S2[Server 2<br>Database]\n        R1[(\"Local<br>Resource A\")]\n        R2[(\"Local<br>Resource B\")]\n\n        C1 --> S1\n        C2 --> S2\n        S1 <--> R1\n        S2 <--> R2\n    end\n\n    subgraph \"Internet\"\n        S3[Server 3<br>External API]\n        R3[(\"Remote<br>Resource C\")]\n\n        C3 --> S3\n        S3 <--> R3\n    end",
+        "componentTitle": "Components",
+        "components": {
+          "hosts": "LLM applications that initiate connections",
+          "clients": "Connectors within host applications",
+          "servers": "Services providing specific functionalities"
+        },
+        "details": {
+          "title": "Component Details",
+          "host": {
+            "title": "Host",
+            "description": "The host process is the core coordinator of the MCP protocol. It is responsible for managing the lifecycle of client instances, controlling connection permissions, and enforcing security policies. The host is also responsible for coordinating AI/LLM integration, ensuring smooth operation of the entire system.",
+            "features": [
+              "Manage lifecycle of client instances",
+              "Control connection permissions and enforce security policies",
+              "Coordinate AI/LLM integration",
+              "Ensure system stability"
+            ]
+          },
+          "client": {
+            "description": "Clients are created by the host to maintain independent connections with servers. Each client maintains a 1:1 relationship with a server, ensuring connection isolation and security.",
+            "features": [
+              "Maintain independent connections with servers",
+              "Establish stateful sessions",
+              "Handle protocol negotiation",
+              "Manage message routing"
+            ]
+          },
+          "server": {
+            "title": "Server",
+            "description": "Servers are responsible for exposing resources and tools. They can run independently and handle sampling requests through clients. Servers can be local or remote, providing various functionalities to the system.",
+            "features": [
+              "Expose specific resources and tools",
+              "Run and manage independently",
+              "Handle requests through clients",
+              "Support local and remote services"
+            ]
+          }
+        },
+        "principles": {
+          "title": "Design Principles",
+          "description": "MCP is built on the following key design principles:",
+          "items": [
+            {
+              "title": "Simple to Implement",
+              "description": "Servers should be extremely easy to build",
+              "features": [
+                "Host applications handle complex orchestration responsibilities",
+                "Servers focus on specific, well-defined functionalities",
+                "Simple interfaces minimize implementation overhead",
+                "Clear separation ensures code maintainability"
+              ]
+            },
+            {
+              "title": "Highly Composable",
+              "description": "Servers should be highly composable",
+              "features": [
+                "Each server independently provides focused functionality",
+                "Multiple servers can be seamlessly combined",
+                "Shared protocol enables interoperability",
+                "Modular design supports extensibility"
+              ]
+            },
+            {
+              "title": "Secure Isolation",
+              "description": "Servers should not be able to read the entire conversation or 'see' other servers",
+              "features": [
+                "Servers receive only necessary context information",
+                "Complete conversation history remains with the host",
+                "Each server connection remains isolated",
+                "Cross-server interactions controlled by the host",
+                "Host process enforces security boundaries"
+              ]
+            },
+            {
+              "title": "Progressive Enhancement",
+              "description": "Server and client capabilities can be added progressively",
+              "features": [
+                "Core protocol provides minimum required functionality",
+                "Additional features can be negotiated as needed",
+                "Servers and clients evolve independently",
+                "Protocol design supports future extensions",
+                "Maintains backward compatibility"
+              ]
+            }
+          ]
+        },
+        "messages": {
+          "title": "Protocol Basics",
+          "description": "All messages in MCP must follow the JSON-RPC 2.0 specification. The protocol defines three types of messages:",
+          "items": [
+            {
+              "title": "Request",
+              "description": "Bidirectional message that can be sent from client to server or vice versa",
+              "features": [
+                "Must include an ID of string or integer type",
+                "ID cannot be null",
+                "The same ID cannot be reused by the requester within the same session",
+                "Can include an optional parameter object"
+              ],
+              "codeExample": {
+                "title": "Request Example",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "id": "string | number",
+                  "method": "string",
+                  "param?": {  
+                    "key": "value"
+                  }
+                }
+              }
+            },
+            {
+              "title": "Response",
+              "description": "Sent as a reply to a request",
+              "features": [
+                "Must include the same ID as the corresponding request",
+                "Must set either result or error, but not both",
+                "Error code must be an integer",
+                "Can include optional result data"
+              ],
+              "codeExample": {
+                "title": "Response Example",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "id": "string | number",
+                  "result?": {
+                    "[key: string]": "unknown"
+                  },
+                  "error?": {
+                    "code": "number",
+                    "message": "string",
+                    "data?": "unknown"
+                  }
+                }
+              }
+            },
+            {
+              "title": "Notification",
+              "description": "One-way message that doesn't require a response, can be sent from client to server or vice versa",
+              "features": [
+                "Cannot include an ID field",
+                "Used for status updates and event notifications",
+                "Can include an optional parameter object",
+                "Reduces communication overhead, supports asynchronous operations"
+              ],
+              "codeExample": {
+                "title": "Notification Example",
+                "code": {
+                  "jsonrpc": "2.0",
+                  "method": "string",
+                  "params?": {
+                    "[key: string]": "unknown"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "lifecycle": {
+          "title": "Lifecycle",
+          "description": "MCP defines a strict lifecycle for client-server connections, ensuring proper capability negotiation and state management.",
+          "diagram": "sequenceDiagram\n    participant Client\n    participant Server\n\n    Note over Client,Server: Initialization Phase\n    activate Client\n    Client->>+Server: Initialize Request\n    Server-->>Client: Initialize Response\n    Client--)Server: Initialized Notification\n\n    Note over Client,Server: Operation Phase\n    rect rgb(200, 220, 250)\n        note over Client,Server: Normal Protocol Operations\n    end\n\n    Note over Client,Server: Shutdown\n    Client--)-Server: Disconnect\n    deactivate Server\n    Note over Client,Server: Connection Closed",
+          "phases": [
+            {
+              "title": "Initialization Phase",
+              "description": "The initialization phase must be the first interaction between the client and server. During this phase, both parties:",
+              "features": [
+                "Establish protocol version compatibility",
+                "Exchange and negotiate capabilities",
+                "Share implementation details"
+              ],
+              "codeExamples": [
+                {
+                  "title": "Initialize Request",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "id": 1,
+                    "method": "initialize",
+                    "params": {
+                      "protocolVersion": "2024-11-05",
+                      "capabilities": {
+                        "roots": {
+                          "listChanged": true
+                        },
+                        "sampling": {}
+                      },
+                      "clientInfo": {
+                        "name": "ExampleClient",
+                        "version": "1.0.0"
+                      }
+                    }
+                  }
+                },
+                {
+                  "title": "Initialize Response",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "id": 1,
+                    "result": {
+                      "protocolVersion": "2024-11-05",
+                      "capabilities": {
+                        "logging": {},
+                        "prompts": {
+                          "listChanged": true
+                        },
+                        "resources": {
+                          "subscribe": true,
+                          "listChanged": true
+                        },
+                        "tools": {
+                          "listChanged": true
+                        }
+                      },
+                      "serverInfo": {
+                        "name": "ExampleServer",
+                        "version": "1.0.0"
+                      }
+                    }
+                  }
+                },
+                {
+                  "title": "Initialized Notification",
+                  "code": {
+                    "jsonrpc": "2.0",
+                    "method": "initialized"
+                  }
+                }
+              ]
+            },
+            {
+              "title": "Version Negotiation",
+              "description": "In the initialize request, the client must send the protocol version it supports.",
+              "features": [
+                "The client should send the latest version it supports",
+                "The server must respond with the same version or another version it supports",
+                "If the client doesn't support the server's version, it should disconnect"
+              ]
+            },
+            {
+              "title": "Capability Negotiation",
+              "description": "Client and server capabilities determine which optional protocol features are available during the session.",
+              "capabilities": {
+                "client": [
+                  {
+                    "name": "roots",
+                    "description": "Ability to provide filesystem root directories"
+                  },
+                  {
+                    "name": "sampling",
+                    "description": "Support for LLM sampling requests"
+                  },
+                  {
+                    "name": "experimental",
+                    "description": "Describes support for non-standard experimental features"
+                  }
+                ],
+                "server": [
+                  {
+                    "name": "prompts",
+                    "description": "Provides prompt templates"
+                  },
+                  {
+                    "name": "resources",
+                    "description": "Provides readable resources"
+                  },
+                  {
+                    "name": "tools",
+                    "description": "Provides callable tools"
+                  },
+                  {
+                    "name": "logging",
+                    "description": "Emits structured log messages"
+                  },
+                  {
+                    "name": "experimental",
+                    "description": "Describes support for non-standard experimental features"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Operation Phase",
+              "description": "During the operation phase, the client and server exchange messages according to the negotiated capabilities.",
+              "features": [
+                "Adhere to the negotiated protocol version",
+                "Use only successfully negotiated capabilities"
+              ]
+            },
+            {
+              "title": "Shutdown Phase",
+              "description": "In the shutdown phase, the connection is gracefully terminated.",
+              "features": [
+                "Client sends a disconnect notification",
+                "Server closes the connection",
+                "Clean up associated resources"
+              ]
+            }
+          ]
+        },
+        "transports": {
+          "title": "Transport Mechanisms",
+          "description": "MCP currently defines two standard client-server communication transport mechanisms: stdio (standard input/output) and HTTP-based SSE. Clients should support stdio whenever possible. Additionally, clients and servers can implement custom transport mechanisms in a pluggable manner.",
+          "revision": "Protocol Revision: 2024-11-05",
+          "stdio": {
+            "title": "Standard Input/Output (stdio)",
+            "description": "In the stdio transport mechanism:",
+            "features": [
+              "The client launches the MCP server as a child process",
+              "The server receives JSON-RPC messages via standard input (stdin) and writes responses to standard output (stdout)",
+              "Messages are newline-delimited and must not contain embedded newlines",
+              "The server may write UTF-8 strings to standard error (stderr) for logging. Clients may capture, forward, or ignore these logs",
+              "The server must not write any non-valid MCP message content to stdout",
+              "The client must not write any non-valid MCP message content to the server's stdin"
+            ],
+            "diagram": "sequenceDiagram\n    participant Client\n    participant Server Process\n\n    Client->>+Server Process: Launch child process\n    loop Message Exchange\n        Client->>Server Process: Write to stdin\n        Server Process-->>Client: Write to stdout\n        Server Process-->>Client: Optional: stderr logs\n    end\n    Client->>Server Process: Close stdin, terminate child process\n    deactivate Server Process"
+          },
+          "sse": {
+            "title": "HTTP-based SSE",
+            "description": "In the SSE transport mechanism, the server runs as a standalone process and can handle multiple client connections.",
+            "endpoints": {
+              "title": "The server must provide two endpoints:",
+              "items": [
+                {
+                  "title": "SSE Endpoint",
+                  "description": "For clients to establish connections and receive messages from the server"
+                },
+                {
+                  "title": "HTTP POST Endpoint",
+                  "description": "For clients to send messages to the server"
+                }
+              ]
+            },
+            "requirements": [
+              "When a client connects, the server must send an endpoint event containing the URI for the client to send messages to",
+              "All subsequent client messages must be sent as HTTP POST requests to this endpoint",
+              "Server messages are sent as SSE message events with the message content JSON-encoded in the event data"
+            ],
+            "diagram": "sequenceDiagram\n    participant Client\n    participant Server\n\n    Client->>+Server: Open SSE connection\n    Server-->>Client: endpoint event\n    loop Message Exchange\n        Client->>Server: HTTP POST message\n        Server-->>Client: SSE message event\n    end\n    Client->>Server: Close SSE connection\n    deactivate Server"
+          },
+          "custom": {
+            "title": "Custom Transport Mechanisms",
+            "description": "Clients and servers can implement additional custom transport mechanisms to meet their specific needs. The protocol is transport-agnostic and can be implemented on any communication channel that supports bidirectional message exchange.",
+            "requirements": [
+              "Implementers choosing to support custom transport mechanisms must ensure they preserve the JSON-RPC message format and lifecycle requirements defined by MCP",
+              "Custom transport mechanisms should document their specific connection establishment and message exchange patterns to aid in interoperability"
+            ]
+          }
+        },
+        "capabilities": {
+          "title": "Core Features",
+          "clientTitle": "Client Capabilities",
+          "serverTitle": "Server Capabilities",
+          "items": [
+            "Share context information with language models",
+            "Expose tools and functionalities to AI systems",
+            "Build composable integrations and workflows",
+            "Implement secure and controlled access to resources"
+          ]
+        },
+        "communication": {
+          "title": "Communication Mechanism",
+          "description": "Use JSON-RPC 2.0 for standardized message exchange",
+          "features": [
+            "Stateful connections",
+            "Capability negotiation",
+            "Secure data transmission",
+            "Error handling"
+          ]
+        }
+      },
+      "baseProtocol": {
+        "title": "Base Protocol",
+        "subtitle": "Based on JSON-RPC 2.0",
+        "description": "MCP is based on the JSON-RPC 2.0 protocol, providing a standardized request-response pattern",
+        "methods": {
+          "initialize": {
+            "title": "Initialize",
+            "description": "Initialize connection and negotiate capabilities"
+          },
+          "ready": {
+            "title": "Ready",
+            "description": "Server ready notification"
+          },
+          "shutdown": {
+            "title": "Shutdown",
+            "description": "Close connection"
+          }
+        }
+      },
+      "serverFeatures": {
+        "title": "Server Features",
+        "description": "The server provides the basic building blocks for adding context to language models via MCP, offering three fundamental primitives for managing context: prompts, resources, and tools.",
+        "primitives": {
+          "headers": ["Primitive", "Control", "Description", "Example"],
+          "items": [
+            {
+              "primitive": "Prompts",
+              "control": "System",
+              "description": "Define model behavior and role",
+              "example": "You are a professional code reviewer"
+            },
+            {
+              "primitive": "Resources",
+              "control": "User",
+              "description": "Provide additional context information",
+              "example": "Code files, documentation"
+            },
+            {
+              "primitive": "Tools",
+              "control": "System/User",
+              "description": "Extend model capabilities",
+              "example": "Code search, file editing"
+            }
+          ]
+        },
+        "features": [
+          {
+            "title": "Resource Management",
+            "description": "Provide context and data for AI models",
+            "items": [
+              "Support for multiple resource types",
+              "Dynamic resource loading",
+              "Resource lifecycle management"
+            ]
+          },
+          {
+            "title": "Tool Integration",
+            "description": "Extend AI model capabilities",
+            "items": [
+              "Flexible tool registration mechanism",
+              "Tool invocation permission control",
+              "Asynchronous tool execution support"
+            ]
+          },
+          {
+            "title": "Context Control",
+            "description": "Precisely control AI model behavior",
+            "items": [
+              "System-level prompt management",
+              "Dynamic context updates",
+              "Multi-turn conversation state maintenance"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "more": "More",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish",
+    "continue": "Continue",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "success": "Success",
+    "failed": "Failed",
+    "copied": "Copied",
+    "learnMore": "Learn More"
+  },
+  "Servers": {
+    "title": "Claude MCP Server Directory",
+    "description": "Discover the best and most popular claude mcp servers",
+    "viewAll": "View All",
+    "noServers": "No servers found",
+    "author": "Author",
+    "links": "Links",
+    "homepage": "Homepage",
+    "repository": "Repository",
+    "tags": "Tags",
+    "capabilities": "Capabilities",
+    "filterByTags": "Filter by Tags",
+    "allTags": "All",
+    "search": "Search Servers",
+    "searchPlaceholder": "Enter keywords to search...",
+    "serverDetails": "Server Details",
+    "notFound": "Server Not Found",
+    "notFoundDescription": "The requested server could not be found."
+  },
+  "Docs": {
+      "meta": {
+          "title": "MCP Documentation",
+          "description": "The premier platform for Claude MCP protocol documentation, developer resources and community collaboration.",
+          "og": {
+            "title": "MCP Documentation", 
+            "description": "The premier platform for Claude MCP protocol documentation, developer resources and community collaboration."
+          },
+          "twitter": {
+            "title": "MCP Documentation",
+            "description": "The premier platform for Claude MCP protocol documentation, developer resources and community collaboration."
+          }
+        },
+      "landingPage": {
+        "title": "Model Context Protocol (MCP) Documentation Center",
+        "welcome": "Welcome to the Model Context Protocol (MCP) Documentation Center. Please select a specific document topic from the navigation on the left, or continue reading the overview below.",
+        "whatIs": {
+          "title": "What is Model Context Protocol?",
+          "description": "Model Context Protocol (MCP) is an open-source protocol launched by Anthropic Claude, aimed at establishing a unified context interaction standard between AI models and development environments. By providing standardized access to context information, MCP enables AI models to better understand and process code, acting as a bridge between them and allowing developers to connect AI applications and various data sources through a single standard."
+        },
+        "features": {
+          "title": "Key Features",
+          "unifiedInterface": {
+            "title": "Unified Interface",
+            "description": "Provides a standardized API interface, simplifying interactions between AI and various context information."
+          },
+          "seamlessIntegration": {
+            "title": "Seamless Integration",
+            "description": "Easily integrates into existing development workflows without complex adaptations."
+          },
+          "multiSource": {
+            "title": "Multi-source Data Support",
+            "description": "Supports retrieving context information from multiple sources, including code repositories, documentation, and more."
+          },
+          "contextManagement": {
+            "title": "Intelligent Context Management",
+            "description": "Optimizes the transmission of context information to improve the quality of AI model understanding and generation."
+          },
+          "extensibility": {
+            "title": "Extensible Design",
+            "description": "Flexible architecture allows adding new data sources and functions."
+          }
+        },
+        "useCases": {
+          "title": "Use Cases",
+          "codeDevelopment": {
+            "title": "Code Management & Development",
+            "description": "Through Claude desktop applications and the MCP protocol, AI can help users manage GitHub projects, easily completing complex tasks from creating projects to submitting code requests."
+          },
+          "documentProcessing": {
+            "title": "Intelligent Document Processing",
+            "description": "MCP enables AI to understand and process various document formats, providing more accurate content analysis and generating suggestions."
+          },
+          "knowledgeIntegration": {
+            "title": "Knowledge Base Integration",
+            "description": "Seamlessly connect enterprise knowledge bases with AI models to provide intelligent answers and suggestions based on enterprise-specific knowledge."
+          },
+          "devTools": {
+            "title": "Development Tool Enhancement",
+            "description": "Provide intelligent assistance for IDEs and development tools, offering more accurate suggestions and auto-completion based on code context."
+          }
+        },
+        "whyChoose": {
+          "title": "Why Choose MCP?",
+          "description": "The emergence of the MCP protocol promises to thoroughly solve the pain point of LLM (Large Language Model) applications struggling to connect to data, enabling cutting-edge models to generate better, more relevant responses without having to write custom integration code for each data source - a single MCP protocol can handle connections to multiple data sources."
+        },
+        "getStarted": {
+          "title": "Getting Started",
+          "description": "To get started with MCP, check out the <introduction>Introduction</introduction> in the \"Getting Started\" section on the left navigation. For users who want to quickly get up and running, we provide a <quickstart>Quick Start Guide</quickstart>."
+        },
+        "cta": {
+          "title": "Ready to Start Exploring MCP?",
+          "subtitle": "Check out our detailed documentation to learn how to integrate MCP into your projects.",
+          "exploreButton": "Start Exploring",
+          "githubButton": "GitHub Repository"
+        }
+      },
+      "nav": {
+        "getting_started": "Getting Started",
+        "typescript": "TypeScript",
+        "python": "Python",
+        "guides": "Guides",
+        "advanced": "Advanced Topics",
+        "previous": "Previous",
+        "next": "Next",
+        "items": {
+          "introduction": "Introduction",
+          "architecture": "Architecture",
+          "installation": "Installation",
+          "protocol": "Protocol",
+          "quickstart": "Quick Start",
+          "getting_started": "Getting Started",
+          "write-ts-server": "MCP Server",
+          "write-ts-client": "MCP Client",
+          "use-llm-dev-mcp": "Develop MCP with Cursor/LLM",
+          "dev-sse-mcp": "Develop an SSE MCP Service",
+          "resources": "Resource Management",
+          "tools": "Tools Usage",
+          "messages": "Message Handling",
+          "security": "Security",
+          "deployment": "Deployment",
+          "configuration": "Configuration"
+        }
+      }
+    },
+  "Clients": {
+      "title": "MCP Clients",
+      "description": "Explore various client applications implementing the Model Context Protocol (MCP)",
+      "details": "Client Details",
+      "noClients": "No clients found",
+      "viewAll": "View All Clients",
+      "backToClients": "Back to Clients List",
+      "author": "Developer",
+      "published": "Publication Date",
+      "platforms": "Supported Platforms",
+      "visitHomepage": "Visit Homepage",
+      "viewRepository": "View Repository",
+      "platformWindows": "Windows",
+      "platformMac": "macOS",
+      "platformLinux": "Linux",
+      "platformWeb": "Web",
+      "platformIos": "iOS",
+      "platformAndroid": "Android",
+      "notFound": "Client Not Found",
+      "notFoundDescription": "The requested client was not found",
+      "search": "Search Clients",
+      "searchPlaceholder": "Enter keywords to search..."
+    },
+  "Blog": {
+    "common": {
+      "searchPlaceholder": "Search articles...",
+      "allCategories": "All Categories",
+      "noResults": "No articles found matching your criteria",
+      "readMore": "Read more",
+      "backToBlog": "Back to blog list",
+      "shareArticle": "Share this article",
+      "copyLink": "Copy link",
+      "linkCopied": "Link copied to clipboard",
+      "relatedPosts": "Related articles",
+      "scrollToTop": "Back to top",
+      "readingTime": "Reading time",
+      "minutesRead": "min read",
+      "tableOfContents": "Table of contents",
+      "loadingToc": "Loading table of contents..."
+    },
+    "meta": {
+      "title": "Blog",
+      "description": "Explore our latest articles and insights about technology, AI, programming, and best practices"
+    },
+    "page": {
+      "title": "Blog Insights",
+      "description": "Explore our latest articles and insights about technology, artificial intelligence, programming, and best practices to help you build smarter applications"
+    }
+  }
+}
