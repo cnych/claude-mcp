@@ -116,6 +116,10 @@ Zapier MCP 的整体数据流响应流程如下所示：
 
 ![Zapier MCP Test](/images/zapier-test.png)
 
+这个时候在我们的邮箱中就会收到一封邮件，内容就是我们刚刚测试的那篇文章的总结。
+
+![Zapier MCP Test Result](/images/zapier-result.png)
+
 ## 总结
 
 Zapier MCP 彻底改变了 AI 系统与数字生态系统的交互方式。它通过提供安全、标准化且可扩展的接口，将 AI 模型与数千个应用程序无缝连接，极大地拓展了 AI 的应用场景。现在，各类企业都能轻松实现复杂的自动化流程，而无需投入大量开发资源。

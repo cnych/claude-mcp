@@ -116,6 +116,10 @@ Now, you can test your Zapier MCP integration in Cursor. For instance, you can s
 
 ![Zapier MCP Test](/images/zapier-test.png)
 
+When this task is complete, you will receive an email from Zapier containing the summary of the article you tested.
+
+![Zapier MCP Test Result](/images/zapier-result.png)
+
 ## Conclusion
 
 Zapier MCP revolutionizes how AI systems interact with digital ecosystems. By providing a secure, standardized, and scalable interface, it seamlessly connects AI models with thousands of applications, significantly expanding AI use cases. Businesses of all sizes can now implement complex automation workflows without extensive development resources.

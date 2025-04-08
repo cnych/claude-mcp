@@ -14,7 +14,6 @@ icon: /images/zapier-icon.png
 createTime: 2025-04-06
 ---
 
-<CURRENT_CURSOR_POSITION>
 [Zapier](https://zapier.com)는 클라우드 기반 자동화 도구로, 사용자가 "Zap"(자동화 워크플로우)을 통해 선호하는 애플리케이션들을 연결할 수 있게 해줍니다. 각 Zap은 트리거(워크플로우를 시작하는 이벤트)와 하나 이상의 액션(수행할 작업)으로 구성됩니다. 7,000개 이상의 앱과 30,000개 이상의 액션을 지원하며, 다양한 서비스를 통합하여 비즈니스 프로세스를 간소화하는 데 적합합니다.
 
 ![Zapier](/images/zapier-mcp.jpg)
@@ -116,6 +115,10 @@ Zapier MCP 엔드포인트를 생성하려면 다음 단계를 따르세요:
 이제 Cursor에서 Zapier MCP를 테스트할 수 있습니다. 예를 들어, 기사 내용을 요약하여 지정된 이메일로 보내도록 할 수 있습니다.
 
 ![Zapier MCP 테스트](/images/zapier-test.png)
+
+이 작업이 완료되면 지정된 이메일에 요약된 기사 내용이 포함된 이메일이 수신됩니다.
+
+![Zapier MCP 테스트 결과](/images/zapier-result.png)
 
 ## 결론
 

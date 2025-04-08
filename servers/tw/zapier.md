@@ -116,6 +116,10 @@ Zapier MCP 的整體資料流回應流程如下所示：
 
 ![Zapier MCP Test](/images/zapier-test.png)
 
+這時候我們的信箱就會收到一封來自 Zapier 的郵件，內容就是我們剛剛測試的那篇文章的總結。
+
+![Zapier MCP Test Result](/images/zapier-result.png)
+
 ## 總結
 
 Zapier MCP 徹底改變了 AI 系統與數位生態系統的互動方式。它透過提供安全、標準化且可擴展的介面，將 AI 模型與數千個應用程式無縫連接，極大地拓展了 AI 的應用場景。現在，各類企業都能輕鬆實現複雜的自動化流程，而無需投入大量開發資源。
