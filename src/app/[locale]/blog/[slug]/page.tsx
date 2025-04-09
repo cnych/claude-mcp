@@ -62,6 +62,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],
+      url: locale === 'en' ? `https://www.claudemcp.com/blog/${slug}` : `https://www.claudemcp.com/${locale}/blog/${slug}`,
       images: post.coverImage ? [
         {
           url: post.coverImage,

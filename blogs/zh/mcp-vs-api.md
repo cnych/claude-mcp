@@ -11,7 +11,7 @@ author:
 category: 技术
 ---
 
-[MCP (Model Context Protocol)](https://www.claudemcp.com) 是一个新的开放协议，旨在标准化如何向大型语言模型（LLMs）提供上下文。可以将 MCP 想象成 AI Agent 的 USB-C 接口：它为 AI Agent 连接各种工具和数据源提供了一种统一的方法。
+[MCP (Model Context Protocol)](/) 是一个新的开放协议，旨在标准化如何向大型语言模型（LLMs）提供上下文。可以将 MCP 想象成 AI Agent 的 USB-C 接口：它为 AI Agent 连接各种工具和数据源提供了一种统一的方法。
 
 本文详细介绍了 MCP 的定义、架构、工作原理、优势和劣势，并将其与传统 API 进行了对比。
 

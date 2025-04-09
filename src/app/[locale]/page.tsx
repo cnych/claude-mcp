@@ -37,15 +37,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
+      url: locale === 'en' ? `https://www.claudemcp.com` : `https://www.claudemcp.com/${locale}`,
       title: t('meta.og.title'),
       description: t('meta.og.description'),
-      images: ['/og-image.png'],
+      images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('meta.twitter.title'),
       description: t('meta.twitter.description'),
-      images: ['/twitter-image.png'],
+      images: ['/og.png'],
     },
     alternates: {
         canonical: locale === 'en' ? `https://www.claudemcp.com` : `https://www.claudemcp.com/${locale}`,

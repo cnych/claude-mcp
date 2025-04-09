@@ -27,8 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('meta.title'),
     description: t('meta.description'),
     openGraph: {
+      url: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,
       title: t('meta.title'),
       description: t('meta.description'),
+      images: ['/og.png'],
     },
     alternates: {
       canonical: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,

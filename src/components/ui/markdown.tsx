@@ -28,26 +28,79 @@ function YouTubeEmbed({ videoId }: { videoId: string }) {
   );
 }
 
+// 声明window.adsbygoogle全局类型
+declare global {
+  interface Window {
+    adsbygoogle: any[];
+  }
+}
+
 // AdSense广告嵌入组件
 function AdSenseEmbed({ adSlot }: { adSlot: string }) {
+  const adId = useRef(`ad-${generateId()}`);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // 确保在客户端
+    if (typeof window === 'undefined') return;
+    
+    // 检查是否已经存在AdSense脚本
+    const adsenseScript = document.querySelector(`script[src*="adsbygoogle.js"]`);
+    if (!adsenseScript) {
+      console.warn('未检测到全局AdSense脚本，广告可能无法正常显示');
+    }
+    
+    // 稍微延迟初始化广告，确保DOM已完全渲染
+    const timer = setTimeout(() => {
+      try {
+        if (!window.adsbygoogle) {
+          window.adsbygoogle = [];
+          console.log('初始化adsbygoogle数组');
+        }
+        
+        window.adsbygoogle.push({});
+        console.log(`AdSense广告(${adSlot})推送成功，ID: ${adId.current}`);
+        setLoaded(true);
+      } catch (err) {
+        const errMsg = err instanceof Error ? err.message : String(err);
+        console.error(`AdSense初始化失败(${adSlot}):`, errMsg);
+        setError(errMsg);
+      }
+    }, 300); // 增加延迟，确保DOM完全准备好
+    
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [adSlot]);
+
   return (
-    <div className="not-prose my-6">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="${AD_CLIENT}"
-                 data-ad-slot="${adSlot}"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          `,
+    <div className="not-prose my-6 relative min-h-[120px]">
+      {error && (
+        <div className="absolute top-0 left-0 w-full text-xs text-red-500 bg-red-50 p-1 rounded">
+          AdSense加载错误: {error}
+        </div>
+      )}
+      
+      <ins 
+        id={adId.current}
+        className="adsbygoogle"
+        style={{
+          display: 'block', 
+          textAlign: 'center',
+          minHeight: '120px'
         }}
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client={AD_CLIENT}
+        data-ad-slot={adSlot}
       />
+      
+      {!loaded && !error && (
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <div className="text-xs text-gray-400">广告加载中...</div>
+        </div>
+      )}
     </div>
   );
 }
@@ -216,9 +269,18 @@ export function Markdown({ content = "" }: MarkdownProps) {
           const adsenseEmbeds =
             containerRef.current.querySelectorAll(".adsense-embed");
 
-          adsenseEmbeds.forEach((embedDiv) => {
+          if (adsenseEmbeds.length > 0) {
+            console.log(`找到${adsenseEmbeds.length}个AdSense嵌入点`);
+          }
+
+          adsenseEmbeds.forEach((embedDiv, index) => {
             const adSlot = embedDiv.getAttribute("data-ad-slot");
-            if (!adSlot) return;
+            if (!adSlot) {
+              console.warn("发现AdSense嵌入点但没有slot信息");
+              return;
+            }
+
+            console.log(`处理AdSense嵌入 #${index+1}, slot: ${adSlot}`);
 
             // 创建AdSense容器
             const adsenseContainer = document.createElement("div");
@@ -227,11 +289,16 @@ export function Markdown({ content = "" }: MarkdownProps) {
 
             const adsenseId = `adsense-${generateId()}`;
 
-            // 创建React根并渲染
-            const root = createRoot(adsenseContainer);
-            rootsRef.current.set(adsenseId, root);
-
-            root.render(<AdSenseEmbed adSlot={adSlot} />);
+            try {
+              // 创建React根并渲染
+              const root = createRoot(adsenseContainer);
+              rootsRef.current.set(adsenseId, root);
+              console.log(`为AdSense创建React根: ${adsenseId}`);
+              root.render(<AdSenseEmbed adSlot={adSlot} />);
+            } catch (err) {
+              console.error(`渲染AdSense组件失败:`, err);
+              adsenseContainer.innerHTML = `<div class="p-2 text-red-500 border border-red-200 rounded">AdSense加载失败</div>`;
+            }
           });
 
           // 处理YouTube嵌入

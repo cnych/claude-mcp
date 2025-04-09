@@ -22,6 +22,8 @@ createTime: 2025-04-06
 
 [Zapier MCP](https://zapier.com/mcp) 是 Zapier 对模型上下文协议（Claude MCP）的实现。Zapier MCP 通过在复杂的 AI 系统（如 Claude）与 Zapier 的 7000 多个应用和 30000 多个 actions 集成的广泛生态系统之间创建无缝桥梁，扩展了这一技术。这种强大的组合为自动化工作流程、上下文决策和增强的 AI 驱动应用程序解锁了前所未有的能力，而无需大量开发资源或专业编码专长。
 
+:::adsense 8781986491:::
+
 Zapier MCP 使 AI 助手能够：
 
 - 访问和操作数据：从数据库、CRM、项目管理工具等读取和写入。

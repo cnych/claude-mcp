@@ -33,15 +33,16 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
+      url: locale === 'en' ? `https://www.claudemcp.com/blog` : `https://www.claudemcp.com/${locale}/blog`,
       title: `${t('Blog.meta.title')} | ${t('Index.meta.og.title')}`,
       description: `${t('Blog.meta.description')} | ${t('Index.meta.og.title')}`,
-      images: ['/og-image.png'],
+      images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${t('Blog.meta.title')} | ${t('Index.meta.twitter.title')}`,
       description: `${t('Blog.meta.description')} | ${t('Index.meta.twitter.title')}`,
-      images: ['/twitter-image.png'],
+      images: ['/og.png'],
     },
     alternates: {
       canonical: locale === 'en' ? `https://www.claudemcp.com/blog` : `https://www.claudemcp.com/${locale}/blog`,

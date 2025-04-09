@@ -30,6 +30,8 @@ Zapier MCP enables AI assistants to:
 - Securely manage credentials: Ensure all interactions are conducted safely with proper authentication and authorization mechanisms.
 - Customize actions: Define permitted operations for the AI to control data usage.
 
+:::adsense 8781986491:::
+
 At its core, Zapier MCP serves as a specialized **middleware layer** that facilitates structured communication between AI systems and thousands of applications within Zapier's integration ecosystem. The protocol operates via RESTful API endpoints compliant with the OpenAPI specification, allowing AI models to:
 
 - Discover available tools through schema definitions

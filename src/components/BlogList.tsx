@@ -47,7 +47,7 @@ export default function BlogList({ posts, categories }: BlogListProps) {
       </div>
 
       {/* 分类导航 */}
-      <div className="flex flex-wrap items-center gap-2 justify-center border-b pb-4">
+      <div className="hidden flex-wrap items-center gap-2 justify-center border-b pb-4">
         <Button
           variant={selectedCategory === '' ? "default" : "ghost"}
           size="sm"

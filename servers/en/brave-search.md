@@ -24,6 +24,8 @@ An MCP server implementation that integrates the Brave Search API, providing bot
 - **Flexible Filtering**: Control result types, safety levels, and content freshness
 - **Smart Fallbacks**: Local search automatically falls back to web when no results are found
 
+:::adsense 8781986491:::
+
 ## Tools
 
 - **brave_web_search**

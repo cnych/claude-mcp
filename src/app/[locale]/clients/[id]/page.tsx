@@ -62,13 +62,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${client.name} | ${t('title')}`,
       description: client.digest,
-      images: client.icon ? [client.icon] : ['/og-image.png'],
+      images: client.icon ? [client.icon] : ['/og.png'],
+      url: locale === 'en' 
+        ? `https://www.claudemcp.com/clients/${id}` 
+        : `https://www.claudemcp.com/${locale}/clients/${id}`,
     },
     twitter: {
       card: 'summary_large_image',
       title: `${client.name} | ${t('title')}`,
       description: client.digest,
-      images: client.icon ? [client.icon] : ['/twitter-image.png'],
+      images: client.icon ? [client.icon] : ['/og.png'],
     },
     alternates: {
       canonical: locale === 'en' 

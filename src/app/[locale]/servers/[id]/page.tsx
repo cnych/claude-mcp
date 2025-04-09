@@ -60,15 +60,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${server.name} | ${t('title')}`,
     description: server.digest,
     openGraph: {
+      url: locale === 'en' 
+        ? `https://www.claudemcp.com/servers/${id}` 
+        : `https://www.claudemcp.com/${locale}/servers/${id}`,
       title: `${server.name} | ${t('title')}`,
       description: server.digest,
-      images: server.icon ? [server.icon] : ['/og-image.png'],
+      images: server.icon ? [server.icon] : ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${server.name} | ${t('title')}`,
       description: server.digest,
-      images: server.icon ? [server.icon] : ['/twitter-image.png'],
+      images: server.icon ? [server.icon] : ['/og.png'],
     },
     alternates: {
       canonical: locale === 'en' 

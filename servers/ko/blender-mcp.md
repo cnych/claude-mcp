@@ -54,6 +54,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 설치가 완료되면 Claude MCP 클라이언트에서 Blender MCP 서버를 활성화할 수 있습니다.
 
+:::adsense 8781986491:::
+
 **Claude for Desktop**
 
 `Claude for Desktop`의 경우 클라이언트를 열고 `Settings` > `Developer` > `Edit Config` > `claude_desktop_config.json` 파일에 다음 내용을 추가합니다:

@@ -20,9 +20,17 @@ export async function generateStaticParams() {
   return locales.map(locale => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations();
+
+  // 从URL参数创建过滤函数
+  const awaitedSearchParams = await searchParams || {};
+  const tags = awaitedSearchParams.tags;
+  let url = locale === 'en' ? `https://www.claudemcp.com/clients` : `https://www.claudemcp.com/${locale}/clients`;
+  if (tags) {
+    url += `?tags=${tags}`;
+  }
 
   return {
     title: `${t('Clients.title')} | ${t('Index.meta.title')}`,
@@ -32,18 +40,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
+      url,
       title: `${t('Clients.title')} | ${t('Index.meta.og.title')}`,
       description: `${t('Clients.description')} | ${t('Index.meta.og.title')}`,
-      images: ['/og-image.png'],
+      images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${t('Clients.title')} | ${t('Index.meta.twitter.title')}`,
       description: `${t('Clients.description')} | ${t('Index.meta.twitter.title')}`,
-      images: ['/twitter-image.png'],
+      images: ['/og.png'],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/clients` : `https://www.claudemcp.com/${locale}/clients`,
+      canonical: url,
     },
     manifest: "/site.webmanifest",
   };
