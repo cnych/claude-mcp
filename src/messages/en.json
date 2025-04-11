@@ -28,10 +28,17 @@
     "getStarted": "Get Started",
     "joinCommunity": "Join Community",
     "latestDocs": {
-      "title": "Claude MCP Latest Documentation",
-      "description": "Stay updated with the latest Claude MCP documentation and learning tutorials",
+      "title": "Latest Claude MCP Learning Docs",
+      "description": "Stay up-to-date with our latest Claude MCP documentation and learning tutorials",
       "noDate": "No date",
-      "viewAll": "View All Documents"
+      "viewAll": "View All Documentation"
+    }
+  },
+  "HomePage": {
+    "latestBlog": {
+      "title": "Latest Blog Posts",
+      "description": "Read our latest insights and tutorials on Claude MCP, AI technologies, and development practices",
+      "viewAll": "View All Posts"
     }
   },
   "Index": {

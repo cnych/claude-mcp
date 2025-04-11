@@ -8,8 +8,10 @@ import { GlobalSection } from '@/components/home/global-section';
 import { FeaturedServers } from '@/components/home/featured-servers';
 import { FeaturedClients } from '@/components/home/featured-clients';
 import { LatestDocs } from '@/components/home/latest-docs';
+import { LatestBlogPosts } from '@/components/home/latest-blog-posts';
 import { loadServersData, loadClientsData } from '@/lib/data-utils';
 import { getLatestDocs } from '@/lib/docs';
+import { getBlogPosts } from '@/data/blog-posts';
 import { locales } from '@/i18n/config';
 import type { MCPClient } from '@/types/client';
 
@@ -69,6 +71,9 @@ export default async function Home({ params }: PageProps) {
   // 加载最新文档
   const latestDocs = await getLatestDocs(locale, 6);
 
+  // 加载最新博客文章
+  const latestBlogPosts = await getBlogPosts(locale);
+
   return (
     <main className="flex min-h-screen flex-col antialiased">
       <HeroSection />
@@ -78,6 +83,7 @@ export default async function Home({ params }: PageProps) {
       <OverviewSection />
       <ProtocolSection />
       <IntegrationSection />
+      <LatestBlogPosts posts={latestBlogPosts} />
       <GlobalSection />
     </main>
   );

@@ -34,6 +34,13 @@
       "viewAll": "查看全部文件"
     }
   },
+  "HomePage": {
+    "latestBlog": {
+      "title": "最新博客文章",
+      "description": "閱讀我們關於 Claude MCP、AI 技術和開發實踐的最新見解和教程",
+      "viewAll": "查看全部文章"
+    }
+  },
   "Index": {
     "meta": {
       "title": "Claude MCP - 模型上下文協議",

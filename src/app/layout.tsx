@@ -3,6 +3,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { Metadata } from 'next'
 import { AD_CLIENT } from '@/lib/utils'
+import CanvasCursor from '@/components/CavasCursor'
+import ClarityScript from '@/components/ClarityScript'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,10 +27,12 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://www.claudemcp.com" />
         <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`}
           crossOrigin="anonymous"></script>
+        <ClarityScript />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
         <GoogleAnalytics gaId="G-JBQK9CPP1N" />
+        <CanvasCursor />
       </body>
     </html>
   )

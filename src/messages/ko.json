@@ -26,13 +26,19 @@
       "title": "글로벌 기술 커뮤니티",
       "description": "Anthropic MCP 프로토콜 문서, 개발자 리소스 및 커뮤니티 협업을 위한 최고의 플랫폼.",
       "getStarted": "시작하기",
-      "joinCommunity": "커뮤니티 참여",
+      "joinCommunity": "커뮤니티 가입",
       "latestDocs": {
-        "title": "Claude MCP 최신 학습 문서",
+        "title": "최신 Claude MCP 학습 문서",
         "description": "최신 Claude MCP 문서와 학습 튜토리얼을 확인하세요",
         "noDate": "날짜 없음",
-        "noDocuments": "문서가 없습니다",
         "viewAll": "모든 문서 보기"
+      }
+    },
+    "HomePage": {
+      "latestBlog": {
+        "title": "최신 블로그 게시물",
+        "description": "Claude MCP, AI 기술 및 개발 사례에 대한 최신 인사이트와 튜토리얼을 읽어보세요",
+        "viewAll": "모든 게시물 보기"
       }
     },
     "Index": {
