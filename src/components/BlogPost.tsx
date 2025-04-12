@@ -17,6 +17,7 @@ import {
   ChevronUpIcon
 } from 'lucide-react';
 import type { BlogPost } from './BlogCard';
+import { Markdown } from '@/components/ui/markdown';
 
 export interface BlogPostDetails extends BlogPost {
   content: string;
@@ -157,7 +158,7 @@ export default function BlogPost({ post }: BlogPostProps) {
 
       {/* 内容区域 */}
       <div className="prose prose-lg prose-blue max-w-none dark:prose-invert">
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Markdown content={post.content} />
       </div>
 
       {/* 标签 */}

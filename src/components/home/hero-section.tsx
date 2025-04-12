@@ -91,6 +91,12 @@ export function HeroSection() {
                 </Button>
               </Link>
             )}
+              <Link href="https://www.a2aprotocol.net/?ref=claude-mcp">
+                <Button variant="default" size="lg" className="h-12 px-6 text-base hover-card">
+                  {t('hero.a2a')}
+                  <Book className="ml-2" />
+                </Button>
+              </Link>
           </motion.div>
         </motion.div>
       </motion.div>

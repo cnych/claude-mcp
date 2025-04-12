@@ -57,11 +57,12 @@
       },
       "hero": {
         "introducing": "새로운 출시",
-        "title": "Claude MCP 튜토리얼 사이트",
+        "title": "Claude MCP 커뮤니티",
         "description": "Claude MCP(모델 컨텍스트 프로토콜)는 Claude가 맞춤 제작한 개방형 프로토콜 표준으로, AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 제공하여 AI가 코드를 더 잘 이해하고 처리할 수 있게 합니다.",
         "getStarted": "시작하기",
         "documentation": "문서 보기",
-        "videoCourse": "비디오 강좌"
+        "videoCourse": "비디오 강좌",
+        "a2a": "A2A 프로토콜"
       },
       "overview": {
         "title": "왜 Claude MCP인가?",

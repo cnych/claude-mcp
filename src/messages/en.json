@@ -57,11 +57,12 @@
     },
     "hero": {
       "introducing": "Introducing",
-      "title": "Claude MCP Tutorial",
+      "title": "Claude MCP Community",
       "description": "Claude MCP (Model Context Protocol) is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, enabling AI to better understand and process code",
       "getStarted": "Get Started",
       "documentation": "View Documentation",
-      "videoCourse": "Video Course"
+      "videoCourse": "Video Course",
+      "a2a": "A2A Protocol"
     },
     "overview": {
       "title": "Why Choose Claude MCP?",
@@ -868,7 +869,7 @@
       }
     },
   "Clients": {
-      "title": "MCP Clients",
+      "title": "Claude MCP Clients",
       "description": "Explore various client applications implementing the Model Context Protocol (MCP)",
       "details": "Client Details",
       "noClients": "No clients found",

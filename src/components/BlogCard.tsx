@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { Badge } from './ui/badge';
+
 
 export interface BlogPost {
   id: string;
@@ -44,9 +44,6 @@ export default function BlogCard({ post, variant = 'default' }: BlogCardProps) {
           )}
           <div className="flex flex-col justify-between p-6 md:w-1/2">
             <div>
-              <Badge variant="outline" className="mb-4 text-xs font-medium text-muted-foreground">
-                {post.category}
-              </Badge>
               <h2 className="mb-3 text-2xl md:text-3xl font-bold leading-tight group-hover:text-primary transition-colors">
                 {post.title}
               </h2>
@@ -95,9 +92,6 @@ export default function BlogCard({ post, variant = 'default' }: BlogCardProps) {
           </div>
         )}
         <div className="flex flex-col flex-grow p-5">
-          <Badge variant="outline" className="self-start mb-3 text-xs font-medium text-muted-foreground">
-            {post.category}
-          </Badge>
           <h3 className="mb-3 line-clamp-2 text-xl font-bold leading-tight group-hover:text-primary transition-colors">
             {post.title}
           </h3>

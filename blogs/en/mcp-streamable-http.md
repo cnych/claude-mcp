@@ -6,7 +6,7 @@ slug: mcp-streamable-http
 coverImage: /images/blog/mcp-streamable-http.png
 featured: true
 author:
-  name: Yang Ming
+  name: 阳明
   avatar: /images/avatars/yangming.png
 category: Technology
 ---

@@ -71,8 +71,6 @@ export default function LanguageSwitcher() {
       }
     }
     
-    // 默认返回主页
-    console.log(`未找到匹配路径: ${path}，返回主页`);
     return {
       pathname: '/' as keyof Pathnames,
       params: undefined

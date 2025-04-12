@@ -83,11 +83,12 @@
       },
       "hero": {
         "introducing": "全新发布",
-        "title": "Claude MCP 教程网",
+        "title": "Claude MCP 社区",
         "description": "Claude MCP（模型上下文协议）是 Claude 定制的一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，让AI更好地理解和处理代码。",
         "getStarted": "开始使用",
         "documentation": "查看文档",
-        "videoCourse": "视频课程"
+        "videoCourse": "视频课程",
+        "a2a": "A2A 协议"
       },
       "overview": {
         "title": "为什么选择 Claude MCP?",
