@@ -43,16 +43,16 @@
   },
   "Index": {
     "meta": {
-      "title": "Claude MCP - Model Context Protocol",
-      "description": "An open protocol standard for establishing unified context interaction between AI models and development environments",
+      "title": "Claude MCP (Model Context Protocol) Community",
+      "description": "Claude MCP is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, claudemcp.com is the community website for MCP, providing MCP documentation, example codes, server lists, and best practices.",
       "keywords": "AI, Protocol, Context, Development Environment, Claude",
       "og": {
-        "title": "Model Context Protocol",
-        "description": "An open protocol standard for establishing unified context interaction between AI models and development environments"
+        "title": "Claude MCP (Model Context Protocol) Community",
+        "description": "Claude MCP is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, claudemcp.com is the community website for MCP, providing MCP documentation, example codes, server lists, and best practices."
       },
       "twitter": {
-        "title": "Model Context Protocol",
-        "description": "An open protocol standard for establishing unified context interaction between AI models and development environments"
+        "title": "Claude MCP (Model Context Protocol) Community",
+        "description": "Claude MCP is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, claudemcp.com is the community website for MCP, providing MCP documentation, example codes, server lists, and best practices."
       }
     },
     "hero": {
@@ -217,7 +217,7 @@
     }
   },
   "footer": {
-    "description": "MCP Tutorial is a website dedicated to learning the MCP protocol, providing detailed introductions, example codes, and best practices.",
+    "description": "Claude MCP Community is a community website dedicated to the Claude MCP protocol, providing detailed introductions, example codes, server lists, and best practices.",
     "copyright": "All rights reserved.",
     "sections": {
       "product": "Product",
@@ -761,7 +761,8 @@
     "searchPlaceholder": "Enter keywords to search...",
     "serverDetails": "Server Details",
     "notFound": "Server Not Found",
-    "notFoundDescription": "The requested server could not be found."
+    "notFoundDescription": "The requested server could not be found.",
+    "submitServer": "Submit a Server"
   },
   "Docs": {
       "meta": {

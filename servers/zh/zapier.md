@@ -12,6 +12,7 @@ tags:
   - 自动化
 icon: /images/zapier-icon.png
 createTime: 2025-04-06
+featured: true
 ---
 
 [Zapier](https://zapier.com) 是一个基于云的自动化工具，允许用户通过“Zap”（自动化工作流）连接喜欢的应用程序。每个 Zap 包括一个触发器（启动工作流的事件）和一个或多个动作（执行的任务）。它支持超过 7000 多个应用和 30000 多个 actions，适合整合各种服务，简化业务流程。

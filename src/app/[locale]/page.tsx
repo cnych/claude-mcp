@@ -14,6 +14,7 @@ import { getLatestDocs } from '@/lib/docs';
 import { getBlogPosts } from '@/data/blog-posts';
 import { locales } from '@/i18n/config';
 import type { MCPClient } from '@/types/client';
+import type { MCPServer } from '@/types/server';
 
 // 设置静态生成和缓存
 export const revalidate = 3600; // 每小时重新验证
@@ -61,7 +62,9 @@ export default async function Home({ params }: PageProps) {
   const { locale } = await params;
   
   // 加载精选服务器数据
-  const { servers: featuredServers } = await loadServersData(locale, 6);
+  const { servers: featuredServers } = await loadServersData(locale, 0, (server: MCPServer) => {
+    return server.featured === true;
+  });
   
   // 加载精选客户端数据
   const { clients: featuredClients } = await loadClientsData(locale, 6, (client: MCPClient) => {

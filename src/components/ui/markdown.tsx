@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { remark } from "remark";
 import html from "remark-html";
+import remarkGfm from "remark-gfm";
 import { CodeBlock } from "./code-block";
 import { Mermaid } from "./mermaid";
 import { AD_CLIENT } from "@/lib/utils";
@@ -127,18 +128,143 @@ async function markdownToHtml(markdown: string): Promise<string> {
   }
 
   try {
+    // 预处理任务列表标记
+    let processedMarkdown = markdown;
+    
+    // 将任务列表标记替换为带有特殊类的HTML标记
+    processedMarkdown = processedMarkdown.replace(
+      /^(\s*)-\s*\[( |x|X)\]\s+(.*)$/gm, 
+      (match, indent, checked, content) => {
+        const isChecked = checked.toLowerCase() === 'x' ? 'checked' : '';
+        return `${indent}- <label class="task-list-item"><input type="checkbox" ${isChecked} disabled class="task-list-item-checkbox"> ${content}</label>`;
+      }
+    );
+    
+    // 直接替换特殊格式的表格 (以|开头和结尾的多行)
+    // 这是StackOverflow推荐的方法，直接用正则表达式替换
+    const tableRegex = /(\|[^\n]+\|\r?\n)+/g;
+    processedMarkdown = processedMarkdown.replace(tableRegex, (tableMatch) => {
+      // 分割表格行
+      const rows = tableMatch.split('\n').filter(row => row.trim().length > 0);
+      if (rows.length === 0) return tableMatch;
+      
+      // 构建HTML表格
+      let tableHtml = '<div class="overflow-x-auto my-6 custom-table-wrapper">\n';
+      tableHtml += '<table class="custom-table w-full border-collapse">\n';
+      
+      // 处理表格行
+      rows.forEach((row, rowIndex) => {
+        // 从行中提取单元格内容
+        const cellMatches = Array.from(row.matchAll(/\|(.*?)(?=\||$)/g))
+          .map(match => match[1].trim())
+          .filter(cell => cell !== '');
+          
+        if (cellMatches.length === 0) return;
+        
+        // 检查是否是分隔行 (全是 - 的行)
+        const isSeparator = cellMatches.every(cell => /^[-=\s]+$/.test(cell));
+        
+        // 跳过分隔行
+        if (isSeparator && rowIndex === 1) return;
+        
+        // 确定是表头还是表体
+        const isHeader = (rowIndex === 0);
+        const tag = isHeader ? 'th' : 'td';
+        
+        // 行开始
+        if (rowIndex === 0) {
+          tableHtml += '<thead>\n<tr class="bg-gray-100 dark:bg-gray-800">\n';
+        } else if (rowIndex === 1 && rows.length > 2) {
+          tableHtml += '<tbody>\n<tr class="bg-white dark:bg-gray-900">\n';
+        } else {
+          const bgClass = rowIndex % 2 === 0 
+            ? 'bg-white dark:bg-gray-900' 
+            : 'bg-gray-50 dark:bg-gray-800/50';
+          tableHtml += `<tr class="${bgClass}">\n`;
+        }
+        
+        // 添加单元格
+        cellMatches.forEach(cell => {
+          const cellClass = isHeader 
+            ? 'px-4 py-3 font-semibold text-left border-b-2 border-gray-300 dark:border-gray-600'
+            : 'px-4 py-3 border-b border-gray-200 dark:border-gray-700';
+          
+          // 检查是否有代码路径
+          const hasCodePath = cell.includes('/') || cell.includes('\\') || cell.includes('.json');
+          const extraClass = hasCodePath ? ' font-mono whitespace-nowrap' : '';
+          
+          tableHtml += `<${tag} class="${cellClass}${extraClass}">${cell}</${tag}>\n`;
+        });
+        
+        // 行结束
+        tableHtml += '</tr>\n';
+        
+        // 如果是第一行，关闭thead
+        if (rowIndex === 0) {
+          tableHtml += '</thead>\n';
+        }
+      });
+      
+      // 确保tbody被添加
+      if (!tableHtml.includes('<tbody>')) {
+        tableHtml += '<tbody>\n';
+      }
+      
+      // 关闭表格
+      tableHtml += '</tbody>\n</table>\n</div>\n';
+      
+      return tableHtml;
+    });
+
+    // 增加对独立行的表格处理 - 处理不连续的或最后一行表格
+    processedMarkdown = processedMarkdown.replace(/^\|(.+\|)+$/gm, (line) => {
+      // 检查是否已经被处理过（在HTML标签内）
+      if (/<\/?table|<\/?tr|<\/?td|<\/?th/.test(line)) {
+        return line; // 已经在表格标签内，不再处理
+      }
+
+      // 提取单元格内容
+      const cellMatches = Array.from(line.matchAll(/\|(.*?)(?=\||$)/g))
+        .map(match => match[1].trim())
+        .filter(cell => cell !== '');
+        
+      if (cellMatches.length === 0) return line;
+      
+      // 构建单行表格
+      let tableHtml = '<div class="overflow-x-auto my-6 custom-table-wrapper">\n';
+      tableHtml += '<table class="custom-table w-full border-collapse">\n';
+      tableHtml += '<tbody>\n';
+      tableHtml += '<tr class="bg-white dark:bg-gray-900">\n';
+      
+      // 添加单元格
+      cellMatches.forEach(cell => {
+        const cellClass = 'px-4 py-3 border-b border-gray-200 dark:border-gray-700';
+        
+        // 检查是否有代码路径
+        const hasCodePath = cell.includes('/') || cell.includes('\\') || cell.includes('.json');
+        const extraClass = hasCodePath ? ' font-mono whitespace-nowrap' : '';
+        
+        tableHtml += `<td class="${cellClass}${extraClass}">${cell}</td>\n`;
+      });
+      
+      // 关闭表格
+      tableHtml += '</tr>\n';
+      tableHtml += '</tbody>\n';
+      tableHtml += '</table>\n';
+      tableHtml += '</div>\n';
+      
+      return tableHtml;
+    });
+
+    // 继续使用remark处理其他Markdown内容
     const result = await remark()
-      .use(html, { sanitize: false }) // 不进行sanitize以保留原始HTML
-      .process(markdown);
+      .use(remarkGfm)
+      .use(html, { 
+        sanitize: false 
+      })
+      .process(processedMarkdown);
 
-    const htmlResult = result.toString();
-
-    // 简单检查HTML是否有内容
-    if (!htmlResult || htmlResult.trim() === "") {
-      console.warn("转换后的HTML为空");
-    }
-
-    return htmlResult;
+    return result.toString();
   } catch (error) {
     console.error("Markdown转换出错:", error);
     throw error;
@@ -264,6 +390,229 @@ export function Markdown({ content = "" }: MarkdownProps) {
         // 设置初始HTML
         if (containerRef.current) {
           containerRef.current.innerHTML = htmlContent;
+          
+          // 后处理任务列表
+          const taskItems = containerRef.current.querySelectorAll('.task-list-item');
+          taskItems.forEach((item) => {
+            // 移除列表项的默认样式
+            (item as HTMLElement).style.listStyleType = 'none';
+            
+            // 找到复选框并样式化
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+              (checkbox as HTMLInputElement).classList.add(
+                'form-checkbox', 'h-4', 'w-4',
+                'text-primary', 'border-gray-300', 'rounded',
+                'mr-2', 'focus:ring-primary', 'dark:border-gray-600'
+              );
+            }
+          });
+          
+          // 确保兼容性：处理可能已经通过remark-gfm渲染的常规任务列表复选框
+          const legacyCheckboxes = containerRef.current.querySelectorAll('li > input[type="checkbox"]:not(.task-list-item-checkbox)');
+          legacyCheckboxes.forEach((checkbox) => {
+            const input = checkbox as HTMLInputElement;
+            const listItem = input.parentElement;
+            
+            if (listItem) {
+              listItem.style.listStyleType = 'none';
+              input.classList.add(
+                'form-checkbox', 'h-4', 'w-4',
+                'text-primary', 'border-gray-300', 'rounded',
+                'mr-2', 'focus:ring-primary', 'dark:border-gray-600'
+              );
+            }
+          });
+          
+          // 作为最后的后备处理方案，仍然检查剩余的原始格式的 [x] 和 [ ] 
+          const allListItems = containerRef.current.querySelectorAll('li');
+          allListItems.forEach((li) => {
+            // 已经处理过的任务列表项跳过
+            if (li.classList.contains('task-list-item')) return;
+            if (li.querySelector('input[type="checkbox"]')) return;
+            
+            const text = li.textContent || '';
+            // 更强大的正则表达式，捕获多种任务列表格式
+            const match = text.match(/^\s*\[([ xX])\]\s(.+)$/);
+            
+            if (match) {
+              const isChecked = match[1].toLowerCase() === 'x';
+              
+              // 清除原始文本
+              li.innerHTML = li.innerHTML.replace(/^\s*\[([ xX])\]\s/, '');
+              
+              // 创建并插入复选框
+              const checkbox = document.createElement('input');
+              checkbox.type = 'checkbox';
+              checkbox.checked = isChecked;
+              checkbox.disabled = true;
+              checkbox.classList.add(
+                'form-checkbox', 'h-4', 'w-4',
+                'text-primary', 'border-gray-300', 'rounded',
+                'mr-2', 'focus:ring-primary', 'dark:border-gray-600'
+              );
+              
+              li.style.listStyleType = 'none';
+              li.insertBefore(checkbox, li.firstChild);
+            }
+          });
+          
+          // 处理特殊的竖线分隔表格
+          const pipeTables = containerRef.current.querySelectorAll('table.pipe-table');
+          pipeTables.forEach((table) => {
+            // 创建表格容器
+            const tableWrapper = document.createElement('div');
+            tableWrapper.className = 'overflow-x-auto my-6 rounded-md border border-gray-200 dark:border-gray-700';
+            
+            // 移动表格到新容器中
+            if (table.parentNode) {
+              table.parentNode.insertBefore(tableWrapper, table);
+              tableWrapper.appendChild(table);
+            }
+            
+            // 设置表格基本样式
+            table.className = 'w-full border-collapse text-sm';
+            
+            // 处理表头行
+            const headerRows = table.querySelectorAll('thead tr');
+            headerRows.forEach(row => {
+              row.className = 'bg-gray-100 dark:bg-gray-800';
+              
+              // 处理表头单元格
+              const headerCells = row.querySelectorAll('th');
+              headerCells.forEach(cell => {
+                (cell as HTMLTableCellElement).className = 'px-4 py-3 font-semibold text-gray-700 dark:text-gray-200 border-b-2 border-gray-300 dark:border-gray-600 border-r last:border-r-0';
+                (cell as HTMLTableCellElement).style.whiteSpace = 'nowrap';
+              });
+            });
+            
+            // 处理表格行
+            const bodyRows = table.querySelectorAll('tbody tr');
+            bodyRows.forEach((row, i) => {
+              // 设置基本样式和斑马条纹
+              const className = i % 2 === 0
+                ? 'border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900'
+                : 'border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50';
+              
+              row.className = className;
+              
+              // 处理单元格
+              const cells = row.querySelectorAll('td');
+              cells.forEach((cell) => {
+                const cellElement = cell as HTMLTableCellElement;
+                
+                // 根据内容类型设置不同的类
+                if (cellElement.classList.contains('separator-cell')) {
+                  cellElement.className = 'px-1 py-1 text-center text-gray-400 dark:text-gray-600 border-r last:border-r-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 font-mono';
+                } else if (cellElement.textContent?.includes('/') || cellElement.textContent?.includes('\\') || cellElement.textContent?.includes('.json')) {
+                  cellElement.className = 'px-4 py-3 text-gray-700 dark:text-gray-300 border-r last:border-r-0 border-gray-200 dark:border-gray-700 font-mono whitespace-nowrap';
+                } else {
+                  cellElement.className = 'px-4 py-3 text-gray-700 dark:text-gray-300 border-r last:border-r-0 border-gray-200 dark:border-gray-700';
+                }
+              });
+            });
+          });
+
+          // 增强标准表格样式
+          const tables = containerRef.current.querySelectorAll('table:not(.pipe-table)');
+          
+          if (tables.length > 0) {
+            console.log(`找到${tables.length}个表格，正在处理`);
+          }
+          
+          tables.forEach((table, tableIndex) => {
+            // 1. 创建表格容器以实现滚动
+            const tableWrapper = document.createElement('div');
+            tableWrapper.className = 'overflow-x-auto my-6 rounded-md border border-gray-200 dark:border-gray-700';
+            
+            // 2. 将表格移到容器中
+            table.parentNode?.insertBefore(tableWrapper, table);
+            tableWrapper.appendChild(table);
+            
+            // 3. 设置表格基本样式
+            table.className = 'w-full border-collapse text-sm';
+            (table as HTMLTableElement).style.minWidth = '100%';
+            
+            // 4. 处理表头 (thead)
+            const thead = table.querySelector('thead');
+            if (thead) {
+              thead.className = 'bg-gray-50 dark:bg-gray-800';
+              
+              const headerRows = thead.querySelectorAll('tr');
+              headerRows.forEach(row => {
+                row.className = 'border-b border-gray-200 dark:border-gray-700';
+                
+                const headerCells = row.querySelectorAll('th');
+                headerCells.forEach(cell => {
+                  cell.className = 'px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200 border-r last:border-r-0 border-gray-200 dark:border-gray-700';
+                  cell.style.whiteSpace = 'nowrap';
+                });
+              });
+            } else {
+              // 如果没有表头，创建一个虚拟表头
+              console.log(`表格 #${tableIndex + 1} 没有表头，尝试创建`);
+              const firstRow = table.querySelector('tr');
+              if (firstRow) {
+                const cellCount = firstRow.querySelectorAll('td').length;
+                if (cellCount > 0) {
+                  // 创建虚拟表头
+                  const newThead = document.createElement('thead');
+                  newThead.className = 'bg-gray-50 dark:bg-gray-800';
+                  
+                  const headerRow = document.createElement('tr');
+                  headerRow.className = 'border-b border-gray-200 dark:border-gray-700';
+                  
+                  for (let i = 0; i < cellCount; i++) {
+                    const th = document.createElement('th');
+                    th.className = 'px-4 py-3 text-left font-medium text-gray-700 dark:text-gray-200 border-r last:border-r-0 border-gray-200 dark:border-gray-700';
+                    th.textContent = `列 ${i+1}`;
+                    headerRow.appendChild(th);
+                  }
+                  
+                  newThead.appendChild(headerRow);
+                  table.insertBefore(newThead, table.firstChild);
+                }
+              }
+            }
+            
+            // 5. 处理表体 (tbody)
+            const tbody = table.querySelector('tbody') || table;
+            if (tbody !== table) {
+              tbody.className = 'bg-white dark:bg-gray-900';
+            }
+            
+            const rows = tbody.querySelectorAll('tr');
+            rows.forEach((row, rowIndex) => {
+              // 斑马纹样式
+              if (rowIndex % 2 === 0) {
+                row.className = 'bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700';
+              } else {
+                row.className = 'bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700';
+              }
+              
+              // 处理单元格
+              const cells = row.querySelectorAll('td');
+              cells.forEach((cell) => {
+                const cellElement = cell as HTMLTableCellElement;
+                
+                // 基本单元格样式
+                cellElement.className = 'px-4 py-3 text-gray-700 dark:text-gray-300 border-r last:border-r-0 border-gray-200 dark:border-gray-700';
+                
+                // 检查是否是分隔单元格（全是-或=的单元格）
+                if (cellElement.classList.contains('separator-cell')) {
+                  cellElement.className = 'px-1 py-1 text-center text-gray-400 dark:text-gray-600 border-r last:border-r-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800';
+                  cellElement.style.fontFamily = 'monospace';
+                }
+                
+                // 如果单元格内容是代码路径，则使用等宽字体
+                const text = cellElement.textContent || '';
+                if (text.includes('/') || text.includes('\\') || text.includes('.json')) {
+                  cellElement.style.fontFamily = 'monospace';
+                  cellElement.style.whiteSpace = 'nowrap';
+                }
+              });
+            });
+          });
 
           // 处理AdSense嵌入
           const adsenseEmbeds =
@@ -393,6 +742,24 @@ export function Markdown({ content = "" }: MarkdownProps) {
               />
             );
           });
+
+          // 确保表格正确渲染
+          const customTables = containerRef.current.querySelectorAll('.custom-table');
+          customTables.forEach((table) => {
+            const tableElement = table as HTMLTableElement;
+            
+            // 添加一些交互增强
+            const rows = tableElement.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+              // 添加悬停效果
+              row.addEventListener('mouseenter', () => {
+                row.classList.add('bg-gray-100', 'dark:bg-gray-800/70');
+              });
+              row.addEventListener('mouseleave', () => {
+                row.classList.remove('bg-gray-100', 'dark:bg-gray-800/70');
+              });
+            });
+          });
         }
       }, 0);
     } catch (e) {
@@ -453,6 +820,10 @@ export function Markdown({ content = "" }: MarkdownProps) {
     <div
       ref={containerRef}
       className="prose prose-blue dark:prose-invert max-w-none"
+      style={{
+        // 添加任务列表的全局样式
+        '--task-list-item-checkbox-margin': '0.25em 0.5em 0.25em 0',
+      } as React.CSSProperties}
     />
   );
 }

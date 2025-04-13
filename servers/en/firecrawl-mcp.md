@@ -13,6 +13,7 @@ tags:
   - web extraction
 icon: https://avatars.githubusercontent.com/u/135057108?s=48&v=4
 createTime: 2025-04-09
+featured: true
 ---
 
 Firecrawl MCP is an MCP server implementation that utilizes [Firecrawl](https://firecrawl.dev/) for web crawling, providing advanced web scraping, content extraction, and data processing capabilities for Cursor, Claude, and other MCP clients. It seamlessly integrates with various MCP clients through the Model Context Protocol (MCP), enabling AI systems to directly access and process web content.

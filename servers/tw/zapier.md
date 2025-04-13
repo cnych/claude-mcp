@@ -12,6 +12,7 @@ tags:
   - 自動化
 icon: /images/zapier-icon.png
 createTime: 2025-04-06
+featured: true
 ---
 
 [Zapier](https://zapier.com) 是一個基於雲端的自動化工具，允許使用者透過「Zap」（自動化工作流程）串接喜愛的應用程式。每個 Zap 包含一個觸發器（啟動工作流程的事件）與一個或多個動作（執行的任務）。它支援超過 7,000 個應用程式與 30,000 多種 actions，適合整合各類服務，簡化業務流程。

@@ -13,6 +13,7 @@ tags:
   - 反链
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
+featured: true
 ---
 
 这个 MCP 服务器使用 Ahrefs 的数据检索任何域名的反链信息。

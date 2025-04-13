@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claude MCP Community Website
 
-## Getting Started
+![MCP Logo](/public/logo.png)
 
-First, run the development server:
+This repository contains the source code for [claudemcp.com](https://www.claudemcp.com), a community website for the Model Context Protocol (MCP). The site serves as a hub for MCP documentation, server directory, client information, and community resources.
+
+## 📋 MCP Servers and Clients
+
+### Featured MCP Servers
+
+The following MCP servers are currently documented on the website:
+
+- **[Backlinks MCP](https://www.claudemcp.com/servers/backlinks-mcp)** - Server for retrieving backlinks information for domains
+- **[Blender MCP](https://github.com/ahujasid/blender-mcp)** - Integration with Blender 3D modeling software
+- **[Brave Search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)** - Web search capabilities using Brave's search engine
+- **[Claudflare](https://www.claudemcp.com/servers/cloudflare)** - Integration with Cloudflare services
+- **[Fetch](https://www.claudemcp.com/servers/fetch)** - Web content fetching and processing
+- **[Figma Context](https://github.com/glips/figma-context-mcp)** - Access and manipulation of Figma designs
+- **[Firecrawl](https://github.com/mendableai/firecrawl-mcp-server)** - Advanced web scraping and crawling capabilities
+- **Filesystem** - Secure file system operations with configurable access
+- **Git** - Git repository operations and management
+- **GitHub** - GitHub API integration for repository management
+- **Google Drive** - Access and management of Google Drive files
+- **Playwright** - Browser automation and testing
+- **PostgreSQL** - PostgreSQL database interactions
+- **Puppeteer** - Headless browser automation
+- **SQLite** - SQLite database interactions
+- **Zapier** - Integration with thousands of web services through Zapier
+
+### Featured MCP Clients
+
+The website features information about these MCP client applications:
+
+- **Claude Desktop** - Official desktop application by Anthropic
+- **Continue** - AI-powered software development environment
+- **Cursor** - Code editor with AI assistant capabilities
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn
+
+### Development Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/cnych/claude-mcp.git
+cd claude-mcp
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/src/app/[locale]` - Application routes with internationalization support
+- `/src/components` - Reusable UI components
+- `/src/i18n` - Internationalization configuration
+- `/src/messages` - Translation files for multiple languages
+- `/servers` - Content files for MCP servers
+- `/clients` - Content files for MCP clients
+- `/docs` - Documentation content files
+- `/blogs` - Blog post content files
 
-## Learn More
+## 🌐 Internationalization
 
-To learn more about Next.js, take a look at the following resources:
+The website supports the following languages:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- English (en)
+- Korean (ko)
+- Simplified Chinese (zh)
+- Traditional Chinese (tw)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To add content in a specific language, place your files in the corresponding language directory under the content folders.
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We welcome contributions to the Claude MCP Community website! Here are ways you can contribute:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Contributing Servers
+
+1. Fork the repository
+2. Create a new file in the `/servers/{locale}` directory following the existing format
+3. Submit a pull request with your server information
+
+Alternatively, use the "Submit a Server" button on the [Servers page](https://www.claudemcp.com/servers) to create a pull request directly.
+
+### Contributing to the Website
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a pull request
+
+### Translation Contributions
+
+We appreciate help with translations. To contribute:
+
+1. Check the `/src/messages` directory for translation files
+2. Add or improve translations for your language
+3. Submit a pull request with your changes

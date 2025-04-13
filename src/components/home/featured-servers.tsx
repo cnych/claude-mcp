@@ -16,9 +16,7 @@ export function FeaturedServers({ servers }: FeaturedServersProps) {
 
   if (!servers || servers.length === 0) {
     return (
-      <div className="flex justify-center items-center py-12">
-        <p className="text-gray-600 dark:text-gray-300">{t("noServers")}</p>
-      </div>
+      <></>
     );
   }
 

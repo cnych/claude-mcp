@@ -14,6 +14,7 @@ export interface MCPServer {
   };
   tags: string[];
   createTime: string;
+  featured?: boolean;
 }
 
 export interface ServerSearchParams {

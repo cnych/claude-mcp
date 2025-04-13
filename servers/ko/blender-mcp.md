@@ -12,6 +12,7 @@ tags:
   - 3D
 icon: https://avatars.githubusercontent.com/u/11807284?s=48&v=4
 createTime: 2025-04-07
+featured: true
 ---
 
 [Blender MCP](https://github.com/ahujasid/blender-mcp)는 Model Context Protocol(MCP)을 통해 대형 언어 모델과 연결되어 Blender와 직접 상호작용하고 제어할 수 있게 해주는 Blender MCP 서버입니다. 이 통합을 통해 프롬프트를 이용한 3D 모델링 보조, 장면 생성 및 조작이 가능해집니다. 특히 워크플로우를 간소화하고자 하는 초보자와 전문가 모두에게 적합합니다.

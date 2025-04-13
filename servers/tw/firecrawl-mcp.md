@@ -13,6 +13,7 @@ tags:
   - 網頁擷取
 icon: https://avatars.githubusercontent.com/u/135057108?s=48&v=4
 createTime: 2025-04-09
+featured: true
 ---
 
 Firecrawl MCP 是使用 [Firecrawl](https://firecrawl.dev/) 來爬取網頁的 MCP 伺服器實作，為 Cursor、Claude 以及其他 MCP 客戶端提供了進階的網頁爬取、內容擷取和資料處理能力。它透過 Model Context Protocol (MCP) 與各種 MCP 客戶端無縫整合，使 AI 能夠直接存取和處理網路內容。

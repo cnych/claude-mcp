@@ -77,6 +77,7 @@ export async function loadServersData(
             prompts: data.prompts === true,
           },
           tags: tags,
+          featured: Boolean(data.featured),
         };
         
         // 应用过滤函数

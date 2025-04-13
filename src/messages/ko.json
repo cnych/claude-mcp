@@ -43,16 +43,16 @@
     },
     "Index": {
       "meta": {
-        "title": "Claude MCP - 모델 컨텍스트 프로토콜",
-        "description": "Claude MCP는 AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준입니다",
+        "title": "Claude MCP（모델 컨텍스트 프로토콜）커뮤니티",
+        "description": "Claude MCP는 AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준입니다, claudemcp.com 은 MCP 의 커뮤니티 웹사이트로, MCP 의 문서, 예제 코드, 서버 목록 및 최선의 사례를 제공합니다.",
         "keywords": "AI, 프로토콜, 컨텍스트, 개발 환경, Claude",
         "og": {
-          "title": "Claude MCP - 모델 컨텍스트 프로토콜",
-          "description": "Claude MCP는 AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준입니다"
+          "title": "Claude MCP（모델 컨텍스트 프로토콜）커뮤니티",
+          "description": "Claude MCP는 AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준입니다, claudemcp.com 은 MCP 의 커뮤니티 웹사이트로, MCP 의 문서, 예제 코드, 서버 목록 및 최선의 사례를 제공합니다."
         },
         "twitter": {
-          "title": "Claude MCP - 모델 컨텍스트 프로토콜",
-          "description": "AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준"
+          "title": "Claude MCP（모델 컨텍스트 프로토콜）커뮤니티",
+          "description": "Claude MCP는 AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 위한 개방형 프로토콜 표준, claudemcp.com 은 MCP 의 커뮤니티 웹사이트로, MCP 의 문서, 예제 코드, 서버 목록 및 최선의 사례를 제공합니다."
         }
       },
       "hero": {
@@ -217,7 +217,7 @@
       }
     },
     "footer": {
-      "description": "MCP 튜토리얼 사이트는 MCP 프로토콜에 중점을 둔 학습 사이트로, MCP 프로토콜의 상세한 소개, 예제 코드 및 모범 사례를 제공합니다.",
+      "description": "Claude MCP 커뮤니티는 Claude MCP 프로토콜에 중점을 둔 커뮤니티 웹사이트로, Claude MCP 프로토콜의 상세한 소개, 예제 코드, 서버 목록 및 모범 사례를 제공합니다.",
       "copyright": "모든 권리 보유.",
       "sections": {
         "product": "제품",
@@ -762,7 +762,8 @@
       "searchPlaceholder": "키워드 입력...",
       "serverDetails": "서버 세부 정보",
       "notFound": "서버를 찾을 수 없습니다",
-      "notFoundDescription": "요청한 서버를 찾을 수 없습니다."
+      "notFoundDescription": "요청한 서버를 찾을 수 없습니다.",
+      "submitServer": "서버 제출하기"
     },
     "Docs": {
       "meta": {

@@ -13,6 +13,7 @@ tags:
   - 백링크
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
+featured: true
 ---
 
 이 MCP 서버는 Ahrefs 데이터를 활용하여 모든 도메인의 백링크 정보를 검색합니다.

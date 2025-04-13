@@ -13,6 +13,7 @@ tags:
   - 设计
 icon: /icons/figma-context-mcp-icon.png
 createTime: 2025-04-11
+featured: true
 ---
 
 [Figma Context MCP](/servers/figma-context-mcp) 是一个强大的 [MCP Server](/servers)，可以帮助开发者直接从 Figma 设计稿中提取信息，并通过 AI 代理快速实现设计。比如在 Cursor 中可以通过提示词让 AI Agent 访问你的 Figma 设计数据，并生成代码。与直接粘贴屏幕截图相比，它最终的表现结果要好得多。

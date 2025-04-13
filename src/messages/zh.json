@@ -69,16 +69,16 @@
     },
     "Index": {
       "meta": {
-        "title": "Claude MCP - 模型上下文协议",
-        "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互",
+        "title": "Claude MCP（模型上下文协议）社区",
+        "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。",
         "keywords": "AI, 协议, 上下文, 开发环境, Claude",
         "og": {
-          "title": "Claude MCP - 模型上下文协议",
-          "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互"
+          "title": "Claude MCP（模型上下文协议）社区",
+          "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         },
         "twitter": {
-          "title": "Claude MCP - 模型上下文协议",
-          "description": "一个开放的协议标准，用于在AI模型和开发环境间建立统一的上下文交互"
+          "title": "Claude MCP（模型上下文协议）社区",
+          "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         }
       },
       "hero": {
@@ -243,7 +243,7 @@
       }
     },
     "footer": {
-      "description": "MCP 教程网是一个专注于 MCP 协议的学习网站，提供 MCP 协议的详细介绍、示例代码和最佳实践。",
+      "description": "Claude MCP 社区是一个专注于 Claude MCP 协议的社区网站，提供 Claude MCP 协议的详细介绍、示例代码、服务器目录和最佳实践。",
       "copyright": "保留所有权利。",
       "sections": {
         "product": "产品",
@@ -788,18 +788,19 @@
       "searchPlaceholder": "输入关键词搜索...",
       "serverDetails": "服务器详情",
       "notFound": "服务器未找到",
-      "notFoundDescription": "请求的服务器无法找到。"
+      "notFoundDescription": "请求的服务器无法找到。",
+      "submitServer": "提交服务器"
     },
     "Docs": {
       "meta": {
-          "title": "MCP 文档",
-          "description": "Claude MCP协议的官方文档平台，提供开发者资源和社区协作。",
+          "title": "Claude MCP 文档",
+          "description": "Claude MCP 协议的官方文档平台，提供开发者资源和社区协作。",
           "og": {
-            "title": "MCP 文档", 
+            "title": "Claude MCP 文档", 
             "description": "Claude MCP协议的官方文档平台，提供开发者资源和社区协作。"
           },
           "twitter": {
-            "title": "MCP 文档",
+            "title": "Claude MCP 文档",
             "description": "Claude MCP协议的官方文档平台，提供开发者资源和社区协作。"
           }
         },

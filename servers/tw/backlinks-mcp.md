@@ -13,6 +13,7 @@ tags:
   - 反向連結
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
+featured: true
 ---
 
 這個 MCP 伺服器使用 Ahrefs 的資料擷取任何網域的反向連結資訊。

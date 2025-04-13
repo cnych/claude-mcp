@@ -13,6 +13,7 @@ tags:
   - 웹 추출
 icon: https://avatars.githubusercontent.com/u/135057108?s=48&v=4
 createTime: 2025-04-09
+featured: true
 ---
 
 Firecrawl MCP는 [Firecrawl](https://firecrawl.dev/)을 사용하여 웹 페이지를 스크랩하는 MCP 서버 구현으로, Cursor, Claude 및 기타 MCP 클라이언트에 고급 웹 스크래핑, 콘텐츠 추출 및 데이터 처리 기능을 제공합니다. Model Context Protocol (MCP)을 통해 다양한 MCP 클라이언트와 원활하게 통합되어 AI가 웹 콘텐츠에 직접 접근하고 처리할 수 있도록 합니다.

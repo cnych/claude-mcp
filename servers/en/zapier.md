@@ -12,6 +12,7 @@ tags:
   - automation
 icon: /images/zapier-icon.png
 createTime: 2025-04-06
+featured: true
 ---
 
 [Zapier](https://zapier.com) is a cloud-based automation tool that allows users to connect their favorite applications through "Zaps" (automated workflows). Each Zap consists of a trigger (an event that initiates the workflow) and one or more actions (tasks to be executed). It supports over 7,000 applications and more than 30,000 actions, making it ideal for integrating various services and streamlining business processes.

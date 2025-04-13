@@ -12,6 +12,7 @@ tags:
   - 3D
 icon: https://avatars.githubusercontent.com/u/11807284?s=48&v=4
 createTime: 2025-04-07
+featured: true
 ---
 
 [Blender MCP](https://github.com/ahujasid/blender-mcp) is a Blender MCP server that connects to large language models via the Model Context Protocol (MCP), enabling direct interaction and control of Blender. This integration makes it possible to assist with 3D modeling, scene creation, and manipulation through prompts. It is particularly suitable for both beginners and professionals looking to streamline their workflows.

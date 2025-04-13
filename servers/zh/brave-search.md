@@ -13,6 +13,7 @@ tags:
   - api
 icon: https://cdn.simpleicons.org/brave
 createTime: 2024-12-01T00:00:00Z
+featured: true
 ---
 
 一个集成了 Brave 搜索 API 的 MCP 服务器实现，提供网页和本地搜索功能。

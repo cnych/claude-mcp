@@ -43,16 +43,16 @@
   },
   "Index": {
     "meta": {
-      "title": "Claude MCP - 模型上下文協議",
-      "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動",
+      "title": "Claude MCP（模型上下文協議）社區",
+      "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動，claudemcp.com 是 MCP 的社區網站，提供 MCP 的文件、示例代碼、服務器目錄和最佳實踐。",
       "keywords": "AI, 協議, 上下文, 開發環境, Claude",
       "og": {
-        "title": "Claude MCP - 模型上下文協議",
-        "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動"
+        "title": "Claude MCP（模型上下文協議）社區",
+        "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境之間建立統一的上下文互動，claudemcp.com 是 MCP 的社區網站，提供 MCP 的文件、示例代碼、服務器目錄和最佳實踐。"
       },
       "twitter": {
-        "title": "Claude MCP - 模型上下文協議",
-        "description": "一個開放的協議標準，用於在 AI 模型和開發環境間建立統一的上下文互動"
+        "title": "Claude MCP（模型上下文協議）社區",
+        "description": "Claude MCP 是一個開放的協議標準，用於在 AI 模型和開發環境間建立統一的上下文互動，claudemcp.com 是 MCP 的社區網站，提供 MCP 的文件、示例代碼、服務器目錄和最佳實踐。"
       }
     },
     "hero": {
@@ -217,7 +217,7 @@
     }
   },
   "footer": {
-    "description": "Claude MCP 教程網是一個專注於 Claude MCP 協議的學習網站，提供 Claude MCP 協議的詳細介紹、示例代碼和最佳實踐。",
+    "description": "Claude MCP 社區是一個專注於 Claude MCP 協議的社區網站，提供 Claude MCP 協議的詳細介紹、示例代碼、服務器目錄和最佳實踐。",
     "copyright": "保留所有權利。",
     "sections": {
       "product": "產品",
@@ -742,7 +742,8 @@
     "searchPlaceholder": "輸入關鍵詞搜尋...",
     "serverDetails": "伺服器詳情",
     "notFound": "伺服器未找到",
-    "notFoundDescription": "請求的伺服器無法找到。"
+    "notFoundDescription": "請求的伺服器無法找到。",
+    "submitServer": "提交伺服器"
   },
   "Docs": {
     "meta": {

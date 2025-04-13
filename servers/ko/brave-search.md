@@ -12,7 +12,8 @@ tags:
   - search
   - api
 icon: https://cdn.simpleicons.org/brave
-createTime: 2024-12-01T00:00:00Z
+createTime: 2024-12-01
+featured: true
 ---
 
 An MCP server implementation that integrates the Brave Search API, providing both web and local search capabilities.

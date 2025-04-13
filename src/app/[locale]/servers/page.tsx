@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { loadServersData } from '@/lib/data-utils';
 import { locales } from '@/i18n/config';
 import type { MCPServer } from '@/types/server';
+import { SubmitServerButton } from '@/components/SubmitServerButton';
 
 // 设置静态生成和缓存
 export const revalidate = 3600; // 每小时重新验证
@@ -91,9 +92,12 @@ export default async function ServersPage({ params, searchParams }: PageProps) {
   
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="max-w-7xl mx-auto text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">
-        {t('title')}
-      </h1>
+      <div className="max-w-7xl mx-auto flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+          {t('title')}
+        </h1>
+        <SubmitServerButton />
+      </div>
       
       <div className="space-y-6 max-w-7xl mx-auto">
         <SearchBar position="Servers" />

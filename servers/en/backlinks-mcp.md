@@ -1,186 +1,187 @@
 ---
-name: Backlinks MCP  
-digest: An MCP server that retrieves backlink information for any domain using Ahrefs data  
-author: cnych  
-repository: https://github.com/cnych/backlinks-mcp  
-homepage: https://www.claudemcp.com/servers/backlinks-mcp  
-capabilities:  
-  prompts: false  
-  resources: false  
-  tools: true  
-tags:  
-  - SEO  
-  - Backlinks  
-icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4  
-createTime: 2025-04-12  
----  
+name: Backlinks MCP
+digest: An MCP server that retrieves backlink information for any domain using Ahrefs data
+author: cnych
+repository: https://github.com/cnych/backlinks-mcp
+homepage: https://www.claudemcp.com/servers/backlinks-mcp
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - SEO
+  - Backlinks
+icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
+createTime: 2025-04-12
+featured: true
+---
 
-This MCP server retrieves backlink information for any domain using Ahrefs data.  
+This MCP server retrieves backlink information for any domain using Ahrefs data.
 
-## Features  
+## Features
 
-- 🔍 Retrieve backlink information for any domain  
-- 🔒 Automatically solve Cloudflare Turnstile CAPTCHAs  
-- 💾 Signature caching for improved performance and reduced API costs  
-- 🚀 Fast and efficient data retrieval  
-- 🧹 Streamlined output with only the most relevant backlink details  
-
-## Installation  
-
-> This MCP server is for educational purposes only. Please refrain from misuse, as you assume full responsibility for any consequences. Inspired by the `@Gofei Community`.  
-
-## Features  
-
-- 🔍 Retrieve backlink information for any domain  
-- 🔒 Automatically solve Cloudflare Turnstile CAPTCHAs  
-- 💾 Signature caching for improved performance and reduced API costs  
-- 🚀 Fast and efficient data retrieval  
-- 🧹 Streamlined output with only the most relevant backlink details  
+- 🔍 Retrieve backlink information for any domain
+- 🔒 Automatically solve Cloudflare Turnstile CAPTCHAs
+- 💾 Signature caching for improved performance and reduced API costs
+- 🚀 Fast and efficient data retrieval
+- 🧹 Streamlined output with only the most relevant backlink details
 
 ## Installation
 
-### Prerequisites  
+> This MCP server is for educational purposes only. Please refrain from misuse, as you assume full responsibility for any consequences. Inspired by the `@Gofei Community`.
 
-- Python 3.8 or later  
-- A CapSolver account and API key (register [here](https://dashboard.capsolver.com/passport/register?inviteCode=1dTH7WQSfHD0))  
-- `uv` installation (on macOS, you may need `brew install uv`)  
+## Features
 
-### Manual Installation  
+- 🔍 Retrieve backlink information for any domain
+- 🔒 Automatically solve Cloudflare Turnstile CAPTCHAs
+- 💾 Signature caching for improved performance and reduced API costs
+- 🚀 Fast and efficient data retrieval
+- 🧹 Streamlined output with only the most relevant backlink details
 
-1. Clone the repository:  
+## Installation
 
-   ```bash  
-   git clone https://github.com/cnych/backlinks-mcp.git  
-   cd backlinks-mcp  
-   ```  
+### Prerequisites
 
-2. Install FastMCP using uv:  
+- Python 3.8 or later
+- A CapSolver account and API key (register [here](https://dashboard.capsolver.com/passport/register?inviteCode=1dTH7WQSfHD0))
+- `uv` installation (on macOS, you may need `brew install uv`)
 
-   ```bash  
-   uv pip install fastmcp  
-   ```  
+### Manual Installation
 
-3. Set your CapSolver API key:  
-   ```bash  
-   export CAPSOLVER_API_KEY="your-capsolver-api-key"  
-   ```  
+1. Clone the repository:
 
-## Usage  
+   ```bash
+   git clone https://github.com/cnych/backlinks-mcp.git
+   cd backlinks-mcp
+   ```
 
-### Running the Service  
+2. Install FastMCP using uv:
 
-You can run the service with FastMCP in several ways:  
+   ```bash
+   uv pip install fastmcp
+   ```
 
-#### Install in Claude Desktop  
+3. Set your CapSolver API key:
+   ```bash
+   export CAPSOLVER_API_KEY="your-capsolver-api-key"
+   ```
 
-Install this server in Claude Desktop for immediate interaction:  
+## Usage
 
-```bash  
-fastmcp install src/backlinks_mcp/server.py  
-```  
+### Running the Service
 
-#### Test with MCP Inspector  
+You can run the service with FastMCP in several ways:
 
-For development and testing:  
+#### Install in Claude Desktop
 
-```bash  
-fastmcp dev src/backlinks_mcp/server.py  
-```  
+Install this server in Claude Desktop for immediate interaction:
 
-#### Install in Cursor IDE  
+```bash
+fastmcp install src/backlinks_mcp/server.py
+```
 
-In Cursor settings, switch to the MCP tab, click `+Add new global MCP server`, and enter:  
+#### Test with MCP Inspector
 
-```json  
-{  
-  "mcpServers": {  
-    "Backlink MCP": {  
-      "command": "uvx",  
-      "args": ["backlinks-mcp"],  
-      "env": {  
-        "CAPSOLVER_API_KEY": "CAP-xxxxxx"  
-      }  
-    }  
-  }  
-}  
-```  
+For development and testing:
 
-Alternatively, create a `.cursor/mcp.json` file in the project root with the above content for project-specific MCP servers.  
+```bash
+fastmcp dev src/backlinks_mcp/server.py
+```
 
-> Obtain the `CAPSOLVER_API_KEY` environment variable [here](https://dashboard.capsolver.com/passport/register?inviteCode=1dTH7WQSfHD0).  
+#### Install in Cursor IDE
 
-Usage in Cursor:  
+In Cursor settings, switch to the MCP tab, click `+Add new global MCP server`, and enter:
 
-![Use Backlinks MCP on Cursor](/images/backlinks-mcp-on-cursor.png)  
+```json
+{
+  "mcpServers": {
+    "Backlink MCP": {
+      "command": "uvx",
+      "args": ["backlinks-mcp"],
+      "env": {
+        "CAPSOLVER_API_KEY": "CAP-xxxxxx"
+      }
+    }
+  }
+}
+```
 
-### API Reference  
+Alternatively, create a `.cursor/mcp.json` file in the project root with the above content for project-specific MCP servers.
 
-This service exposes the following MCP tool:  
+> Obtain the `CAPSOLVER_API_KEY` environment variable [here](https://dashboard.capsolver.com/passport/register?inviteCode=1dTH7WQSfHD0).
 
-#### `get_backlinks_list(domain: str)`  
+Usage in Cursor:
 
-Retrieves a list of backlinks for the specified domain.  
+![Use Backlinks MCP on Cursor](/images/backlinks-mcp-on-cursor.png)
 
-**Parameters:**  
+### API Reference
 
-- `domain` (string): Target domain (e.g., "example.com")  
+This service exposes the following MCP tool:
 
-**Returns:**  
+#### `get_backlinks_list(domain: str)`
 
-A list of backlink objects, each containing:  
+Retrieves a list of backlinks for the specified domain.
 
-- `anchor`: Backlink anchor text  
-- `domainRating`: Domain Rating (0-100)  
-- `title`: Title of the linking page  
-- `urlFrom`: URL of the page containing the backlink  
-- `urlTo`: Linked URL  
-- `edu`: Whether from an educational site  
-- `gov`: Whether from a government site  
+**Parameters:**
 
-**Example Response:**  
+- `domain` (string): Target domain (e.g., "example.com")
 
-```json  
-[  
-  {  
-    "anchor": "example link",  
-    "domainRating": 76,  
-    "title": "Useful Resources",  
-    "urlFrom": "https://referringsite.com/resources",  
-    "urlTo": "https://example.com/page",  
-    "edu": false,  
-    "gov": false  
-  },  
-  ...  
-]  
-```  
+**Returns:**
 
-## Development  
+A list of backlink objects, each containing:
 
-For development, clone the repository and install dependencies:  
+- `anchor`: Backlink anchor text
+- `domainRating`: Domain Rating (0-100)
+- `title`: Title of the linking page
+- `urlFrom`: URL of the page containing the backlink
+- `urlTo`: Linked URL
+- `edu`: Whether from an educational site
+- `gov`: Whether from a government site
 
-```bash  
-git clone https://github.com/cnych/backlinks-mcp.git  
-cd backlinks-mcp  
-uv sync  
-```  
+**Example Response:**
 
-## How It Works  
+```json
+[
+  {
+    "anchor": "example link",
+    "domainRating": 76,
+    "title": "Useful Resources",
+    "urlFrom": "https://referringsite.com/resources",
+    "urlTo": "https://example.com/page",
+    "edu": false,
+    "gov": false
+  },
+  ...
+]
+```
 
-1. The service first attempts to retrieve cached domain signatures.  
-2. If no valid cache exists, it:  
-   - Uses CapSolver to bypass Cloudflare Turnstile CAPTCHAs  
-   - Obtains signatures and validity periods from Ahrefs  
-   - Caches this information for future use  
-3. Retrieves backlink data using the signature  
-4. Processes and returns streamlined backlink information  
+## Development
 
-## Troubleshooting  
+For development, clone the repository and install dependencies:
 
-- **CapSolver API Key Error**: Ensure the `CAPSOLVER_API_KEY` environment variable is correctly set  
-- **Rate Limiting**: Reduce usage frequency if encountering rate limits  
-- **No Results**: Some domains may lack backlinks or remain unindexed by Ahrefs  
-- **Issues**: For troubleshooting, refer to the [Backlinks MCP GitHub repository](https://github.com/cnych/backlinks-mcp)  
+```bash
+git clone https://github.com/cnych/backlinks-mcp.git
+cd backlinks-mcp
+uv sync
+```
 
-## License  
+## How It Works
+
+1. The service first attempts to retrieve cached domain signatures.
+2. If no valid cache exists, it:
+   - Uses CapSolver to bypass Cloudflare Turnstile CAPTCHAs
+   - Obtains signatures and validity periods from Ahrefs
+   - Caches this information for future use
+3. Retrieves backlink data using the signature
+4. Processes and returns streamlined backlink information
+
+## Troubleshooting
+
+- **CapSolver API Key Error**: Ensure the `CAPSOLVER_API_KEY` environment variable is correctly set
+- **Rate Limiting**: Reduce usage frequency if encountering rate limits
+- **No Results**: Some domains may lack backlinks or remain unindexed by Ahrefs
+- **Issues**: For troubleshooting, refer to the [Backlinks MCP GitHub repository](https://github.com/cnych/backlinks-mcp)
+
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.

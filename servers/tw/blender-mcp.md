@@ -12,6 +12,7 @@ tags:
   - 3D
 icon: https://avatars.githubusercontent.com/u/11807284?s=48&v=4
 createTime: 2025-04-07
+featured: true
 ---
 
 [Blender MCP](https://github.com/ahujasid/blender-mcp) 是一個 Blender MCP 伺服器，透過 Model Context Protocol (MCP)與大型語言模型連接，讓大型語言模型能直接與 Blender 互動和控制。這個整合讓使用者能透過提示詞來輔助 3D 建模、場景建立與操作。特別適合想簡化流程的初學者和專業人士。
