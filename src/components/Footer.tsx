@@ -17,8 +17,10 @@ export function Footer() {
       { name: 'DeepSite', href: 'https://www.deepsite.app?ref=claude-mcp' },
     ],
     community: [
-      { name: t('links.github'), href: 'https://github.com/modelcontextprotocol' },
-      { name: 'Documentation', href: '/docs' as keyof Pathnames },
+      { name: t('links.github'), href: 'https://github.com/cnych/claude-mcp' },
+      { name: tNav('documentation'), href: '/docs' as keyof Pathnames },
+      { name: tNav('specification'), href: '/specification' as keyof Pathnames },
+      { name: tNav('blog'), href: '/blog' as keyof Pathnames },
     ],
   }
 

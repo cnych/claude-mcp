@@ -91,15 +91,15 @@ export default async function ServersPage({ params, searchParams }: PageProps) {
   const { servers, tags } = await loadServersData(locale, undefined, filterFn);
   
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="max-w-7xl mx-auto flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
           {t('title')}
         </h1>
         <SubmitServerButton />
       </div>
       
-      <div className="space-y-6 max-w-7xl mx-auto">
+      <div className="space-y-4 sm:space-y-6 max-w-7xl mx-auto">
         <SearchBar position="Servers" />
         <TagList initialTags={tags} />
         <ServerList servers={servers} />

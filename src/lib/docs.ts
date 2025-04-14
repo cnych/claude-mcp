@@ -23,7 +23,6 @@ export async function getDocList(locale: string = 'en'): Promise<Record<string, 
   try {
     // 确保语言代码有效，否则回退到英文
     if (!locale || typeof locale !== 'string' || !locales.includes(locale as any)) {
-      console.log(`无效的语言代码 ${locale}，使用默认值 'en'`);
       locale = 'en';
     }
 

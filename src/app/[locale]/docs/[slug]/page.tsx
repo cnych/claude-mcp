@@ -7,6 +7,7 @@ import { readFile, readdir } from 'fs/promises';
 import path from 'path';
 import { locales } from '@/i18n/config';
 import { getDocList, type DocMeta } from '@/lib/docs';
+import matter from 'gray-matter';
 
 
 // 设置静态生成和缓存
@@ -22,7 +23,8 @@ async function loadDocContent(locale: string, slug: string) {
   try {
     const filePath = path.join(process.cwd(), 'docs', locale, `${slug}.md`);
     const content = await readFile(filePath, 'utf-8');
-    return { content };
+    const matterResult = matter(content);
+    return { content: matterResult.content, data: matterResult.data };
   } catch (error) {
     console.error(`Failed to load doc content for ${locale}/${slug}:`, error);
     return { error: new Error('Document not found') };

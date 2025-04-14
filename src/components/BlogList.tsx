@@ -33,7 +33,7 @@ export default function BlogList({ posts, categories }: BlogListProps) {
   const otherPosts = filteredPosts.filter(post => post.id !== featuredPost.id);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 px-4 sm:px-0">
       {/* 搜索栏 - 现在移到最上面 */}
       <div className="relative max-w-md mx-auto">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />

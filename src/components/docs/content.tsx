@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Markdown } from '@/components/ui/markdown';
+import { MarkdownComponent as Markdown } from '@/components/ui/markdown';
 
 // 移除SWR客户端获取
 type DocContentProps = {

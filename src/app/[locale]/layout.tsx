@@ -33,7 +33,7 @@ export default async function LocaleLayout({
     <ThemeProvider attribute="class">
       <NextIntlClientProvider messages={messages} locale={locale}>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen mt-16">{children}</main>
         <Footer />
       </NextIntlClientProvider>
     </ThemeProvider>

@@ -17,7 +17,7 @@ import {
   ChevronUpIcon
 } from 'lucide-react';
 import type { BlogPost } from './BlogCard';
-import { Markdown } from '@/components/ui/markdown';
+import { MarkdownComponent as Markdown } from '@/components/ui/markdown';
 
 export interface BlogPostDetails extends BlogPost {
   content: string;
@@ -78,7 +78,7 @@ export default function BlogPost({ post }: BlogPostProps) {
   };
 
   return (
-    <article className="relative mx-auto max-w-4xl">
+    <article className="relative mx-auto max-w-4xl px-4 sm:px-0">
       {/* 阅读进度条 */}
       <div className="fixed top-0 left-0 z-50 h-1 bg-primary transition-all duration-300 ease-out" style={{ width: `${scrollProgress}%` }}></div>
       
@@ -157,9 +157,8 @@ export default function BlogPost({ post }: BlogPostProps) {
       </div>
 
       {/* 内容区域 */}
-      <div className="prose prose-lg prose-blue max-w-none dark:prose-invert">
-        <Markdown content={post.content} />
-      </div>
+      
+      <Markdown content={post.content} />
 
       {/* 标签 */}
       {post.tags && post.tags.length > 0 && (

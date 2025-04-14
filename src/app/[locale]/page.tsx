@@ -78,7 +78,7 @@ export default async function Home({ params }: PageProps) {
   const latestBlogPosts = await getBlogPosts(locale);
 
   return (
-    <main className="flex min-h-screen flex-col antialiased">
+    <main className="flex min-h-screen flex-col antialiased overflow-x-hidden">
       <HeroSection />
       <LatestDocs docs={latestDocs} />
       <FeaturedServers servers={featuredServers} />

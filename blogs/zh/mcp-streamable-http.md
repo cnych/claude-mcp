@@ -99,7 +99,7 @@ Streamable HTTP 的工作流程如下：
 
 **实现**：
 
-```
+```bash
 客户端                                 服务器
    |                                    |
    |-- POST /message (计算请求) -------->|
@@ -116,7 +116,7 @@ Streamable HTTP 的工作流程如下：
 
 **实现**：
 
-```
+```bash
 客户端                                 服务器
    |                                    |
    |-- POST /message (处理请求) -------->|
@@ -138,7 +138,7 @@ Streamable HTTP 的工作流程如下：
 
 **实现**：
 
-```
+```bash
 客户端                                 服务器
    |                                    |
    |-- POST /message (初始化) ---------->|
@@ -164,7 +164,7 @@ Streamable HTTP 的工作流程如下：
 
 **实现**：
 
-```
+```bash
 客户端                                 服务器
    |                                    |
    |-- POST /message (初始化) ---------->|

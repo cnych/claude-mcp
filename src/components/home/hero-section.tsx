@@ -5,7 +5,8 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link as I18nLink } from '@/i18n/routing';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Book,Video } from 'lucide-react';
+import { Book, Video } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const container = {
   hidden: { opacity: 0 },
@@ -26,12 +27,27 @@ const item = {
 export function HeroSection() {
   const t = useTranslations('Index');
   const locale = useLocale();
-
-  console.log(locale, locale === 'zh' || locale === 'tw');
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // 检测屏幕宽度变化
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // 初始检查
+    checkIfMobile();
+    
+    // 监听窗口大小变化
+    window.addEventListener('resize', checkIfMobile);
+    
+    // 清理监听器
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   return (
     <motion.section 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden animated-gradient"
+      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden animated-gradient"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -41,62 +57,62 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.07]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary))_0%,transparent_50%)] opacity-[0.15]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary)))_0%,transparent_50%)] opacity-[0.15]" />
         <div className="absolute left-1/4 top-1/3 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[100px]" />
         <div className="absolute right-1/4 bottom-1/3 w-[350px] h-[350px] bg-purple-500/20 rounded-full blur-[100px]" />
         <div className="absolute right-1/3 top-1/4 w-[300px] h-[300px] bg-pink-500/20 rounded-full blur-[100px]" />
       </div>
 
       <motion.div 
-        className="max-w-5xl mx-auto px-6 py-24 text-center relative z-10"
+        className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-24 text-center relative z-10"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <motion.div className="space-y-8" variants={item}>
+        <motion.div className="space-y-6 sm:space-y-8" variants={item}>
           <motion.div 
-            className="inline-block rounded-full px-4 py-1.5 glass-effect text-primary text-sm font-medium mb-8 hover-card"
+            className="inline-block rounded-full px-3 sm:px-4 py-1 sm:py-1.5 glass-effect text-primary text-xs sm:text-sm font-medium mb-4 sm:mb-8 hover-card"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             🎉 {t('hero.introducing')}
           </motion.div>
           <motion.h1 
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight gradient-text [text-wrap:balance]"
+            className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight gradient-text [text-wrap:balance]"
             variants={item}
           >
             {t('hero.title')}
           </motion.h1>
           <motion.p 
-            className="text-xl text-muted-foreground max-w-4xl mx-auto [text-wrap:balance] leading-relaxed"
+            className="text-base sm:text-xl text-muted-foreground max-w-4xl mx-auto [text-wrap:balance] leading-relaxed"
             variants={item}
           >
             {t('hero.description')}
           </motion.p>
           <motion.div 
-            className="flex items-center justify-center gap-6 pt-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 pt-2 sm:pt-4"
             variants={item}
           >
-            <I18nLink href="/docs">
-              <Button variant="default" size="lg" className="h-12 px-6 text-base hover-card">
+            <I18nLink href="/docs" className="w-full sm:w-auto">
+              <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base hover-card w-full`}>
                 {t('hero.documentation')}
-                <Book className="ml-2" />
+                <Book className="ml-2 h-4 w-4" />
               </Button>
             </I18nLink>
             {(locale === 'zh' || locale === 'tw') && (
-              <Link href="https://fastclass.cn/course/mcp">
-                <Button variant="default" size="lg" className="h-12 px-6 text-base hover-card">
+              <Link href="https://fastclass.cn/course/mcp" className="w-full sm:w-auto">
+                <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base hover-card w-full`}>
                   {t('hero.videoCourse')}
-                <Video className="ml-2" />
+                  <Video className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             )}
-              <Link href="https://www.a2aprotocol.net/?ref=claude-mcp">
-                <Button variant="default" size="lg" className="h-12 px-6 text-base hover-card">
-                  {t('hero.a2a')}
-                  <Book className="ml-2" />
-                </Button>
-              </Link>
+            <Link href="https://www.a2aprotocol.net/?ref=claude-mcp" className="w-full sm:w-auto">
+              <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base hover-card w-full`}>
+                {t('hero.a2a')}
+                <Book className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>
