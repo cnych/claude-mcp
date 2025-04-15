@@ -71,14 +71,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const t = await getTranslations('Docs');
+
+  const { data } = await loadDocContent(locale, slug);
+
+  let description = data?.description;
+  if (description.length < 160) {
+    description = `${description} - ${t(`nav.items.${slug}`)} - ${t('meta.description')}`;
+  }
+  description = `${description.substring(0, 160)}`;
   
   return {
-    title: `${t('meta.title')} - ${t(`nav.items.${slug}`)}`,
-    description: t('meta.description'),
+    title: `${t(`nav.items.${slug}`)} - ${t('meta.title')}`,
+    description: description,
     openGraph: {
       url: locale === 'en' ? `https://www.claudemcp.com/docs/${slug}` : `https://www.claudemcp.com/${locale}/docs/${slug}`,
-      title: `${t('meta.og.title')} - ${t(`nav.items.${slug}`)}`,
-      description: t('meta.og.description'),
+      title: `${t(`nav.items.${slug}`)} - ${t('meta.og.title')}`,
+      description: description,
       images: ['/og.png'],
     },
     alternates: {

@@ -57,7 +57,7 @@ export function ServerDetails({ server }: { server: MCPServer }) {
         rounded-2xl p-4 sm:p-6 mb-8 shadow-sm">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <div className="flex items-center">
+            <div className="flex items-center justify-between">
               <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
                 {server.name}
               </h1>

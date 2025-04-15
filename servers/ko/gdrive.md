@@ -1,7 +1,7 @@
 ---
-name: Google Drive MCP Server
-digest: Claude MCP server for Google Drive
-author: Claude Team
+name: Google Drive MCP 서버
+digest: Google Drive를 위한 Claude MCP 서버
+author: Claude 팀
 homepage: https://github.com/modelcontextprotocol/servers
 repository: https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive
 capabilities:
@@ -16,54 +16,54 @@ icon: https://cdn.simpleicons.org/google
 createTime: 2024-12-06T00:00:00Z
 ---
 
-A Model Context Protocol server for Google Drive. This server integrates with Google Drive to allow listing, reading, and searching over files.
+Google Drive를 위한 모델 컨텍스트 프로토콜 서버입니다. 이 서버는 Google Drive와 통합되어 파일 목록 조회, 읽기 및 검색 기능을 제공합니다.
 
-## Components
+## 구성 요소
 
-### Tools
+### 도구
 
 - **search**
-  - Search for files in Google Drive
-  - Input: `query` (string): Search query
-  - Returns file names and MIME types of matching files
+  - Google Drive에서 파일 검색
+  - 입력: `query` (문자열): 검색 쿼리
+  - 일치하는 파일의 이름과 MIME 유형 반환
 
-### Resources
+### 리소스
 
-The server provides access to Google Drive files:
+이 서버는 Google Drive 파일에 대한 접근을 제공합니다:
 
-- **Files** (`gdrive:///<file_id>`)
-  - Supports all file types
-  - Google Workspace files are automatically exported:
-    - Docs → Markdown
-    - Sheets → CSV
-    - Presentations → Plain text
-    - Drawings → PNG
-  - Other files are provided in their native format
+- **파일** (`gdrive:///<file_id>`)
+  - 모든 파일 유형 지원
+  - Google Workspace 파일은 자동으로 변환됩니다:
+    - 문서 → 마크다운
+    - 스프레드시트 → CSV
+    - 프레젠테이션 → 일반 텍스트
+    - 그림 → PNG
+  - 기타 파일은 원본 형식으로 제공됩니다
 
-## Getting started
+## 시작하기
 
-1. [Create a new Google Cloud project](https://console.cloud.google.com/projectcreate)
-2. [Enable the Google Drive API](https://console.cloud.google.com/workspace-api/products)
-3. [Configure an OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent) ("internal" is fine for testing)
-4. Add OAuth scope `https://www.googleapis.com/auth/drive.readonly`
-5. [Create an OAuth Client ID](https://console.cloud.google.com/apis/credentials/oauthclient) for application type "Desktop App"
-6. Download the JSON file of your client's OAuth keys
-7. Rename the key file to `gcp-oauth.keys.json` and place into the root of this repo (i.e. `servers/gcp-oauth.keys.json`)
+1. [새 Google Cloud 프로젝트 생성](https://console.cloud.google.com/projectcreate)
+2. [Google Drive API 활성화](https://console.cloud.google.com/workspace-api/products)
+3. [OAuth 동의 화면 구성](https://console.cloud.google.com/apis/credentials/consent) (테스트용으로는 "내부"가 적합)
+4. OAuth 범위 `https://www.googleapis.com/auth/drive.readonly` 추가
+5. 애플리케이션 유형 "데스크톱 앱"으로 [OAuth 클라이언트 ID 생성](https://console.cloud.google.com/apis/credentials/oauthclient)
+6. 클라이언트의 OAuth 키가 포함된 JSON 파일 다운로드
+7. 키 파일 이름을 `gcp-oauth.keys.json`으로 변경하고 이 저장소의 루트에 배치 (예: `servers/gcp-oauth.keys.json`)
 
-Make sure to build the server with either `npm run build` or `npm run watch`.
+`npm run build` 또는 `npm run watch`를 사용하여 서버를 빌드하세요.
 
-### Authentication
+### 인증
 
-To authenticate and save credentials:
+인증 및 자격 증명 저장 방법:
 
-1. Run the server with the `auth` argument: `node ./dist auth`
-2. This will open an authentication flow in your system browser
-3. Complete the authentication process
-4. Credentials will be saved in the root of this repo (i.e. `servers/.gdrive-server-credentials.json`)
+1. `auth` 인수와 함께 서버 실행: `node ./dist auth`
+2. 시스템 브라우저에서 인증 흐름이 열립니다
+3. 인증 프로세스 완료
+4. 자격 증명이 이 저장소의 루트에 저장됩니다 (예: `servers/.gdrive-server-credentials.json`)
 
-### Usage with Desktop App
+### 데스크톱 앱에서 사용
 
-To integrate this server with the desktop app, add the following to your app's server configuration:
+이 서버를 데스크톱 앱과 통합하려면 앱의 서버 구성에 다음을 추가하세요:
 
 ```json
 {
@@ -76,6 +76,6 @@ To integrate this server with the desktop app, add the following to your app's s
 }
 ```
 
-## License
+## 라이선스
 
-This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
+이 MCP 서버는 MIT 라이선스로 배포됩니다. 이는 당신이 자유롭게 소프트웨어를 사용, 수정, 배포할 수 있으며, MIT 라이선스의 조건에 따라 이용할 수 있습니다. 자세한 내용은 프로젝트 저장소의 LICENSE 파일을 참조하세요.

@@ -18,6 +18,8 @@ export function Footer() {
     ],
     community: [
       { name: t('links.github'), href: 'https://github.com/cnych/claude-mcp' },
+      { name: tNav('playground'), href: '/playground' as keyof Pathnames },
+      { name: tNav('inspector'), href: '/inspector' as keyof Pathnames },
       { name: tNav('documentation'), href: '/docs' as keyof Pathnames },
       { name: tNav('specification'), href: '/specification' as keyof Pathnames },
       { name: tNav('blog'), href: '/blog' as keyof Pathnames },

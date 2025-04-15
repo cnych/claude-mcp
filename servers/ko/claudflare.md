@@ -1,6 +1,6 @@
 ---
-name: Cloudflare MCP Server
-digest: Deploy, configure & interrogate your resources on the Cloudflare developer platform (e.g. Workers/KV/R2/D1)
+name: Cloudflare MCP 서버
+digest: Cloudflare 개발자 플랫폼(예: Workers/KV/R2/D1)에서 리소스를 배포, 구성 및 조회할 수 있습니다
 author: Cloudflare
 homepage: https://github.com/cloudflare/mcp-server-cloudflare
 repository: https://github.com/cloudflare/mcp-server-cloudflare
@@ -18,92 +18,92 @@ icon: https://cdn.simpleicons.org/cloudflare
 createTime: 2024-12-01T00:00:00Z
 ---
 
-Model Context Protocol (MCP) is a [new, standardized protocol](https://www.claudemcp.com) for managing context between large language models (LLMs) and external systems. In this repository, we provide an installer as well as an MCP Server for [Cloudflare's API](https://api.cloudflare.com).
+모델 컨텍스트 프로토콜(MCP)은 대형 언어 모델(LLM)과 외부 시스템 간의 컨텍스트를 관리하기 위한 [새로운 표준화된 프로토콜](https://www.claudemcp.com)입니다. 이 저장소에서는 [Cloudflare API](https://api.cloudflare.com)를 위한 설치 프로그램과 MCP 서버를 제공합니다.
 
-This lets you use Claude Desktop, or any MCP Client, to use natural language to accomplish things on your Cloudflare account, e.g.:
+이를 통해 Claude Desktop 또는 모든 MCP 클라이언트를 사용하여 자연어로 Cloudflare 계정에서 다음과 같은 작업을 수행할 수 있습니다:
 
-- `Please deploy me a new Worker with an example durable object.`
-- `Can you tell me about the data in my D1 database named '...'?`
-- `Can you copy all the entries from my KV namespace '...' into my R2 bucket '...'?`
+- `예제 durable object가 포함된 새 Worker를 배포해 주세요.`
+- `'...'라는 이름의 D1 데이터베이스에 있는 데이터에 대해 알려주실 수 있나요?`
+- `'...'라는 KV 네임스페이스의 모든 항목을 '...'라는 R2 버킷으로 복사해 주실 수 있나요?`
 
-## Demo
+## 데모
 
-[![Demonstrating the newly-released MCP server to explore Cloudflare properties, like Workers, KV, and D1.](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
+[![Workers, KV, D1과 같은 Cloudflare 속성을 탐색하기 위해 새로 출시된 MCP 서버 시연.](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
 
-## Setup
+## 설정
 
-1. Run `npx @cloudflare/mcp-server-cloudflare init`
+1. `npx @cloudflare/mcp-server-cloudflare init` 실행
 
-![Example console output](/images/mcp-cloudflare-init.jpg)
+![예제 콘솔 출력](/images/mcp-cloudflare-init.jpg)
 
-2. Restart Claude Desktop, you should see a small 🔨 icon that shows the following tools available for use:
+2. Claude Desktop를 다시 시작하면 다음과 같은 사용 가능한 도구를 보여주는 작은 🔨 아이콘이 표시됩니다:
 
-![Example tool icon](/images/mcp-cloudflare-tool-icon.jpg)
+![예제 도구 아이콘](/images/mcp-cloudflare-tool-icon.jpg)
 
-![Example tool list](/images/mcp-cloudflare-tool-list.jpg)
+![예제 도구 목록](/images/mcp-cloudflare-tool-list.jpg)
 
-## Features
+## 기능
 
-### KV Store Management
+### KV 스토어 관리
 
-- `get_kvs`: List all KV namespaces in your account
-- `kv_get`: Get a value from a KV namespace
-- `kv_put`: Store a value in a KV namespace
-- `kv_list`: List keys in a KV namespace
-- `kv_delete`: Delete a key from a KV namespace
+- `get_kvs`: 계정의 모든 KV 네임스페이스 나열
+- `kv_get`: KV 네임스페이스에서 값 가져오기
+- `kv_put`: KV 네임스페이스에 값 저장
+- `kv_list`: KV 네임스페이스의 키 나열
+- `kv_delete`: KV 네임스페이스에서 키 삭제
 
-### R2 Storage Management
+### R2 스토리지 관리
 
-- `r2_list_buckets`: List all R2 buckets in your account
-- `r2_create_bucket`: Create a new R2 bucket
-- `r2_delete_bucket`: Delete an R2 bucket
-- `r2_list_objects`: List objects in an R2 bucket
-- `r2_get_object`: Get an object from an R2 bucket
-- `r2_put_object`: Put an object into an R2 bucket
-- `r2_delete_object`: Delete an object from an R2 bucket
+- `r2_list_buckets`: 계정의 모든 R2 버킷 나열
+- `r2_create_bucket`: 새 R2 버킷 생성
+- `r2_delete_bucket`: R2 버킷 삭제
+- `r2_list_objects`: R2 버킷의 객체 나열
+- `r2_get_object`: R2 버킷에서 객체 가져오기
+- `r2_put_object`: R2 버킷에 객체 넣기
+- `r2_delete_object`: R2 버킷에서 객체 삭제
 
-### D1 Database Management
+### D1 데이터베이스 관리
 
-- `d1_list_databases`: List all D1 databases in your account
-- `d1_create_database`: Create a new D1 database
-- `d1_delete_database`: Delete a D1 database
-- `d1_query`: Execute a SQL query against a D1 database
+- `d1_list_databases`: 계정의 모든 D1 데이터베이스 나열
+- `d1_create_database`: 새 D1 데이터베이스 생성
+- `d1_delete_database`: D1 데이터베이스 삭제
+- `d1_query`: D1 데이터베이스에 대해 SQL 쿼리 실행
 
-### Workers Management
+### Workers 관리
 
-- `worker_list`: List all Workers in your account
-- `worker_get`: Get a Worker's script content
-- `worker_put`: Create or update a Worker script
-- `worker_delete`: Delete a Worker script
+- `worker_list`: 계정의 모든 Workers 나열
+- `worker_get`: Worker의 스크립트 내용 가져오기
+- `worker_put`: Worker 스크립트 생성 또는 업데이트
+- `worker_delete`: Worker 스크립트 삭제
 
-### Analytics
+### 분석
 
-- `analytics_get`: Retrieve analytics data for your domain
-  - Includes metrics like requests, bandwidth, threats, and page views
-  - Supports date range filtering
+- `analytics_get`: 도메인에 대한 분석 데이터 검색
+  - 요청, 대역폭, 위협, 페이지 뷰와 같은 지표 포함
+  - 날짜 범위 필터링 지원
 
-## Developing
+## 개발
 
-In the current project folder, run:
+현재 프로젝트 폴더에서 다음을 실행합니다:
 
 ```
 pnpm install
 pnpm build:watch
 ```
 
-Then, in a second terminal:
+그런 다음 두 번째 터미널에서:
 
 ```
 node dist/index.js init
 ```
 
-This will link Claude Desktop against your locally-installed version for you to test.
+이 명령은 Claude Desktop를 로컬 설치 버전에 연결하여 테스트할 수 있도록 합니다.
 
-## Usage outside of Claude
+## 클라이언트 외부에서 사용
 
-To run the server locally, run `node dist/index run <account-id>`.
+서버를 로컬에서 실행하려면 `node dist/index run <account-id>`을 실행합니다.
 
-If you're using an alternative MCP Client, or testing things locally, emit the `tools/list` command to get an up-to-date list of all available tools. Then you can call these directly using the `tools/call` command.
+대체 MCP 클라이언트를 사용하거나 로컬에서 테스트하는 경우 `tools/list` 명령을 실행하여 모든 사용 가능한 도구 목록을 업데이트하고 이를 직접 호출할 수 있습니다.
 
 ### Workers
 
@@ -138,7 +138,7 @@ worker_put({
 worker_delete({ name: "my-worker" });
 ```
 
-### KV Store
+### KV 스토어
 
 ```javascript
 // List KV namespaces
@@ -172,13 +172,13 @@ kv_delete({
 });
 ```
 
-### R2 Storage
+### R2 스토리지
 
 ```javascript
-// List buckets
+// 버킷 나열
 r2_list_buckets();
 
-// Create bucket
+// 버킷 생성
 r2_create_bucket({ name: "my-bucket" });
 
 // Delete bucket
@@ -213,13 +213,13 @@ r2_delete_object({
 });
 ```
 
-### D1 Database
+### D1 데이터베이스
 
 ```javascript
-// List databases
+// 데이터베이스 나열
 d1_list_databases();
 
-// Create database
+// 데이터베이스 생성
 d1_create_database({ name: "my-database" });
 
 // Delete database
@@ -246,10 +246,10 @@ d1_query({
 });
 ```
 
-### Analytics
+### 분석
 
 ```javascript
-// Get today's analytics
+// 오늘의 분석 가져오기
 analytics_get({
   zoneId: "your_zone_id",
   since: "2024-11-26T00:00:00Z",
@@ -257,6 +257,6 @@ analytics_get({
 });
 ```
 
-## Contributing
+## 기여
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+기여를 환영합니다! 자유롭게 Pull Request를 제출하세요.

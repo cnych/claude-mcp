@@ -1,6 +1,6 @@
 ---
 name: Puppeteer
-digest: Browser automation and web scraping
+digest: A MCP server that provides browser automation capabilities using Puppeteer.This server enables LLMs to interact with web pages, take screenshots, and execute JavaScript in a real browser environment.
 author: Claude Team
 homepage: https://github.com/modelcontextprotocol/servers
 repository: https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer

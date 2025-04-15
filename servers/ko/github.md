@@ -1,7 +1,7 @@
 ---
-name: GitHub MCP Server
-digest: Claude MCP server for GitHub API
-author: Claude Team
+name: GitHub MCP 서버
+digest: GitHub API를 위한 Claude MCP 서버
+author: Claude 팀
 homepage: https://github.com/modelcontextprotocol/servers
 repository: https://github.com/modelcontextprotocol/servers/tree/main/src/github
 capabilities:
@@ -15,243 +15,243 @@ icon: https://cdn.simpleicons.org/github
 createTime: 2024-12-06T00:00:00Z
 ---
 
-MCP Server for the GitHub API, enabling file operations, repository management, search functionality, and more.
+파일 작업, 저장소 관리, 검색 기능 등을 가능하게 하는 GitHub API용 MCP 서버입니다.
 
-### Features
+### 기능
 
-- **Automatic Branch Creation**: When creating/updating files or pushing changes, branches are automatically created if they don't exist
-- **Comprehensive Error Handling**: Clear error messages for common issues
-- **Git History Preservation**: Operations maintain proper Git history without force pushing
-- **Batch Operations**: Support for both single-file and multi-file operations
-- **Advanced Search**: Support for searching code, issues/PRs, and users
+- **자동 브랜치 생성**: 파일 생성/업데이트 또는 변경사항 푸시 시, 브랜치가 존재하지 않으면 자동으로 생성됩니다
+- **포괄적인 오류 처리**: 일반적인 문제에 대한 명확한 오류 메시지 제공
+- **Git 이력 보존**: 강제 푸시 없이 적절한 Git 이력을 유지하는 작업
+- **일괄 작업**: 단일 파일 및 다중 파일 작업 지원
+- **고급 검색**: 코드, 이슈/PR 및 사용자 검색 지원
 
-## Tools
+## 도구
 
 1. `create_or_update_file`
 
-   - Create or update a single file in a repository
-   - Inputs:
-     - `owner` (string): Repository owner (username or organization)
-     - `repo` (string): Repository name
-     - `path` (string): Path where to create/update the file
-     - `content` (string): Content of the file
-     - `message` (string): Commit message
-     - `branch` (string): Branch to create/update the file in
-     - `sha` (optional string): SHA of file being replaced (for updates)
-   - Returns: File content and commit details
+   - 저장소에서 단일 파일 생성 또는 업데이트
+   - 입력:
+     - `owner` (문자열): 저장소 소유자(사용자 이름 또는 조직)
+     - `repo` (문자열): 저장소 이름
+     - `path` (문자열): 파일을 생성/업데이트할 경로
+     - `content` (문자열): 파일 내용
+     - `message` (문자열): 커밋 메시지
+     - `branch` (문자열): 파일을 생성/업데이트할 브랜치
+     - `sha` (선택적 문자열): 교체할 파일의 SHA(업데이트용)
+   - 반환: 파일 내용 및 커밋 세부 정보
 
 2. `push_files`
 
-   - Push multiple files in a single commit
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `branch` (string): Branch to push to
-     - `files` (array): Files to push, each with `path` and `content`
-     - `message` (string): Commit message
-   - Returns: Updated branch reference
+   - 단일 커밋으로 여러 파일 푸시
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `branch` (문자열): 푸시할 브랜치
+     - `files` (배열): 푸시할 파일, 각각 `path`와 `content` 포함
+     - `message` (문자열): 커밋 메시지
+   - 반환: 업데이트된 브랜치 참조
 
 3. `search_repositories`
 
-   - Search for GitHub repositories
-   - Inputs:
-     - `query` (string): Search query
-     - `page` (optional number): Page number for pagination
-     - `perPage` (optional number): Results per page (max 100)
-   - Returns: Repository search results
+   - GitHub 저장소 검색
+   - 입력:
+     - `query` (문자열): 검색 쿼리
+     - `page` (선택적 숫자): 페이지네이션을 위한 페이지 번호
+     - `perPage` (선택적 숫자): 페이지당 결과 수(최대 100)
+   - 반환: 저장소 검색 결과
 
 4. `create_repository`
 
-   - Create a new GitHub repository
-   - Inputs:
-     - `name` (string): Repository name
-     - `description` (optional string): Repository description
-     - `private` (optional boolean): Whether repo should be private
-     - `autoInit` (optional boolean): Initialize with README
-   - Returns: Created repository details
+   - 새 GitHub 저장소 생성
+   - 입력:
+     - `name` (문자열): 저장소 이름
+     - `description` (선택적 문자열): 저장소 설명
+     - `private` (선택적 불리언): 저장소를 비공개로 할지 여부
+     - `autoInit` (선택적 불리언): README로 초기화할지 여부
+   - 반환: 생성된 저장소 세부 정보
 
 5. `get_file_contents`
 
-   - Get contents of a file or directory
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `path` (string): Path to file/directory
-     - `branch` (optional string): Branch to get contents from
-   - Returns: File/directory contents
+   - 파일 또는 디렉토리 내용 가져오기
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `path` (문자열): 파일/디렉토리 경로
+     - `branch` (선택적 문자열): 내용을 가져올 브랜치
+   - 반환: 파일/디렉토리 내용
 
 6. `create_issue`
 
-   - Create a new issue
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `title` (string): Issue title
-     - `body` (optional string): Issue description
-     - `assignees` (optional string[]): Usernames to assign
-     - `labels` (optional string[]): Labels to add
-     - `milestone` (optional number): Milestone number
-   - Returns: Created issue details
+   - 새 이슈 생성
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `title` (문자열): 이슈 제목
+     - `body` (선택적 문자열): 이슈 설명
+     - `assignees` (선택적 문자열[]): 할당할 사용자 이름
+     - `labels` (선택적 문자열[]): 추가할 레이블
+     - `milestone` (선택적 숫자): 마일스톤 번호
+   - 반환: 생성된 이슈 세부 정보
 
 7. `create_pull_request`
 
-   - Create a new pull request
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `title` (string): PR title
-     - `body` (optional string): PR description
-     - `head` (string): Branch containing changes
-     - `base` (string): Branch to merge into
-     - `draft` (optional boolean): Create as draft PR
-     - `maintainer_can_modify` (optional boolean): Allow maintainer edits
-   - Returns: Created pull request details
+   - 새 풀 리퀘스트 생성
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `title` (문자열): PR 제목
+     - `body` (선택적 문자열): PR 설명
+     - `head` (문자열): 변경사항이 포함된 브랜치
+     - `base` (문자열): 병합할 대상 브랜치
+     - `draft` (선택적 불리언): 초안 PR로 생성할지 여부
+     - `maintainer_can_modify` (선택적 불리언): 관리자 편집 허용 여부
+   - 반환: 생성된 풀 리퀘스트 세부 정보
 
 8. `fork_repository`
 
-   - Fork a repository
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `organization` (optional string): Organization to fork to
-   - Returns: Forked repository details
+   - 저장소 포크
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `organization` (선택적 문자열): 포크할 조직
+   - 반환: 포크된 저장소 세부 정보
 
 9. `create_branch`
 
-   - Create a new branch
-   - Inputs:
-     - `owner` (string): Repository owner
-     - `repo` (string): Repository name
-     - `branch` (string): Name for new branch
-     - `from_branch` (optional string): Source branch (defaults to repo default)
-   - Returns: Created branch reference
+   - 새 브랜치 생성
+   - 입력:
+     - `owner` (문자열): 저장소 소유자
+     - `repo` (문자열): 저장소 이름
+     - `branch` (문자열): 새 브랜치 이름
+     - `from_branch` (선택적 문자열): 소스 브랜치(기본값은 저장소 기본값)
+   - 반환: 생성된 브랜치 참조
 
 10. `list_issues`
 
-    - List and filter repository issues
-    - Inputs:
-      - `owner` (string): Repository owner
-      - `repo` (string): Repository name
-      - `state` (optional string): Filter by state ('open', 'closed', 'all')
-      - `labels` (optional string[]): Filter by labels
-      - `sort` (optional string): Sort by ('created', 'updated', 'comments')
-      - `direction` (optional string): Sort direction ('asc', 'desc')
-      - `since` (optional string): Filter by date (ISO 8601 timestamp)
-      - `page` (optional number): Page number
-      - `per_page` (optional number): Results per page
-    - Returns: Array of issue details
+    - 저장소 이슈 목록 및 필터링
+    - 입력:
+      - `owner` (문자열): 저장소 소유자
+      - `repo` (문자열): 저장소 이름
+      - `state` (선택적 문자열): 상태별 필터링('open', 'closed', 'all')
+      - `labels` (선택적 문자열[]): 레이블별 필터링
+      - `sort` (선택적 문자열): 정렬 기준('created', 'updated', 'comments')
+      - `direction` (선택적 문자열): 정렬 방향('asc', 'desc')
+      - `since` (선택적 문자열): 날짜별 필터링(ISO 8601 타임스탬프)
+      - `page` (선택적 숫자): 페이지 번호
+      - `per_page` (선택적 숫자): 페이지당 결과 수
+    - 반환: 이슈 세부 정보 배열
 
 11. `update_issue`
 
-    - Update an existing issue
-    - Inputs:
-      - `owner` (string): Repository owner
-      - `repo` (string): Repository name
-      - `issue_number` (number): Issue number to update
-      - `title` (optional string): New title
-      - `body` (optional string): New description
-      - `state` (optional string): New state ('open' or 'closed')
-      - `labels` (optional string[]): New labels
-      - `assignees` (optional string[]): New assignees
-      - `milestone` (optional number): New milestone number
-    - Returns: Updated issue details
+    - 기존 이슈 업데이트
+    - 입력:
+      - `owner` (문자열): 저장소 소유자
+      - `repo` (문자열): 저장소 이름
+      - `issue_number` (숫자): 업데이트할 이슈 번호
+      - `title` (선택적 문자열): 새 제목
+      - `body` (선택적 문자열): 새 설명
+      - `state` (선택적 문자열): 새 상태('open' 또는 'closed')
+      - `labels` (선택적 문자열[]): 새 레이블
+      - `assignees` (선택적 문자열[]): 새 담당자
+      - `milestone` (선택적 숫자): 새 마일스톤 번호
+    - 반환: 업데이트된 이슈 세부 정보
 
 12. `add_issue_comment`
 
-    - Add a comment to an issue
-    - Inputs:
-      - `owner` (string): Repository owner
-      - `repo` (string): Repository name
-      - `issue_number` (number): Issue number to comment on
-      - `body` (string): Comment text
-    - Returns: Created comment details
+    - 이슈에 댓글 추가
+    - 입력:
+      - `owner` (문자열): 저장소 소유자
+      - `repo` (문자열): 저장소 이름
+      - `issue_number` (숫자): 댓글을 달 이슈 번호
+      - `body` (문자열): 댓글 텍스트
+    - 반환: 생성된 댓글 세부 정보
 
 13. `search_code`
 
-    - Search for code across GitHub repositories
-    - Inputs:
-      - `q` (string): Search query using GitHub code search syntax
-      - `sort` (optional string): Sort field ('indexed' only)
-      - `order` (optional string): Sort order ('asc' or 'desc')
-      - `per_page` (optional number): Results per page (max 100)
-      - `page` (optional number): Page number
-    - Returns: Code search results with repository context
+    - GitHub 저장소 전체에서 코드 검색
+    - 입력:
+      - `q` (문자열): GitHub 코드 검색 구문을 사용한 검색 쿼리
+      - `sort` (선택적 문자열): 정렬 필드('indexed'만 가능)
+      - `order` (선택적 문자열): 정렬 순서('asc' 또는 'desc')
+      - `per_page` (선택적 숫자): 페이지당 결과 수(최대 100)
+      - `page` (선택적 숫자): 페이지 번호
+    - 반환: 저장소 컨텍스트가 포함된 코드 검색 결과
 
 14. `search_issues`
 
-    - Search for issues and pull requests
-    - Inputs:
-      - `q` (string): Search query using GitHub issues search syntax
-      - `sort` (optional string): Sort field (comments, reactions, created, etc.)
-      - `order` (optional string): Sort order ('asc' or 'desc')
-      - `per_page` (optional number): Results per page (max 100)
-      - `page` (optional number): Page number
-    - Returns: Issue and pull request search results
+    - 이슈 및 풀 리퀘스트 검색
+    - 입력:
+      - `q` (문자열): GitHub 이슈 검색 구문을 사용한 검색 쿼리
+      - `sort` (선택적 문자열): 정렬 필드(comments, reactions, created 등)
+      - `order` (선택적 문자열): 정렬 순서('asc' 또는 'desc')
+      - `per_page` (선택적 숫자): 페이지당 결과 수(최대 100)
+      - `page` (선택적 숫자): 페이지 번호
+    - 반환: 이슈 및 풀 리퀘스트 검색 결과
 
 15. `search_users`
 
-    - Search for GitHub users
-    - Inputs:
-      - `q` (string): Search query using GitHub users search syntax
-      - `sort` (optional string): Sort field (followers, repositories, joined)
-      - `order` (optional string): Sort order ('asc' or 'desc')
-      - `per_page` (optional number): Results per page (max 100)
-      - `page` (optional number): Page number
-    - Returns: User search results
+    - GitHub 사용자 검색
+    - 입력:
+      - `q` (문자열): GitHub 사용자 검색 구문을 사용한 검색 쿼리
+      - `sort` (선택적 문자열): 정렬 필드(followers, repositories, joined)
+      - `order` (선택적 문자열): 정렬 순서('asc' 또는 'desc')
+      - `per_page` (선택적 숫자): 페이지당 결과 수(최대 100)
+      - `page` (선택적 숫자): 페이지 번호
+    - 반환: 사용자 검색 결과
 
 16. `list_commits`
 
-- Gets commits of a branch in a repository
-- Inputs:
-  - `owner` (string): Repository owner
-  - `repo` (string): Repository name
-  - `page` (optional string): page number
-  - `per_page` (optional string): number of record per page
-  - `sha` (optional string): branch name
-- Returns: List of commits
+- 저장소의 브랜치 커밋 가져오기
+- 입력:
+  - `owner` (문자열): 저장소 소유자
+  - `repo` (문자열): 저장소 이름
+  - `page` (선택적 문자열): 페이지 번호
+  - `per_page` (선택적 문자열): 페이지당 레코드 수
+  - `sha` (선택적 문자열): 브랜치 이름
+- 반환: 커밋 목록
 
-## Search Query Syntax
+## 검색 쿼리 구문
 
-### Code Search
+### 코드 검색
 
-- `language:javascript`: Search by programming language
-- `repo:owner/name`: Search in specific repository
-- `path:app/src`: Search in specific path
-- `extension:js`: Search by file extension
-- Example: `q: "import express" language:typescript path:src/`
+- `language:javascript`: 프로그래밍 언어로 검색
+- `repo:owner/name`: 특정 저장소에서 검색
+- `path:app/src`: 특정 경로에서 검색
+- `extension:js`: 파일 확장자로 검색
+- 예시: `q: "import express" language:typescript path:src/`
 
-### Issues Search
+### 이슈 검색
 
-- `is:issue` or `is:pr`: Filter by type
-- `is:open` or `is:closed`: Filter by state
-- `label:bug`: Search by label
-- `author:username`: Search by author
-- Example: `q: "memory leak" is:issue is:open label:bug`
+- `is:issue` 또는 `is:pr`: 유형별 필터링
+- `is:open` 또는 `is:closed`: 상태별 필터링
+- `label:bug`: 레이블로 검색
+- `author:username`: 작성자로 검색
+- 예시: `q: "memory leak" is:issue is:open label:bug`
 
-### Users Search
+### 사용자 검색
 
-- `type:user` or `type:org`: Filter by account type
-- `followers:>1000`: Filter by followers
-- `location:London`: Search by location
-- Example: `q: "fullstack developer" location:London followers:>100`
+- `type:user` 또는 `type:org`: 계정 유형별 필터링
+- `followers:>1000`: 팔로워 수로 필터링
+- `location:London`: 위치로 검색
+- 예시: `q: "fullstack developer" location:London followers:>100`
 
-For detailed search syntax, see [GitHub's searching documentation](https://docs.github.com/en/search-github/searching-on-github).
+자세한 검색 구문은 [GitHub의 검색 문서](https://docs.github.com/en/search-github/searching-on-github)를 참조하세요.
 
-## Setup
+## 설정
 
-### Personal Access Token
+### 개인 액세스 토큰
 
-[Create a GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) with appropriate permissions:
+적절한 권한이 있는 [GitHub 개인 액세스 토큰 생성](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens):
 
-- Go to [Personal access tokens](https://github.com/settings/tokens) (in GitHub Settings > Developer settings)
-- Select which repositories you'd like this token to have access to (Public, All, or Select)
-- Create a token with the `repo` scope ("Full control of private repositories")
-  - Alternatively, if working only with public repositories, select only the `public_repo` scope
-- Copy the generated token
+- [개인 액세스 토큰](https://github.com/settings/tokens)으로 이동 (GitHub 설정 > 개발자 설정)
+- 이 토큰이 액세스할 저장소 선택 (공개, 전체 또는 선택)
+- `repo` 범위("비공개 저장소에 대한 전체 제어")가 있는 토큰 생성
+  - 또는 공개 저장소만 작업하는 경우 `public_repo` 범위만 선택
+- 생성된 토큰 복사
 
-### Usage with Claude Desktop
+### Claude 데스크톱에서 사용
 
-To use this with Claude Desktop, add the following to your `claude_desktop_config.json`:
+Claude 데스크톱에서 사용하려면 `claude_desktop_config.json`에 다음을 추가하세요:
 
 ```json
 {
@@ -267,6 +267,6 @@ To use this with Claude Desktop, add the following to your `claude_desktop_confi
 }
 ```
 
-## License
+## 라이선스
 
-This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
+이 MCP 서버는 MIT 라이선스로 배포됩니다. 이는 당신이 자유롭게 소프트웨어를 사용, 수정, 배포할 수 있으며, MIT 라이선스의 조건에 따라 이용할 수 있습니다. 자세한 내용은 프로젝트 저장소의 LICENSE 파일을 참조하세요.

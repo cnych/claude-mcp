@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
 import { getBlogPostDetails, getBlogPosts } from '@/data/blog-posts';
 import BlogPost from '@/components/BlogPost';
 import { locales } from '@/i18n/config';
@@ -41,24 +42,30 @@ interface BlogPostPageProps {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug, locale } = await params;
+  const t = await getTranslations();
   const post = await getBlogPostDetails(slug, locale);
 
   if (!post) {
     return {
-      title: 'Article Not Found',
-      description: 'The article you are looking for does not exist or has been removed',
+      title: t('Blog.meta.title'),
+      description: t('Blog.meta.description'),
     };
   }
 
   // 使用content的前100个字符作为摘要，或者使用标题
-  const description = post.excerpt || post.content.replace(/<[^>]*>/g, '').slice(0, 100) + '...';
+  const title = `${post.title} | ${t('Blog.meta.title')}`
+  let description = post.excerpt || post.content.replace(/<[^>]*>/g, '');
+  if (description.length < 160) {
+    description = `${description} - ${t('Blog.meta.description')}`;
+  }
+  description = description.slice(0, 160);
 
   return {
-    title: `${post.title} | Claude MCP Blog`,
-    description: description,
+    title,
+    description,
     openGraph: {
-      title: post.title,
-      description: description,
+      title,
+      description,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],

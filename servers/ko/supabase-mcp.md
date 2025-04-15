@@ -13,7 +13,9 @@ tags:
   - cloud
 icon: https://avatars.githubusercontent.com/u/87650496?v=4
 createTime: 2024-12-21
+featured: true
 ---
+
 > Supabase 프로젝트를 Cursor, Claude, Windsurf 및 기타 AI 어시스턴트와 연결하세요.
 
 ![supabase-mcp-demo](https://static.claudemcp.com/servers/supabase-community/supabase-mcp/supabase-community-supabase-mcp-24a1d57e.jpg)

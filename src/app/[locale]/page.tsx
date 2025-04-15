@@ -9,6 +9,7 @@ import { FeaturedServers } from '@/components/home/featured-servers';
 import { FeaturedClients } from '@/components/home/featured-clients';
 import { LatestDocs } from '@/components/home/latest-docs';
 import { LatestBlogPosts } from '@/components/home/latest-blog-posts';
+import { PlaygroundInspectorSection } from '@/components/home/playground-inspector-section';
 import { loadServersData, loadClientsData } from '@/lib/data-utils';
 import { getLatestDocs } from '@/lib/docs';
 import { getBlogPosts } from '@/data/blog-posts';
@@ -80,6 +81,7 @@ export default async function Home({ params }: PageProps) {
   return (
     <main className="flex min-h-screen flex-col antialiased overflow-x-hidden">
       <HeroSection />
+      <PlaygroundInspectorSection />
       <LatestDocs docs={latestDocs} />
       <FeaturedServers servers={featuredServers} />
       <FeaturedClients clients={featuredClients} />

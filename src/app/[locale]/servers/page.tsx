@@ -33,23 +33,29 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     url += `?tags=${tags}`;
   }
 
+  const title = `${t('Servers.title')} - ${t('Index.meta.title')}`;
+  let description = `${t('Servers.description')} - ${t('Index.meta.title')}`;
+  if (description.length > 160) {
+    description = `${description.substring(0, 160)}`;
+  }
+
   return {
-    title: `${t('Servers.title')} | ${t('Index.meta.title')}`,
-    description: `${t('Servers.description')} | ${t('Index.meta.title')}`,
+    title: title,
+    description: description,
     icons: {
       icon: "/logo.png",
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
       url,
-      title: `${t('Servers.title')} | ${t('Index.meta.og.title')}`,
-      description: `${t('Servers.description')} | ${t('Index.meta.og.title')}`,
+      title: title,
+      description: description,
       images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${t('Servers.title')} | ${t('Index.meta.twitter.title')}`,
-      description: `${t('Servers.description')} | ${t('Index.meta.twitter.title')}`,
+      title: title,
+      description: description,
       images: ['/og.png'],
     },
     alternates: {

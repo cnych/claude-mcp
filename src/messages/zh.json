@@ -3,6 +3,8 @@
       "title": "Claude MCP",
       "servers": "服务器",
       "clients": "客户端",
+      "playground": "实验场",
+      "inspector": "调试器",
       "documentation": "文档",
       "blog": "博客",
       "specification": "协议规范",
@@ -42,7 +44,7 @@
         "loadingToc": "正在加载目录..."
       },
       "meta": {
-        "title": "博客",
+        "title": "MCP 博客",
         "description": "探索我们关于技术、AI、编程和最佳实践的最新文章和见解"
       },
       "page": {
@@ -269,6 +271,10 @@
       "meta": {
         "title": "MCP 协议规范",
         "description": "Model Context Protocol 技术规范文档"
+      },
+      "breadcrumb": {
+        "home": "首页",
+        "specification": "规范"
       },
       "title": "协议规范",
       "description": "Model Context Protocol 的详细技术规范",
@@ -920,5 +926,19 @@
       "notFoundDescription": "请求的客户端未找到",
       "search": "搜索客户端",
       "searchPlaceholder": "输入关键词搜索..."
+    },
+    "Tools": {
+      "title": "Claude MCP 工具",
+      "description": "探索和测试我们的 MCP 开发和调试工具",
+      "playground": {
+        "title": "MCP 实验场",
+        "description": "在线对话试用各类 MCP Server"
+      },
+      "inspector": {
+        "title": "MCP Inspector",
+        "description": "使用 MCP 官方调试器在线测试的 MCP Server"
+      },
+      "openPlayground": "打开实验场",
+      "openInspector": "打开调试器"
     }
   }

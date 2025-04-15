@@ -45,6 +45,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, id } = await params;
   const t = await getTranslations('Servers');
+  const tIndex = await getTranslations('Index');
   
   // 加载服务器详情
   const server = await loadServerDetail(locale, id);
@@ -55,22 +56,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t('notFoundDescription'),
     };
   }
+
+  const title = `${server.name} - ${t('title')} - ${tIndex('meta.title')}`;
+  let description = `${server.digest} - ${t('title')} - ${tIndex('meta.title')}`;
+  if (description.length > 160) {
+    description = `${description.substring(0, 160)}`;
+  }
   
   return {
-    title: `${server.name} | ${t('title')}`,
-    description: server.digest,
+    title: title,
+    description: description,
     openGraph: {
       url: locale === 'en' 
         ? `https://www.claudemcp.com/servers/${id}` 
         : `https://www.claudemcp.com/${locale}/servers/${id}`,
-      title: `${server.name} | ${t('title')}`,
-      description: server.digest,
+      title: title,
+      description: description,
       images: server.icon ? [server.icon] : ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${server.name} | ${t('title')}`,
-      description: server.digest,
+      title: title,
+      description: description,
       images: server.icon ? [server.icon] : ['/og.png'],
     },
     alternates: {

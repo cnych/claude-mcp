@@ -3,6 +3,8 @@
       "title": "Claude MCP",
       "servers": "서버 목록",
       "clients": "클라이언트 목록",
+      "playground": "실험실",
+      "inspector": "인스펙터",
       "documentation": "문서",
       "blog": "블로그",
       "specification": "프로토콜 사양",
@@ -920,5 +922,19 @@
         "title": "블로그 인사이트",
         "description": "기술, 인공지능, 프로그래밍 및 최선의 실무 최신 기사와 견해 탐색, 더 스마트한 애플리케이션 구축 돕기"
       }
+    },
+    "Tools": {
+      "title": "Claude MCP 도구",
+      "description": "개발 및 검사를 위한 MCP 도구 탐색 및 테스트",
+      "playground": {
+        "title": "MCP 실험실",
+        "description": "다양한 MCP Server 시험 환경"
+      },
+      "inspector": {
+        "title": "MCP Inspector",
+        "description": "온라인 테스트용 MCP 공식 디버깅 도구"
+      },
+      "openPlayground": "실험실 열기",
+      "openInspector": "인스펙터 열기"
     }
   }

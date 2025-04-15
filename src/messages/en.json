@@ -3,6 +3,8 @@
     "title": "Claude MCP",
     "servers": "Servers",
     "clients": "Clients",
+    "playground": "Playground",
+    "inspector": "Inspector",
     "documentation": "Documentation",
     "blog": "Blog",
     "specification": "Specification",
@@ -243,6 +245,12 @@
     "meta": {
       "title": "MCP Protocol Specification",
       "description": "Model Context Protocol Technical Specification Document"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "specification": "Specification",
+      "version": "Version",
+      "architecture": "Architecture"
     },
     "title": "Protocol Specification",
     "description": "Detailed technical specification of the Model Context Protocol",
@@ -747,7 +755,7 @@
     "learnMore": "Learn More"
   },
   "Servers": {
-    "title": "Claude MCP Server Directory",
+    "title": "Claude MCP Servers",
     "description": "Discover the best and most popular claude mcp servers",
     "viewAll": "View All",
     "noServers": "No servers found",
@@ -912,12 +920,26 @@
       "loadingToc": "Loading table of contents..."
     },
     "meta": {
-      "title": "Blog",
+      "title": "MCP Blog",
       "description": "Explore our latest articles and insights about technology, AI, programming, and best practices"
     },
     "page": {
       "title": "Blog Insights",
       "description": "Explore our latest articles and insights about technology, artificial intelligence, programming, and best practices to help you build smarter applications"
     }
+  },
+  "Tools": {
+    "title": "Claude MCP Tools",
+    "description": "Explore and test our MCP tools for development and inspection",
+    "playground": {
+      "title": "MCP Playground",
+      "description": "Experiment with the comprehensive ModelScope MCP Server platform"
+    },
+    "inspector": {
+      "title": "MCP Inspector",
+      "description": "Use the official MCP debugging tool for online testing"
+    },
+    "openPlayground": "Open Playground",
+    "openInspector": "Open Inspector"
   }
 }

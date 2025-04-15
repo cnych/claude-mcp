@@ -10,13 +10,15 @@ capabilities:
   tools: true
 tags:
   - SEO
+  - Ahrefs
   - 백링크
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
-featured: true
 ---
 
 이 MCP 서버는 Ahrefs 데이터를 활용하여 모든 도메인의 백링크 정보를 검색합니다.
+
+> 주의 ⚠️: 이 MCP는 이미 [SEO MCP](/ko/servers/seo-mcp)에 통합되었습니다. 더 많은 기능이 있는 [SEO MCP](/ko/servers/seo-mcp)를 대신 사용해 주세요.
 
 ## 기능
 

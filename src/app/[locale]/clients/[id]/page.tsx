@@ -45,6 +45,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, id } = await params;
   const t = await getTranslations('Clients');
+  const tIndex = await getTranslations('Index');
   
   // 加载客户端详情
   const client = await loadClientDetail(locale, id);
@@ -55,13 +56,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: t('notFoundDescription'),
     };
   }
+
+  const title = `${client.name} - ${t('title')} - ${tIndex('meta.title')}`;
+  let description = `${client.digest} - ${t('title')} - ${tIndex('meta.title')}`;
+  if (description.length > 160) {
+    description = `${description.substring(0, 160)}`;
+  }
   
   return {
-    title: `${client.name} | ${t('title')}`,
-    description: client.digest,
+    title: title,
+    description: description,
     openGraph: {
-      title: `${client.name} | ${t('title')}`,
-      description: client.digest,
+      title: title,
+      description: description,
       images: client.icon ? [client.icon] : ['/og.png'],
       url: locale === 'en' 
         ? `https://www.claudemcp.com/clients/${id}` 
@@ -69,8 +76,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${client.name} | ${t('title')}`,
-      description: client.digest,
+      title: title,
+      description: description,
       images: client.icon ? [client.icon] : ['/og.png'],
     },
     alternates: {

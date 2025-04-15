@@ -10,13 +10,15 @@ capabilities:
   tools: true
 tags:
   - SEO
+  - Ahrefs
   - Backlinks
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
-featured: true
 ---
 
 This MCP server retrieves backlink information for any domain using Ahrefs data.
+
+> Note ⚠️: This MCP has been merged into [SEO MCP](/servers/seo-mcp). Please use [SEO MCP](/servers/seo-mcp) instead for more features.
 
 ## Features
 

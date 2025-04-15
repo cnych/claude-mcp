@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Github, ArrowUpRight } from 'lucide-react'
 import { Link } from '@/i18n/routing'
+import { locales } from '@/i18n/config'
 import { Mermaid } from '@/components/ui/mermaid'
 
 // 设置静态生成和缓存
@@ -16,20 +17,27 @@ type PageProps = {
 // 预生成所有可能的规范页面路径
 export async function generateStaticParams() {
   // 支持的语言
-  return ['en', 'zh', 'tw'].map(locale => ({ locale }));
+  return locales.map(locale => ({ locale }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('Specification')
+  const tIndex = await getTranslations('Index')
+
+  let description = t('meta.description');
+  if (description.length < 160) {
+    description = `${description} - ${tIndex('meta.description')}`;
+  }
+  description = `${description.substring(0, 160)}`;
 
   return {
-    title: t('meta.title'),
-    description: t('meta.description'),
+    title: `${t('meta.title')} - ${tIndex('meta.title')}`,
+    description: description,
     openGraph: {
       url: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,
-      title: t('meta.title'),
-      description: t('meta.description'),
+      title: `${t('meta.title')} - ${tIndex('meta.title')}`,
+      description: description,
       images: ['/og.png'],
     },
     alternates: {

@@ -228,6 +228,27 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
   useEffect(() => {
     if (!contentRef.current || !htmlContent) return;
     
+    // 处理所有链接
+    contentRef.current.querySelectorAll('a').forEach(link => {
+      const href = link.getAttribute('href');
+      // 检查是否是外部链接
+      if (href && !href.startsWith('/') && !href.startsWith('#') && !href.startsWith('tel:') && !href.startsWith('mailto:')) {
+        try {
+          const url = new URL(href);
+          // 只有外部链接才添加安全属性
+          console.log(url.host);
+          const host = "www.claudemcp.com";
+          if (url.host && url.host !== host) {
+            link.setAttribute('rel', 'noreferrer noopener nofollow');
+            link.setAttribute('target', '_blank');
+          }
+        } catch (e) {
+          // 如果 URL 解析失败，说明可能是相对路径，不做处理
+          console.debug('Invalid URL or relative path:', href, e);
+        }
+      }
+    });
+
     // 处理YouTube嵌入
     contentRef.current.querySelectorAll('.youtube-embed').forEach(element => {
       const videoId = element.getAttribute('data-video-id');
@@ -248,7 +269,6 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
     
     // 处理代码块
     contentRef.current.querySelectorAll('pre code').forEach(element => {
-      console.log(element);
       const className = element.className || '';
       const language = className.replace('language-', '');
       const code = element.textContent || '';
@@ -291,7 +311,7 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
   if (!content) return null;
 
   return (
-    <div className="prose prose-blue dark:prose-invert max-w-none prose-pre:bg-transparent prose-pre:border-none prose-pre:shadow-none prose-pre:p-0 prose-table:overflow-x-auto">
+    <div className="prose prose-blue dark:prose-invert max-w-none prose-pre:border-none prose-pre:shadow-none prose-table:overflow-x-auto">
       <div 
         ref={contentRef} 
         dangerouslySetInnerHTML={{ __html: htmlContent }} 

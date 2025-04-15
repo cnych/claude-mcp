@@ -1,6 +1,6 @@
 import { locales } from "@/i18n/config";
 import { MetadataRoute } from "next";
-import { loadServersData } from "@/lib/data-utils";
+import { loadServersData, loadClientsData } from "@/lib/data-utils";
 import { getBlogPosts } from '@/data/blog-posts';
 import { readdir } from 'fs/promises';
 import path from 'path';
@@ -44,6 +44,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
+  // 获取所有语言的客户端数据
+  const clientsByLocale = await Promise.all(
+    locales.map(async (locale) => {
+      const { clients } = await loadClientsData(locale);
+      return { locale, clients };
+    })
+  );
+
   // 获取所有语言的文档数据
   const docsByLocale = await Promise.all(
     locales.map(async (locale) => {
@@ -59,6 +67,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "daily" as const,
     priority: 1,
   }));
+
+  // 生成客户端列表页 URLs
+  const clientListUrls = locales.map((locale) => ({
+    url: locale === "en" ? `${baseUrl}/clients` : `${baseUrl}/${locale}/clients`,
+    lastModified: new Date(),
+    changeFrequency: "daily" as const,
+    priority: 0.9,
+  }));
+
+  // 生成客户端详情页 URLs
+  const clientDetailUrls = clientsByLocale.flatMap(({ locale, clients }) =>
+    clients.map((client) => ({
+      url: locale === "en" ? `${baseUrl}/clients/${client.id}` : `${baseUrl}/${locale}/clients/${client.id}`,
+      lastModified: new Date(client.createTime),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    }))
+  );
 
   // 生成服务器列表页 URLs
   const serverListUrls = locales.map((locale) => ({
@@ -128,6 +154,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...homeUrls,
     ...serverListUrls,
     ...serverDetailUrls,
+    ...clientListUrls,
+    ...clientDetailUrls,
     ...docUrls,
     ...staticUrls,
     ...blogUrls,

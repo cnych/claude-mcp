@@ -13,6 +13,7 @@ tags:
   - notion
 icon: https://static.claudemcp.com/servers/makenotion/notion-mcp-server/makenotion-notion-mcp-server-e217db9f.jpg
 createTime: 2025-03-11
+featured: true
 ---
 
 This project implements an [MCP server](https://www.claudemcp.com/specification) for the [Notion API](https://developers.notion.com/reference/intro).

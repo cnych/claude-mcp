@@ -45,6 +45,27 @@ export default function LanguageSwitcher() {
         params: { slug: slug! }
       }
     }
+
+    if (path.startsWith('/playground')) {
+      return {
+        pathname: '/playground' as keyof Pathnames,
+        params: undefined
+      }
+    }
+
+    if (path.startsWith('/inspector')) {
+      return {
+        pathname: '/inspector' as keyof Pathnames,
+        params: undefined
+      }
+    }
+
+    if (path.startsWith('/specification')) {
+      return {
+        pathname: '/specification' as keyof Pathnames,
+        params: undefined
+      }
+    }
     
     // 检查是否是 /servers/xxx 格式的路径
     if (path.startsWith('/servers/') && path !== '/servers') {
@@ -63,6 +84,8 @@ export default function LanguageSwitcher() {
         params: { slug: slug! }
       }
     }
+
+
     // 其他标准路径
     if (pathnames[path as keyof typeof pathnames]) {
       return {

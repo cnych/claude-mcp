@@ -4,6 +4,8 @@
     "servers": "服務目錄",
     "clients": "客戶端",
     "documentation": "文件",
+    "playground": "實驗場",
+    "inspector": "調試器",
     "blog": "部落格",
     "specification": "協議規範",
     "community": "社群",
@@ -900,6 +902,19 @@
         "title": "博客洞見",
         "description": "探索我們關於技術、人工智能、編程和最佳實踐的最新文章和見解，幫助您構建更智能的應用"
       }
-    }
-  
+    },
+  "Tools": {
+    "title": "Claude MCP 工具",
+    "description": "探索和測試我們的 MCP 開發和調試工具",
+    "playground": {
+      "title": "MCP 實驗場",
+      "description": "在線對話試用各類 MCP Server"
+    },
+    "inspector": {
+      "title": "MCP Inspector",
+      "description": "使用 MCP 官方調試器在線測試的 MCP Server"
+    },
+    "openPlayground": "開啟實驗場",
+    "openInspector": "開啟調試器"
+  }
 }

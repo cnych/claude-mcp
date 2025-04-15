@@ -28,27 +28,34 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const awaitedSearchParams = await searchParams || {};
   const tags = awaitedSearchParams.tags;
   let url = locale === 'en' ? `https://www.claudemcp.com/clients` : `https://www.claudemcp.com/${locale}/clients`;
+  let title = `${t('Clients.title')} - ${t('Index.meta.title')}`;
+  let description = `${t('Clients.description')} - ${t('Index.meta.title')}`;
   if (tags) {
     url += `?tags=${tags}`;
+    title = `${t('Clients.title')} - ${tags} - ${t('Index.meta.title')}`;
+    description = `${t('Clients.description')} - ${tags} - ${t('Index.meta.title')}`;
+  }
+  if (description.length > 160) {
+    description = `${description.substring(0, 160)}`;
   }
 
   return {
-    title: `${t('Clients.title')} | ${t('Index.meta.title')}`,
-    description: `${t('Clients.description')} | ${t('Index.meta.title')}`,
+    title: title,
+    description: description,
     icons: {
       icon: "/logo.png",
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
       url,
-      title: `${t('Clients.title')} | ${t('Index.meta.og.title')}`,
-      description: `${t('Clients.description')} | ${t('Index.meta.og.title')}`,
+      title: title,
+      description: description,
       images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${t('Clients.title')} | ${t('Index.meta.twitter.title')}`,
-      description: `${t('Clients.description')} | ${t('Index.meta.twitter.title')}`,
+      title: title,
+      description: description,
       images: ['/og.png'],
     },
     alternates: {

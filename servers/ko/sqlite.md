@@ -1,7 +1,7 @@
 ---
-name: SQLite MCP Server
-digest: Database interaction and business intelligence for MCP Servers
-author: Claude Team
+name: SQLite MCP 서버
+digest: MCP 서버를 위한 데이터베이스 상호작용 및 비즈니스 인텔리전스
+author: Claude 팀
 homepage: https://github.com/modelcontextprotocol/servers
 repository: https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite
 capabilities:
@@ -15,77 +15,77 @@ icon: https://cdn.simpleicons.org/sqlite
 createTime: 2024-12-06T00:00:00Z
 ---
 
-A Model Context Protocol (MCP) server implementation that provides database interaction and business intelligence capabilities through SQLite. This server enables running SQL queries, analyzing business data, and automatically generating business insight memos.
+SQLite를 통해 데이터베이스 상호작용 및 비즈니스 인텔리전스 기능을 제공하는 모델 컨텍스트 프로토콜(MCP) 서버 구현입니다. 이 서버는 SQL 쿼리 실행, 비즈니스 데이터 분석 및 비즈니스 인사이트 메모 자동 생성을 가능하게 합니다.
 
-## Components
+## 구성 요소
 
-### Resources
+### 리소스
 
-The server exposes a single dynamic resource:
+서버는 단일 동적 리소스를 제공합니다:
 
-- `memo://insights`: A continuously updated business insights memo that aggregates discovered insights during analysis
-  - Auto-updates as new insights are discovered via the append-insight tool
+- `memo://insights`: 분석 중 발견된 인사이트를 집계하는 지속적으로 업데이트되는 비즈니스 인사이트 메모
+  - append-insight 도구를 통해 새로운 인사이트가 발견되면 자동 업데이트됨
 
-### Prompts
+### 프롬프트
 
-The server provides a demonstration prompt:
+서버는 데모 프롬프트를 제공합니다:
 
-- `mcp-demo`: Interactive prompt that guides users through database operations
-  - Required argument: `topic` - The business domain to analyze
-  - Generates appropriate database schemas and sample data
-  - Guides users through analysis and insight generation
-  - Integrates with the business insights memo
+- `mcp-demo`: 사용자를 데이터베이스 작업을 통해 안내하는 대화형 프롬프트
+  - 필수 인자: `topic` - 분석할 비즈니스 도메인
+  - 적절한 데이터베이스 스키마 및 샘플 데이터 생성
+  - 사용자를 분석 및 인사이트 생성 과정으로 안내
+  - 비즈니스 인사이트 메모와 통합
 
-### Tools
+### 도구
 
-The server offers six core tools:
+서버는 여섯 가지 핵심 도구를 제공합니다:
 
-#### Query Tools
+#### 쿼리 도구
 
 - `read-query`
 
-  - Execute SELECT queries to read data from the database
-  - Input:
-    - `query` (string): The SELECT SQL query to execute
-  - Returns: Query results as array of objects
+  - 데이터베이스에서 데이터를 읽기 위한 SELECT 쿼리 실행
+  - 입력:
+    - `query` (문자열): 실행할 SELECT SQL 쿼리
+  - 반환: 객체 배열 형태의 쿼리 결과
 
 - `write-query`
 
-  - Execute INSERT, UPDATE, or DELETE queries
-  - Input:
-    - `query` (string): The SQL modification query
-  - Returns: `{ affected_rows: number }`
+  - INSERT, UPDATE 또는 DELETE 쿼리 실행
+  - 입력:
+    - `query` (문자열): SQL 수정 쿼리
+  - 반환: `{ affected_rows: number }`
 
 - `create-table`
-  - Create new tables in the database
-  - Input:
-    - `query` (string): CREATE TABLE SQL statement
-  - Returns: Confirmation of table creation
+  - 데이터베이스에 새 테이블 생성
+  - 입력:
+    - `query` (문자열): CREATE TABLE SQL 문
+  - 반환: 테이블 생성 확인
 
-#### Schema Tools
+#### 스키마 도구
 
 - `list-tables`
 
-  - Get a list of all tables in the database
-  - No input required
-  - Returns: Array of table names
+  - 데이터베이스의 모든 테이블 목록 가져오기
+  - 입력 필요 없음
+  - 반환: 테이블 이름 배열
 
 - `describe-table`
-  - View schema information for a specific table
-  - Input:
-    - `table_name` (string): Name of table to describe
-  - Returns: Array of column definitions with names and types
+  - 특정 테이블의 스키마 정보 보기
+  - 입력:
+    - `table_name` (문자열): 설명할 테이블 이름
+  - 반환: 이름과 유형이 포함된 열 정의 배열
 
-#### Analysis Tools
+#### 분석 도구
 
 - `append-insight`
-  - Add new business insights to the memo resource
-  - Input:
-    - `insight` (string): Business insight discovered from data analysis
-  - Returns: Confirmation of insight addition
-  - Triggers update of memo://insights resource
+  - 메모 리소스에 새로운 비즈니스 인사이트 추가
+  - 입력:
+    - `insight` (문자열): 데이터 분석에서 발견된 비즈니스 인사이트
+  - 반환: 인사이트 추가 확인
+  - memo://insights 리소스 업데이트 트리거
 
-## Usage with Claude Desktop
+## Claude Desktop에서 사용하기
 
 ```bash
 # Add the server to your claude_desktop_config.json
@@ -104,6 +104,6 @@ The server offers six core tools:
 }
 ```
 
-## License
+## 라이선스
 
-This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
+이 MCP 서버는 MIT 라이선스로 배포됩니다. 이는 당신이 자유롭게 소프트웨어를 사용, 수정, 배포할 수 있으며, MIT 라이선스의 조건에 따라 이용할 수 있습니다. 자세한 내용은 프로젝트 저장소의 LICENSE 파일을 참조하세요.

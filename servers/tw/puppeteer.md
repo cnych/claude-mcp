@@ -1,7 +1,7 @@
 ---
 name: Puppeteer
-digest: 浏览器自动化和网页爬取
-author: Claude 团队
+digest: 使用 Puppeteer 提供瀏覽器自動化能力的 MCP 伺服器。該伺服器使 LLMs 能夠與網頁互動、截圖和在真實瀏覽器環境中執行 JavaScript。
+author: Claude 團隊
 homepage: https://github.com/modelcontextprotocol/servers
 repository: https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer
 capabilities:
@@ -10,85 +10,85 @@ capabilities:
   tools: true
 tags:
   - puppeteer
-  - 浏览器
-  - 爬虫
+  - 瀏覽器
+  - 爬蟲
 icon: https://cdn.simpleicons.org/puppeteer
 createTime: 2024-12-01T00:00:00Z
 ---
 
-使用 Puppeteer 提供浏览器自动化能力的 MCP 服务器。该服务器使 LLMs 能够与网页交互、截图和在真实浏览器环境中执行 JavaScript。
+使用 Puppeteer 提供瀏覽器自動化能力的 MCP 伺服器。該伺服器使 LLMs 能夠與網頁互動、截圖和在真實瀏覽器環境中執行 JavaScript。
 
-## 组件
+## 組件
 
 ### 工具
 
 - **puppeteer_navigate**
 
-  - 导航到浏览器中的任何 URL
-  - 输入: `url` (string)
+  - 導航到瀏覽器中的任何 URL
+  - 輸入: `url` (string)
 
 - **puppeteer_screenshot**
 
-  - 捕获整个页面或特定元素的截图
-  - 输入:
-    - `name` (string, required): 截图名称
-    - `selector` (string, optional): CSS 选择器，用于截图元素
-    - `width` (number, optional, default: 800): 截图宽度
-    - `height` (number, optional, default: 600): 截图高度
+  - 捕獲整個頁面或特定元素的截圖
+  - 輸入:
+    - `name` (string, required): 截圖名稱
+    - `selector` (string, optional): CSS 選擇器，用於截圖元素
+    - `width` (number, optional, default: 800): 截圖寬度
+    - `height` (number, optional, default: 600): 截圖高度
 
 - **puppeteer_click**
 
-  - 点击页面上的元素
-  - 输入: `selector` (string): CSS 选择器，用于点击元素
+  - 點擊頁面上的元素
+  - 輸入: `selector` (string): CSS 選擇器，用於點擊元素
 
 - **puppeteer_hover**
 
-  - 悬停页面上的元素
-  - 输入: `selector` (string): CSS 选择器，用于悬停元素
+  - 懸停頁面上的元素
+  - 輸入: `selector` (string): CSS 選擇器，用於懸停元素
 
 - **puppeteer_fill**
 
-  - 填充输入字段
-  - 输入:
-    - `selector` (string): CSS 选择器，用于输入字段
+  - 填充輸入欄位
+  - 輸入:
+    - `selector` (string): CSS 選擇器，用於輸入欄位
     - `value` (string): 要填充的值
 
 - **puppeteer_select**
 
-  - 选择带有 SELECT 标签的元素
-  - 输入:
-    - `selector` (string): CSS 选择器，用于选择元素
-    - `value` (string): 要选择的值
+  - 選擇帶有 SELECT 標籤的元素
+  - 輸入:
+    - `selector` (string): CSS 選擇器，用於選擇元素
+    - `value` (string): 要選擇的值
 
 - **puppeteer_evaluate**
 
-  - 在浏览器控制台中执行 JavaScript
-  - 输入: `script` (string): 要执行的 JavaScript 代码
+  - 在瀏覽器控制台中執行 JavaScript
+  - 輸入: `script` (string): 要執行的 JavaScript 程式碼
 
-### 资源
+### 資源
 
-服务器提供两种类型的资源：
+伺服器提供兩種類型的資源：
 
 1. **Console Logs** (`console://logs`)
 
-   - 浏览器控制台输出文本格式
-   - 包括浏览器中的所有控制台消息
+   - 瀏覽器控制台輸出文字格式
+   - 包括瀏覽器中的所有控制台訊息
 
 2. **Screenshots** (`screenshot://<name>`)
-   - PNG 图像的截图
-   - 通过捕获时指定的截图名称访问
+   - PNG 圖像的截圖
+   - 通過捕獲時指定的截圖名稱訪問
 
-## 关键功能
+## 關鍵功能
 
-- 浏览器自动化
-- 控制台日志监控
-- 截图功能
-- JavaScript 执行
-- 基本的网页交互（导航、点击、表单填充）
+- 瀏覽器自動化
+- 控制台日誌監控
+- 截圖功能
+- JavaScript 執行
+- 基本的網頁互動（導航、點擊、表單填充）
 
 ## 使用 Puppeteer 服务器的配置
 
-以下是使用 Puppeteer 服务器的 Claude Desktop 配置：
+## 關鍵功能
 
 ```json
 {
@@ -101,6 +101,21 @@ createTime: 2024-12-01T00:00:00Z
 }
 ```
 
-## 许可证
+## 使用 Puppeteer 伺服器的配置
 
-该 MCP 服务器根据 MIT 许可证授权。这意味着您可以自由使用、修改和分发软件，但需遵守 MIT 许可证的条款和条件。更多详情，请参阅项目仓库中的 LICENSE 文件。
+以下是使用 Puppeteer 伺服器的 Claude Desktop 配置：
+
+```json
+{
+  "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}
+```
+
+## 許可證
+
+該 MCP 伺服器根據 MIT 許可證授權。這意味著您可以自由使用、修改和分發軟件，但需遵守 MIT 許可證的條款和條件。更多詳情，請參閱項目倉庫中的 LICENSE 文件。

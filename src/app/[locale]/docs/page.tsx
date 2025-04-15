@@ -15,10 +15,17 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('Docs');
+  const tIndex = await getTranslations('Index')
+
+  let description = t('meta.description');
+  if (description.length < 160) {
+    description = `${description} - ${tIndex('meta.description')}`;
+  }
+  description = `${description.substring(0, 160)}`;
   
   return {
-    title: t('meta.title'),
-    description: t('meta.description'),
+    title: `${t('meta.title')} - ${tIndex('meta.title')}`,
+    description: description,
     alternates: {
       canonical: locale === 'en' ? 'https://www.claudemcp.com/docs' : `https://www.claudemcp.com/${locale}/docs`,
     },

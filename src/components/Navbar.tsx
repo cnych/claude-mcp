@@ -23,6 +23,8 @@ export default function Navbar() {
     { href: '/servers' as const, label: t('servers') },
     { href: '/clients' as const, label: t('clients') },
     { href: '/docs' as const, label: t('documentation') },
+    { href: '/playground' as const, label: t('playground') },
+    { href: '/inspector' as const, label: t('inspector') },
     { href: '/specification' as const, label: t('specification') },
     { href: '/blog' as const, label: t('blog') },
   ]
@@ -33,8 +35,8 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <I18nLink href="/" aria-label="Claude MCP" title="Claude MCP" className="flex items-center">
-              <img src="/logo.png" alt="Claude MCP" className="w-10 h-auto mr-1" />
-              <span className="text-xl font-bold text-gray-900 dark:text-white">{t('title')}</span>
+              <img src="/logo.png" alt="Claude MCP" className="w-10 h-auto mr-2" />
+              <span className="hidden md:block text-xl font-bold text-gray-900 dark:text-white">{t('title')}</span>
             </I18nLink>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navLinks.map((link) => (
@@ -108,7 +110,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "block px-3 py-2 rounded-md text-base font-medium transform transition-transform duration-300",
+                "block px-3 py-2 rounded-md text-sm font-medium transform transition-transform duration-300",
                 isMenuOpen ? "translate-y-0" : "translate-y-4",
                 path.startsWith(link.href)
                   ? "bg-blue-50 text-blue-600 dark:bg-gray-800 dark:text-blue-400"

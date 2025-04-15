@@ -25,23 +25,29 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const { locale } = await params;
   const t = await getTranslations();
 
+  const title = `${t('Blog.meta.title')} - ${t('Index.meta.title')}`;
+  let description = `${t('Blog.meta.description')} - ${t('Index.meta.description')}`;
+  if (description.length > 160) {
+    description = description.slice(0, 160);
+  }
+
   return {
-    title: `${t('Blog.meta.title')} | ${t('Index.meta.title')}`,
-    description: `${t('Blog.meta.description')} | ${t('Index.meta.title')}`,
+    title,
+    description,
     icons: {
       icon: "/logo.png",
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
       url: locale === 'en' ? `https://www.claudemcp.com/blog` : `https://www.claudemcp.com/${locale}/blog`,
-      title: `${t('Blog.meta.title')} | ${t('Index.meta.og.title')}`,
-      description: `${t('Blog.meta.description')} | ${t('Index.meta.og.title')}`,
+      title,
+      description,
       images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${t('Blog.meta.title')} | ${t('Index.meta.twitter.title')}`,
-      description: `${t('Blog.meta.description')} | ${t('Index.meta.twitter.title')}`,
+      title,
+      description,
       images: ['/og.png'],
     },
     alternates: {
