@@ -9,10 +9,9 @@ capabilities:
   resources: false
   tools: true
 tags:
-  - web crawler
+  - crawler
   - search
   - indexing
-  - crawling
 icon: https://pragmar.com/media/static/images/home/mcp-server-webcrawl.png
 createTime: 2025-03-26
 ---
@@ -59,6 +58,7 @@ Configuration varies by crawler. Be sure to replace --datasource example with yo
 ```
 
 **Tested wget commands:**
+
 ```bash
 # --adjust-extension for file extensions, e.g. *.html
 wget --mirror https://example.com
@@ -79,6 +79,7 @@ wget --mirror https://example.com --adjust-extension
 ```
 
 **Tested wget commands for WARC:**
+
 ```bash
 wget --warc-file=example --recursive https://example.com
 wget --warc-file=example --recursive --page-requisites https://example.com
@@ -91,15 +92,21 @@ wget --warc-file=example --recursive --page-requisites https://example.com
   "mcpServers": {
     "webcrawl": {
       "command": "mcp-server-webcrawl",
-      "args": ["--crawler", "interrobot", "--datasrc", "/home/user/Documents/InterroBot/interrobot.v2.db"]
+      "args": [
+        "--crawler",
+        "interrobot",
+        "--datasrc",
+        "/home/user/Documents/InterroBot/interrobot.v2.db"
+      ]
     }
   }
 }
 ```
 
 **Notes:**
-* Crawls must be run from within InterroBot (windowed)
-* macOS/Windows: --datasource path is provided on InterroBot options page
+
+- Crawls must be run from within InterroBot (windowed)
+- macOS/Windows: --datasource path is provided on InterroBot options page
 
 ### Katana Configuration
 
@@ -115,6 +122,7 @@ wget --warc-file=example --recursive --page-requisites https://example.com
 ```
 
 **Tested Katana command:**
+
 ```bash
 # -store-response to save crawl contents
 # -store-response-dir allows for many site crawls in one dir
@@ -128,15 +136,21 @@ katana -u https://example.com -store-response -store-response-dir crawls/
   "mcpServers": {
     "webcrawl": {
       "command": "mcp-server-webcrawl",
-      "args": ["--crawler", "siteone", "--datasrc", "/path/to/siteone/archives/"]
+      "args": [
+        "--crawler",
+        "siteone",
+        "--datasrc",
+        "/path/to/siteone/archives/"
+      ]
     }
   }
 }
 ```
 
 **Notes:**
-* Crawls must be run from within SiteOne (windowed)
-* "Generate offline website" must be checked
+
+- Crawls must be run from within SiteOne (windowed)
+- "Generate offline website" must be checked
 
 ## Available Tools
 
@@ -146,14 +160,14 @@ Retrieves a list of sites (project websites or crawl directories).
 
 **Optional Parameters**
 
-* `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, url). Options include:
-* `ids` (array of integers, optional): List of project IDs to filter by. Leave empty for all projects.
+- `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, url). Options include:
+- `ids` (array of integers, optional): List of project IDs to filter by. Leave empty for all projects.
 
 **Optional Fields**
 
-* `modified` ISO 8601 timestamp of last modification
-* `created` ISO 8601 timestamp of creation
-* `robots` Robots.txt information (limited support)
+- `modified` ISO 8601 timestamp of last modification
+- `created` ISO 8601 timestamp of creation
+- `robots` Robots.txt information (limited support)
 
 **Example Usage**
 
@@ -167,33 +181,33 @@ Searches for resources (webpages, CSS, PDF, etc.) across projects and retrieves 
 
 **Optional Parameters:**
 
-* `query` (string, optional): Fulltext search query string. Supports fulltext and boolean operators, syntax consistent with SQLite FTS5 in boolean mode (AND, OR, NOT, quoted phrases, suffix wildcards).
-* `sites` (array of integers, optional): List of project IDs to filter search results to specific sites.
-* `limit` (integer, optional): Maximum number of results to return. Default is 20, max is 100.
-* `offset` (integer, optional): Number of results to skip for pagination. Default is 0.
-* `sort` (string, optional): Sort order for results. Prefixed with `+` for ascending, `-` for descending.
-* `statuses` (array of integers, optional): Filter by HTTP status codes (e.g., [200] for successful responses, [404, 500] for errors).
-* `types` (array of strings, optional): Filter for specific resource types.
-* `thumbnails` (boolean, optional): Enable base64 encoded data for image thumbnails. Default is false.
-* `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, URL, status). Empty list means default fields only. The content field can lead to large results and should be used judiciously with LIMIT.:
-* `ids` (array of integers, optional): Retrieve specific resources directly by their IDs.
+- `query` (string, optional): Fulltext search query string. Supports fulltext and boolean operators, syntax consistent with SQLite FTS5 in boolean mode (AND, OR, NOT, quoted phrases, suffix wildcards).
+- `sites` (array of integers, optional): List of project IDs to filter search results to specific sites.
+- `limit` (integer, optional): Maximum number of results to return. Default is 20, max is 100.
+- `offset` (integer, optional): Number of results to skip for pagination. Default is 0.
+- `sort` (string, optional): Sort order for results. Prefixed with `+` for ascending, `-` for descending.
+- `statuses` (array of integers, optional): Filter by HTTP status codes (e.g., [200] for successful responses, [404, 500] for errors).
+- `types` (array of strings, optional): Filter for specific resource types.
+- `thumbnails` (boolean, optional): Enable base64 encoded data for image thumbnails. Default is false.
+- `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, URL, status). Empty list means default fields only. The content field can lead to large results and should be used judiciously with LIMIT.:
+- `ids` (array of integers, optional): Retrieve specific resources directly by their IDs.
 
 **Optional Fields**
 
-* `created`: ISO 8601 timestamp of creation
-* `modified`: ISO 8601 timestamp of last modification
-* `content`: The actual content of the resource, if text/* (HTML/CSS/JS/plain)
-* `name`: Resource name or title information
-* `size`: File size information
-* `time`: Time-related metrics for the resource (support varies by crawler type)
-* `headers`: HTTP headers associated with the resource (support varies by crawler type)
+- `created`: ISO 8601 timestamp of creation
+- `modified`: ISO 8601 timestamp of last modification
+- `content`: The actual content of the resource, if text/\* (HTML/CSS/JS/plain)
+- `name`: Resource name or title information
+- `size`: File size information
+- `time`: Time-related metrics for the resource (support varies by crawler type)
+- `headers`: HTTP headers associated with the resource (support varies by crawler type)
 
 **Sort Options**
 
-* `+id`, `-id`: Sort by resource ID
-* `+url`, `-url`: Sort by resource URL
-* `+status`, `-status`: Sort by HTTP status code
-* `?`: Random sort (useful for statistical sampling)
+- `+id`, `-id`: Sort by resource ID
+- `+url`, `-url`: Sort by resource URL
+- `+status`, `-status`: Sort by HTTP status code
+- `?`: Random sort (useful for statistical sampling)
 
 **Example Usage:**
 

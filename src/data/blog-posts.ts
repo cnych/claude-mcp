@@ -81,7 +81,6 @@ export function getBlogPosts(locale: string = 'zh'): Promise<BlogPost[]> {
     
     // 如果目录不存在，返回空数组
     if (!fs.existsSync(blogsDir)) {
-      console.warn(`Blog directory does not exist: ${blogsDir}`);
       blogCache[locale] = [];
       resolve(blogCache[locale]);
       return;

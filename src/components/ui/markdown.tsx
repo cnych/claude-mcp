@@ -239,7 +239,7 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
           console.log(url.host);
           const host = "www.claudemcp.com";
           if (url.host && url.host !== host) {
-            link.setAttribute('rel', 'noreferrer noopener nofollow');
+            link.setAttribute('rel', 'ugc noreferrer noopener nofollow');
             link.setAttribute('target', '_blank');
           }
         } catch (e) {

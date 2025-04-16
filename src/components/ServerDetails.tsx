@@ -118,7 +118,7 @@ export function ServerDetails({ server }: { server: MCPServer }) {
                   href={server.repository}
                   className="mt-1 text-blue-600 dark:text-blue-400 hover:underline block truncate"
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="ugc noreferrer noopener nofollow"
                 >
                   {server.repository}
                 </a>
@@ -131,7 +131,7 @@ export function ServerDetails({ server }: { server: MCPServer }) {
                   href={server.homepage}
                   className="mt-1 text-blue-600 dark:text-blue-400 hover:underline block truncate"
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="ugc noreferrer noopener nofollow"
                 >
                   {server.homepage}
                 </a>
