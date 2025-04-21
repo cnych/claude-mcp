@@ -73,15 +73,15 @@
     },
     "Index": {
       "meta": {
-        "title": "Claude MCP（模型上下文协议）社区",
+        "title": "MCP 社区",
         "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。",
         "keywords": "AI, 协议, 上下文, 开发环境, Claude",
         "og": {
-          "title": "Claude MCP（模型上下文协议）社区",
+          "title": "MCP 社区",
           "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         },
         "twitter": {
-          "title": "Claude MCP（模型上下文协议）社区",
+          "title": "MCP 社区",
           "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         }
       },
@@ -797,7 +797,8 @@
       "serverDetails": "服务器详情",
       "notFound": "服务器未找到",
       "notFoundDescription": "请求的服务器无法找到。",
-      "submitServer": "提交服务器"
+      "submitServer": "提交服务器",
+      "relatedServers": "相关推荐服务器"
     },
     "Docs": {
       "meta": {
@@ -894,6 +895,7 @@
           "write-ts-server": "MCP 服务器",
           "write-ts-client": "MCP 客户端",
           "use-llm-dev-mcp": "使用 Cursor/LLM 开发 MCP",
+          "sampling-usage": "MCP 中的 Sampling 功能",
           "dev-sse-mcp": "开发 SSE 类型的 MCP 服务",
           "resources": "资源管理",
           "tools": "工具使用",

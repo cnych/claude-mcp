@@ -12,7 +12,7 @@ tags:
   - ai
   - ui
   - ide
-icon: https://static.claudemcp.com/servers/21st-dev/magic-mcp/21st-dev-magic-mcp-6c24c56a.png
+icon: https://avatars.githubusercontent.com/u/199367026?s=200&v=4
 createTime: 2025-02-19
 featured: true
 ---

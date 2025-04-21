@@ -3,6 +3,7 @@ title: 開發 MCP 客戶端
 description: 如何開發我們的第一個 TypeScript MCP 客戶端
 section: typescript
 prev: write-ts-server
+next: use-llm-dev-mcp
 pubDate: 2025-03-24
 order: 2
 ---

@@ -22,7 +22,7 @@ export function LatestBlogPosts({ posts }: LatestBlogPostsProps) {
   }
 
   // 只显示最多3篇博客文章
-  const displayPosts = posts.slice(0, 3);
+  const displayPosts = posts.slice(0, 6);
 
   return (
     <section className="py-16 md:py-24 bg-card">

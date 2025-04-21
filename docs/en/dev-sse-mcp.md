@@ -3,6 +3,7 @@ title: Develop an SSE-based MCP Service
 description: Developing an SSE-based MCP intelligent shopping assistant service
 section: typescript
 prev: use-llm-dev-mcp
+next: sampling-usage
 pubDate: 2025-04-02
 order: 4
 ---

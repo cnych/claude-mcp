@@ -3,6 +3,7 @@ title: SSE 기반 MCP 서비스 개발하기
 description: SSE 기반 MCP 지능형 쇼핑 도우미 서비스 개발하기
 section: typescript
 prev: use-llm-dev-mcp
+next: sampling-usage
 pubDate: 2025-04-02
 order: 4
 ---

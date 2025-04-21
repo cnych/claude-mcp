@@ -2,7 +2,8 @@
 title: Cursor/LLM을 사용하여 MCP 개발하기
 description: Cursor/LLM을 사용하여 MCP 서버를 개발하는 방법
 section: typescript
-prev: write-ts-server
+prev: write-ts-client
+next: dev-sse-mcp
 pubDate: 2025-04-01
 order: 3
 ---

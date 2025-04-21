@@ -3,6 +3,7 @@ title: Write a MCP Client
 description: How to write our first TypeScript MCP client
 section: typescript
 prev: write-ts-server
+next: use-llm-dev-mcp
 pubDate: 2025-03-24
 order: 2
 ---

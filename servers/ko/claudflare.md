@@ -1,6 +1,6 @@
 ---
 name: Cloudflare MCP 서버
-digest: Cloudflare 개발자 플랫폼(예: Workers/KV/R2/D1)에서 리소스를 배포, 구성 및 조회할 수 있습니다
+digest: "Cloudflare 개발자 플랫폼(예: Workers/KV/R2/D1)에서 리소스를 배포, 구성 및 조회할 수 있습니다"
 author: Cloudflare
 homepage: https://github.com/cloudflare/mcp-server-cloudflare
 repository: https://github.com/cloudflare/mcp-server-cloudflare

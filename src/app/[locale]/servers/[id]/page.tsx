@@ -1,11 +1,12 @@
 import { ServerDetails } from '@/components/ServerDetails';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { loadServerDetail } from '@/lib/data-utils';
+import { loadServerDetail, loadServersData } from '@/lib/data-utils';
 import { readdir } from 'fs/promises';
 import path from 'path';
 import { locales } from '@/i18n/config';
 import { notFound } from 'next/navigation';
+import type { MCPServer } from '@/types/server';
 
 // 每小时重新生成页面
 export const revalidate = 3600;
@@ -88,6 +89,52 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+/**
+ * 获取相关推荐服务器
+ * @param locale 语言
+ * @param currentServer 当前服务器
+ * @param maxCount 最大推荐数量
+ * @returns 推荐服务器列表
+ */
+async function getRelatedServers(locale: string, currentServer: MCPServer, maxCount: number = 12): Promise<MCPServer[]> {
+  // 获取所有服务器
+  const { servers: allServers } = await loadServersData(locale);
+  
+  // 排除当前服务器
+  const otherServers = allServers.filter(server => server.id !== currentServer.id);
+  
+  // 相同标签的服务器
+  const serversWithSameTags = otherServers.filter(server => 
+    server.tags.some(tag => currentServer.tags.includes(tag))
+  );
+  
+  // 如果找到的相关服务器不足maxCount个，从精选服务器中补充
+  let result = [...serversWithSameTags];
+  if (result.length < maxCount) {
+    // 获取精选服务器（排除已选的服务器）
+    const featuredServers = otherServers
+      .filter(server => server.featured && !result.some(s => s.id === server.id))
+      .slice(0, maxCount - result.length);
+    
+    result = [...result, ...featuredServers];
+  }
+  
+  // 如果仍然不足maxCount个，随机补充
+  if (result.length < maxCount) {
+    const remainingServers = otherServers.filter(
+      server => !result.some(s => s.id === server.id)
+    );
+    
+    // 随机打乱剩余服务器
+    const shuffledRemaining = [...remainingServers].sort(() => 0.5 - Math.random());
+    
+    result = [...result, ...shuffledRemaining.slice(0, maxCount - result.length)];
+  }
+  
+  // 限制最多返回maxCount个
+  return result.slice(0, maxCount);
+}
+
 export default async function ServerDetailPage({
   params
 }: PageProps) {
@@ -100,9 +147,12 @@ export default async function ServerDetailPage({
     notFound();
   }
   
+  // 获取相关推荐服务器
+  const relatedServers = await getRelatedServers(locale, server);
+  
   return (
     <div className="container mx-auto px-4 py-8">
-      <ServerDetails server={server} />
+      <ServerDetails server={server} relatedServers={relatedServers} />
     </div>
   );
 } 
