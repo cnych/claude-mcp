@@ -13,6 +13,7 @@ tags:
   - docker
 icon: https://avatars.githubusercontent.com/u/110299016?v=4
 createTime: 2025-03-11
+featured: true
 ---
 
 An MCP server implementation that integrates the Sonar API to provide Claude with unparalleled real-time, web-wide research.

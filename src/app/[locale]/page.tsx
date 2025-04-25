@@ -73,7 +73,7 @@ export default async function Home({ params }: PageProps) {
   });
   
   // 加载最新文档
-  const latestDocs = await getLatestDocs(locale, 6);
+  const latestDocs = await getLatestDocs(locale, 9);
 
   // 加载最新博客文章
   const latestBlogPosts = await getBlogPosts(locale);

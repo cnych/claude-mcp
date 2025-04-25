@@ -90,11 +90,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getBlogPostDetails(slug, locale);
 
   if (!post) {
-    notFound();
+    return notFound();
   }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "title": post.title,
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": `https://www.claudemcp.com${post.coverImage}`,
+    "url": locale === 'en' ? `https://www.claudemcp.com/blog/${slug}` : `https://www.claudemcp.com/${locale}/blog/${slug}`,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "articleBody": post.content,
+    "author": {
+      "@type": "Person",
+      "name": post.author.name
+    },
+  };
+
 
   return (
     <div className="container mx-auto max-w-5xl py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <BlogPost post={post} />
     </div>
   );

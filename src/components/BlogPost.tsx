@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -13,8 +12,7 @@ import {
   ClockIcon,
   TwitterIcon,
   LinkedinIcon,
-  LinkIcon,
-  ChevronUpIcon
+  LinkIcon
 } from 'lucide-react';
 import type { BlogPost } from './BlogCard';
 import { MarkdownComponent as Markdown } from '@/components/ui/markdown';
@@ -44,31 +42,6 @@ interface BlogPostProps {
 export default function BlogPost({ post }: BlogPostProps) {
   const { locale } = useParams();
   const t = useTranslations('Blog.common');
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  // 监听滚动事件，计算阅读进度
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(progress);
-      setShowScrollTop(window.scrollY > 500);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // 回到顶部
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   // 复制链接
   const copyLink = () => {
@@ -79,9 +52,6 @@ export default function BlogPost({ post }: BlogPostProps) {
 
   return (
     <article className="relative mx-auto max-w-4xl px-4 sm:px-0">
-      {/* 阅读进度条 */}
-      <div className="fixed top-0 left-0 z-50 h-1 bg-primary transition-all duration-300 ease-out" style={{ width: `${scrollProgress}%` }}></div>
-      
       {/* 返回按钮 */}
       <div className="mb-8">
         <Button variant="ghost" asChild className="p-0 hover:bg-transparent">
@@ -252,19 +222,6 @@ export default function BlogPost({ post }: BlogPostProps) {
             ))}
           </div>
         </div>
-      )}
-
-      {/* 返回顶部按钮 */}
-      {showScrollTop && (
-        <Button 
-          variant="outline" 
-          size="icon" 
-          className="fixed bottom-6 right-6 h-10 w-10 rounded-full shadow-md"
-          onClick={scrollToTop}
-        >
-          <ChevronUpIcon className="h-5 w-5" />
-          <span className="sr-only">{t('scrollToTop')}</span>
-        </Button>
       )}
     </article>
   );

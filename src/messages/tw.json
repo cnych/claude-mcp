@@ -845,6 +845,8 @@
         "write-ts-server": "MCP 伺服器",
         "write-ts-client": "MCP 客戶端",
         "use-llm-dev-mcp": "使用 Cursor/LLM 開發 MCP",
+        "transports-2025-03-26": "MCP 傳輸協定 2025-03-26",
+        "streamable-http": "Streamable HTTP",
         "sampling-usage": "MCP 中的 Sampling 功能",
         "dev-sse-mcp": "開發 SSE 類型的 MCP 服務",
         "resources": "資源管理",

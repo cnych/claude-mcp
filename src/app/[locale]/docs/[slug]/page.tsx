@@ -141,6 +141,45 @@ export default async function DocPage({ params }: PageProps) {
     }
   }
 
+  // 查找当前文档在docList中的信息
+  let currentDoc: DocMeta | undefined;
+  for (const sectionDocs of Object.values(docList)) {
+    const found = sectionDocs.find(doc => doc.slug === slug);
+    if (found) {
+      currentDoc = found;
+      break;
+    }
+  }
+  
+  // 构建结构化数据
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": currentDoc?.title || `${slug} Documentation`,
+    "description": currentDoc?.description || "",
+    "datePublished": currentDoc?.pubDate || new Date().toISOString(),
+    "dateModified": currentDoc?.pubDate || new Date().toISOString(),
+    "articleSection": currentDoc?.section || "Documentation",
+    "url": locale === 'en' 
+      ? `https://www.claudemcp.com/docs/${slug}` 
+      : `https://www.claudemcp.com/${locale}/docs/${slug}`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Claude MCP",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.claudemcp.com/logo.png"
+      }
+    },
+    "inLanguage": locale,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": locale === 'en' 
+        ? `https://www.claudemcp.com/docs/${slug}` 
+        : `https://www.claudemcp.com/${locale}/docs/${slug}`
+    }
+  };
+  
   if (error) {
     return (
       <div className="bg-red-50 dark:bg-red-900/10 p-6 rounded-lg border border-red-200 dark:border-red-800">
@@ -174,6 +213,12 @@ export default async function DocPage({ params }: PageProps) {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-950 dark:to-gray-900">
+      {/* 注入结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       {/* 顶部装饰 */}
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-blue-50/20 dark:from-blue-950/20" />
       

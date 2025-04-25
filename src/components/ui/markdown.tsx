@@ -73,8 +73,8 @@ function processTaskLists(html: string): string {
 marked.setOptions(marked.getDefaults());
 marked.setOptions({
   gfm: true,   // GitHub风格Markdown，包含表格和任务列表
-  breaks: true,
-  pedantic: false,
+  pedantic: false,  // 
+  // 移除 breaks: true，让 GFM 处理代码块内的换行
 });
 
 // 添加扩展
@@ -236,10 +236,9 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
         try {
           const url = new URL(href);
           // 只有外部链接才添加安全属性
-          console.log(url.host);
           const host = "www.claudemcp.com";
           if (url.host && url.host !== host) {
-            link.setAttribute('rel', 'ugc noreferrer noopener nofollow');
+            link.setAttribute('rel', 'ugc');
             link.setAttribute('target', '_blank');
           }
         } catch (e) {
@@ -268,10 +267,13 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
     });
     
     // 处理代码块
-    contentRef.current.querySelectorAll('pre code').forEach(element => {
+    const codeBlocks = contentRef.current.querySelectorAll('pre code');
+    
+    codeBlocks.forEach((element) => {
       const className = element.className || '';
       const language = className.replace('language-', '');
       const code = element.textContent || '';
+      
 
       if (language === 'mermaid') {
         const mermaidContainer = document.createElement('div');
@@ -283,15 +285,19 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
         }
       } else if (language && language !== 'plaintext') {
         try {
-          // 手动应用高亮
           if (hljs.getLanguage(language)) {
             const highlightedCode = hljs.highlight(code, { language }).value;
             element.innerHTML = highlightedCode;
             element.classList.add('hljs');
+          } else {
+            element.classList.add('hljs'); 
           }
         } catch (error) {
           console.warn(`代码高亮错误 (${language}):`, error);
+          element.classList.add('hljs');
         }
+      } else {
+        element.classList.add('hljs');
       }
     });
     

@@ -73,15 +73,15 @@
     },
     "Index": {
       "meta": {
-        "title": "MCP 社区",
+        "title": "Claude MCP 社区",
         "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。",
         "keywords": "AI, 协议, 上下文, 开发环境, Claude",
         "og": {
-          "title": "MCP 社区",
+          "title": "Claude MCP 社区",
           "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境之间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         },
         "twitter": {
-          "title": "MCP 社区",
+          "title": "Claude MCP 社区",
           "description": "Claude MCP 是一个开放的协议标准，用于在AI模型和开发环境间建立统一的上下文交互，claudemcp.com 是 MCP 的社区网站，提供 MCP 的文档、示例代码、服务器目录和最佳实践。"
         }
       },
@@ -890,6 +890,8 @@
           "architecture": "架构",
           "installation": "安装",
           "protocol": "协议",
+          "transports-2025-03-26": "传输协议",
+          "streamable-http": "Streamable HTTP",
           "quickstart": "快速开始",
           "getting_started": "入门指南",
           "write-ts-server": "MCP 服务器",

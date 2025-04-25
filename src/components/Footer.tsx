@@ -15,6 +15,7 @@ export function Footer() {
       { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
       { name: 'A2A', href: 'https://www.a2aprotocol.net?ref=claude-mcp' },
       { name: 'DeepSite', href: 'https://www.deepsite.app?ref=claude-mcp' },
+      { name: 'Drow Names', href: 'https://www.drownames.com?ref=claude-mcp' },
     ],
     community: [
       { name: t('links.github'), href: 'https://github.com/cnych/claude-mcp' },

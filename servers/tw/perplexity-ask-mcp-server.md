@@ -13,6 +13,7 @@ tags:
   - docker
 icon: https://avatars.githubusercontent.com/u/110299016?v=4
 createTime: 2025-03-11
+featured: true
 ---
 
 一個整合 Sonar API 的 MCP 伺服器實現，為 Claude 提供無與倫比的即時全網研究能力。

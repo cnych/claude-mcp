@@ -47,15 +47,15 @@
   },
   "Index": {
     "meta": {
-      "title": "MCP Community",
+      "title": "Claude MCP Community",
       "description": "Claude MCP is an open protocol standard for unified context interaction between AI models and development environments. claudemcp.com as the community website, providing documentation, example code, server listings, and best practices.",
       "keywords": "AI, Protocol, Context, Development Environment, Claude",
       "og": {
-        "title": "MCP Community",
+        "title": "Claude MCP Community",
         "description": "Claude MCP is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, claudemcp.com is the community website for MCP, providing MCP documentation, example codes, server lists, and best practices."
       },
       "twitter": {
-        "title": "MCP Community",
+        "title": "Claude MCP Community",
         "description": "Claude MCP is an open protocol standard customized by Claude for establishing unified context interaction between AI models and development environments, claudemcp.com is the community website for MCP, providing MCP documentation, example codes, server lists, and best practices."
       }
     },
@@ -870,6 +870,8 @@
           "write-ts-server": "MCP Server",
           "write-ts-client": "MCP Client",
           "use-llm-dev-mcp": "Develop MCP with Cursor/LLM",
+          "transports-2025-03-26": "Transports Protocol 2025-03-26",
+          "streamable-http": "Streamable HTTP",
           "sampling-usage": "Sampling Usage",
           "dev-sse-mcp": "Develop an SSE MCP Service",
           "resources": "Resource Management",
@@ -922,7 +924,7 @@
       "loadingToc": "Loading table of contents..."
     },
     "meta": {
-      "title": "MCP Blog",
+      "title": "Claude MCP Blog",
       "description": "Explore our latest articles and insights about technology, AI, programming, and best practices"
     },
     "page": {

@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { remark } from "remark";
-import html from "remark-html";
 import { MarkdownComponent as Markdown } from "@/components/ui/markdown";
 import type { MCPServer } from "@/types/server";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
@@ -20,20 +17,6 @@ export function ServerDetails({
 }) {
   const { locale } = useParams();
   const t = useTranslations("Servers");
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    async function processContent() {
-      if (server) {
-        const processedContent = await remark()
-          .use(html)
-          .process(server.description);
-        const contentHtml = processedContent.toString();
-        setContent(contentHtml);
-      }
-    }
-    processContent();
-  }, [server]);
 
   if (!server) {
     return (
@@ -131,7 +114,7 @@ export function ServerDetails({
                   href={server.repository}
                   className="mt-1 text-blue-600 dark:text-blue-400 hover:underline block truncate"
                   target="_blank"
-                  rel="ugc noreferrer noopener nofollow"
+                  rel="ugc"
                 >
                   {server.repository}
                 </a>
@@ -146,7 +129,7 @@ export function ServerDetails({
                   href={server.homepage}
                   className="mt-1 text-blue-600 dark:text-blue-400 hover:underline block truncate"
                   target="_blank"
-                  rel="ugc noreferrer noopener nofollow"
+                  rel="ugc"
                 >
                   {server.homepage}
                 </a>
@@ -204,10 +187,11 @@ export function ServerDetails({
         </div>
       </div>
 
+      {/* 使用 gap 控制间距，让内容区 flex-1 填充空间 */}
       <div className="flex flex-col lg:flex-row gap-6">
         {/* content */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 prose dark:prose-invert max-w-none lg:flex-1">
-          <Markdown content={content} />
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 lg:flex-1 min-w-0">
+          <Markdown content={server.description} />
         </div>
 
         {/* 相关推荐服务器 */}

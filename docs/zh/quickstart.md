@@ -2,10 +2,10 @@
 title: 快速入门
 description: 如何快速上手使用 Claude MCP（Model Context Protocol）
 section: getting_started
-prev: protocol
+prev: transports-2025-03-26
 next: write-ts-server
 pubDate: 2024-12-02
-order: 4
+order: 5
 ---
 
 # 快速入门

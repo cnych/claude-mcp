@@ -3,7 +3,7 @@ title: 基础协议
 description: Claude MCP（Model Context Protocol）基础协议定义
 section: getting_started
 prev: architecture
-next: quickstart
+next: transports-2025-03-26
 pubDate: 2024-12-02
 order: 3
 ---
@@ -233,6 +233,7 @@ sequenceDiagram
 
 - `stdio`（标准输入输出）
 - 基于 `SSE`（Server-Sent Events）的 HTTP
+- [Streamable HTTP（2025-03-26 版本）](/zh/docs/transports-2025-03-26/)
 
 需要注意，客户端应尽可能支持 `stdio`，此外，客户端和服务器也可以以可插拔的方式实现自定义传输机制。
 
