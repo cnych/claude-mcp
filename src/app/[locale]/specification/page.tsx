@@ -23,20 +23,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('Specification')
-  const tIndex = await getTranslations('Index')
 
-  let description = t('meta.description');
-  if (description.length < 160) {
-    description = `${description} - ${tIndex('meta.description')}`;
-  }
-  description = `${description.substring(0, 160)}`;
+  const description = t('meta.description');
 
   return {
-    title: `${t('meta.title')} - ${tIndex('meta.title')}`,
+    title: t('meta.title'),
     description: description,
     openGraph: {
       url: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,
-      title: `${t('meta.title')} - ${tIndex('meta.title')}`,
+      title: t('meta.title'),
       description: description,
       images: ['/og.png'],
     },

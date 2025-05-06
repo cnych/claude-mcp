@@ -11,7 +11,7 @@ const baseUrl = "https://www.claudemcp.com";
 async function fetchDocs(locale: string): Promise<DocMeta[]> {
   try {
     // 从文件系统获取文档数据
-    const docsDir = path.join(process.cwd(), 'docs', locale);
+    const docsDir = path.join(process.cwd(), 'public/docs', locale);
     const files = await readdir(docsDir);
     
     const docs: DocMeta[] = [];
@@ -148,6 +148,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
+    {
+      url: locale === "en" ? `${baseUrl}/playground` : `${baseUrl}/${locale}/playground`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: locale === "en" ? `${baseUrl}/inspector` : `${baseUrl}/${locale}/inspector`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }
   ]);
 
   return [

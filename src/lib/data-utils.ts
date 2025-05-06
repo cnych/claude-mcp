@@ -25,7 +25,7 @@ export async function loadServersData(
     }
     
     // 从服务器目录中读取所有服务器文件
-    const serversDir = path.join(process.cwd(), 'servers', locale);
+    const serversDir = path.join(process.cwd(), 'public/servers', locale);
     
     try {
       const dirStat = await stat(serversDir);
@@ -125,7 +125,7 @@ export async function loadServerDetail(locale: string, id: string): Promise<MCPS
     }
     
     // 服务器文件路径
-    const filePath = path.join(process.cwd(), 'servers', locale, `${id}.md`);
+    const filePath = path.join(process.cwd(), 'public/servers', locale, `${id}.md`);
     
     try {
       const content = await readFile(filePath, 'utf-8');
@@ -183,7 +183,7 @@ export async function loadClientsData(
     }
     
     // 从客户端目录中读取所有客户端文件
-    const clientsDir = path.join(process.cwd(), 'clients', locale);
+    const clientsDir = path.join(process.cwd(), 'public/clients', locale);
     
     try {
       const dirStat = await stat(clientsDir);
@@ -291,7 +291,7 @@ export async function loadClientDetail(locale: string, id: string): Promise<MCPC
     }
     
     // 客户端文件路径
-    const filePath = path.join(process.cwd(), 'clients', locale, `${id}.md`);
+    const filePath = path.join(process.cwd(), 'public/clients', locale, `${id}.md`);
     
     try {
       const content = await readFile(filePath, 'utf-8');

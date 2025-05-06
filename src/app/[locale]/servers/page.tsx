@@ -33,14 +33,13 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     url += `?tags=${tags}`;
   }
 
-  const title = `${t('Servers.title')} - ${t('Index.meta.title')}`;
-  let description = `${t('Servers.description')} - ${t('Index.meta.title')}`;
+  let description = `${t('Servers.description')} - ${t('Servers.title')} - ${t('Index.meta.title')}`;
   if (description.length > 160) {
     description = `${description.substring(0, 160)}`;
   }
 
   return {
-    title: title,
+    title: t('Servers.title'),
     description: description,
     icons: {
       icon: "/logo.png",
@@ -48,13 +47,13 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
     },
     openGraph: {
       url,
-      title: title,
+      title: t('Servers.title'),
       description: description,
       images: ['/og.png'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: title,
+      title: t('Servers.title'),
       description: description,
       images: ['/og.png'],
     },

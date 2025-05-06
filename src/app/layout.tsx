@@ -3,7 +3,6 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { Metadata } from 'next'
 import { AD_CLIENT } from '@/lib/utils'
-import CanvasCursor from '@/components/CavasCursor'
 import ClarityScript from '@/components/ClarityScript'
 
 // 优化中文字体加载
@@ -39,17 +38,17 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="tw" href="https://www.claudemcp.com/tw" />
         <link rel="alternate" hrefLang="ko" href="https://www.claudemcp.com/ko" />
         <link rel="alternate" hrefLang="x-default" href="https://www.claudemcp.com" />
-        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`}
-          crossOrigin="anonymous"></script>
         <ClarityScript />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preload" href="/logo.png" as="image" />
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
         <GoogleAnalytics gaId="G-JBQK9CPP1N" />
-        <CanvasCursor />
       </body>
     </html>
   )

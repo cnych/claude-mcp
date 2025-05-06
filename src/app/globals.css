@@ -57,34 +57,141 @@ body {
 }
 
 @layer utilities {
+  /* 基础动画库 */
   .bg-grid-pattern {
     background-image: linear-gradient(to right, rgb(var(--primary) / 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(var(--primary) / 0.1) 1px, transparent 1px);
     background-size: 4rem 4rem;
   }
 
-  .animate-in {
-    animation-delay: calc(var(--index) * 130ms);
-  }
+  /* 动画延迟变量 */
+  .animation-delay-0 { animation-delay: 0ms; }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-900 { animation-delay: 900ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
 
+  /* 动画关键帧定义 */
   @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
   }
 
   @keyframes slide-in-from-bottom {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 
+  @keyframes slide-in-from-left {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slide-in-from-right {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes scale-in {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes pulse-effect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes float-effect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes rotate-effect {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* 各种动画类 */
   .fade-in {
-    animation: fade-in 1s ease forwards;
+    animation: fade-in 0.6s ease-out forwards;
   }
 
-  .slide-in-from-bottom {
-    animation: slide-in-from-bottom 1s ease forwards;
+  .slide-in-bottom {
+    animation: slide-in-from-bottom 0.5s ease-out forwards;
   }
 
+  .slide-in-left {
+    animation: slide-in-from-left 0.5s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slide-in-from-right 0.5s ease-out forwards;
+  }
+
+  .scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  .float {
+    animation: float-effect 3s ease-in-out infinite;
+  }
+
+  .pulse-animation {
+    animation: pulse-effect 3s infinite ease-in-out;
+  }
+
+  .rotate {
+    animation: rotate-effect 10s linear infinite;
+  }
+
+  /* 状态切换类 */
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-scale:active {
+    transform: scale(0.95);
+  }
+
+  .hover-float:hover {
+    animation: float-effect 1.5s ease-in-out infinite;
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 8px 2px rgba(var(--primary), 0.3);
+    transform: translateY(-2px);
+  }
+
+  /* 容器内子元素动画（取代Framer Motion的stagger效果） */
+  .stagger-container > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-container > *:nth-child(2) { animation-delay: 100ms; }
+  .stagger-container > *:nth-child(3) { animation-delay: 200ms; }
+  .stagger-container > *:nth-child(4) { animation-delay: 300ms; }
+  .stagger-container > *:nth-child(5) { animation-delay: 400ms; }
+  .stagger-container > *:nth-child(6) { animation-delay: 500ms; }
+  .stagger-container > *:nth-child(7) { animation-delay: 600ms; }
+  .stagger-container > *:nth-child(8) { animation-delay: 700ms; }
+  .stagger-container > *:nth-child(9) { animation-delay: 800ms; }
+  .stagger-container > *:nth-child(10) { animation-delay: 900ms; }
+
+  /* 效果组合类 */
   .glow-effect {
     position: relative;
   }
@@ -117,10 +224,7 @@ body {
     @apply bg-background/60 backdrop-blur-xl border border-primary/10 shadow-lg;
   }
 
-  .hover-card {
-    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl;
-  }
-
+  /* 渐变背景动画 */
   .animated-gradient {
     background: linear-gradient(
       120deg,

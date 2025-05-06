@@ -22,7 +22,7 @@ export async function generateStaticParams() {
     // 为每种语言加载所有可能的客户端ID
     for (const locale of locales) {
       try {
-        const clientsDir = path.join(process.cwd(), 'clients', locale);
+        const clientsDir = path.join(process.cwd(), 'public/clients', locale);
         const files = await readdir(clientsDir);
         
         for (const file of files) {
@@ -45,7 +45,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, id } = await params;
   const t = await getTranslations('Clients');
-  const tIndex = await getTranslations('Index');
   
   // 加载客户端详情
   const client = await loadClientDetail(locale, id);
@@ -57,11 +56,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = `${client.name} - ${t('title')} - ${tIndex('meta.title')}`;
-  let description = `${client.digest} - ${t('title')} - ${tIndex('meta.title')}`;
-  if (description.length > 160) {
-    description = `${description.substring(0, 160)}`;
-  }
+  const title = `${client.name} - ${t('title')}`;
+  const description = client.digest;
   
   return {
     title: title,

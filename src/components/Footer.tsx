@@ -25,6 +25,16 @@ export function Footer() {
       { name: tNav('specification'), href: '/specification' as keyof Pathnames },
       { name: tNav('blog'), href: '/blog' as keyof Pathnames },
     ],
+    contact: [
+      { name: 'X', href: 'https://x.com/cnych' },
+      { name: 'Email', href: 'mailto:icnych@gmail.com' },
+      { name: 'Dev.to', href: 'https://dev.to/cnych' },
+      { name: 'Cal.com', href: 'https://cal.com/cnych' },
+      { name: 'Buy me a coffee', href: 'https://buymeacoffee.com/icnych' },
+      { name: 'Velog', href: 'https://velog.io/@cnych/posts' },
+      { name: 'Zenn', href: 'https://zenn.dev/cnych' },
+      { name: 'Creem', href: 'https://www.creem.io/bip/cnych' },
+    ],
   }
 
   return (
@@ -74,7 +84,23 @@ export function Footer() {
                 </ul>
               </div>
             </div>
-            
+            <div className="mt-10 md:mt-0">
+              <h3 className="text-sm font-semibold">{t('sections.contact')}</h3>
+              <ul role="list" className="mt-4 space-y-4">
+                {navigation.contact.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t">
@@ -82,8 +108,13 @@ export function Footer() {
             <p className="text-xs text-muted-foreground">
               &copy; {new Date().getFullYear()} Claude MCP Tutorial.
             </p>
+            &nbsp;&nbsp;
             <Link href="/sitemap.xml" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Sitemap
+            </Link>
+            &nbsp;&nbsp;
+            <Link href="/llms.txt" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              llms.txt
             </Link>
           </div>
         </div>

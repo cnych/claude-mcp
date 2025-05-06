@@ -1,5 +1,5 @@
-# 使用 Node.js 18 作为基础镜像
-FROM node:20-alpine3.20 AS base
+# 使用 Node.js 22 作为基础镜像
+FROM node:22.15.0-alpine3.21 AS base
 
 # 安装依赖阶段
 FROM base AS deps
@@ -43,8 +43,8 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/docs ./docs
-COPY --from=builder --chown=nextjs:nodejs /app/servers ./servers
+# COPY --from=builder --chown=nextjs:nodejs /app/docs ./docs
+# COPY --from=builder --chown=nextjs:nodejs /app/servers ./servers
 
 # 切换到非 root 用户
 USER nextjs

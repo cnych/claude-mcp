@@ -21,7 +21,7 @@ type PageProps = {
 // 预加载文档内容
 async function loadDocContent(locale: string, slug: string) {
   try {
-    const filePath = path.join(process.cwd(), 'docs', locale, `${slug}.md`);
+    const filePath = path.join(process.cwd(), 'public/docs', locale, `${slug}.md`);
     const content = await readFile(filePath, 'utf-8');
     const matterResult = matter(content);
     return { content: matterResult.content, data: matterResult.data };
@@ -40,7 +40,7 @@ export async function generateStaticParams() {
     for (const locale of locales) {
       // 读取该语言的文档目录
       try {
-        const docsDir = path.join(process.cwd(), 'docs', locale);
+        const docsDir = path.join(process.cwd(), 'public/docs', locale);
         const files = await readdir(docsDir);
         
         // 添加每个文档的参数
@@ -74,11 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const { data } = await loadDocContent(locale, slug);
 
-  let description = data?.description;
-  if (description.length < 160) {
-    description = `${description} - ${t(`nav.items.${slug}`)} - ${t('meta.description')}`;
-  }
-  description = `${description.substring(0, 160)}`;
+  const description = data?.description;
   
   return {
     title: `${t(`nav.items.${slug}`)} - ${t('meta.title')}`,

@@ -18,13 +18,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations('Tools');
-  const tIndex = await getTranslations('Index');
 
-  const title = `${t('playground.title')} - ${tIndex('meta.title')}`;
-  let description = `${t('playground.description')} - ${tIndex('meta.description')}`;
-  if (description.length > 160) {
-    description = description.slice(0, 160);
-  }
+  const title = t('playground.title');
+  const description = t('playground.description');
 
   return {
     title: title,

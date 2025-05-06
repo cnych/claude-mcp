@@ -1,21 +1,31 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { Suspense, lazy } from 'react';
 import { HeroSection } from '@/components/home/hero-section';
-import { OverviewSection } from '@/components/home/overview-section';
-import { ProtocolSection } from '@/components/home/protocol-section';
 import { IntegrationSection } from '@/components/home/integration-section';
-import { GlobalSection } from '@/components/home/global-section';
-import { FeaturedServers } from '@/components/home/featured-servers';
-import { FeaturedClients } from '@/components/home/featured-clients';
-import { LatestDocs } from '@/components/home/latest-docs';
-import { LatestBlogPosts } from '@/components/home/latest-blog-posts';
-import { PlaygroundInspectorSection } from '@/components/home/playground-inspector-section';
 import { loadServersData, loadClientsData } from '@/lib/data-utils';
 import { getLatestDocs } from '@/lib/docs';
 import { getBlogPosts } from '@/data/blog-posts';
 import { locales } from '@/i18n/config';
 import type { MCPClient } from '@/types/client';
 import type { MCPServer } from '@/types/server';
+
+// 懒加载非首屏关键组件
+const PlaygroundInspectorSection = lazy(() => import('@/components/home/playground-inspector-section').then(mod => ({ default: mod.PlaygroundInspectorSection })));
+const LatestDocs = lazy(() => import('@/components/home/latest-docs').then(mod => ({ default: mod.LatestDocs })));
+const FeaturedServers = lazy(() => import('@/components/home/featured-servers').then(mod => ({ default: mod.FeaturedServers })));
+const FeaturedClients = lazy(() => import('@/components/home/featured-clients').then(mod => ({ default: mod.FeaturedClients })));
+const OverviewSection = lazy(() => import('@/components/home/overview-section').then(mod => ({ default: mod.OverviewSection })));
+const ProtocolSection = lazy(() => import('@/components/home/protocol-section').then(mod => ({ default: mod.ProtocolSection })));
+const LatestBlogPosts = lazy(() => import('@/components/home/latest-blog-posts').then(mod => ({ default: mod.LatestBlogPosts })));
+const GlobalSection = lazy(() => import('@/components/home/global-section').then(mod => ({ default: mod.GlobalSection })));
+
+// 占位组件 - 用于懒加载时显示
+const SectionPlaceholder = () => (
+  <div className="w-full py-16 flex items-center justify-center">
+    <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+  </div>
+);
 
 // 设置静态生成和缓存
 export const revalidate = 3600; // 每小时重新验证
@@ -80,16 +90,44 @@ export default async function Home({ params }: PageProps) {
 
   return (
     <main className="flex min-h-screen flex-col antialiased overflow-x-hidden">
+      {/* 首屏立即加载关键内容 */}
       <HeroSection />
-      <PlaygroundInspectorSection />
-      <LatestDocs docs={latestDocs} />
-      <FeaturedServers servers={featuredServers} />
-      <FeaturedClients clients={featuredClients} />
-      <OverviewSection />
-      <ProtocolSection />
+      
+      {/* 懒加载非首屏内容 */}
+      <Suspense fallback={<SectionPlaceholder />}>
+        <PlaygroundInspectorSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <LatestDocs docs={latestDocs} />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <FeaturedServers servers={featuredServers} />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <FeaturedClients clients={featuredClients} />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <OverviewSection />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <ProtocolSection />
+      </Suspense>
+      
+      {/* 直接渲染优化的CSS动画组件 */}
       <IntegrationSection />
-      <LatestBlogPosts posts={latestBlogPosts} />
-      <GlobalSection />
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <LatestBlogPosts posts={latestBlogPosts} />
+      </Suspense>
+      
+      <Suspense fallback={<SectionPlaceholder />}>
+        <GlobalSection />
+      </Suspense>
     </main>
   );
 } 

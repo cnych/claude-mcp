@@ -28,8 +28,8 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   const awaitedSearchParams = await searchParams || {};
   const tags = awaitedSearchParams.tags;
   let url = locale === 'en' ? `https://www.claudemcp.com/clients` : `https://www.claudemcp.com/${locale}/clients`;
-  let title = `${t('Clients.title')} - ${t('Index.meta.title')}`;
-  let description = `${t('Clients.description')} - ${t('Index.meta.title')}`;
+  let title = t('Clients.title');
+  let description = t('Clients.description');
   if (tags) {
     url += `?tags=${tags}`;
     title = `${t('Clients.title')} - ${tags} - ${t('Index.meta.title')}`;

@@ -54,11 +54,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   // 使用content的前100个字符作为摘要，或者使用标题
   const title = `${post.title} | ${t('Blog.meta.title')}`
-  let description = post.excerpt || post.content.replace(/<[^>]*>/g, '');
-  if (description.length < 160) {
-    description = `${description} - ${t('Blog.meta.description')}`;
-  }
-  description = description.slice(0, 160);
+  const description = post.excerpt;
 
   return {
     title,

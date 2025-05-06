@@ -77,7 +77,7 @@ export function getBlogPosts(locale: string = 'zh'): Promise<BlogPost[]> {
       return;
     }
 
-    const blogsDir = path.join(process.cwd(), 'blogs', locale);
+    const blogsDir = path.join(process.cwd(), 'public/blogs', locale);
     
     // 如果目录不存在，返回空数组
     if (!fs.existsSync(blogsDir)) {
@@ -114,7 +114,7 @@ export async function getBlogPostDetails(slug: string, locale: string = 'zh'): P
     return blogDetailsCache[locale][slug];
   }
   
-  const blogsDir = path.join(process.cwd(), 'blogs', locale);
+  const blogsDir = path.join(process.cwd(), 'public/blogs', locale);
   
   // 检查目录是否存在
   if (!fs.existsSync(blogsDir)) {

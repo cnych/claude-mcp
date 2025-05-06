@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const { locale } = await params;
   const t = await getTranslations();
 
-  const title = `${t('Blog.meta.title')} - ${t('Index.meta.title')}`;
-  let description = `${t('Blog.meta.description')} - ${t('Index.meta.description')}`;
+  const title = t('Blog.meta.title');
+  let description = `${t('Blog.meta.description')} - ${title}`;
   if (description.length > 160) {
     description = description.slice(0, 160);
   }

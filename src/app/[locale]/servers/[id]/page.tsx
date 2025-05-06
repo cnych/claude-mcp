@@ -23,7 +23,7 @@ export async function generateStaticParams() {
     // 为每种语言加载所有可能的服务器ID
     for (const locale of locales) {
       try {
-        const serversDir = path.join(process.cwd(), 'servers', locale);
+        const serversDir = path.join(process.cwd(), 'public/servers', locale);
         const files = await readdir(serversDir);
         
         for (const file of files) {
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = `${server.name} - ${t('title')} - ${tIndex('meta.title')}`;
+  const title = `${server.name} - ${t('title')}`;
   let description = `${server.digest} - ${t('title')} - ${tIndex('meta.title')}`;
   if (description.length > 160) {
     description = `${description.substring(0, 160)}`;
@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  * @param maxCount 最大推荐数量
  * @returns 推荐服务器列表
  */
-async function getRelatedServers(locale: string, currentServer: MCPServer, maxCount: number = 12): Promise<MCPServer[]> {
+async function getRelatedServers(locale: string, currentServer: MCPServer, maxCount: number = 16): Promise<MCPServer[]> {
   // 获取所有服务器
   const { servers: allServers } = await loadServersData(locale);
   

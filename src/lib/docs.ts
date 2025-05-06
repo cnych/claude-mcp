@@ -26,7 +26,7 @@ export async function getDocList(locale: string = 'en'): Promise<Record<string, 
       locale = 'en';
     }
 
-    const docsDir = path.join(process.cwd(), 'docs', locale);
+    const docsDir = path.join(process.cwd(), 'public/docs', locale);
     let files: string[] = [];
     
     try {
