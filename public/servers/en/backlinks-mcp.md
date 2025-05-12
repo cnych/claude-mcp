@@ -11,7 +11,7 @@ capabilities:
 tags:
   - SEO
   - Ahrefs
-  - Backlinks
+  - backlinks
 icon: https://avatars.githubusercontent.com/u/3094973?s=48&v=4
 createTime: 2025-04-12
 ---

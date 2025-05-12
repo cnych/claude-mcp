@@ -1,5 +1,5 @@
 ---
-name: BrowserStack
+name: BrowserStack MCP
 digest: BrowserStack MCP Server is now live! Leverage the full power of the BrowserStack Test Platform on any AI system, including chatbots, apps, and autonomous agents.
 author: BrowserStack
 homepage: https://www.browserstack.com
@@ -9,9 +9,6 @@ capabilities:
   tools: true
 tags:
   - Testing
-  - Automated testing
-  - Browser testing
-  - App testing
   - QA
   - Accessibility
 icon: https://avatars.githubusercontent.com/u/1119453?s=200&v=4
