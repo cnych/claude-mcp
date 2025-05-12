@@ -1,3 +1,24 @@
+---
+name: Apify MCP Server
+digest: Deploy and interact with Apify Actors for web scraping, data extraction, and automation tasks through the Model Context Protocol
+author: Apify
+homepage: https://github.com/apify/actors-mcp-server
+repository: https://github.com/apify/actors-mcp-server
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - apify
+  - web-scraping
+  - data-extraction
+  - actors
+  - automation
+icon: https://cdn.simpleicons.org/apify
+createTime: 2025-05-06T00:00:00Z
+---
+
+
 # Apify Model Context Protocol (MCP) server
 
 [![Actors MCP server](https://apify.com/actor-badge?actor=apify/actors-mcp-server)](https://apify.com/apify/actors-mcp-server)
