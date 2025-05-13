@@ -50,7 +50,6 @@ export function TagList({ initialTags = [] }: TagListProps) {
       
       // 收集第一行标签的索引
       const rowTagIndexes: number[] = [];
-      let hasMoreRows = false;
       
       // 从第二个标签开始检测(跳过All标签)
       for (let i = 1; i < tagElements.length; i++) {
@@ -64,7 +63,6 @@ export function TagList({ initialTags = [] }: TagListProps) {
             rowTagIndexes.push(tagIndex);
           }
         } else {
-          hasMoreRows = true;
           break; // 一旦发现不在同一行的标签，立即停止并确认有多行
         }
       }
@@ -75,7 +73,6 @@ export function TagList({ initialTags = [] }: TagListProps) {
       // 如果自动检测的结果少于默认值，使用默认值
       if (firstRowTagsList.length < Math.min(DEFAULT_VISIBLE_COUNT, initialTags.length)) {
         firstRowTagsList = initialTags.slice(0, Math.min(DEFAULT_VISIBLE_COUNT, initialTags.length));
-        hasMoreRows = initialTags.length > DEFAULT_VISIBLE_COUNT;
       }
       
       setFirstRowTags(firstRowTagsList);

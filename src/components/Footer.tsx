@@ -28,8 +28,8 @@ export function Footer() {
     contact: [
       { name: 'X', href: 'https://x.com/cnych' },
       { name: 'Email', href: 'mailto:icnych@gmail.com' },
-      { name: 'Dev.to', href: 'https://dev.to/cnych' },
       { name: 'Cal.com', href: 'https://cal.com/cnych' },
+      { name: 'Dev.to', href: 'https://dev.to/cnych' },
       { name: 'Buy me a coffee', href: 'https://buymeacoffee.com/icnych' },
       { name: 'Velog', href: 'https://velog.io/@cnych/posts' },
       { name: 'Zenn', href: 'https://zenn.dev/cnych' },
