@@ -10,7 +10,7 @@ mac: true
 linux: true
 featured: true
 tags:
-  - Web Scraping
+  - Web scraping
   - Apify Actors
   - Integration
 createTime: 2025-05-13
