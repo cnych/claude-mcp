@@ -1,6 +1,6 @@
 ---
 name: Apify Tester MCP Client
-digest: A MCP client that connects AI agents to Apify's ecosystem of 5,000+ web scraping and automation Actors, enabling data extraction from websites, social media, search engines, and maps.
+digest: An MCP Client that connects AI agents to Apify's ecosystem of 5,000+ web scraping and automation Actors, enabling data extraction from websites, social media, search engines, and maps.
 author: Apify
 homepage: https://apify.com/jiri.spilka/tester-mcp-client
 docs: https://mcp.apify.com
