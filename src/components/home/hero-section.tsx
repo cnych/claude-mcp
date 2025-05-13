@@ -74,6 +74,16 @@ export function HeroSection() {
                 <Book className="ml-2 h-4 w-4" />
               </Button>
             </Link>
+
+            {(locale === 'en') && (
+              <Link href="https://www.manusai.io/?ref=claude-mcp" className="w-full sm:w-auto">
+                <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base w-full`}>
+                  Manus AI
+                  <Book className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            )}
+
           </div>
         </div>
       </div>
