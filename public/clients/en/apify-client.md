@@ -1,12 +1,19 @@
 ---
-title: 'Apify Tester Client for Model Context Protocol (MCP)'
-description: 'A Model Context Protocol (MCP) client that enables AI agents to access and utilize 5,000+ ready-made Apify Actors for extracting data from websites, social media, search engines, online maps, and more.'
-creator: 'Apify'
-tags: ['Plugin', 'Testing', 'Integration']
-website: 'https://apify.com/jiri.spilka/tester-mcp-client'
-docs: 'https://mcp.apify.com'
-github: 'https://github.com/apify/tester-mcp-client'
-icon: 'http://apify.com/ext/apify-symbol-512px.svg'
+name: Apify Tester MCP Client
+digest: A MCP client that connects AI agents to Apify's ecosystem of 5,000+ web scraping and automation Actors, enabling data extraction from websites, social media, search engines, and maps.
+author: Apify
+homepage: https://apify.com/jiri.spilka/tester-mcp-client
+docs: https://mcp.apify.com
+icon: http://apify.com/ext/apify-symbol-512px.svg
+windows: true
+mac: true
+linux: true
+featured: true
+tags:
+  - Web Scraping
+  - Apify Actors
+  - Integration
+createTime: 2025-05-13
 ---
 
 
