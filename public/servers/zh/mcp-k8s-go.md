@@ -12,7 +12,6 @@ tags:
   - go
 icon: https://static.claudemcp.com/servers/strowk/mcp-k8s-go/strowk-mcp-k8s-go-4e7474d6.png
 createTime: 2024-12-01
-featured: true
 ---
 
 ![MCP K8S Go 徽标](https://static.claudemcp.com/servers/strowk/mcp-k8s-go/strowk-mcp-k8s-go-4e7474d6.png)

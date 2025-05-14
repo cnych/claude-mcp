@@ -20,6 +20,7 @@ export function Footer() {
       { name: 'JoyGames', href: 'https://www.joygames.io?ref=claude-mcp' },
       { name: 'Drow Names', lang: 'en', href: 'https://www.drownames.com?ref=claude-mcp' },
       { name: 'Invincible Title Card', lang: 'en', href: 'https://www.invincibletitlecardgenerator.com/?ref=claude-mcp' },
+      { name: 'Crazy Cattle 3D', href: 'https://www.crazycattle3.org' },
     ],
     community: [
       { name: t('links.github'), href: 'https://github.com/cnych/claude-mcp' },
