@@ -851,6 +851,7 @@
       },
       "nav": {
         "getting_started": "시작하기",
+        "base-dev": "기본 개발",
         "typescript": "TypeScript",
         "python": "Python",
         "guides": "사용 가이드",
@@ -871,6 +872,7 @@
           "streamable-http": "Streamable HTTP",
           "sampling-usage": "MCP 예제 사용",
           "dev-sse-mcp": "SSE 유형의 MCP 서비스 개발",
+          "mcp-py-sdk-basic": "MCP Python SDK 기본 사용",
           "resources": "리소스 관리",
           "tools": "도구 사용",
           "messages": "메시지 처리",

@@ -1,7 +1,7 @@
 ---
 title: Sampling 기능 사용 방법
 description: Sampling 기능은 MCP에서 매우 중요한 기능으로, 서버가 클라이언트를 통해 LLM 완성 요청을 보내 복잡한 에이전트 행동을 구현하면서도 보안성과 프라이버시를 유지할 수 있게 해줍니다.
-section: typescript
+section: base-dev
 prev: dev-sse-mcp
 pubDate: 2025-04-20
 order: 5
@@ -429,7 +429,8 @@ const confirmationResponse = await server.createMessage({
       },
     },
   ],
-  systemPrompt: "파일 삭제 확인을 돕는 어시스턴트입니다. '예' 또는 '아니오'만 답변해 주세요.",
+  systemPrompt:
+    "파일 삭제 확인을 돕는 어시스턴트입니다. '예' 또는 '아니오'만 답변해 주세요.",
   maxTokens: 10,
   temperature: 0.1,
   includeContext: "none",

@@ -1,7 +1,7 @@
 ---
 title: MCP Streamable HTTP 신규 프로토콜 사용
 description: Streamable HTTP는 MCP의 전송 프로토콜 중 하나로, HTTP와 Server-Sent Events(SSE) 기술을 결합하여 현대 분산 시스템에 유연한 양방향 통신 기능을 제공합니다. 이번 섹션에서는 Streamable HTTP 프로토콜 사용 방법을 소개합니다.
-section: typescript
+section: base-dev
 prev: sampling-usage
 next: dev-sse-mcp
 pubDate: 2025-04-24

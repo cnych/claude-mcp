@@ -1,7 +1,7 @@
 ---
 title: 如何使用 Sampling 功能
 description: Sampling 功能是 MCP 中非常重要的一個功能，它允許 servers 透過 client 請求 LLM 補全，從而實現複雜的 agentic 行為，同時保持安全性和隱私性。
-section: typescript
+section: base-dev
 prev: dev-sse-mcp
 pubDate: 2025-04-20
 order: 5

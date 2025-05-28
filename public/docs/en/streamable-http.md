@@ -1,7 +1,7 @@
 ---
 title: Using the New MCP Streamable HTTP Protocol
 description: Streamable HTTP is one of MCP's transport protocols, combining HTTP and Server-Sent Events (SSE) technologies to provide flexible bidirectional communication for modern distributed systems. This section will introduce how to use the Streamable HTTP protocol.
-section: typescript
+section: base-dev
 prev: sampling-usage
 next: dev-sse-mcp
 pubDate: 2025-04-24

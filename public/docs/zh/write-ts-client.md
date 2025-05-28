@@ -1,7 +1,7 @@
 ---
 title: 编写 MCP 客户端
 description: 如何编写我们的第一个 TypeScript MCP 客户端
-section: typescript
+section: base-dev
 prev: write-ts-server
 next: use-llm-dev-mcp
 pubDate: 2025-03-24

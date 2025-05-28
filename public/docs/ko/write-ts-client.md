@@ -1,7 +1,7 @@
 ---
 title: MCP 클라이언트 작성하기
 description: 첫 번째 TypeScript MCP 클라이언트를 작성하는 방법
-section: typescript
+section: base-dev
 prev: write-ts-server
 next: use-llm-dev-mcp
 pubDate: 2025-03-24

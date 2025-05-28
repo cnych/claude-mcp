@@ -1,7 +1,7 @@
 ---
 title: Write a MCP Server
 description: How to write your first TypeScript MCP server
-section: typescript
+section: base-dev
 prev: quickstart
 next: write-ts-client
 pubDate: 2024-12-03

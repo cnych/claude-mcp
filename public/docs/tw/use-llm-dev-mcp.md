@@ -1,7 +1,7 @@
 ---
 title: 使用 Cursor/LLM 開發 MCP
 description: 如何使用 Cursor/LLM 開發 MCP 伺服器
-section: typescript
+section: base-dev
 prev: write-ts-client
 next: dev-sse-mcp
 pubDate: 2025-04-01

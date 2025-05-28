@@ -1,7 +1,7 @@
 ---
 title: MCP Streamable HTTP 新协议使用
 description: Streamable HTTP 是 MCP 的传输协议之一，它结合了 HTTP 和 Server-Sent Events (SSE) 技术，为现代分布式系统提供了灵活的双向通信能力，本节将为大家介绍如何使用 Streamable HTTP 协议。
-section: typescript
+section: base-dev
 prev: sampling-usage
 next: dev-sse-mcp
 pubDate: 2025-04-24

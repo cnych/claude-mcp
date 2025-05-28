@@ -1,7 +1,7 @@
 ---
 title: 開發 SSE 類型的 MCP 服務
 description: 開發一個基於 SSE 類型的 MCP 智能商城助手服務
-section: typescript
+section: base-dev
 prev: use-llm-dev-mcp
 next: sampling-usage
 pubDate: 2025-04-02

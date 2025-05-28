@@ -1,7 +1,7 @@
 ---
 title: How to Use the Sampling Feature
 description: The Sampling feature is a crucial capability in MCP that enables servers to request LLM completions through clients, facilitating complex agentic behaviors while maintaining security and privacy.
-section: typescript
+section: base-dev
 prev: dev-sse-mcp
 pubDate: 2025-04-20
 order: 5
@@ -429,7 +429,8 @@ const confirmationResponse = await server.createMessage({
       },
     },
   ],
-  systemPrompt: "You are an assistant helping users confirm file deletions. Reply only with 'yes' or 'no'.",
+  systemPrompt:
+    "You are an assistant helping users confirm file deletions. Reply only with 'yes' or 'no'.",
   maxTokens: 10,
   temperature: 0.1,
   includeContext: "none",

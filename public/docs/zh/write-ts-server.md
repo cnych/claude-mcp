@@ -1,7 +1,7 @@
 ---
 title: 编写 MCP 服务器
 description: 如何编写我们的第一个 TypeScript MCP 服务器
-section: typescript
+section: base-dev
 prev: quickstart
 next: write-ts-client
 pubDate: 2024-12-03

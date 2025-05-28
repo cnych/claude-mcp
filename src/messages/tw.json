@@ -831,6 +831,7 @@
       },
     "nav": {
       "getting_started": "入門指南",
+      "base-dev": "基礎開發",
       "typescript": "TypeScript",
       "python": "Python",
       "guides": "使用指南",
@@ -851,6 +852,7 @@
         "streamable-http": "Streamable HTTP",
         "sampling-usage": "MCP 中的 Sampling 功能",
         "dev-sse-mcp": "開發 SSE 類型的 MCP 服務",
+        "mcp-py-sdk-basic": "使用 MCP Python SDK 開發 MCP 伺服器與客戶端",
         "resources": "資源管理",
         "tools": "工具使用",
         "messages": "訊息處理",

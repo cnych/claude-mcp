@@ -856,6 +856,7 @@
       },
       "nav": {
         "getting_started": "Getting Started",
+        "base-dev": "Base Development",
         "typescript": "TypeScript",
         "python": "Python",
         "guides": "Guides",
@@ -876,6 +877,7 @@
           "streamable-http": "Streamable HTTP",
           "sampling-usage": "Sampling Usage",
           "dev-sse-mcp": "Develop an SSE MCP Service",
+          "mcp-py-sdk-basic": "MCP Python SDK Basic Usage",
           "resources": "Resource Management",
           "tools": "Tools Usage",
           "messages": "Message Handling",

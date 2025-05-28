@@ -881,7 +881,7 @@
       },
       "nav": {
         "getting_started": "入门指南",
-        "typescript": "TypeScript",
+        "base-dev": "基础开发",
         "python": "Python",
         "guides": "使用指南",
         "advanced": "高级主题",
@@ -901,6 +901,7 @@
           "use-llm-dev-mcp": "使用 Cursor/LLM 开发 MCP",
           "sampling-usage": "MCP 中的 Sampling 功能",
           "dev-sse-mcp": "开发 SSE 类型的 MCP 服务",
+          "mcp-py-sdk-basic": "使用 MCP Python SDK 开发 MCP 服务器与客户端",
           "resources": "资源管理",
           "tools": "工具使用",
           "messages": "消息处理",

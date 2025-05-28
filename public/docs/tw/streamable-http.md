@@ -1,7 +1,7 @@
 ---
 title: MCP Streamable HTTP 新協定使用指南
 description: Streamable HTTP 是 MCP 的傳輸協定之一，結合了 HTTP 與伺服器推送事件 (SSE) 技術，為現代分散式系統提供靈活的雙向通訊能力。本節將介紹如何使用 Streamable HTTP 協定。
-section: typescript
+section: base-dev
 prev: sampling-usage
 next: dev-sse-mcp
 pubDate: 2025-04-24

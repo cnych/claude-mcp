@@ -1,7 +1,7 @@
 ---
 title: MCP 서버 작성하기
 description: 첫 번째 TypeScript MCP 서버를 작성하는 방법
-section: typescript
+section: base-dev
 prev: quickstart
 next: write-ts-client
 pubDate: 2024-12-03
