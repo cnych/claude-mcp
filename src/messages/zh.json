@@ -902,6 +902,8 @@
           "sampling-usage": "MCP 中的 Sampling 功能",
           "dev-sse-mcp": "开发 SSE 类型的 MCP 服务",
           "mcp-py-sdk-basic": "使用 MCP Python SDK 开发 MCP 服务器与客户端",
+          "mcp-py-sdk-deep": "使用 MCP Python SDK 实现 SSE 和 Streamable HTTP 协议",
+          "mcp-authorization": "MCP Authorization 授权机制",
           "resources": "资源管理",
           "tools": "工具使用",
           "messages": "消息处理",

@@ -4,6 +4,7 @@ digest: Access public web data through the Bright Data API
 author: Bright Data
 homepage: https://brightdata.com
 repository: https://github.com/brightdata/brightdata-mcp
+pinned: true
 capabilities:
   resources: true
   tools: true
@@ -13,10 +14,10 @@ tags:
   - api
 icon: https://avatars.githubusercontent.com/u/19207323?s=48&v=4
 createTime: 2025-04-15
+featured: true
 ---
 
 Official Bright Data MCP server that enables LLMs to access public web data. This server allows MCP clients like Claude Desktop, Cursor, Windsurf, OpenAI Agents and others make decisions based on the information available on the web.
-
 
 ## 🌟 Overview
 
@@ -28,9 +29,9 @@ Welcome to the official Bright Data Model Context Protocol (MCP) server, enablin
 
 The videos below demonstrate a minimal use case for Claude Desktop:
 
-https://github.com/user-attachments/assets/59f6ebba-801a-49ab-8278-1b2120912e33
+<video src="https://github.com/user-attachments/assets/59f6ebba-801a-49ab-8278-1b2120912e33" controls></video>
 
-https://github.com/user-attachments/assets/61ab0bee-fdfa-4d50-b0de-5fab96b4b91d 
+<video src="https://github.com/user-attachments/assets/61ab0bee-fdfa-4d50-b0de-5fab96b4b91d" controls></video>
 
 For YouTube tutorials and demos: [Demo](https://github.com/brightdata-com/brightdata-mcp/blob/main/examples/README.md)
 
@@ -63,14 +64,16 @@ For YouTube tutorials and demos: [Demo](https://github.com/brightdata-com/bright
   }
 }
 ```
+
 ## 🔧 Available Tools
 
 [List of Available Tools](https://github.com/brightdata-com/brightdata-mcp/blob/main/assets/Tools.md)
 
 ## ⚠️ Security Best Practices
 
-**Important:** Always treat scraped web content as untrusted data. Never use raw scraped content directly in LLM prompts to avoid potential prompt injection risks. 
+**Important:** Always treat scraped web content as untrusted data. Never use raw scraped content directly in LLM prompts to avoid potential prompt injection risks.
 Instead:
+
 - Filter and validate all web data before processing
 - Use structured data extraction rather than raw text (web_data tools)
 
@@ -80,7 +83,8 @@ Instead:
 
 2. Get your API key from the [user settings page](https://brightdata.com/cp/setting/users)
 
-3. (Optional) Create a custom Web Unlocker zone 
+3. (Optional) Create a custom Web Unlocker zone
+
    - By default, we create a Web Unlocker zone automatically using your API token
    - For more control, you can create your own Web Unlocker zone in your [control panel](https://brightdata.com/cp/zones) and specify it with the `WEB_UNLOCKER_ZONE` environment variable
 
@@ -116,7 +120,7 @@ To use this MCP server with other agent types, you should adapt the following to
 
 ## 🎮 Try Bright Data MCP Playgrounds
 
-Want to try Bright Data MCP without setting up anything? 
+Want to try Bright Data MCP without setting up anything?
 
 Check out this playground on [Smithery](https://smithery.ai/server/@luminati-io/brightdata-mcp/tools):
 

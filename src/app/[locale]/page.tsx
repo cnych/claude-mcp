@@ -93,11 +93,6 @@ export default async function Home({ params }: PageProps) {
       {/* 首屏立即加载关键内容 */}
       <HeroSection />
       
-      {/* 懒加载非首屏内容 */}
-      <Suspense fallback={<SectionPlaceholder />}>
-        <PlaygroundInspectorSection />
-      </Suspense>
-      
       <Suspense fallback={<SectionPlaceholder />}>
         <LatestDocs docs={latestDocs} />
       </Suspense>
@@ -123,6 +118,11 @@ export default async function Home({ params }: PageProps) {
       
       <Suspense fallback={<SectionPlaceholder />}>
         <LatestBlogPosts posts={latestBlogPosts} />
+      </Suspense>
+
+      {/* 懒加载非首屏内容 */}
+      <Suspense fallback={<SectionPlaceholder />}>
+        <PlaygroundInspectorSection />
       </Suspense>
       
       <Suspense fallback={<SectionPlaceholder />}>

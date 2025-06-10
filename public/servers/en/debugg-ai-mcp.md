@@ -1,6 +1,24 @@
+---
+name: Debugg AI MCP
+digest: AI-driven browser automation and E2E test server
+author: Debugg AI
+homepage: https://debugg.ai
+repository: https://github.com/debugg-ai/debugg-ai-mcp
+capabilities:
+  resources: true
+  tools: true
+  prompts: false
+tags:
+  - Testing
+  - automation
+  - browser
+icon: https://avatars.githubusercontent.com/u/203699926?s=48&v=4
+createTime: 2025-06-02
+---
+
 # 🧪 Official MCP Server for Debugg AI
 
-**AI-driven browser automation and E2E test server** implementing the [Model Context Protocol (MCP)](https://modelcontext.org), designed to help AI agents test UI changes, simulate user behavior, and analyze visual outputs of running web applications — all via natural language and CLI tools.
+**AI-driven browser automation and E2E test server** implementing the [Model Context Protocol (MCP)](/), designed to help AI agents test UI changes, simulate user behavior, and analyze visual outputs of running web applications — all via natural language and CLI tools.
 
 End to end testing used to be a nightmare. Not just to setup, but to manage over time as you made changes to your app.
 
@@ -14,22 +32,22 @@ Should you want to later rerun those tests or create a suite of them to run in y
 
 ## 🚀 Features
 
-* 🧠 **MCP Protocol Support**
+- 🧠 **MCP Protocol Support**
   Full MCP server implementation with CLI and tool registry support.
 
-* 🧪 **End-to-End Test Automation**
+- 🧪 **End-to-End Test Automation**
   Trigger UI tests based on user stories or natural language descriptions via the `debugg_ai_test_page_changes` tool.
 
-* 🌐 **Localhost Web App Integration**
+- 🌐 **Localhost Web App Integration**
   Test your running dev app on any `localhost` port with simulated user flows.
 
-* 🧾 **MCP Tool Notifications**
+- 🧾 **MCP Tool Notifications**
   Sends real-time progress updates back to clients with step descriptions and UI state goals.
 
-* 🧷 **Screenshot Support**
+- 🧷 **Screenshot Support**
   Capture final visual state of the page for LLMs with image rendering support.
 
-* 🧱 **Stdio Server Compatible**
+- 🧱 **Stdio Server Compatible**
   Plug into any MCP-compatible client (like Claude Desktop, LangChain agents, etc.) via stdin/stdout.
 
 ---
@@ -52,10 +70,7 @@ Should you want to later rerun those tests or create a suite of them to run in y
 
 > Watch a more in-depth, [Full Use Case Demo](https://debugg.ai/demo)
 
-
---- 
-
-
+---
 
 ## 🛠️ Quickstart
 
@@ -90,19 +105,19 @@ docker run -i --rm --init \
 
 ### Description
 
-Run an end-to-end test on a running web app, testing a UI feature or flow described in natural language. Allows AI agents in ANY code gen platform to quickly evaluate proposed changes and 
+Run an end-to-end test on a running web app, testing a UI feature or flow described in natural language. Allows AI agents in ANY code gen platform to quickly evaluate proposed changes and
 ensure new functionality works as expected.
 
 ### Input Parameters
 
-| Name          | Type   | Required  | Description                                            |
-| ------------- | ------ | --------- | ------------------------------------------------------ |
-| `description` | string | ✅        | What feature or page to test (e.g. "Signup page form") |
-| `localPort`   | number | ❌        | Port of your running app (default: `3000`)             |
-| `repoName`    | string | ❌        | GitHub repo name                                       |
-| `branchName`  | string | ❌        | Current branch                                         |
-| `repoPath`    | string | ❌        | Absolute path to the repo                              |
-| `filePath`    | string | ❌        | File to test                                           |
+| Name          | Type   | Required | Description                                            |
+| ------------- | ------ | -------- | ------------------------------------------------------ |
+| `description` | string | ✅       | What feature or page to test (e.g. "Signup page form") |
+| `localPort`   | number | ❌       | Port of your running app (default: `3000`)             |
+| `repoName`    | string | ❌       | GitHub repo name                                       |
+| `branchName`  | string | ❌       | Current branch                                         |
+| `repoPath`    | string | ❌       | Absolute path to the repo                              |
+| `filePath`    | string | ❌       | File to test                                           |
 
 ---
 
@@ -133,17 +148,16 @@ ensure new functionality works as expected.
 
 ## 🔐 Environment Variables
 
-| Variable                                | Description                                | Required |
-| --------------------------------------- | ------------------------------------------ | -------- |
-| `DEBUGGAI_API_KEY`                      | API key for calling DebuggAI backend       | ✅       |
-| `TEST_USERNAME_EMAIL`                   | Email of test user account                 | ❌       |
-| `TEST_USER_PASSWORD`                    | Password of test user account              | ❌       |
-| `DEBUGGAI_LOCAL_PORT`                   | Local port your app runs on                | ✅       |
-| `DEBUGGAI_LOCAL_REPO_NAME`              | GitHub repo name                           | ❌       |
-| `DEBUGGAI_LOCAL_BRANCH_NAME`            | Branch name                                | ❌       |
-| `DEBUGGAI_LOCAL_REPO_PATH`              | Local path to repo root                    | ❌       |
-| `DEBUGGAI_LOCAL_FILE_PATH`              | File to test                               | ❌       |
-
+| Variable                     | Description                          | Required |
+| ---------------------------- | ------------------------------------ | -------- |
+| `DEBUGGAI_API_KEY`           | API key for calling DebuggAI backend | ✅       |
+| `TEST_USERNAME_EMAIL`        | Email of test user account           | ❌       |
+| `TEST_USER_PASSWORD`         | Password of test user account        | ❌       |
+| `DEBUGGAI_LOCAL_PORT`        | Local port your app runs on          | ✅       |
+| `DEBUGGAI_LOCAL_REPO_NAME`   | GitHub repo name                     | ❌       |
+| `DEBUGGAI_LOCAL_BRANCH_NAME` | Branch name                          | ❌       |
+| `DEBUGGAI_LOCAL_REPO_PATH`   | Local path to repo root              | ❌       |
+| `DEBUGGAI_LOCAL_FILE_PATH`   | File to test                         | ❌       |
 
 ---
 
@@ -178,7 +192,7 @@ npx @modelcontextprotocol/inspector --config debugg-ai-mcp/test-config.json --se
 
 ## 🧱 Built With
 
-* [Model Context Protocol SDK](https://github.com/modelcontextprotocol)
+- [Model Context Protocol SDK](https://github.com/modelcontextprotocol)
 
 ---
 
@@ -193,6 +207,5 @@ For bugs, ideas, or integration help, open an issue or contact the DebuggAI team
 MIT License © 2025 DebuggAI
 
 ---
-
 
 <p style="padding-top: 20px; text-align: center;">Made with 🩸, 💦, and 😭 in San Francisco</p>

@@ -15,6 +15,7 @@ export interface MCPServer {
   tags: string[];
   createTime: string;
   featured?: boolean;
+  pinned?: boolean;
 }
 
 export interface ServerSearchParams {

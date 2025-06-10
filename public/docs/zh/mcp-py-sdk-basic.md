@@ -3,6 +3,7 @@ title: MCP Python SDK 基本使用
 description: 学习了解如何使用 MCP Python SDK 来开发 MCP 服务器与客户端
 section: base-dev
 prev: streamable-http
+next: mcp-py-sdk-deep
 pubDate: 2025-05-27
 order: 7
 ---

@@ -72,11 +72,12 @@ export async function loadServersData(
           repository: data.repository,
           createTime: data.createTime || new Date().toISOString(),
           capabilities: {
-            resources: data.resources === true,
-            tools: data.tools === true,
-            prompts: data.prompts === true,
+            resources: data.capabilities?.resources === true,
+            tools: data.capabilities?.tools === true,
+            prompts: data.capabilities?.prompts === true,
           },
           tags: tags,
+          pinned: Boolean(data.pinned),
           featured: Boolean(data.featured),
         };
         
@@ -87,8 +88,17 @@ export async function loadServersData(
       }
     }
     
-    // 排序服务器 (按创建时间降序)
+    // 排序服务器 (按 pinned 状态优先，然后按创建时间降序)
     servers.sort((a, b) => {
+      // 1. Pinned items first
+      if (a.pinned && !b.pinned) {
+        return -1; // a comes first
+      }
+      if (!a.pinned && b.pinned) {
+        return 1; // b comes first
+      }
+    
+      // 2. If both are pinned or both are not pinned, sort by createTime (descending)
       const dateA = new Date(a.createTime).getTime();
       const dateB = new Date(b.createTime).getTime();
       return dateB - dateA;
