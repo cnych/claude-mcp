@@ -4,7 +4,7 @@ digest: A Client that connects AI agents to Apify's ecosystem of 5,000+ web scra
 author: Apify
 homepage: https://apify.com/jiri.spilka/tester-mcp-client
 docs: https://mcp.apify.com
-icon: http://apify.com/ext/apify-symbol-512px.svg
+icon: https://apify.com/ext/apify-symbol-512px.svg
 windows: true
 mac: true
 linux: true

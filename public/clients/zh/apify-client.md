@@ -4,7 +4,7 @@ digest: 该客户端将 AI 智能体接入 Apify 生态系统中 5000+个网页�
 author: Apify
 homepage: https://apify.com/jiri.spilka/tester-mcp-client
 docs: https://mcp.apify.com
-icon: http://apify.com/ext/apify-symbol-512px.svg
+icon: https://apify.com/ext/apify-symbol-512px.svg
 windows: true
 mac: true
 linux: true

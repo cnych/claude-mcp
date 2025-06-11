@@ -238,7 +238,7 @@ export function MarkdownComponent({ content = "" }: MarkdownProps) {
           // 只有外部链接才添加安全属性
           const host = "www.claudemcp.com";
           if (url.host && url.host !== host) {
-            link.setAttribute('rel', 'ugc');
+            link.setAttribute('rel', 'ugc nofollow noreferrer');
             link.setAttribute('target', '_blank');
           }
         } catch (e) {

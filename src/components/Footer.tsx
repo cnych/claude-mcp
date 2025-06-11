@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Link as I18nLink } from '@/i18n/routing'
 import { type Pathnames } from '@/i18n/config'
 import { useLocale } from 'next-intl'
+import Image from 'next/image'
 
 export function Footer() {
   const t = useTranslations('footer')
@@ -17,10 +18,10 @@ export function Footer() {
       { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
       { name: 'A2A', href: 'https://www.a2aprotocol.net?ref=claude-mcp' },
       { name: 'DeepSite', href: 'https://www.deepsite.app?ref=claude-mcp' },
-      { name: 'JoyGames', href: 'https://www.joygames.io?ref=claude-mcp' },
-      { name: 'Drow Names', lang: 'en', href: 'https://www.drownames.com?ref=claude-mcp' },
+      { name: 'Liquid Glass', href: 'https://www.liquid-glass.org?ref=claude-mcp' },
       { name: 'Invincible Title Card', lang: 'en', href: 'https://www.invincibletitlecardgenerator.com/?ref=claude-mcp' },
-      { name: 'Crazy Cattle 3D', href: 'https://www.crazycattle3.org' },
+      { name: 'GPT 5', href: 'https://www.gpt-5.dev?ref=claude-mcp' },
+      { name: 'Color Block Jam Level', href: 'https://www.colorblockjamlevel.app?ref=claude-mcp' },
     ],
     community: [
       { name: t('links.github'), href: 'https://github.com/cnych/claude-mcp' },
@@ -44,6 +45,8 @@ export function Footer() {
       { name: 'MarkItDown MCP', href: '/servers/markitdown-mcp' },
       { name: 'Google Drive', href: '/servers/gdrive' },
       { name: 'Filesystem MCP', href: '/servers/filesystem' },
+      { name: 'Bright Data', href: '/servers/brightdata' },
+      { name: 'MCP Feedback Enhanced', href: '/servers/mcp-feedback-enhanced' },
       { name: '...', href: '/servers' },
     ]
   }
@@ -59,8 +62,9 @@ export function Footer() {
     <footer className="border-t bg-background/50 backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <Link href="/" className="text-xl font-bold">
+          <div className="space-y-4">
+            <Link href="/" className="text-xl font-bold flex flex-row items-center gap-2">
+              <Image src="/logo.png" alt="Claude MCP" width={27} height={27} />
               {tNav('title')}
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
@@ -71,7 +75,7 @@ export function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold">{t('sections.product')}</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul role="list" className="mt-4 space-y-4 max-h-[200px] overflow-y-auto">
                   {filteredProducts.map((item) => (
                     <li key={item.name}>
                       <I18nLink
@@ -86,7 +90,7 @@ export function Footer() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold">{t('sections.community')}</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul role="list" className="mt-4 space-y-4 max-h-[200px] overflow-y-auto">
                   {navigation.community.map((item) => (
                     <li key={item.name}>
                       <a
@@ -122,7 +126,7 @@ export function Footer() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold">{t('sections.hotMcp')}</h3>
-                <ul role="list" className="mt-4 space-y-4">
+                <ul role="list" className="mt-4 space-y-4 max-h-[200px] overflow-y-auto">
                   {navigation.hotMcp.map((item) => (
                     <li key={item.name}>
                       <I18nLink
@@ -138,14 +142,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t">
+        <div className="mt-8 pt-8 border-t">
           <div className="flex items-center">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} Claude MCP Tutorial.
+              &copy; {new Date().getFullYear()} Claude MCP Community.
             </p>
             &nbsp;&nbsp;
             <Link href="/sitemap.xml" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-              Sitemap
+              Sitemap.xml
             </Link>
             &nbsp;&nbsp;
             <Link href="/llms.txt" className="text-xs text-muted-foreground hover:text-foreground transition-colors">

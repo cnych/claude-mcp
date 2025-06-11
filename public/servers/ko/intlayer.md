@@ -9,16 +9,13 @@ capabilities:
   resources: true
   tools: true
 tags:
-  - intlayer
   - i18n
-  - l10n
-  - localization
-  - translation
-  - ide
-  - automation
-  - documentation
+  - 지역화
+  - 번역
+  - 자동화
 icon: https://intlayer.org/android-chrome-512x512.png
 createTime: 2025-06-10
+featured: true
 ---
 
 **Intlayer**를 사용하여 개발을 향상시키는 모델 컨텍스트 프로토콜(MCP) 서버로, IDE 인식 문서, CLI 통합 및 AI 기반 컨텍스트 도구를 제공합니다.

@@ -4,7 +4,7 @@ digest: AI 에이전트를 Apify의 5,000개 이상의 웹 스크래핑 및 자�
 author: Apify
 homepage: https://apify.com/jiri.spilka/tester-mcp-client
 docs: https://mcp.apify.com
-icon: http://apify.com/ext/apify-symbol-512px.svg
+icon: https://apify.com/ext/apify-symbol-512px.svg
 windows: true
 mac: true
 linux: true

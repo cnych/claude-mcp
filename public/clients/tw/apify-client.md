@@ -4,7 +4,7 @@ digest: 此客戶端能將AI代理連接至Apify生態系統中5,000+個網頁�
 author: Apify
 homepage: https://apify.com/jiri.spilka/tester-mcp-client
 docs: https://mcp.apify.com
-icon: http://apify.com/ext/apify-symbol-512px.svg
+icon: https://apify.com/ext/apify-symbol-512px.svg
 windows: true
 mac: true
 linux: true

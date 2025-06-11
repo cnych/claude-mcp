@@ -9,16 +9,13 @@ capabilities:
   resources: true
   tools: true
 tags:
-  - intlayer
   - i18n
-  - l10n
   - localization
   - translation
-  - ide
   - automation
-  - documentation
 icon: https://intlayer.org/android-chrome-512x512.png
 createTime: 2025-06-10
+featured: true
 ---
 
 A Model Context Protocol (MCP) server that enhances development with **Intlayer** by providing IDE-aware documentation, CLI integration, and AI-powered context tools.

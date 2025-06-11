@@ -9,16 +9,13 @@ capabilities:
   resources: true
   tools: true
 tags:
-  - intlayer
   - i18n
-  - l10n
   - 本地化
   - 翻譯
-  - ide
   - 自動化
-  - 文件
 icon: https://intlayer.org/android-chrome-512x512.png
 createTime: 2025-06-10
+featured: true
 ---
 
 一個模型上下文協定（MCP）伺服器，透過提供 IDE 感知的文件、CLI 整合和 AI 驅動的上下文工具來增強 **Intlayer** 的開發體驗。
