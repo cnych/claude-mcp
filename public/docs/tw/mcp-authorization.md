@@ -3,7 +3,7 @@ title: MCP 授權機制
 description: 瞭解 MCP 的 Authorization 授權機制，並使用 MCP Python SDK 實現 MCP 授權
 section: base-dev
 prev: mcp-py-sdk-deep
-pubDate: 2025-06-10
+pubDate: 2025-06-11
 order: 9
 ---
 

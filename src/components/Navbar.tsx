@@ -1,6 +1,7 @@
 'use client'
 
 import {useTranslations} from 'next-intl'
+import Image from 'next/image'
 import {Link as I18nLink} from '@/i18n/routing'
 import LanguageSwitcher from './LanguageSwitcher'
 import ThemeToggle from './ThemeToggle'
@@ -20,9 +21,9 @@ export default function Navbar() {
 
   // 定义类型安全的导航链接
   const navLinks = [
+    { href: '/docs' as const, label: t('documentation') },
     { href: '/servers' as const, label: t('servers') },
     { href: '/clients' as const, label: t('clients') },
-    { href: '/docs' as const, label: t('documentation') },
     { href: '/playground' as const, label: t('playground') },
     { href: '/inspector' as const, label: t('inspector') },
     { href: '/specification' as const, label: t('specification') },
@@ -34,9 +35,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <I18nLink href="/" aria-label="Claude MCP" title="Claude MCP" className="flex items-center">
-              <img src="/logo.png" alt="Claude MCP" className="w-10 h-auto mr-2" />
-              <span className="hidden md:block text-xl font-bold text-gray-900 dark:text-white">{t('title')}</span>
+            <I18nLink 
+              href="/" 
+              aria-label="Claude MCP" 
+              title="Claude MCP" 
+              className="flex items-center group transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              <Image 
+                src="/logo.png" 
+                alt="Claude MCP" 
+                width={27} 
+                height={27} 
+                className="mr-2 transition-transform duration-300 group-hover:rotate-12" 
+              />
+              <span className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                {t('title')}
+              </span>
             </I18nLink>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navLinks.map((link) => (

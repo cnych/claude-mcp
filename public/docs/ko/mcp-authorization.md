@@ -2,8 +2,8 @@
 title: MCP 인증 메커니즘 상세 설명
 description: MCP 인증 메커니즘을 심층적으로 이해하고 MCP Python SDK를 통해 인증 기능 구현
 section: 기본 개발
-prev: mcp-py-sdk 심층 분석
-pubDate: 2025년 6월 10일
+prev: mcp-py-sdk-deep
+pubDate: 2025-06-11
 order: 9
 ---
 

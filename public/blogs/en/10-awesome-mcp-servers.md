@@ -6,7 +6,7 @@ slug: 10-awesome-mcp-servers
 coverImage: /images/blog/mcp-servers-10awesome.jpg
 featured: true
 author:
-  name: Yangming
+  name: 阳明
   avatar: /images/avatars/yangming.png
 category: Technology
 ---

@@ -4,6 +4,7 @@ import './globals.css'
 import { Metadata } from 'next'
 import { AD_CLIENT } from '@/lib/utils'
 import ClarityScript from '@/components/ClarityScript'
+import Script from 'next/script'
 
 // 优化中文字体加载
 const notoSansSC = Noto_Sans_SC({
@@ -42,13 +43,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preload" href="/logo.png" as="image" />
-        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`}
-          crossOrigin="anonymous"
-        />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
         <GoogleAnalytics gaId="G-JBQK9CPP1N" />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${AD_CLIENT}`}
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   )

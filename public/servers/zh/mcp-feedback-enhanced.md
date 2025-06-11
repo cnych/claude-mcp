@@ -18,7 +18,7 @@ featured: true
 
 ## 核心理念
 
-这是一个建立**面向反馈的开发工作流**的[MCP 服务器](https://modelcontextprotocol.io/)，完美适配本地环境、**SSH 远程环境**（Cursor SSH Remote、VS Code Remote SSH）和**WSL（Windows Subsystem for Linux）环境**。通过引导 AI 与用户确认而非进行推测性操作，可将多个工具调用整合为单个面向反馈的请求，大幅降低平台成本并提升开发效率。
+这是一个建立**面向反馈的开发工作流**的[MCP 服务器](/zh)，完美适配本地环境、**SSH 远程环境**（Cursor SSH Remote、VS Code Remote SSH）和**WSL（Windows Subsystem for Linux）环境**。通过引导 AI 与用户确认而非进行推测性操作，可将多个工具调用整合为单个面向反馈的请求，大幅降低平台成本并提升开发效率。
 
 **支持平台:** [Cursor](https://www.cursor.com) | [Cline](https://cline.bot) | [Windsurf](https://windsurf.com) | [Augment](https://www.augmentcode.com) | [Trae](https://www.trae.ai)
 

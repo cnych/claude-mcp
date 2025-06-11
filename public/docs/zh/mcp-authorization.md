@@ -2,8 +2,8 @@
 title: MCP授权机制详解
 description: 深入理解MCP授权机制，并通过MCP Python SDK实现授权功能
 section: 基础开发
-prev: mcp-py-sdk深度解析
-pubDate: 2025年6月10日
+prev: mcp-py-sdk-deep
+pubDate: 2025-06-11
 order: 9
 ---
 

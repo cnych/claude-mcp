@@ -6,7 +6,7 @@ slug: what-is-mcp
 coverImage: /images/blog/what-is-mcp-claude.jpg
 featured: true
 author:
-  name: Yangming
+  name: 阳明
   avatar: /images/avatars/yangming.png
 category: Technology
 ---

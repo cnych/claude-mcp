@@ -3,7 +3,7 @@ title: MCP Authorization Mechanism
 description: Learn about the MCP Authorization mechanism and implement MCP authorization using the MCP Python SDK
 section: base-dev
 prev: mcp-py-sdk-deep
-pubDate: 2025-06-10
+pubDate: 2025-06-11
 order: 9
 ---
 
