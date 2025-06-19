@@ -8,13 +8,28 @@ import ThemeToggle from './ThemeToggle'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { useLocale } from 'next-intl'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const locale = useLocale()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [bannerClosed, setBannerClosed] = useState(false)
+
+  // 检查Banner是否已关闭
+  useEffect(() => {
+    // 监听Banner关闭事件
+    const handleBannerClosed = () => {
+      setBannerClosed(true);
+    };
+
+    window.addEventListener('bannerClosed', handleBannerClosed);
+
+    return () => {
+      window.removeEventListener('bannerClosed', handleBannerClosed);
+    };
+  }, []);
   
   // 从路径中移除语言前缀以获取实际路径
   const path = pathname.replace(`/${locale}`, '')
@@ -31,7 +46,10 @@ export default function Navbar() {
   ]
   
   return (
-    <nav className="bg-white fixed top-0 left-0 right-0 z-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <nav className={cn(
+      "bg-white fixed left-0 right-0 z-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 transition-all duration-300",
+      bannerClosed ? "top-0" : "top-12"
+    )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-0">
         <div className="flex justify-between h-16">
           <div className="flex">

@@ -15,6 +15,7 @@ tags:
 icon: https://pragmar.com/media/static/images/home/mcp-server-webcrawl.png
 createTime: 2025-03-26
 ---
+
 Advanced search and retrieval for web crawler data. With mcp-server-webcrawl, your AI client filters and analyzes web content under your direction or autonomously. The server includes a full-text search interface with boolean support, and resource filtering by type, HTTP status, and more.
 
 mcp-server-webcrawl provides the LLM a complete menu with which to search your web content, and works with a variety of web crawlers:
@@ -47,7 +48,7 @@ For step-by-step MCP server setup, refer to the [Setup Guides](https://pragmar.g
 
 **mcp-server-webcrawl** works with a variety of web crawlers and formats:
 
-- **[WARC](https://en.wikipedia.org/wiki/WARC_(file_format))** - Standard web archive format - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/warc.html)
+- **[WARC](<https://en.wikipedia.org/wiki/WARC_(file_format)>)** - Standard web archive format - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/warc.html)
 - **[wget](https://en.wikipedia.org/wiki/Wget)** - CLI website mirroring tool (macOS/Linux) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/wget.html)
 - **[InterroBot](https://interro.bot)** - GUI crawler and analyzer (macOS/Windows) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/interrobot.html)
 - **[Katana](https://github.com/projectdiscovery/katana)** - CLI web crawler (macOS/Windows/Linux) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/katana.html)
@@ -84,25 +85,28 @@ While the API interface is designed to be consumed by the LLM directly, it can b
 ### Example Queries
 
 **Basic Searches:**
-* `privacy` - fulltext single keyword match
-* `"privacy policy"` - fulltext match exact phrase
-* `boundar*` - fulltext wildcard matches results starting with *boundar* (boundary, boundaries)
+
+- `privacy` - fulltext single keyword match
+- `"privacy policy"` - fulltext match exact phrase
+- `boundar*` - fulltext wildcard matches results starting with _boundar_ (boundary, boundaries)
 
 **Field-Specific Searches:**
-* `id: 12345` - id field matches a specific resource by ID
-* `url: example.com/somedir` - url field matches results with URL containing example.com/somedir
-* `type: html` - type field matches for HTML pages only
-* `status: 200` - status field matches specific HTTP status codes (equal to 200)
-* `status: >=400` - status field matches specific HTTP status code (greater than or equal to 400)
-* `content: h1` - content field matches content (HTTP response body, often, but not always HTML)
-* `headers: text/xml` - headers field matches HTTP response headers
+
+- `id: 12345` - id field matches a specific resource by ID
+- `url: example.com/somedir` - url field matches results with URL containing example.com/somedir
+- `type: html` - type field matches for HTML pages only
+- `status: 200` - status field matches specific HTTP status codes (equal to 200)
+- `status: >=400` - status field matches specific HTTP status code (greater than or equal to 400)
+- `content: h1` - content field matches content (HTTP response body, often, but not always HTML)
+- `headers: text/xml` - headers field matches HTTP response headers
 
 **Boolean Operations:**
-* `privacy AND policy` - fulltext matches both
-* `privacy OR policy` - fulltext matches either
-* `policy NOT privacy` - fulltext matches policies not containing privacy
-* `(login OR signin) AND form` - fulltext matches fulltext login or signin with form
-* `type: html AND status: 200` - fulltext matches only HTML pages with HTTP success
+
+- `privacy AND policy` - fulltext matches both
+- `privacy OR policy` - fulltext matches either
+- `policy NOT privacy` - fulltext matches policies not containing privacy
+- `(login OR signin) AND form` - fulltext matches fulltext login or signin with form
+- `type: html AND status: 200` - fulltext matches only HTML pages with HTTP success
 
 ## Field Search Definitions
 
@@ -110,13 +114,13 @@ Field search provides search precision, allowing you to specify which columns of
 
 ### Available Fields
 
-* **id** - database ID
-* **url** - resource URL
-* **type** - enumerated list of types (see types section below)
-* **size** - file size in bytes
-* **status** - HTTP response codes
-* **headers** - HTTP response headers
-* **content** - HTTP body—HTML, CSS, JS, and more
+- **id** - database ID
+- **url** - resource URL
+- **type** - enumerated list of types (see types section below)
+- **size** - file size in bytes
+- **status** - HTTP response codes
+- **headers** - HTTP response headers
+- **content** - HTTP body—HTML, CSS, JS, and more
 
 ## Content Types
 
@@ -124,19 +128,19 @@ Crawls contain resource types beyond HTML pages. The `type:` field search allows
 
 ### Supported Content Types
 
-* **html** - webpages
-* **iframe** - iframes
-* **img** - web images
-* **audio** - web audio files
-* **video** - web video files
-* **font** - web font files
-* **style** - CSS stylesheets
-* **script** - JavaScript files
-* **rss** - RSS syndication feeds
-* **text** - plain text content
-* **pdf** - PDF files
-* **doc** - MS Word documents
-* **other** - uncategorized
+- **html** - webpages
+- **iframe** - iframes
+- **img** - web images
+- **audio** - web audio files
+- **video** - web video files
+- **font** - web font files
+- **style** - CSS stylesheets
+- **script** - JavaScript files
+- **rss** - RSS syndication feeds
+- **text** - plain text content
+- **pdf** - PDF files
+- **doc** - MS Word documents
+- **other** - uncategorized
 
 ## Extras
 

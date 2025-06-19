@@ -2,9 +2,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
+import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
+import DynamicContent from "@/components/DynamicContent";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -32,8 +34,9 @@ export default async function LocaleLayout({
   return (
     <ThemeProvider attribute="class">
       <NextIntlClientProvider messages={messages} locale={locale}>
+        <Banner />
         <Navbar />
-        <main className="min-h-screen mt-16">{children}</main>
+        <DynamicContent>{children}</DynamicContent>
         <Footer />
       </NextIntlClientProvider>
     </ThemeProvider>
