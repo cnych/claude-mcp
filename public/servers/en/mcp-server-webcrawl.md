@@ -1,8 +1,8 @@
 ---
 name: mcp-server-webcrawl
-digest: Search and retrieval for web crawler content. Connect to your crawls to using advanced filtering and content retrieval.
+digest: Advanced search and retrieval for web crawler data.
 author: pragmar
-repository: https://github.com/pragmar/mcp_server_webcrawl
+repository: https://github.com/pragmar/mcp-server-webcrawl
 homepage: https://pragmar.com/mcp-server-webcrawl/
 capabilities:
   prompts: false
@@ -15,18 +15,19 @@ tags:
 icon: https://pragmar.com/media/static/images/home/mcp-server-webcrawl.png
 createTime: 2025-03-26
 ---
+Advanced search and retrieval for web crawler data. With mcp-server-webcrawl, your AI client filters and analyzes web content under your direction or autonomously. The server includes a full-text search interface with boolean support, and resource filtering by type, HTTP status, and more.
 
-A Model Context Protocol (MCP) server that provides search and retrieval capabilities for web crawlers. This server enables MCP clients to search and access web content across crawled sites using advanced filtering.
+mcp-server-webcrawl provides the LLM a complete menu with which to search your web content, and works with a variety of web crawlers:
 
 ## Features
 
 🔍 **Fulltext Search**. Filter web content for keywords, tags, CSS classes, and more.
 
-🔬 **Advanced Search**. Search by status, content types, and/or website.
+🔬 **Advanced Search**. Field search by HTTP status, headers, content type, URL, or size. Boolean operators are supported.
 
 🕸️ **Multicrawler Support**. Support for WARC, wget, InterroBot, Katana, and SiteOne crawlers.
 
-✂️ **API Context Shaping**. Field option determining API returns allows for lighter contexts in LLM interactions.
+✂️ **Token Efficient**. API encourages context shaping of returned data, from field selection to content filters, including Markdown, XPath, search snippets, and more.
 
 ## Installation
 
@@ -40,184 +41,120 @@ Install the package with pip:
 pip install mcp-server-webcrawl
 ```
 
-## Configuration
+For step-by-step MCP server setup, refer to the [Setup Guides](https://pragmar.github.io/mcp-server-webcrawl/guides.html).
 
-Configuration varies by crawler. Be sure to replace --datasource example with your target path.
+## Supported Crawlers
 
-### wget Configuration
+**mcp-server-webcrawl** works with a variety of web crawlers and formats:
 
-```json
-{
-  "mcpServers": {
-    "webcrawl": {
-      "command": "mcp-server-webcrawl",
-      "args": ["--crawler", "wget", "--datasrc", "/path/to/wget/archives/"]
-    }
-  }
-}
-```
+- **[WARC](https://en.wikipedia.org/wiki/WARC_(file_format))** - Standard web archive format - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/warc.html)
+- **[wget](https://en.wikipedia.org/wiki/Wget)** - CLI website mirroring tool (macOS/Linux) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/wget.html)
+- **[InterroBot](https://interro.bot)** - GUI crawler and analyzer (macOS/Windows) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/interrobot.html)
+- **[Katana](https://github.com/projectdiscovery/katana)** - CLI web crawler (macOS/Windows/Linux) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/katana.html)
+- **[SiteOne](https://crawler.siteone.io)** - GUI crawler and analyzer (macOS/Windows/Linux) - [Setup Guide](https://pragmar.github.io/mcp-server-webcrawl/guides/siteone.html)
 
-**Tested wget commands:**
+## Prompt Routines
 
-```bash
-# --adjust-extension for file extensions, e.g. *.html
-wget --mirror https://example.com
-wget --mirror https://example.com --adjust-extension
-```
+**mcp-server-webcrawl** provides the toolkit necessary to search web crawl data freestyle, figuring it out as you go, reacting to each query. This is what it was designed for.
 
-### WARC Configuration
+It is also capable of running routines (as prompts). You can write these yourself, or use the ones provided. These prompts are **copy and paste**, and used as raw Markdown. They are enabled by the advanced search provided to the LLM; queries and logic can be embedded in a procedural set of instructions, or even an input loop as is the case with Gopher Service.
 
-```json
-{
-  "mcpServers": {
-    "webcrawl": {
-      "command": "mcp-server-webcrawl",
-      "args": ["--crawler", "warc", "--datasrc", "/path/to/warc/archives/"]
-    }
-  }
-}
-```
+### Available Prompt Routines
 
-**Tested wget commands for WARC:**
+**🔍 SEO Audit** [`auditseo.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/auditseo.md) – Technical SEO (search engine optimization) analysis. Covers the basics, with options to dive deeper.
 
-```bash
-wget --warc-file=example --recursive https://example.com
-wget --warc-file=example --recursive --page-requisites https://example.com
-```
+**🔗 404 Audit** [`audit404.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/audit404.md) – Broken link detection and pattern analysis. Not only finds issues, but suggests fixes.
 
-### InterroBot Configuration
+**⚡ Performance Audit** [`auditperf.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/auditperf.md) – Website speed and optimization analysis. Real talk.
 
-```json
-{
-  "mcpServers": {
-    "webcrawl": {
-      "command": "mcp-server-webcrawl",
-      "args": [
-        "--crawler",
-        "interrobot",
-        "--datasrc",
-        "/home/user/Documents/InterroBot/interrobot.v2.db"
-      ]
-    }
-  }
-}
-```
+**📁 File Audit** [`auditfiles.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/auditfiles.md) – File organization and asset analysis. Discover the composition of your website.
 
-**Notes:**
+**🌐 Gopher Interface** [`gopher.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/gopher.md) – An old-fashioned search interface inspired by the Gopher clients of yesteryear.
 
-- Crawls must be run from within InterroBot (windowed)
-- macOS/Windows: --datasource path is provided on InterroBot options page
+**⚙️ Search Test** [`testsearch.md`](https://raw.githubusercontent.com/pragmar/mcp-server-webcrawl/master/prompts/testsearch.md) – A battery of tests to check for Boolean logical inconsistencies in the search query parser and subsequent FTS5 conversion.
 
-### Katana Configuration
+If you want to shortcut the site selection (one less query), paste the markdown and in the same request, type "run pasted for [site name or URL]." It will figure it out. When pasted without additional context, you should be prompted to select from a list of crawled sites.
 
-```json
-{
-  "mcpServers": {
-    "webcrawl": {
-      "command": "mcp-server-webcrawl",
-      "args": ["--crawler", "katana", "--datasrc", "/path/to/katana/crawls/"]
-    }
-  }
-}
-```
+## Boolean Search Syntax
 
-**Tested Katana command:**
+The query engine supports field-specific (`field: value`) searches and complex boolean expressions. Fulltext is supported as a combination of the url, content, and headers fields.
 
-```bash
-# -store-response to save crawl contents
-# -store-response-dir allows for many site crawls in one dir
-katana -u https://example.com -store-response -store-response-dir crawls/
-```
+While the API interface is designed to be consumed by the LLM directly, it can be helpful to familiarize yourself with the search syntax. Searches generated by the LLM are inspectable, but generally collapsed in the UI. If you need to see the query, expand the MCP collapsible.
 
-### SiteOne Configuration
+### Example Queries
 
-```json
-{
-  "mcpServers": {
-    "webcrawl": {
-      "command": "mcp-server-webcrawl",
-      "args": [
-        "--crawler",
-        "siteone",
-        "--datasrc",
-        "/path/to/siteone/archives/"
-      ]
-    }
-  }
-}
-```
+**Basic Searches:**
+* `privacy` - fulltext single keyword match
+* `"privacy policy"` - fulltext match exact phrase
+* `boundar*` - fulltext wildcard matches results starting with *boundar* (boundary, boundaries)
 
-**Notes:**
+**Field-Specific Searches:**
+* `id: 12345` - id field matches a specific resource by ID
+* `url: example.com/somedir` - url field matches results with URL containing example.com/somedir
+* `type: html` - type field matches for HTML pages only
+* `status: 200` - status field matches specific HTTP status codes (equal to 200)
+* `status: >=400` - status field matches specific HTTP status code (greater than or equal to 400)
+* `content: h1` - content field matches content (HTTP response body, often, but not always HTML)
+* `headers: text/xml` - headers field matches HTTP response headers
 
-- Crawls must be run from within SiteOne (windowed)
-- "Generate offline website" must be checked
+**Boolean Operations:**
+* `privacy AND policy` - fulltext matches both
+* `privacy OR policy` - fulltext matches either
+* `policy NOT privacy` - fulltext matches policies not containing privacy
+* `(login OR signin) AND form` - fulltext matches fulltext login or signin with form
+* `type: html AND status: 200` - fulltext matches only HTML pages with HTTP success
 
-## Available Tools
+## Field Search Definitions
 
-### `webcrawl_sites`
+Field search provides search precision, allowing you to specify which columns of the search index to filter. Rather than searching the entire content, you can restrict your query to specific attributes like URLs, headers, or content body. This approach improves efficiency when looking for specific attributes or patterns within crawl data.
 
-Retrieves a list of sites (project websites or crawl directories).
+### Available Fields
 
-**Optional Parameters**
+* **id** - database ID
+* **url** - resource URL
+* **type** - enumerated list of types (see types section below)
+* **size** - file size in bytes
+* **status** - HTTP response codes
+* **headers** - HTTP response headers
+* **content** - HTTP body—HTML, CSS, JS, and more
 
-- `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, url). Options include:
-- `ids` (array of integers, optional): List of project IDs to filter by. Leave empty for all projects.
+## Content Types
 
-**Optional Fields**
+Crawls contain resource types beyond HTML pages. The `type:` field search allows filtering by broad content type groups, particularly useful when filtering images without complex extension queries. For example, you might search for `type: html NOT content: login` to find pages without "login," or `type: img` to analyze image resources.
 
-- `modified` ISO 8601 timestamp of last modification
-- `created` ISO 8601 timestamp of creation
-- `robots` Robots.txt information (limited support)
+### Supported Content Types
 
-**Example Usage**
+* **html** - webpages
+* **iframe** - iframes
+* **img** - web images
+* **audio** - web audio files
+* **video** - web video files
+* **font** - web font files
+* **style** - CSS stylesheets
+* **script** - JavaScript files
+* **rss** - RSS syndication feeds
+* **text** - plain text content
+* **pdf** - PDF files
+* **doc** - MS Word documents
+* **other** - uncategorized
 
-List all crawled sites, "Can you list web crawls?"
+## Extras
 
-Get basic crawl information for a site, "Can you get web crawl info for example.com?"
+The `extras` parameter provides additional processing options, transforming HTTP data (markdown, snippets, xpath), or connecting the LLM to external data (thumbnails). These options can be combined as needed to achieve the desired result format.
 
-### `webcrawl_search`
+### Available Extras
 
-Searches for resources (webpages, CSS, PDF, etc.) across projects and retrieves specified fields.
+**thumbnails** – Generates base64 encoded images to be viewed and analyzed by AI models. Enables image description, content analysis, and visual understanding while keeping token output minimal. Works with images, which can be filtered using `type: img` in queries. SVG is not supported.
 
-**Optional Parameters:**
+**markdown** – Provides the HTML content field as concise Markdown, reducing token usage and improving readability for LLMs. Works with HTML, which can be filtered using `type: html` in queries.
 
-- `query` (string, optional): Fulltext search query string. Supports fulltext and boolean operators, syntax consistent with SQLite FTS5 in boolean mode (AND, OR, NOT, quoted phrases, suffix wildcards).
-- `sites` (array of integers, optional): List of project IDs to filter search results to specific sites.
-- `limit` (integer, optional): Maximum number of results to return. Default is 20, max is 100.
-- `offset` (integer, optional): Number of results to skip for pagination. Default is 0.
-- `sort` (string, optional): Sort order for results. Prefixed with `+` for ascending, `-` for descending.
-- `statuses` (array of integers, optional): Filter by HTTP status codes (e.g., [200] for successful responses, [404, 500] for errors).
-- `types` (array of strings, optional): Filter for specific resource types.
-- `thumbnails` (boolean, optional): Enable base64 encoded data for image thumbnails. Default is false.
-- `fields` (array of strings, optional): Additional fields to include in the response beyond the defaults (id, URL, status). Empty list means default fields only. The content field can lead to large results and should be used judiciously with LIMIT.:
-- `ids` (array of integers, optional): Retrieve specific resources directly by their IDs.
+**snippets** – Matches fulltext queries to contextual keyword usage within the content. When used without requesting the content field (or markdown extra), it can provide an efficient means of refining a search without pulling down the complete page contents. Also great for rendering old school hit-highlighted results as a list, like Google search in 1999. Works with HTML, CSS, JS, or any text-based, crawled file.
 
-**Optional Fields**
+**xpath** – Extracts XPath selector data, used in scraping HTML content. Use XPath's text() selector for text-only, element selectors return outerHTML. Only supported with `type: html`, other types will be ignored. One or more XPath selectors (//h1, count(//h1), etc.) can be requested, using the `extrasXpath` argument.
 
-- `created`: ISO 8601 timestamp of creation
-- `modified`: ISO 8601 timestamp of last modification
-- `content`: The actual content of the resource, if text/\* (HTML/CSS/JS/plain)
-- `name`: Resource name or title information
-- `size`: File size information
-- `time`: Time-related metrics for the resource (support varies by crawler type)
-- `headers`: HTTP headers associated with the resource (support varies by crawler type)
+Extras provide a means of producing token-efficient HTTP content responses. Markdown produces roughly 1/3 the bytes of the source HTML, snippets are generally 500 or so bytes per result, and XPath can be as specific or broad as you choose. The more focused your requests, the more results you can fit into your LLM session.
 
-**Sort Options**
-
-- `+id`, `-id`: Sort by resource ID
-- `+url`, `-url`: Sort by resource URL
-- `+status`, `-status`: Sort by HTTP status code
-- `?`: Random sort (useful for statistical sampling)
-
-**Example Usage:**
-
-Search a website for keyword, "Can you search the example.com crawl for keyword?"
-
-Search and summarize filtered content, "Can you search web crawls for keyword, collect content, and summarize?"
-
-Get image information, "Can you list images in the example.com web crawl?"
-
-Find 404 errors with keyword (WARC/Katana/InterroBot), "Can you search the example.com crawl for 404 errors?"
+The idea, of course, is that the LLM takes care of this for you. If you notice your LLM developing an affinity to the "content" field (full HTML), a nudge in chat to budget tokens using the extras feature should be all that is needed.
 
 ## License
 
