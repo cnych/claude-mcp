@@ -1,15 +1,14 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Link as I18nLink } from '@/i18n/routing';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Book, Video } from 'lucide-react';
+import { Book } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function HeroSection() {
   const t = useTranslations('Index');
-  const locale = useLocale();
   const [isMobile, setIsMobile] = useState(false);
   
   // 检测屏幕宽度变化 - 使用节流函数减少频繁触发
@@ -58,32 +57,21 @@ export function HeroSection() {
                 <Book className="ml-2 h-4 w-4" />
               </Button>
             </I18nLink>
-            
-            {(locale === 'zh' || locale === 'tw') && (
-              <Link href="https://fastclass.cn/course/mcp" className="w-full sm:w-auto">
-                <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base w-full`}>
-                  {t('hero.videoCourse')}
-                  <Video className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            )}
-            
-            <Link href="https://www.a2aprotocol.net/?ref=claude-mcp" className="w-full sm:w-auto">
+          
+            <Link href="https://get.brightdata.com/uwsgq3m6w81q?ref=claude-mcp" className="w-full sm:w-auto">
               <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base w-full`}>
-                {t('hero.a2a')}
+                Bright Data
                 <Book className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-
-            {(locale === 'en') && (
-              <Link href="https://www.manusai.io/?ref=claude-mcp" className="w-full sm:w-auto">
-                <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base w-full`}>
-                  Manus AI
-                  <Book className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            )}
-
+            
+            <Link href="https://www.manusai.io/?ref=claude-mcp" className="w-full sm:w-auto">
+              <Button variant="default" size={isMobile ? "default" : "lg"} className={`${isMobile ? 'h-10' : 'h-12'} px-4 sm:px-6 text-sm sm:text-base w-full`}>
+                Manus AI
+                <Book className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            
           </div>
         </div>
       </div>
