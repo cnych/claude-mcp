@@ -28,19 +28,19 @@ createTime: 2024-12-01T00:00:00Z
 
 ## 演示
 
-[![演示新发布的 MCP 服务器以探索 Cloudflare 属性，如 Workers、KV 和 D1。](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
+[![演示新发布的 MCP 服务器以探索 Cloudflare 属性，如 Workers、KV 和 D1。](https://static.claudemcp.com/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
 
 ## 设置
 
 1. 运行 `npx @cloudflare/mcp-server-cloudflare init`
 
-![示例控制台输出](/images/mcp-cloudflare-init.jpg)
+![示例控制台输出](https://static.claudemcp.com/images/mcp-cloudflare-init.jpg)
 
 2. 重启 Claude Desktop，您应该会看到一个小 🔨 图标，显示以下可用工具：
 
-![示例工具图标](/images/mcp-cloudflare-tool-icon.jpg)
+![示例工具图标](https://static.claudemcp.com/images/mcp-cloudflare-tool-icon.jpg)
 
-![示例工具列表](/images/mcp-cloudflare-tool-list.jpg)
+![示例工具列表](https://static.claudemcp.com/images/mcp-cloudflare-tool-list.jpg)
 
 ## 功能
 

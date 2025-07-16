@@ -766,151 +766,152 @@
       }
     },
     "landingPage": {
-        "title": "Model Context Protocol (MCP) 文件中心",
-        "welcome": "歡迎訪問 Model Context Protocol (MCP) 文件中心。請從左側導航選擇具體文件主題，或繼續閱讀下方的概述。",
-        "whatIs": {
-          "title": "什麼是 Model Context Protocol？",
-          "description": "Model Context Protocol (MCP) 是由 Anthropic Claude 推出的開源協議，旨在建立AI模型與開發環境之間的統一上下文互動標準。通過提供標準化的上下文信息訪問方式，MCP 使AI模型能夠更好地理解和處理程式碼，充當它們之間的橋樑，讓開發者能夠通過單一標準連接AI應用和各種資料源。"
+      "title": "Model Context Protocol (MCP) 文件中心",
+      "welcome": "歡迎訪問 Model Context Protocol (MCP) 文件中心。請從左側導航選擇具體文件主題，或繼續閱讀下方的概述。",
+      "whatIs": {
+        "title": "什麼是 Model Context Protocol？",
+        "description": "Model Context Protocol (MCP) 是由 Anthropic Claude 推出的開源協議，旨在建立AI模型與開發環境之間的統一上下文互動標準。通過提供標準化的上下文信息訪問方式，MCP 使AI模型能夠更好地理解和處理程式碼，充當它們之間的橋樑，讓開發者能夠通過單一標準連接AI應用和各種資料源。"
+      },
+      "features": {
+        "title": "主要功能與特性",
+        "unifiedInterface": {
+          "title": "統一介面",
+          "description": "提供標準化的API介面，簡化AI與各類上下文信息的互動"
         },
-        "features": {
-          "title": "主要功能與特性",
-          "unifiedInterface": {
-            "title": "統一介面",
-            "description": "提供標準化的API介面，簡化AI與各類上下文信息的互動"
-          },
-          "seamlessIntegration": {
-            "title": "無縫整合",
-            "description": "輕鬆整合到現有開發工作流程中，無需複雜的適配"
-          },
-          "multiSource": {
-            "title": "多源資料支援",
-            "description": "支援從多種來源獲取上下文信息，包括程式碼儲存庫、文件等"
-          },
-          "contextManagement": {
-            "title": "智慧上下文管理",
-            "description": "優化上下文信息的傳遞，提高AI模型理解和生成的品質"
-          },
-          "extensibility": {
-            "title": "擴展性設計",
-            "description": "靈活的架構允許添加新的資料源和功能"
-          }
+        "seamlessIntegration": {
+          "title": "無縫整合",
+          "description": "輕鬆整合到現有開發工作流程中，無需複雜的適配"
         },
-        "useCases": {
-          "title": "使用場景",
-          "codeDevelopment": {
-            "title": "程式碼管理與開發",
-            "description": "通過Claude桌面應用程式和MCP協議，AI可以幫助用戶管理GitHub專案，輕鬆完成從創建專案到提交程式碼請求的複雜任務。"
-          },
-          "documentProcessing": {
-            "title": "智慧文件處理",
-            "description": "MCP使AI能夠理解和處理各種文件格式，提供更精準的內容分析和生成建議。"
-          },
-          "knowledgeIntegration": {
-            "title": "知識庫整合",
-            "description": "將企業內部知識庫與AI模型無縫連接，提供基於企業特定知識的智慧回答和建議。"
-          },
-          "devTools": {
-            "title": "開發工具增強",
-            "description": "為IDE和開發工具提供智慧輔助功能，根據程式碼上下文提供更準確的建議和自動完成。"
-          }
+        "multiSource": {
+          "title": "多源資料支援",
+          "description": "支援從多種來源獲取上下文信息，包括程式碼儲存庫、文件等"
         },
-        "whyChoose": {
-          "title": "為什麼選擇MCP？",
-          "description": "MCP協議的出現有望徹底解決LLM（大型語言模型）應用難以連接資料的痛點，使前沿模型能夠生成更好、更相關的回應，而無需為每個資料源編寫自定義整合程式碼 - 單一的MCP協議可以處理與多個資料源的連接。"
+        "contextManagement": {
+          "title": "智慧上下文管理",
+          "description": "優化上下文信息的傳遞，提高AI模型理解和生成的品質"
         },
-        "getStarted": {
-          "title": "開始使用",
-          "description": "要開始使用MCP，請從左側導航的\"入門指南\"部分查看<introduction>簡介</introduction>。對於想要快速上手的用戶，我們提供了<quickstart>快速入門指南</quickstart>。"
-        },
-        "cta": {
-          "title": "準備好開始探索MCP了嗎？",
-          "subtitle": "查看我們的詳細文件，了解如何將MCP整合到您的專案中。",
-          "exploreButton": "開始探索",
-          "githubButton": "GitHub 儲存庫"
+        "extensibility": {
+          "title": "擴展性設計",
+          "description": "靈活的架構允許添加新的資料源和功能"
         }
       },
+      "useCases": {
+        "title": "使用場景",
+        "codeDevelopment": {
+          "title": "程式碼管理與開發",
+          "description": "通過Claude桌面應用程式和MCP協議，AI可以幫助用戶管理GitHub專案，輕鬆完成從創建專案到提交程式碼請求的複雜任務。"
+        },
+        "documentProcessing": {
+          "title": "智慧文件處理",
+          "description": "MCP使AI能夠理解和處理各種文件格式，提供更精準的內容分析和生成建議。"
+        },
+        "knowledgeIntegration": {
+          "title": "知識庫整合",
+          "description": "將企業內部知識庫與AI模型無縫連接，提供基於企業特定知識的智慧回答和建議。"
+        },
+        "devTools": {
+          "title": "開發工具增強",
+          "description": "為IDE和開發工具提供智慧輔助功能，根據程式碼上下文提供更準確的建議和自動完成。"
+        }
+      },
+      "whyChoose": {
+        "title": "為什麼選擇MCP？",
+        "description": "MCP協議的出現有望徹底解決LLM（大型語言模型）應用難以連接資料的痛點，使前沿模型能夠生成更好、更相關的回應，而無需為每個資料源編寫自定義整合程式碼 - 單一的MCP協議可以處理與多個資料源的連接。"
+      },
+      "getStarted": {
+        "title": "開始使用",
+        "description": "要開始使用MCP，請從左側導航的\"入門指南\"部分查看<introduction>簡介</introduction>。對於想要快速上手的用戶，我們提供了<quickstart>快速入門指南</quickstart>。"
+      },
+      "cta": {
+        "title": "準備好開始探索MCP了嗎？",
+        "subtitle": "查看我們的詳細文件，了解如何將MCP整合到您的專案中。",
+        "exploreButton": "開始探索",
+        "githubButton": "GitHub 儲存庫"
+      }
+    },
     "nav": {
       "getting_started": "入門指南",
       "base-dev": "基礎開發",
-      "typescript": "TypeScript",
       "python": "Python",
       "guides": "使用指南",
       "advanced": "進階主題",
-      "previous": "上一節",
-      "next": "下一節",
+      "previous": "上一頁",
+      "next": "下一頁",
       "items": {
         "introduction": "簡介",
         "architecture": "架構",
         "installation": "安裝",
         "protocol": "協定",
+        "transports-2025-03-26": "傳輸協議",
+        "streamable-http": "Streamable HTTP",
         "quickstart": "快速開始",
         "getting_started": "入門指南",
         "write-ts-server": "MCP 伺服器",
         "write-ts-client": "MCP 客戶端",
         "use-llm-dev-mcp": "使用 Cursor/LLM 開發 MCP",
-        "transports-2025-03-26": "MCP 傳輸協定 2025-03-26",
-        "streamable-http": "Streamable HTTP",
         "sampling-usage": "MCP 中的 Sampling 功能",
         "dev-sse-mcp": "開發 SSE 類型的 MCP 服務",
         "mcp-py-sdk-basic": "使用 MCP Python SDK 開發 MCP 伺服器與客戶端",
+        "mcp-py-sdk-deep": "使用 MCP Python SDK 實現 SSE 和 Streamable HTTP 協議",
+        "mcp-authorization": "MCP Authorization 授權機制",
         "resources": "資源管理",
         "tools": "工具使用",
         "messages": "訊息處理",
-        "security": "安全性",
+        "security": "安全",
         "deployment": "部署",
         "configuration": "配置"
       }
     }
   },
   "Clients": {
-      "title": "Claude MCP 客戶端",
-      "description": "探索實現模型上下文協議（Claude MCP）的各種客戶端應用",
-      "details": "客戶端詳情",
-      "noClients": "未找到客戶端",
-      "viewAll": "查看所有客戶端",
-      "backToClients": "返回客戶端列表",
-      "author": "開發者",
-      "published": "發佈日期",
-      "platforms": "支援平台",
-      "visitHomepage": "訪問主頁",
-      "viewRepository": "查看程式碼儲存庫",
-      "platformWindows": "Windows",
-      "platformMac": "macOS",
-      "platformLinux": "Linux",
-      "platformWeb": "網頁版",
-      "platformIos": "iOS",
-      "platformAndroid": "Android",
-      "notFound": "未找到客戶端",
-      "notFoundDescription": "請求的客戶端未找到",
-      "search": "搜尋客戶端",
-      "searchPlaceholder": "輸入關鍵詞搜尋..."
+    "title": "Claude MCP 客戶端",
+    "description": "探索實現模型上下文協議（Claude MCP）的各種客戶端應用",
+    "details": "客戶端詳情",
+    "noClients": "未找到客戶端",
+    "viewAll": "查看所有客戶端",
+    "backToClients": "返回客戶端列表",
+    "author": "開發者",
+    "published": "發佈日期",
+    "platforms": "支援平台",
+    "visitHomepage": "訪問主頁",
+    "viewRepository": "查看程式碼儲存庫",
+    "platformWindows": "Windows",
+    "platformMac": "macOS",
+    "platformLinux": "Linux",
+    "platformWeb": "網頁版",
+    "platformIos": "iOS",
+    "platformAndroid": "Android",
+    "notFound": "未找到客戶端",
+    "notFoundDescription": "請求的客戶端未找到",
+    "search": "搜尋客戶端",
+    "searchPlaceholder": "輸入關鍵詞搜尋..."
+  },
+  "Blog": {
+    "common": {
+      "searchPlaceholder": "搜尋文章...",
+      "allCategories": "全部分類",
+      "noResults": "未找到符合條件的文章",
+      "readMore": "閱讀更多",
+      "backToBlog": "返回博客列表",
+      "shareArticle": "分享這篇文章",
+      "copyLink": "複製連結",
+      "linkCopied": "連結已複製到剪貼板",
+      "relatedPosts": "相關文章",
+      "scrollToTop": "返回頂部",
+      "readingTime": "閱讀時間",
+      "minutesRead": "分鐘閱讀",
+      "tableOfContents": "目錄",
+      "loadingToc": "正在加載目錄..."
     },
-    "Blog": {
-      "common": {
-        "searchPlaceholder": "搜尋文章...",
-        "allCategories": "全部分類",
-        "noResults": "未找到符合條件的文章",
-        "readMore": "閱讀更多",
-        "backToBlog": "返回博客列表",
-        "shareArticle": "分享這篇文章",
-        "copyLink": "複製連結",
-        "linkCopied": "連結已複製到剪貼板",
-        "relatedPosts": "相關文章",
-        "scrollToTop": "返回頂部",
-        "readingTime": "閱讀時間",
-        "minutesRead": "分鐘閱讀",
-        "tableOfContents": "目錄",
-        "loadingToc": "正在加載目錄..."
-      },
-      "meta": {
-        "title": "博客",
-        "description": "探索我們關於技術、AI、編程和最佳實踐的最新文章和見解"
-      },
-      "page": {
-        "title": "博客洞見",
-        "description": "探索我們關於技術、人工智能、編程和最佳實踐的最新文章和見解，幫助您構建更智能的應用"
-      }
+    "meta": {
+      "title": "博客",
+      "description": "探索我們關於技術、AI、編程和最佳實踐的最新文章和見解"
     },
+    "page": {
+      "title": "博客洞見",
+      "description": "探索我們關於技術、人工智能、編程和最佳實踐的最新文章和見解，幫助您構建更智能的應用"
+    }
+  },
   "Tools": {
     "title": "Claude MCP 工具",
     "description": "探索和測試我們的 MCP 開發和調試工具",

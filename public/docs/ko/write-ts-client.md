@@ -12,7 +12,7 @@ order: 2
 
 [이전 섹션](/docs/write-ts-server)에서 우리는 날씨 MCP 서버를 성공적으로 개발했으며, 이제 Claude 데스크톱, Cursor 등 MCP 프로토콜을 지원하는 모든 클라이언트에서 사용할 수 있습니다.
 
-![](/images/claude-weather-forecast.png)
+![](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 하지만 자체 클라이언트를 개발하고 싶다면 어떻게 해야 할까요? MCP 클라이언트를 만드는 방법을 알아보겠습니다.
 
@@ -396,7 +396,7 @@ Query:
 
 우리가 제공한 MCP 서버 스크립트는 이전에 개발한 날씨 예보 서비스이며, 여기서는 다음 3일간의 날씨 예보를 요청하고, 우리는 서버에서 제공하는 `get_forecast` 도구를 호출하고, `city`와 `days` 매개변수를 전달하여 최종 결과를 얻을 수 있습니다.
 
-![](/images/client-demo.png)
+![](https://static.claudemcp.com/images/client-demo.png)
 
 여기서는 매우 간단한 MCP 클라이언트를 개발했으며, 이 클라이언트를 통해 서버에서 제공하는 도구를 호출하고 최종 결과를 얻을 수 있습니다.
 

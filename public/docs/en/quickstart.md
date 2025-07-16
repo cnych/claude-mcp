@@ -137,11 +137,11 @@ After saving the above configuration, we need to restart the Claude Desktop appl
 
 When Claude Desktop is restarted, we can find an icon as shown in the following figure in the input box on the homepage:
 
-![Claude Desktop Loading SQLite MCP Server](/images/claude-sqlite.png)
+![Claude Desktop Loading SQLite MCP Server](https://static.claudemcp.com/images/claude-sqlite.png)
 
 This actually indicates that Claude Desktop has successfully loaded the SQLite MCP server and can be used normally. After clicking this button, we can see the available MCP Tools tool list, as shown in the following figure:
 
-![Available MCP Tools in Claude Desktop](/images/claude-sqlite-tools.png)
+![Available MCP Tools in Claude Desktop](https://static.claudemcp.com/images/claude-sqlite-tools.png)
 
 From the above figure, we can see that we can perform many operations, such as querying data in the database, creating new data, updating data, deleting data, etc.
 
@@ -153,15 +153,15 @@ Can you connect to my SQLite database and tell me what products and their prices
 
 Then Claude Desktop will query our SQLite database according to our prompt, and the first time will pop up an authorization dialog, as shown in the following figure:
 
-![Claude Desktop Authorizing SQLite MCP Server](/images/claude-sqlite-auth.png)
+![Claude Desktop Authorizing SQLite MCP Server](https://static.claudemcp.com/images/claude-sqlite-auth.png)
 
 We can see that here we will choose to use the `list-tables` MCP tool, here we need to click the `Allow for This Chat` button to authorize, and then subsequent tools may also need authorization.
 
-![Claude Desktop Authorizing SQLite MCP Server](/images/claude-sqlite-auth2.png)
+![Claude Desktop Authorizing SQLite MCP Server](https://static.claudemcp.com/images/claude-sqlite-auth2.png)
 
 After authorization, we can see the query results, as shown in the following figure:
 
-![Claude Desktop Querying SQLite Database Results](/images/claude-sqlite-result.png)
+![Claude Desktop Querying SQLite Database Results](https://static.claudemcp.com/images/claude-sqlite-result.png)
 
 Normally, Claude Desktop will query the database according to our prompt and return the results. If this process encounters some problems, we can check the logs of Claude Desktop to troubleshoot the issues.
 
@@ -216,7 +216,7 @@ The interaction process between MCP and Claude Desktop is as follows:
 
 Here you may still have some questions about the MCP server, we didn't write any code at all? The reason is that Claude Desktop has built-in a series of MCP servers, including a SQLite MCP server, we just need to configure the database path properly. We can view the [built-in MCP server list](https://github.com/modelcontextprotocol/servers/tree/main/src) in the official git repository.
 
-![Built-in MCP Server List](/images/claude-builtin-servers.png)
+![Built-in MCP Server List](https://static.claudemcp.com/images/claude-builtin-servers.png)
 
 We can see that it includes a SQLite MCP server. By providing database interaction and intelligent business capabilities through SQLite, this server supports running SQL queries, analyzing business data, etc., so we can configure and use it directly. If we have our own business needs, we can also refer to these built-in implementations to customize an MCP server.
 
@@ -347,22 +347,22 @@ Replace the path parameters with your actual path, for example, the complete con
 
 Here we specified the `/Users/cnych/src` directory, then save the configuration file and restart the Claude Desktop application, we can now see a `15` button in the lower right corner of the input box:
 
-![Claude Desktop's File System MCP Server](/images/claude-filesytem-mcp.png)
+![Claude Desktop's File System MCP Server](https://static.claudemcp.com/images/claude-filesytem-mcp.png)
 
 Clicking it will display the available MCP Tools list, as shown in the following figure:
 
-![Claude Desktop's File System MCP Tools](/images/claude-filesytem-tools.png)
+![Claude Desktop's File System MCP Tools](https://static.claudemcp.com/images/claude-filesytem-tools.png)
 
 We can see that we can read files, create files, list directories, move files, search files, etc.
 
 We send the prompt `Can you list the contents of my src directory?` and Claude Desktop will list all the files and directories under the specified directory, as shown in the following figure, of course, the process also requires authorization.
 
-![Claude Desktop Listing File System Directory](/images/claude-filesytem-list-tools.png)
+![Claude Desktop Listing File System Directory](https://static.claudemcp.com/images/claude-filesytem-list-tools.png)
 
 Let it help us write a markdown usage guide and save it to the `markdown-usage.md` file `Write a complete guide to markdown and save it to markdown-usage.md file`.
 
-![Claude Desktop Writing to File System](/images/claude-filesytem-write.png)
+![Claude Desktop Writing to File System](https://static.claudemcp.com/images/claude-filesytem-write.png)
 
 After authorization, we can see that Claude Desktop will automatically write the file to the specified path on our local machine, as shown in the following figure:
 
-![Claude Desktop Writing to File System Success](/images/claude-filesytem-write-result.png)
+![Claude Desktop Writing to File System Success](https://static.claudemcp.com/images/claude-filesytem-write-result.png)

@@ -1,9 +1,46 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+// 赞助商配置接口
+interface Sponsor {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  color: string; // 高亮颜色
+  arrowColor: string; // 箭头按钮的背景颜色
+}
+
+// 赞助商配置数组
+const sponsors: Sponsor[] = [
+  {
+    id: 'asmr-so',
+    name: 'ASMR.so',
+    description: 'AI ASMR Videos with VEO3 AI.',
+    url: 'https://www.asmr.so/?utm_source=claudemcp',
+    color: 'text-pink-400',
+    arrowColor: 'bg-pink-500'
+  },
+  {
+    id: 'brightdata',
+    name: 'Bright Data',
+    description: 'AI Data Platform for Developers.',
+    url: 'https://get.brightdata.com/uwsgq3m6w81q?utm_source=claudemcp',
+    color: 'text-blue-400',
+    arrowColor: 'bg-blue-500'
+  }
+];
 
 const Banner = (): JSX.Element | null => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [currentSponsor, setCurrentSponsor] = useState<Sponsor | null>(null);
+
+  // 组件挂载时随机选择一个赞助商
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * sponsors.length);
+    setCurrentSponsor(sponsors[randomIndex]);
+  }, []);
 
   // 处理关闭按钮点击事件
   const handleDismiss = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -14,15 +51,14 @@ const Banner = (): JSX.Element | null => {
     window.dispatchEvent(new CustomEvent('bannerClosed'));
   };
 
-  // 如果横幅不可见，则不渲染任何内容
-  if (!isVisible) {
+  // 如果横幅不可见或者还没有选择赞助商，则不渲染任何内容
+  if (!isVisible || !currentSponsor) {
     return null;
   }
 
   // 处理整个横幅的点击事件
   const handleClickBanner = () => {
-    const url = "https://www.asmr.so/?utm_source=claudemcp";
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(currentSponsor.url, '_blank', 'noopener,noreferrer');
   };
 
   // 处理整个横幅的键盘事件 (Enter 或 Space 键)
@@ -38,7 +74,7 @@ const Banner = (): JSX.Element | null => {
       tabIndex={0}
       onClick={handleClickBanner}
       onKeyDown={handleKeyDownBanner}
-      aria-label="Sponsored by ShipAny.ai - Ship Your AI Startup in hours"
+      aria-label={`Sponsored by ${currentSponsor.name} - ${currentSponsor.description}`}
       className="fixed top-0 left-0 right-0 z-[99] isolate flex cursor-pointer items-center gap-x-6 overflow-hidden border-b border-gray-800 bg-[#1C1C1C] px-6 py-3 hover:bg-[#2C2C2C] sm:px-3.5 sm:before:flex-1"
     >
       {/* 背景模糊效果 - 装饰性元素 */}
@@ -71,14 +107,14 @@ const Banner = (): JSX.Element | null => {
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <p className="text-sm leading-6 text-gray-200">
           <span className="text-gray-300">Sponsored by</span>
-          <span className="ml-2 text-pink-400 font-medium">ASMR.so</span>
+          <span className={`ml-2 font-medium ${currentSponsor.color}`}>{currentSponsor.name}</span>
           <span className="mx-2 text-gray-300">,</span>
-          <span className="text-gray-200">AI ASMR Videos with VEO3 AI.</span>
+          <span className="text-gray-200">{currentSponsor.description}</span>
           {/* 箭头图标 */}
           <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
-            className="hidden ml-2 sm:inline-block h-5 w-5 rounded-full bg-pink-500 text-white transition-transform duration-200 group-hover:scale-110" 
+            className={`hidden ml-2 sm:inline-block h-5 w-5 rounded-full ${currentSponsor.arrowColor} text-white transition-transform duration-200 group-hover:scale-110`}
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor" 
           >

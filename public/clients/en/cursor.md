@@ -17,7 +17,7 @@ createTime: 2023-01-01
 
 # Cursor AI IDE: A Revolutionary Intelligent Programming Tool
 
-![Cursor AI IDE](/images/cursor-ui.webp)
+![Cursor AI IDE](https://static.claudemcp.com/images/cursor-ui.webp)
 
 ## Overview
 

@@ -22,7 +22,7 @@ Unlock powerful web interaction capabilities for large language models through t
 
 `Playwright` is an open-source browser automation tool developed by Microsoft, enabling testers and developers to automate interactions with web applications across multiple browsers and platforms. Unlike traditional automation tools, `Playwright` is designed for modern web applications, supporting dynamic content, real-time interactions, and even network monitoring, helping teams test applications faster and more efficiently.
 
-![Playwright](/images/playwright.png)
+![Playwright](https://static.claudemcp.com/images/playwright.png)
 
 In modern software development, automated browser testing has become indispensable, ensuring web applications run smoothly across different browsers and environments. If you've used `Playwright`, you understand its powerful capabilities in automating web interactions. However, when multiple test scripts, debugging tools, or automation services need to interact with the same `Playwright` instance simultaneously, the `Playwright` Multi-Client Protocol (MCP) server comes into play.
 
@@ -120,7 +120,7 @@ Replace `npx @playwright/mcp@latest` with `npx @playwright/mcp`.
 
 After configuration, you should see the Playwright MCP server successfully configured in the MCP tab of Cursor Settings:
 
-![](/images/cursor-playwright-mcp.png)
+![](https://static.claudemcp.com/images/cursor-playwright-mcp.png)
 
 ### VS Code Installation
 

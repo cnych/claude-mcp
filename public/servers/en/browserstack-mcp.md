@@ -17,14 +17,14 @@ createTime: 2025-04-29
 
 # BrowserStack MCP Server
 
-[![BrowserStack](/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
+[![BrowserStack](https://static.claudemcp.com/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
 
 Enable every developer and tester in your team, whether they are testing manually, starting their automation journey, or scaling test automation.
 BrowserStack MCP Server allows you to use our cutting-edge [Test Platform](https://www.browserstack.com/test-platform) directly from your favourite AI tools.
 
 ### Why BrowserStack ?
 
-![BrowserStack](/images/browserstack-overview.png)
+![BrowserStack](https://static.claudemcp.com/images/browserstack-overview.png)
 
 ## 💡 Usage Examples
 
@@ -82,7 +82,7 @@ Use the following prompts to run/debug/fix your **automated tests** on BrowserSt
 
    - ℹ️ If you have an open-source project, we'll be able to provide you with a [free plan](https://www.browserstack.com/open-source).
 
-![Open Source](/images/browserstack-open-source.png)
+![Open Source](https://static.claudemcp.com/images/browserstack-open-source.png)
 
 - Once you have an account (and purchased appropriate plan), note down your `username` and `access_key` from [Account Settings](https://www.browserstack.com/accounts/profile/details).
 
@@ -107,7 +107,7 @@ Use the following prompts to run/debug/fix your **automated tests** on BrowserSt
    ```
 
    - In VSCode, make sure to click on `Start` button in the MCP Server to start the server.
-     ![Start MCP Server](/images/browserstack-vscode.png)
+     ![Start MCP Server](https://static.claudemcp.com/images/browserstack-vscode.png)
 
    * For Cursor: `.cursor/mcp.json`:
 

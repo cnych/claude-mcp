@@ -19,7 +19,7 @@ featured: true
 
 [Blender](https://www.blender.org/)는 3D 모델링 소프트웨어로, 3D 모델 생성은 물론 2D 그래픽 및 애니메이션 제작에도 사용할 수 있습니다.
 
-![Blender](/images/blender.png)
+![Blender](https://static.claudemcp.com/images/blender.png)
 
 ## 설치 및 설정
 
@@ -74,7 +74,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 설정 후 잠시 기다리면 `Claude for Desktop`의 왼쪽 툴바에 망치 아이콘이 나타납니다. 클릭하면 Blender MCP 도구를 확인할 수 있습니다.
 
-![Blender MCP On Claude Desktop](/images/blender-mcp-on-claude-desktop.png)
+![Blender MCP On Claude Desktop](https://static.claudemcp.com/images/blender-mcp-on-claude-desktop.png)
 
 **Cursor**
 
@@ -97,21 +97,21 @@ Cursor의 경우 `Cursor Settings` > `MCP` > `+ Add new global MCP server`를 �
 
 설정 완료 후 Cursor 설정 페이지의 MCP 탭에서 방금 추가한 Blender MCP 서버를 확인할 수 있습니다(활성화 필수).
 
-![Blender MCP On Cursor](/images/blender-mcp-on-cursor.png)
+![Blender MCP On Cursor](https://static.claudemcp.com/images/blender-mcp-on-cursor.png)
 
 ## 사용 방법
 
 Blender MCP 서버 설정 외에도 Blender에 플러그인을 설치해야 합니다. Blender MCP GitHub 저장소에서 `addon.py` 파일을 다운로드합니다: [https://raw.githubusercontent.com/ahujasid/blender-mcp/refs/heads/main/addon.py](https://raw.githubusercontent.com/ahujasid/blender-mcp/refs/heads/main/addon.py). 로컬에 저장한 후 Blender를 열고 `Edit` > `Preferences` > `Add-ons`로 이동해 `Install from Disk...` 버튼을 클릭, 다운로드한 `addon.py` 파일을 선택합니다.
 
-![Blender install addon](/images/blender-install-addon.png)
+![Blender install addon](https://static.claudemcp.com/images/blender-install-addon.png)
 
 정상 사용을 위해 `Blender MCP` 옵션을 체크해야 합니다.
 
-![Blender enable addon](/images/blender-enable-addon.png)
+![Blender enable addon](https://static.claudemcp.com/images/blender-enable-addon.png)
 
 Blender로 돌아가 3D 뷰 사이드바(`N` 키로 표시 가능)에서 `BlenderMCP` 탭을 찾아 `Poly Haven`(선택 사항)을 체크하고 `Connect to MCP server` 버튼을 클릭합니다.
 
-![Blender MCP Addon Connect](/images/blender-mcp-addon-connect.png)
+![Blender MCP Addon Connect](https://static.claudemcp.com/images/blender-mcp-addon-connect.png)
 
 이제 모든 준비가 완료되었습니다. Claude Desktop이나 Cursor에서 명령을 입력해 Blender를 제어할 수 있습니다. 현재 지원하는 기능은 다음과 같습니다:
 

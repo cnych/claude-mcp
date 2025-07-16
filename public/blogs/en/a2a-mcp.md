@@ -3,11 +3,11 @@ title: "A2A Protocol vs. MCP Protocol: The Twin Engines Driving the Intelligent 
 excerpt: The A2A and MCP protocols are shaping the future of agent systems. This article explores their characteristics, differences, and synergies to help developers and product designers better understand this emerging technological landscape.
 date: 2025-04-11
 slug: a2a-mcp
-coverImage: /images/blog/a2a-vs-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/a2a-vs-mcp.png
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 

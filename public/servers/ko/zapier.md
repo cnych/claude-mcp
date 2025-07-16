@@ -10,14 +10,14 @@ capabilities:
 tags:
   - zapier
   - 자동화
-icon: /images/zapier-icon.png
+icon: https://static.claudemcp.com/images/zapier-icon.png
 createTime: 2025-04-06
 featured: true
 ---
 
 [Zapier](https://zapier.com)는 클라우드 기반 자동화 도구로, 사용자가 "Zap"(자동화 워크플로우)을 통해 선호하는 애플리케이션들을 연결할 수 있게 해줍니다. 각 Zap은 트리거(워크플로우를 시작하는 이벤트)와 하나 이상의 액션(수행할 작업)으로 구성됩니다. 7,000개 이상의 앱과 30,000개 이상의 액션을 지원하며, 다양한 서비스를 통합하여 비즈니스 프로세스를 간소화하는 데 적합합니다.
 
-![Zapier](/images/zapier-mcp.jpg)
+![Zapier](https://static.claudemcp.com/images/zapier-mcp.jpg)
 
 ## Zapier MCP란?
 
@@ -77,7 +77,7 @@ Zapier MCP 엔드포인트를 생성하려면 다음 단계를 따르세요:
 1. Zapier 계정에 로그인합니다.
 2. 설정 페이지로 이동합니다: [https://actions.zapier.com/settings/mcp/](https://actions.zapier.com/settings/mcp/)
 
-   ![Zapier MCP 설정](/images/zapier-mcp-settings.jpg)
+   ![Zapier MCP 설정](https://static.claudemcp.com/images/zapier-mcp-settings.jpg)
 
    `Generate URL` 버튼을 클릭하여 Zapier MCP 엔드포인트를 생성합니다. `https://actions.zapier.com/mcp/sk-ak-xxxxx/sse`와 같은 URL이 생성되며, 이는 당신의 Zapier MCP 엔드포인트입니다.
 
@@ -85,11 +85,11 @@ Zapier MCP 엔드포인트를 생성하려면 다음 단계를 따르세요:
 
 생성된 Zapier MCP 엔드포인트 페이지에서 URL 주소 아래에 `Edit MCP Actions` 버튼이 있으며, 이를 클릭하면 [액션 구성 페이지](https://actions.zapier.com/mcp/actions/)로 이동합니다. 액션 구성 페이지에서 사용 가능한 모든 액션을 볼 수 있으며, 활성화하려는 액션을 선택할 수 있습니다.
 
-![Zapier MCP 액션](/images/zapier-mcp-actions.jpg)
+![Zapier MCP 액션](https://static.claudemcp.com/images/zapier-mcp-actions.jpg)
 
 `Add a new Action` 버튼을 클릭하여 새 액션을 추가할 수도 있습니다.
 
-![Zapier MCP 액션 추가](/images/zapier-add-action.jpg)
+![Zapier MCP 액션 추가](https://static.claudemcp.com/images/zapier-add-action.jpg)
 
 ### 3단계: AI 어시스턴트 연결
 
@@ -111,17 +111,17 @@ Zapier MCP 엔드포인트를 생성하려면 다음 단계를 따르세요:
 
 구성이 완료되면 Cursor MCP에서 Zapier 탭을 볼 수 있으며, 활성화한 후 Zapier가 제공하는 도구 목록을 확인할 수 있습니다.
 
-![Zapier MCP 연결](/images/zapier-cursor-settings.png)
+![Zapier MCP 연결](https://static.claudemcp.com/images/zapier-cursor-settings.png)
 
 ### 4단계: 테스트 및 모니터링
 
 이제 Cursor에서 Zapier MCP를 테스트할 수 있습니다. 예를 들어, 기사 내용을 요약하여 지정된 이메일로 보내도록 할 수 있습니다.
 
-![Zapier MCP 테스트](/images/zapier-test.png)
+![Zapier MCP 테스트](https://static.claudemcp.com/images/zapier-test.png)
 
 이 작업이 완료되면 지정된 이메일에 요약된 기사 내용이 포함된 이메일이 수신됩니다.
 
-![Zapier MCP 테스트 결과](/images/zapier-result.png)
+![Zapier MCP 테스트 결과](https://static.claudemcp.com/images/zapier-result.png)
 
 ## 결론
 

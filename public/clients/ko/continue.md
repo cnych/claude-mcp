@@ -22,7 +22,7 @@ createTime: 2023-02-01
 
 Continue Dev는 AI 기술을 통해 개발자의 프로그래밍 경험을 완전히 변화시키는 혁신적인 오픈소스 프로젝트입니다. 강력한 IDE 확장 도구로서, Continue는 인공지능을 개발 환경에 원활하게 통합하여 코딩 효율성을 크게 향상시키고 개발 난이도를 낮춥니다. 이 글에서는 Continue Dev의 핵심 기능, 아키텍처 설계, 사용 시나리오 및 Model Control Protocol(MCP)과의 긴밀한 통합에 대해 자세히 살펴보겠습니다.
 
-![continue dev plugin ui](/images/continuedev-ui.png)
+![continue dev plugin ui](https://static.claudemcp.com/images/continuedev-ui.png)
 
 ## 핵심 기능 및 특징
 
@@ -64,7 +64,7 @@ Continue는 강력한 코드 이해 능력을 갖추고 있습니다:
 
 Continue Dev는 Model Control Protocol(MCP)을 지원하는 최초의 개발 도구 중 하나로, 이 통합은 개발자에게 강력한 기능 확장과 유연성을 제공합니다.
 
-![continue dev x mcp](/images/continue-x-mcp.png)
+![continue dev x mcp](https://static.claudemcp.com/images/continue-x-mcp.png)
 
 ## 기술 아키텍처
 

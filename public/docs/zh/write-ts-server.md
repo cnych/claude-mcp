@@ -67,7 +67,7 @@ OPENWEATHER_API_KEY=your-api-key-here
 
 项目创建完成后，我们可以看到项目结构如下：
 ​
-![MCP 服务器项目结构](/images/claude-write-ts-server-layout.png)
+![MCP 服务器项目结构](https://static.claudemcp.com/images/claude-write-ts-server-layout.png)
 
 ## 模板分析
 
@@ -962,7 +962,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 接下来我们就可以测试了，点击 Claude Desktop 输入框右下角的数字按钮，里面就会列出我们定义的 `get_forecast` 工具。
 
-![Claude Weather Tools](/images/claude-weather-tools.png)
+![Claude Weather Tools](https://static.claudemcp.com/images/claude-weather-tools.png)
 
 接下来我们就可以测试了，比如我们询问 Claude 未来 5 天的天气预报：
 
@@ -970,7 +970,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 Can you get me a 5-day forecast for Beijing and tell me if I should pack an umbrella?
 ```
 
-![Claude Weather Current](/images/claude-weather-forecast.png)
+![Claude Weather Current](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 可以看到会调用 `get_forecast` 工具（需要授权）并显示结果。
 
@@ -995,7 +995,7 @@ tail -n 20 -f ~/Library/Logs/Claude/mcp*.log
 
 然后使用快捷键 `Command+Option+Shift+i` 就可以打开 DevTools 了，和在 Chrome 浏览器中调试一样的。
 
-![Claude DevTools](/images/claude-devtools.png)
+![Claude DevTools](https://static.claudemcp.com/images/claude-devtools.png)
 
 除了上面这些常规的调试方式之外，Claude MCP 官方还提供了一个 `Inspector` 工具，**MCP Inspector** 是一种用于测试和调试 MCP 服务器的交互式开发人员工具。
 
@@ -1029,17 +1029,17 @@ npx @modelcontextprotocol/inspector node /Users/cnych/src/weather-server/build/i
 
 `Inspector` 工具启动后，会在 `localhost:5173` 启动一个 Web 页面，我们就可以在上面测试和调试我们的天气服务了。
 
-![MCP Inspector](/images/claude-inspector-ui.png)
+![MCP Inspector](https://static.claudemcp.com/images/claude-inspector-ui.png)
 
 这里需要注意，我们需要点击右侧的 `Environment Variables` 按钮，然后添加 `OPENWEATHER_API_KEY` 环境变量，值为我们申请的 OpenWeather API 的 key，然后点击 `Connect` 按钮即可连接到天气服务。
 
 连接成功后，我们就可以在右侧主窗口可以看到天气服务的资源和工具了，我们就可以测试和调试了，点击 `List Resources` 按钮就可以列出天气服务的资源，点击列出的资源就可以读取并显示资源内容了。
 
-![MCP Inspector 资源](/images/claude-inspector-resources.png)
+![MCP Inspector 资源](https://static.claudemcp.com/images/claude-inspector-resources.png)
 
 同样我们也可以测试 Tools，可以点击 `List Tools` 按钮列出天气服务的工具，然后点击具体的某个工具，输入参数后点击 `Run Tool` 按钮即可调用工具并显示结果。
 
-![MCP Inspector 工具](/images/claude-inspector-tools.png)
+![MCP Inspector 工具](https://static.claudemcp.com/images/claude-inspector-tools.png)
 
 当然除了 Resources 和 Tools 之外，还可以测试 Prompts、Sampling 等。
 

@@ -3,11 +3,11 @@ title: MCP의 새로운 전송 계층 - Streamable HTTP 프로토콜 상세 설�
 excerpt: MCP는 AI 모델과 도구 간 통신을 위한 표준 프로토콜입니다. AI 애플리케이션이 점점 더 복잡해지고 광범위하게 배포됨에 따라 기존 통신 메커니즘은 일련의 도전 과제에 직면하고 있습니다. GitHub의 206번 PR은 기존 HTTP+SSE 전송 메커니즘을 크게 개선한 새로운 `Streamable HTTP` 전송 계층을 도입했습니다. 이 글은 이 프로토콜의 설계 철학, 기술적 세부 사항 및 실제 적용에 대해 상세히 분석합니다.
 date: 2025-04-09
 slug: mcp-streamable-http
-coverImage: /images/blog/mcp-streamable-http.png
+coverImage: https://static.claudemcp.com/images/blog/mcp-streamable-http.png
 featured: true
 author:
   name: 양명
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 
@@ -15,7 +15,7 @@ category: 기술
 
 ## 기존 HTTP+SSE 전송 메커니즘과 한계
 
-![HTTP+SSE 전송 메커니즘](/images/blog/mcp-http-sse.png)
+![HTTP+SSE 전송 메커니즘](https://static.claudemcp.com/images/blog/mcp-http-sse.png)
 
 기존 MCP 구현에서 클라이언트와 서버는 두 가지 주요 채널을 통해 통신했습니다:
 

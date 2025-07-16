@@ -3,11 +3,11 @@ title: MCP 的新傳輸層 - Streamable HTTP 協定詳解
 excerpt: MCP 是一個用於 AI 模型和工具間通訊的標準協定。隨著 AI 應用的日益複雜和廣泛部署，原有的通訊機制面臨著一系列挑戰。GitHub 上的 206號 PR 引入了全新的 Streamable HTTP 傳輸層，這是對原有 HTTP+SSE 傳輸機制的重大改進。本文將詳細解析這個協定的設計思想、技術細節以及實際應用。
 date: 2025-04-09
 slug: mcp-streamable-http
-coverImage: /images/blog/mcp-streamable-http.png
+coverImage: https://static.claudemcp.com/images/blog/mcp-streamable-http.png
 featured: true
 author:
   name: 陽明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技術
 ---
 
@@ -15,7 +15,7 @@ category: 技術
 
 ## 原有 HTTP+SSE 傳輸機制及其局限
 
-![HTTP+SSE 傳輸機制](/images/blog/mcp-http-sse.png)
+![HTTP+SSE 傳輸機制](https://static.claudemcp.com/images/blog/mcp-http-sse.png)
 
 在原有的 MCP 實現中，客戶端和伺服器通過兩個主要通道通訊：
 

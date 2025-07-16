@@ -114,7 +114,7 @@ Cursor 설정에서 MCP 탭으로 이동, `+Add new global MCP server` 버튼 �
 
 이제 Cursor에서 이 MCP를 사용할 수 있습니다:
 
-![Cursor에서 백링크 MCP 사용](/images/backlinks-mcp-on-cursor.png)
+![Cursor에서 백링크 MCP 사용](https://static.claudemcp.com/images/backlinks-mcp-on-cursor.png)
 
 ### API 참조
 

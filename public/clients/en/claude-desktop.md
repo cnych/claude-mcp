@@ -21,7 +21,7 @@ createTime: 2023-11-28
 
 Claude Desktop is the official client software released by Anthropic, enabling seamless interaction with Claude AI models through the Model Context Protocol (MCP). As a powerful AI assistant tool, it not only provides a native desktop experience but also supports various advanced features to help users improve efficiency in their daily work.
 
-![Claude Desktop UI](/images/claude-desktop-ui.webp)
+![Claude Desktop UI](https://static.claudemcp.com/images/claude-desktop-ui.webp)
 
 ## Core Features
 

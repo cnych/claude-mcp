@@ -16,14 +16,14 @@ createTime: 2025-04-29
 
 # BrowserStack MCP 伺服器
 
-[![BrowserStack](/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
+[![BrowserStack](https://static.claudemcp.com/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
 
 讓團隊中的每位開發者和測試人員都能發揮所長，無論是手動測試、開始自動化旅程，還是擴展測試自動化規模。
 BrowserStack MCP 伺服器讓您能直接從喜愛的 AI 工具使用我們尖端的[測試平台](https://www.browserstack.com/test-platform)。
 
 ### 為什麼選擇 BrowserStack？
 
-![BrowserStack](/images/browserstack-overview.png)
+![BrowserStack](https://static.claudemcp.com/images/browserstack-overview.png)
 
 ## 💡 使用範例
 
@@ -81,7 +81,7 @@ BrowserStack MCP 伺服器讓您能直接從喜愛的 AI 工具使用我們尖�
 
    - ℹ️ 如果您有開源專案，我們可以為您提供[免費方案](https://www.browserstack.com/open-source)。
 
-![開源](/images/browserstack-open-source.png)
+![開源](https://static.claudemcp.com/images/browserstack-open-source.png)
 
 - 建立帳戶（並購買合適方案）後，請從[帳戶設定](https://www.browserstack.com/accounts/profile/details)記下您的`username`和`access_key`。
 
@@ -106,7 +106,7 @@ BrowserStack MCP 伺服器讓您能直接從喜愛的 AI 工具使用我們尖�
    ```
 
    - 在 VSCode 中，確保點擊 MCP 伺服器中的`Start`按鈕來啟動伺服器。
-     ![啟動MCP伺服器](/images/browserstack-vscode.png)
+     ![啟動MCP伺服器](https://static.claudemcp.com/images/browserstack-vscode.png)
 
    * 對於 Cursor：`.cursor/mcp.json`：
 

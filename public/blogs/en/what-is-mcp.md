@@ -3,11 +3,11 @@ title: What is MCP?
 excerpt: This article provides a detailed breakdown of MCP (Model Context Protocol), explaining its working principles, core functionalities, and practical applications to help you fully understand this revolutionary technology hailed as the "USB interface for AI.
 date: 2025-04-16
 slug: what-is-mcp
-coverImage: /images/blog/what-is-mcp-claude.jpg
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp-claude.jpg
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 
@@ -31,7 +31,7 @@ Anthropic recognized that as AI assistants gained mainstream adoption, the indus
 
 ### Client-Server Architecture
 
-![MCP Architecture Diagram](/images/blog/what-is-mcp.png)
+![MCP Architecture Diagram](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 MCP employs a classic client-server architecture:
 
@@ -56,7 +56,7 @@ The workflow is as follows:
 
 ## Four Core Functionalities of MCP
 
-![MCP's Four Core Functionalities](/images/blog/mcp-core-components.png)
+![MCP's Four Core Functionalities](https://static.claudemcp.com/images/blog/mcp-core-components.png)
 
 MCP provides four core primitives (server-side primitives) to standardize interactions between clients and servers:
 

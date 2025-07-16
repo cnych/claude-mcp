@@ -12,7 +12,7 @@ order: 2
 
 在[上一節](/docs/write-ts-server)中，我們已經成功開發了一個天氣預報的 MCP Server，現在我們可以在支援 MCP 協定的客戶端中使用它，例如 Claude Desktop、Cursor 等。
 
-![](/images/claude-weather-forecast.png)
+![](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 但如果我們希望能夠自己開發一個客戶端，該怎麼做呢？
 
@@ -399,7 +399,7 @@ Query:
 
 上面我們提供的 MCP Server 腳本就是前面我們開發好的天氣預報服務，這裡我們要求查詢北京未來 3 天的天氣情況，可以看到我們這裡就調用了服務端提供的 `get_forecast` 工具，並傳入了 `city` 和 `days` 參數，然後我們就可以得到最終的結果。
 
-![](/images/client-demo.png)
+![](https://static.claudemcp.com/images/client-demo.png)
 
 到這裡我們就完成了一個非常簡單的 MCP 客戶端的開發，並且通過這個客戶端我們就可以調用服務端提供的工具，並得到最終的結果。
 

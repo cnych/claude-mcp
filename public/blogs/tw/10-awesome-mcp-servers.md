@@ -3,11 +3,11 @@ title: 10 個值得關注嘅 MCP Server
 excerpt: MCP（Model Context Protocol）伺服器令AI模型同現實世界嘅數據、工具無縫連接。無論你係開發者、AI愛好者，定係希望提升自動化效率嘅企業用戶，呢10個MCP Server都值得一試！
 date: 2025-04-28
 slug: 10-awesome-mcp-servers
-coverImage: /images/blog/mcp-servers-10awesome-cn.jpg
+coverImage: https://static.claudemcp.com/images/blog/mcp-servers-10awesome-cn.jpg
 featured: true
 author:
   name: 陽明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技術
 ---
 

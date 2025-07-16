@@ -47,7 +47,7 @@ Build a weather query MCP server that:
 - Retrieves weather data as comprehensive as possible
 ```
 
-![](/images/cursor-prompts.png)
+![](https://static.claudemcp.com/images/cursor-prompts.png)
 
 這裡我們選擇使用 `Cluade-3.7-sonnet` 模型，然後點擊 `Send` 按鈕，等待片刻，就可以看到 Cursor 開始根據我們的需求生成代碼了。
 
@@ -333,15 +333,15 @@ tsc
 
 在最新的 Cursor 版本（Version: 0.48.6）中，當我們添加了 MCP 配置後，會自動檢測到新增了 MCP server，會提示我們是否開啟：
 
-![](/images/cursor-auto-deteched-mcp.png)
+![](https://static.claudemcp.com/images/cursor-auto-deteched-mcp.png)
 
 開啟後中 Cursor 設置頁面也可以看到我們新增的兩個工具：
 
-![](/images/cursor-mcp-tools-list.png)
+![](https://static.claudemcp.com/images/cursor-mcp-tools-list.png)
 
 然後我們就可以在 Cursor 中來詢問天氣信息了：
 
-![](/images/cursor-test-weather-mcp-server.png)
+![](https://static.claudemcp.com/images/cursor-test-weather-mcp-server.png)
 
 ## 最佳實踐
 

@@ -21,7 +21,7 @@ createTime: 2023-11-28
 
 Claude 桌面應用是 Anthropic 公司推出的官方客戶端軟體，透過模型上下文協議(MCP)實現與 Claude AI 模型的無縫互動。作為一款功能強大的 AI 助手工具，它不僅提供了原生桌面體驗，還支援多種進階功能，幫助用戶在日常工作中提升效率。
 
-![Claude Desktop UI](/images/claude-desktop-ui.webp)
+![Claude Desktop UI](https://static.claudemcp.com/images/claude-desktop-ui.webp)
 
 ## 核心功能詳解
 

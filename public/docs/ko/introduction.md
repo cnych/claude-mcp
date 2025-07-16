@@ -11,7 +11,7 @@ order: 1
 
 [MCP](https://www.claudemcp.com/), 또는 모델 컨텍스트 프로토콜은 Anthropic Claude에서 제공하는 오픈소스 프로토콜로, AI 모델과 개발 환경 간의 통합된 컨텍스트 상호작용을 확립하는 것을 목표로 합니다. 표준화된 컨텍스트 정보 접근을 제공함으로써 AI 모델이 코드를 더 잘 이해하고 처리할 수 있게 합니다. 이는 개발자가 단일 표준을 통해 AI 애플리케이션과 데이터 소스를 연결할 수 있도록 다리 역할을 합니다.
 
-[![Claude MCP 아키텍처](/images/claude-mcp.png "Claude MCP 아키텍처")](https://www.claudemcp.com/)
+[![Claude MCP 아키텍처](https://static.claudemcp.com/images/claude-mcp.png "Claude MCP 아키텍처")](https://www.claudemcp.com/)
 
 예를 들어, 실제 응용 프로그램에서 Claude 데스크톱 애플리케이션과 [MCP](https://www.claudemcp.com/) 프로토콜의 도움을 통해 AI는 사용자가 GitHub 프로젝트를 관리하고, 프로젝트 생성부터 코드 요청 제출까지의 복잡한 작업을 쉽고 빠르게 완료할 수 있도록 도와줍니다. 이 프로토콜의 등장으로 LLM(대규모 언어 모델) 애플리케이션이 데이터에 연결하기 어려운 문제를 철저히 해결할 수 있게 되었으며, 각 데이터 소스에 대한 사용자 정의 통합 코드를 작성할 필요 없이 최신 모델이 더 나은, 더 관련성 있는 응답을 생성할 수 있게 되었습니다. 단일 [MCP](https://www.claudemcp.com/) 프로토콜로 여러 데이터 소스와의 연결을 처리할 수 있습니다.
 

@@ -67,7 +67,7 @@ OPENWEATHER_API_KEY=your-api-key-here
 
 프로젝트가 생성되면 다음과 같은 프로젝트 구조를 볼 수 있습니다:
 
-![MCP 서버 프로젝트 구조](/images/claude-write-ts-server-layout.png)
+![MCP 서버 프로젝트 구조](https://static.claudemcp.com/images/claude-write-ts-server-layout.png)
 
 ## 템플릿 분석
 
@@ -962,7 +962,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 다음으로, 클릭하여 클라이언트에서 날씨 예보 도구를 테스트할 수 있습니다:
 
-![Claude Weather Tools](/images/claude-weather-tools.png)
+![Claude Weather Tools](https://static.claudemcp.com/images/claude-weather-tools.png)
 
 다음으로, 예를 들어, 우리는 베이징에 대한 5일 날씨 예보를 요청할 수 있습니다:
 
@@ -970,7 +970,7 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 Can you get me a 5-day forecast for Beijing and tell me if I should pack an umbrella?
 ```
 
-![Claude Weather Current](/images/claude-weather-forecast.png)
+![Claude Weather Current](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 우리는 이것이 `get_forecast` 도구를 호출하고 (권한 필요) 결과를 표시함을 볼 수 있습니다.
 
@@ -995,7 +995,7 @@ tail -n 20 -f ~/Library/Logs/Claude/mcp*.log
 
 그런 다음, 단축키 `Command+Option+Shift+i`를 사용하여 DevTools를 열 수 있으며, Chrome에서 디버깅하는 것과 같습니다.
 
-![Claude DevTools](/images/claude-devtools.png)
+![Claude DevTools](https://static.claudemcp.com/images/claude-devtools.png)
 
 위의 기본 디버깅 방법 외에도, Claude MCP는 `Inspector` 도구를 제공하며, **MCP Inspector**는 MCP 서버를 테스트하고 디버깅하기 위한 대화형 개발자 도구입니다.
 
@@ -1029,17 +1029,17 @@ npx @modelcontextprotocol/inspector node /Users/cnych/src/weather-server/build/i
 
 `Inspector` 도구가 시작되면 `localhost:5173`에서 웹 페이지를 시작하며, 여기서 우리는 날씨 서비스를 테스트하고 디버깅할 수 있습니다.
 
-![MCP Inspector](/images/claude-inspector-ui.png)
+![MCP Inspector](https://static.claudemcp.com/images/claude-inspector-ui.png)
 
 여기서는 우리가 오른쪽에서 `Environment Variables` 버튼을 클릭하고, `OPENWEATHER_API_KEY` 환경 변수를 추가하고, 값은 우리가 신청한 OpenWeather API 키이며, 그런 다음 `Connect` 버튼을 클릭하여 날씨 서비스에 연결합니다.
 
 연결이 성공적으로 이루어지면 우리는 오른쪽 주 창에서 날씨 서비스의 리소스와 도구를 볼 수 있으며, 우리는 이를 테스트하고 디버깅할 수 있습니다. `List Resources` 버튼을 클릭하여 날씨 서비스의 리소스를 나열하고, 나열된 리소스를 클릭하여 읽고 표시할 수 있습니다.
 
-![MCP Inspector Resources](/images/claude-inspector-resources.png)
+![MCP Inspector Resources](https://static.claudemcp.com/images/claude-inspector-resources.png)
 
 마찬가지로, 우리는 도구를 테스트할 수 있으며, `List Tools` 버튼을 클릭하여 날씨 서비스의 도구를 나열하고, 특정 도구를 클릭하여 매개변수를 입력하고, `Run Tool` 버튼을 클릭하여 도구를 호출하고 결과를 표시할 수 있습니다.
 
-![MCP Inspector Tools](/images/claude-inspector-tools.png)
+![MCP Inspector Tools](https://static.claudemcp.com/images/claude-inspector-tools.png)
 
 물론, 리소스와 도구 외에도 우리는 또한 프롬프트와 샘플링을 테스트할 수 있습니다.
 

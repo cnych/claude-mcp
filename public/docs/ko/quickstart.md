@@ -130,11 +130,11 @@ EOF
 
 Claude 데스크톱이 다시 시작되면 홈페이지의 입력 상자에서 다음 그림과 같은 아이콘을 찾을 수 있습니다:
 
-![Claude 데스크톱 SQLite MCP 서버 로딩](/images/claude-sqlite.png)
+![Claude 데스크톱 SQLite MCP 서버 로딩](https://static.claudemcp.com/images/claude-sqlite.png)
 
 이는 Claude 데스크톱이 SQLite MCP 서버를 성공적으로 로드했으며 정상적으로 사용할 수 있음을 나타냅니다. 이 버튼을 클릭하면 다음 그림과 같이 사용 가능한 MCP 도구 목록을 볼 수 있습니다:
 
-![Claude 데스크톱에서 사용 가능한 MCP 도구](/images/claude-sqlite-tools.png)
+![Claude 데스크톱에서 사용 가능한 MCP 도구](https://static.claudemcp.com/images/claude-sqlite-tools.png)
 
 위 그림에서 볼 수 있듯이 데이터베이스의 데이터 쿼리, 새 데이터 생성, 데이터 업데이트, 데이터 삭제 등 많은 작업을 수행할 수 있습니다.
 위 그림에서 볼 수 있듯이 데이터베이스의 데이터 쿼리, 새 데이터 생성, 데이터 업데이트, 데이터 삭제 등 많은 작업을 수행할 수 있습니다.
@@ -147,14 +147,14 @@ Claude 데스크톱이 다시 시작되면 홈페이지의 입력 상자에서 �
 
 그러면 Claude 데스크톱이 우리의 프롬프트에 따라 SQLite 데이터베이스를 쿼리하게 되며, 처음 실행 시 다음 그림과 같이 권한 부여 대화 상자가 나타납니다:
 
-![Claude 데스크톱 SQLite MCP 서버 권한 부여](/images/claude-sqlite-auth.png)
+![Claude 데스크톱 SQLite MCP 서버 권한 부여](https://static.claudemcp.com/images/claude-sqlite-auth.png)
 
 여기서 `list-tables` MCP 도구를 사용하기로 선택했음을 확인할 수 있으며, `이 채팅에 허용` 버튼을 클릭하여 권한을 부여해야 합니다. 이후 다른 도구들도 마찬가지로 권한 부여가 필요할 수 있습니다.
-![Claude 데스크톱 SQLite MCP 서버 권한 부여](/images/claude-sqlite-auth2.png)
+![Claude 데스크톱 SQLite MCP 서버 권한 부여](https://static.claudemcp.com/images/claude-sqlite-auth2.png)
 
 권한 부여 후, 다음 그림과 같이 쿼리 결과를 확인할 수 있습니다:
 
-![Claude 데스크톱 SQLite 데이터베이스 쿼리 결과](/images/claude-sqlite-result.png)
+![Claude 데스크톱 SQLite 데이터베이스 쿼리 결과](https://static.claudemcp.com/images/claude-sqlite-result.png)
 
 일반적으로 Claude 데스크톱은 우리의 프롬프트에 따라 데이터베이스를 쿼리하고 결과를 반환합니다. 이 과정에서 문제가 발생하면 Claude 데스크톱의 로그를 확인하여 문제를 해결할 수 있습니다.
 
@@ -209,7 +209,7 @@ MCP와 Claude 데스크톱 간의 상호 작용 과정은 다음과 같습니다
 
 여기에 대해 여전히 많은 질문이 있을 수 있습니다. 우리는 아무 코드도 작성하지 않았습니다. 이유는 Claude 데스크톱에 내장된 다양한 MCP 서버가 있기 때문입니다. 우리는 데이터베이스 경로를 적절히 구성하기만 하면 됩니다. 공식 깃허브 저장소에서 [내장 MCP 서버 목록](https://github.com/modelcontextprotocol/servers/tree/main/src)을 볼 수 있습니다.
 
-![내장 MCP 서버 목록](/images/claude-builtin-servers.png)
+![내장 MCP 서버 목록](https://static.claudemcp.com/images/claude-builtin-servers.png)
 
 우리는 이것이 내장된 SQLite MCP 서버를 포함한다는 것을 알 수 있습니다. SQLite를 통해 데이터베이스 상호작용 및 비즈니스 기능을 제공하여 이 서버는 SQL 쿼리 실행, 비즈니스 데이터 분석 등을 지원하므로 직접 구성하고 사용할 수 있습니다. 우리 자신의 비즈니스 요구 사항이 있는 경우 이 내장 구현을 참조하여 MCP 서버를 사용자 지정할 수 있습니다.
 
@@ -340,22 +340,22 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 여기서는 `/Users/cnych/src` 디렉토리를 지정했습니다. 그런 다음 구성 파일을 저장하고 Claude 데스크톱 애플리케이션을 다시 시작하면 입력 상자의 오른쪽 하단에 `15` 버튼을 볼 수 있습니다:
 
-![Claude 데스크톱의 파일 시스템 MCP 서버](/images/claude-filesytem-mcp.png)
+![Claude 데스크톱의 파일 시스템 MCP 서버](https://static.claudemcp.com/images/claude-filesytem-mcp.png)
 
 이 버튼을 클릭하면 다음 그림과 같이 사용 가능한 MCP 도구 목록을 표시합니다:
 
-![Claude 데스크톱의 파일 시스템 MCP 도구](/images/claude-filesytem-tools.png)
+![Claude 데스크톱의 파일 시스템 MCP 도구](https://static.claudemcp.com/images/claude-filesytem-tools.png)
 
 우리는 파일을 읽을 수 있고, 파일을 생성할 수 있고, 디렉토리를 나열할 수 있고, 파일을 이동할 수 있고, 파일을 검색할 수 있습니다.
 
 우리는 프롬프트 `Can you list the contents of my src directory?`를 보내고 Claude 데스크톱은 지정된 디렉토리 아래의 모든 파일과 디렉토리를 나열할 것입니다. 물론, 이 과정도 권한 부여가 필요합니다.
 
-![Claude 데스크톱 파일 시스템 디렉토리 나열](/images/claude-filesytem-list-tools.png)
+![Claude 데스크톱 파일 시스템 디렉토리 나열](https://static.claudemcp.com/images/claude-filesytem-list-tools.png)
 
 마크다운 사용 가이드를 작성하고 `markdown-usage.md` 파일에 저장하도록 요청해 보겠습니다. `마크다운에 대한 완전한 가이드를 작성하고 markdown-usage.md 파일에 저장해 주세요`라고 입력합니다.
 
-![Claude 데스크톱 파일 시스템에 쓰기](/images/claude-filesytem-write.png)
+![Claude 데스크톱 파일 시스템에 쓰기](https://static.claudemcp.com/images/claude-filesytem-write.png)
 
 권한 부여 후, 우리는 Claude 데스크톱이 자동으로 지정된 경로에 파일을 쓰는 것을 볼 수 있습니다. 다음 그림과 같습니다:
 
-![Claude 데스크톱 파일 시스템에 쓰기 성공](/images/claude-filesytem-write-result.png)
+![Claude 데스크톱 파일 시스템에 쓰기 성공](https://static.claudemcp.com/images/claude-filesytem-write-result.png)

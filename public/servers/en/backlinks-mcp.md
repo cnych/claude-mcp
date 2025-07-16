@@ -114,7 +114,7 @@ Alternatively, create a `.cursor/mcp.json` file in the project root with the abo
 
 Usage in Cursor:
 
-![Use Backlinks MCP on Cursor](/images/backlinks-mcp-on-cursor.png)
+![Use Backlinks MCP on Cursor](https://static.claudemcp.com/images/backlinks-mcp-on-cursor.png)
 
 ### API Reference
 

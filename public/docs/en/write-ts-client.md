@@ -12,7 +12,7 @@ order: 2
 
 In the [previous section](/docs/write-ts-server), we successfully developed a weather MCP Server, which can now be used in any client that supports the MCP protocol, such as Claude Desktop, Cursor, etc.
 
-![](/images/claude-weather-forecast.png)
+![](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 But what if we want to develop our own client? Let's explore how to create an MCP client.
 
@@ -397,7 +397,7 @@ Query:
 
 The MCP server script we provided is the weather forecast service we developed earlier, here we require the weather forecast for Beijing for the next 3 days, and we can see that we have called the `get_forecast` tool provided by the server, and passed in the `city` and `days` parameters, and then we can get the final result.
 
-![](/images/client-demo.png)
+![](https://static.claudemcp.com/images/client-demo.png)
 
 Here, we have completed the development of a very simple MCP client, and through this client we can call the tools provided by the server and get the final result.
 

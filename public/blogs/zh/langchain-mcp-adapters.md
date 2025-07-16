@@ -3,11 +3,11 @@ title: LangChain 的 MCP 适配器
 excerpt: LangChain MCP 适配器是一个用于 MCP 工具与 LangChain 和 LangGraph 兼容的轻量级适配器。
 date: 2025-04-13
 slug: langchain-mcp-adapters
-coverImage: /images/blog/langchain-mcp-adapters.png
+coverImage: https://static.claudemcp.com/images/blog/langchain-mcp-adapters.png
 featured: true
 author:
   name: 阳明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技术
 ---
 

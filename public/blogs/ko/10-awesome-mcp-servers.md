@@ -3,11 +3,11 @@ title: 주목할 만한 10가지 MCP 서버
 excerpt: MCP(Model Context Protocol) 서버는 AI 모델과 현실 세계의 데이터, 도구를 원활하게 연결합니다. 개발자, AI 애호가, 자동화 효율을 높이고 싶은 기업 사용자라면 이 10가지 MCP 서버를 꼭 확인해보세요!
 date: 2025-04-28
 slug: 10-awesome-mcp-servers
-coverImage: /images/blog/mcp-servers-10awesome.jpg
+coverImage: https://static.claudemcp.com/images/blog/mcp-servers-10awesome.jpg
 featured: true
 author:
   name: 양명
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 

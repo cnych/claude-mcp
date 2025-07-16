@@ -13,7 +13,7 @@ tags:
   - filesystem
   - photo
   - video
-icon: https://raw.githubusercontent.com/vgribok/exiftool-mcp-server/refs/heads/main/docs/images/Proggy.128.png
+icon: https://raw.githubusercontent.com/vgribok/exiftool-mcp-server/refs/heads/main/docshttps://static.claudemcp.com/images/Proggy.128.png
 createTime: 2025-06-19
 ---
 
@@ -91,7 +91,7 @@ Use the following development-time entry, in case you have cloned the source cod
 }
 ```
 
-![Claude Desktop with Exit tool agent](https://github.com/vgribok/exiftool-mcp-server/raw/main/docs/images/claude-desktop.png)
+![Claude Desktop with Exit tool agent](https://github.com/vgribok/exiftool-mcp-server/raw/main/docshttps://static.claudemcp.com/images/claude-desktop.png)
 
 ## Testing Locally With MCP Inspector
 
@@ -123,13 +123,13 @@ Before testing with the MCP Inspector, ensure the following are installed:
 
 6. Once connected, click the **List Tools** button to discover all available tools provided by the server.
 
-![MCP Inspector: List Tools](https://github.com/vgribok/exiftool-mcp-server/raw/main/docs/images/mcp-inspector-list-tools.png)
+![MCP Inspector: List Tools](https://github.com/vgribok/exiftool-mcp-server/raw/main/docshttps://static.claudemcp.com/images/mcp-inspector-list-tools.png)
 
 7. Select a tool from the list to view its input parameters and metadata.
 
 8. Use the UI to send test requests to the selected tool and observe the responses.
 
-![MCP Inspector: tool call](https://github.com/vgribok/exiftool-mcp-server/blob/main/docs/images/mcp-inspector-tool-call.png)
+![MCP Inspector: tool call](https://github.com/vgribok/exiftool-mcp-server/blob/main/docshttps://static.claudemcp.com/images/mcp-inspector-tool-call.png)
 
 9. Experiment with different parameters to explore the capabilities of the MCP server.
 

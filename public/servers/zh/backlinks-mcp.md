@@ -114,7 +114,7 @@ fastmcp dev src/backlinks_mcp/server.py
 
 接下来，我们可以在 Cursor 中使用这个 MCP:
 
-![Use Backlinks MCP on Cursor](/images/backlinks-mcp-on-cursor.png)
+![Use Backlinks MCP on Cursor](https://static.claudemcp.com/images/backlinks-mcp-on-cursor.png)
 
 ### API 参考
 

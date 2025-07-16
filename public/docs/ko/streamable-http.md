@@ -24,7 +24,7 @@ npx @modelcontextprotocol/create-server streamable-demo
 
 그런 다음 프로젝트 루트 디렉토리로 이동하여 `package.json` 파일의 MCP SDK 의존성 버전을 `1.10.0`으로 수정합니다.
 
-![Update MCP SDK](/images/streamable-demo-update-sdk.png)
+![Update MCP SDK](https://static.claudemcp.com/images/streamable-demo-update-sdk.png)
 
 이어서 의존성을 설치합니다:
 

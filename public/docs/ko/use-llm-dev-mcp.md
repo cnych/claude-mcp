@@ -47,7 +47,7 @@ Build a weather query MCP server that:
 - Retrieves weather data as comprehensive as possible
 ```
 
-![](/images/cursor-prompts.png)
+![](https://static.claudemcp.com/images/cursor-prompts.png)
 
 여기서는 `Cluade-3.7-sonnet` 모델을 선택하고 `Send` 버튼을 클릭합니다. 조금 기다리면 Cursor가 요구 사항에 따라 코드를 생성하기 시작합니다.
 
@@ -333,15 +333,15 @@ tsc
 
 최신 Cursor 버전 (버전: 0.48.6)에서는 MCP 구성을 추가할 때 자동으로 MCP 서버 추가를 감지하고 활성화할지 묻습니다:
 
-![](/images/cursor-auto-deteched-mcp.png)
+![](https://static.claudemcp.com/images/cursor-auto-deteched-mcp.png)
 
 활성화한 후, 우리는 또한 Cursor 설정 페이지에서 추가한 두 가지 도구를 볼 수 있습니다:
 
-![](/images/cursor-mcp-tools-list.png)
+![](https://static.claudemcp.com/images/cursor-mcp-tools-list.png)
 
 그런 다음 우리는 Cursor에서 날씨 정보를 물을 수 있습니다:
 
-![](/images/cursor-test-weather-mcp-server.png)
+![](https://static.claudemcp.com/images/cursor-test-weather-mcp-server.png)
 
 ## 최선의 방법
 

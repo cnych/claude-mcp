@@ -3,11 +3,11 @@ title: MCP's New Transport Layer - A Deep Dive into the Streamable HTTP Protocol
 excerpt: MCP is a standard protocol for communication between AI models and tools. As AI applications grow increasingly complex and widely deployed, the original communication mechanisms face a series of challenges. PR 206 on GitHub introduces a brand-new Streamable HTTP transport layer, representing a significant improvement over the original HTTP+SSE transport mechanism. This article provides a detailed analysis of the protocol's design philosophy, technical specifics, and practical applications.
 date: 2025-04-09
 slug: mcp-streamable-http
-coverImage: /images/blog/mcp-streamable-http.png
+coverImage: https://static.claudemcp.com/images/blog/mcp-streamable-http.png
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 
@@ -15,7 +15,7 @@ category: Technology
 
 ## Original HTTP+SSE Transport Mechanism and Its Limitations
 
-![HTTP+SSE Transport Mechanism](/images/blog/mcp-http-sse.png)
+![HTTP+SSE Transport Mechanism](https://static.claudemcp.com/images/blog/mcp-http-sse.png)
 
 In the original MCP implementation, clients and servers communicate through two main channels:
 

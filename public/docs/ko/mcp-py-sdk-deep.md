@@ -24,7 +24,7 @@ SSE 모드는 MCP 서비스와 클라이언트 간의 통신 방식 중 하나�
 - 재고 수준 실시간 업데이트
 - 자연어 쿼리를 통한 주문 거래 임시 분석 제공
 
-![스마트 쇼핑몰 어시스턴트](https://picdn.youdianzhishi.com/images/1749089781344.png)
+![스마트 쇼핑몰 어시스턴트](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749089781344.png)
 
 여기서는 마이크로서비스 아키텍처를 채택할 수 있습니다. 먼저 제품 마이크로서비스가 필요하며, 이는 제품 목록 API 인터페이스를 제공합니다. 또한 주문 마이크로서비스를 제공하여 주문 생성, 재고 정보 등의 API 인터페이스를 노출합니다.
 
@@ -193,7 +193,7 @@ INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 
 그런 다음 `http://127.0.0.1:8000/docs`에서 API 문서를 확인하거나 `http://127.0.0.1:8000/redoc`에서 ReDoc 형식의 API 문서를 볼 수 있습니다.
 
-![api 문서](https://picdn.youdianzhishi.com/images/1749092558487.png)
+![api 문서](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749092558487.png)
 
 이제 MCP 도구를 사용하여 이러한 API 인터페이스를 노출할 수 있습니다. 다음으로 MCP Python SDK를 사용하여 MCP 서비스를 개발할 수 있습니다.
 
@@ -330,7 +330,7 @@ INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
 
 이제 MCP Inspector를 사용하여 이 MCP 서버를 테스트할 수 있습니다. Transport Type을 SSE로 선택하고 `http://localhost:8083/sse` 엔드포인트를 입력한 다음 `Connect` 버튼을 클릭하면 MCP 서버가 노출한 도구를 볼 수 있습니다.
 
-![mcp inspector](https://picdn.youdianzhishi.com/images/1749105716600.png)
+![mcp inspector](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749105716600.png)
 
 예를 들어 `get_products` 도구를 선택하고 `Run Tool` 버튼을 클릭하면 MCP 서버가 반환하는 제품 목록을 볼 수 있습니다.
 
@@ -350,11 +350,11 @@ INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
 
 그런 다음 MCP 페이지로 돌아가면 이 MCP 서비스를 볼 수 있으며, 제공하는 도구도 표시됩니다:
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749105955597.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749105955597.png)
 
 이렇게 하면 Cursor에서 이 MCP 서비스를 사용할 수 있습니다.
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749106197834.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749106197834.png)
 
 물론 비즈니스 시스템에서 MCP 서비스를 사용하려면 직접 MCP 클라이언트를 개발해야 합니다. 예를 들어 MCP 서비스를 통합하는 고객 서비스 시스템을 개발할 수 있습니다.
 
@@ -707,7 +707,7 @@ $ uv run python web.py
 
 페이지 오른쪽에는 사용 가능한 모든 도구가 나열됩니다. 채팅 인터페이스에 질문을 입력하면, 대형 모델이 도구 사용이 필요하다고 판단하면 도구를 호출하고 호출 결과를 반환합니다. 그런 다음 도구 호출 결과를 기반으로 다시 도구를 호출하여 최종 결과를 얻을 때까지 반복합니다. 프론트엔드 페이지에도 도구 호출 결과가 표시됩니다:
 
-![MCP WEB](https://picdn.youdianzhishi.com/images/1749110324295.png)
+![MCP WEB](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749110324295.png)
 
 여기까지 웹 기반 SSE 타입의 MCP 서버와 클라이언트 개발을 구현했습니다. 이 예제를 통해 MCP 서비스를 사용하면 비즈니스 시스템에 다양한 도구를 매우 편리하게 통합하여 더 지능적인 비즈니스 시스템을 구현할 수 있음을 알 수 있습니다.
 
@@ -717,7 +717,7 @@ MCP는 2025-03-26 버전에 Streamable HTTP 전송 메커니즘을 공식 출시
 
 ### 기존 HTTP+SSE 전송 메커니즘과 그 한계
 
-![HTTP+SSE 전송 메커니즘](https://picdn.youdianzhishi.com/images/1749111379973.png)
+![HTTP+SSE 전송 메커니즘](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749111379973.png)
 
 기존 MCP 구현에서 클라이언트와 서버는 두 가지 주요 채널을 통해 통신했습니다:
 
@@ -1014,11 +1014,11 @@ INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
 
 이제 Cursor에서 이 MCP 서버를 사용할 수 있습니다.
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749112893794.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749112893794.png)
 
 이제 Cursor에서 이 MCP 서버를 사용할 수 있습니다. 다음과 같습니다:
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749113099093.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749113099093.png)
 
 클라이언트에서도 Streamable HTTP 모드를 사용하여 연결할 수 있습니다. 다음과 같습니다:
 

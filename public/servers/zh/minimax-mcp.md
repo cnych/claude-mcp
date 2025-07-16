@@ -17,7 +17,7 @@ icon: https://avatars.githubusercontent.com/u/194880281?v=4
 createTime: 2025-04-10
 ---
 
-![MiniMax Logo](/images/MiniMaxLogo-Light.png)
+![MiniMax Logo](https://static.claudemcp.com/images/MiniMaxLogo-Light.png)
 
 MiniMax 官方模型上下文协议(MCP)服务器，支持与强大的文本转语音和视频/图像生成 API 交互。该服务器允许 Claude 桌面版、Cursor、Windsurf、OpenAI 代理等 MCP 客户端生成语音、克隆声音、生成视频、生成图像等功能。
 

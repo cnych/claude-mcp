@@ -67,7 +67,7 @@ OPENWEATHER_API_KEY=your-api-key-here
 
 項目創建完成後，我們可以看到項目結構如下：
 
-![MCP 伺服器項目結構](/images/claude-write-ts-server-layout.png)
+![MCP 伺服器項目結構](https://static.claudemcp.com/images/claude-write-ts-server-layout.png)
 
 ## 模板分析
 
@@ -950,7 +950,7 @@ private setupToolHandlers(): void {
 
 接下來我們就可以測試了，點擊 Claude Desktop 輸入框右下角的數字按鈕，裡面就會列出我們定義的 `get_forecast` 工具。
 
-![Claude Weather Tools](/images/claude-weather-tools.png)
+![Claude Weather Tools](https://static.claudemcp.com/images/claude-weather-tools.png)
 
 接下來我們就可以測試了，比如我們詢問 Claude 未來 5 天的天氣預報：
 
@@ -958,7 +958,7 @@ private setupToolHandlers(): void {
 Can you get me a 5-day forecast for Beijing and tell me if I should pack an umbrella?
 ```
 
-![Claude Weather Current](/images/claude-weather-forecast.png)
+![Claude Weather Current](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 可以看到會調用 `get_forecast` 工具（需要授權）並顯示結果。
 
@@ -983,7 +983,7 @@ tail -n 20 -f ~/Library/Logs/Claude/mcp*.log
 
 然後使用快捷鍵 `Command+Option+Shift+i` 就可以打開 DevTools 了，和在 Chrome 瀏覽器中調試一樣的。
 
-![Claude DevTools](/images/claude-devtools.png)
+![Claude DevTools](https://static.claudemcp.com/images/claude-devtools.png)
 
 除了上面這些常規的調試方式之外，Claude MCP 官方還提供了一個 `Inspector` 工具，**MCP Inspector** 是一種用於測試和調試 MCP 服務器的交互式開發人員工具。
 
@@ -1017,17 +1017,17 @@ npx @modelcontextprotocol/inspector node /Users/cnych/src/weather-server/build/i
 
 `Inspector` 工具啟動後，會在 `localhost:5173` 啟動一個 Web 頁面，我們就可以在上面測試和調試我們的氣象服務了。
 
-![MCP Inspector](/images/claude-inspector-ui.png)
+![MCP Inspector](https://static.claudemcp.com/images/claude-inspector-ui.png)
 
 這裡需要注意，我們需要點擊右側的 `Environment Variables` 按鈕，然後添加 `OPENWEATHER_API_KEY` 環境變量，值為我們申請的 OpenWeather API 的 key，然後點擊 `Connect` 按鈕即可連接到氣象服務。
 
 連接成功後，我們就可以在右側主窗口可以看到氣象服務的資源和工具了，我們就可以測試和調試了，點擊 `List Resources` 按鈕就可以列出氣象服務的資源，點擊列出的資源就可以讀取並顯示資源內容了。
 
-![MCP Inspector 資源](/images/claude-inspector-resources.png)
+![MCP Inspector 資源](https://static.claudemcp.com/images/claude-inspector-resources.png)
 
 同樣我們也可以測試 Tools，可以點擊 `List Tools` 按鈕列出氣象服務的工具，然後點擊具體的某個工具，輸入參數後點擊 `Run Tool` 按鈕即可調用工具並顯示結果。
 
-![MCP Inspector 工具](/images/claude-inspector-tools.png)
+![MCP Inspector 工具](https://static.claudemcp.com/images/claude-inspector-tools.png)
 
 除了資源（Resources）和工具（Tools）之外，我們還可以測試提示詞（Prompts）、取樣（Sampling）等功能。
 

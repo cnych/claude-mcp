@@ -22,7 +22,7 @@ createTime: 2023-02-01
 
 Continue Dev 是一個革命性的開源專案，旨在透過 AI 技術徹底改變開發者的程式設計體驗。作為一款功能強大的 IDE 擴展工具，Continue 將人工智慧無縫整合到開發環境中，顯著提高編碼效率並降低開發難度。本文將深入探討 Continue Dev 的核心功能、架構設計、使用場景以及與 Model Control Protocol (MCP) 的緊密整合。
 
-![continue dev plugin ui](/images/continuedev-ui.png)
+![continue dev plugin ui](https://static.claudemcp.com/images/continuedev-ui.png)
 
 ## 核心功能與特性
 
@@ -64,7 +64,7 @@ Continue 具備強大的程式碼理解能力:
 
 Continue Dev 是最早支援 Model Control Protocol (MCP) 的開發工具之一，這一整合為開發者帶來了強大的功能擴展和靈活性。
 
-![continue dev x mcp](/images/continue-x-mcp.png)
+![continue dev x mcp](https://static.claudemcp.com/images/continue-x-mcp.png)
 
 ## 技術架構
 

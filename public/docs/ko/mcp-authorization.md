@@ -1,7 +1,7 @@
 ---
 title: MCP 인증 메커니즘 상세 설명
 description: MCP 인증 메커니즘을 심층적으로 이해하고 MCP Python SDK를 통해 인증 기능 구현
-section: 기본 개발
+section: base-dev
 prev: mcp-py-sdk-deep
 pubDate: 2025-06-11
 order: 9
@@ -11,7 +11,7 @@ order: 9
 
 2024년 11월 5일에 출시된 MCP 초기 버전에는 인증 기능이 포함되지 않았습니다. 2025년 3월 26일 업데이트에서 MCP 프로토콜은 OAuth 2.1 기반의 인증 메커니즘을 도입했습니다. 최신 MCP 초안에서는 커뮤니티가 HTTP, SSE, Streamable HTTP 등 다양한 전송 모드를 지원하는 이 인증 프로토콜을 더욱 개선했습니다. 인증 메커니즘을 통해 MCP 클라이언트는 사용자나 애플리케이션을 대신하여 제한된 MCP 도구와 리소스에 안전하게 접근할 수 있습니다.
 
-![MCP 인증 메커니즘 개요](https://picdn.youdianzhishi.com/images/1749124426146.png)
+![MCP 인증 메커니즘 개요](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749124426146.png)
 
 ## MCP 인증 규격
 
@@ -28,11 +28,11 @@ OAuth 2.1 인증 절차를 구현하기 위해 프로토콜은 MCP 서버가 다
 
 인증 절차는 다음과 같이 나타낼 수 있습니다:
 
-![MCP 인증 절차도](https://picdn.youdianzhishi.com/images/1749174953530.png)
+![MCP 인증 절차도](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749174953530.png)
 
 규격은 또한 MCP 서버가 어떻게 제3자 인증 서버를 통해 위임 인증을 지원할지 명시합니다. 예시는 다음과 같습니다:
 
-![위임 인증 절차 예시](https://picdn.youdianzhishi.com/images/1749174989488.png)
+![위임 인증 절차 예시](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749174989488.png)
 
 이 시나리오에서 MCP 서버가 인증을 제3자에게 위임하더라도, MCP 클라이언트에게는 여전히 인증 서버로 간주됩니다. 왜냐하면 자신의 접근 토큰을 발급해야 하기 때문입니다.
 
@@ -53,7 +53,7 @@ MCP 서버가 인증 서버 역할을 할 때, 최종 사용자는 MCP 서버에
 
 프로토콜은 MCP 서버가 이 기능을 직접 구현할 것을 요구하지 않습니다. 개발자는 이러한 엔드포인트를 제3자 인증 서버로 리디렉션하거나 프록시할 수 있습니다. MCP 클라이언트에게는 서버가 직접 인증을 처리하는 것과 차이가 없습니다.
 
-![](https://picdn.youdianzhishi.com/images/1749175316319.png)
+![](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749175316319.png)
 
 이 방법이 앞서 언급한 제3자 인증 위임 방법을 사용해야 하는지 궁금할 수 있습니다.
 
@@ -190,7 +190,7 @@ sequenceDiagram
 
 먼저 [https://github.com/settings/applications/new](https://github.com/settings/applications/new)에서 GitHub OAuth 앱을 생성합니다.
 
-![OAuth 앱 등록](https://picdn.youdianzhishi.com/images/1749193577507.png)
+![OAuth 앱 등록](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749193577507.png)
 
 가장 중요한 것은 `Authorization callback URL` 필드로, `http://localhost:8000/github/callback`로 설정합니다. 이는 GitHub의 OAuth 콜백 요청을 처리하기 위해 해당 엔드포인트가 필요함을 의미합니다. 홈페이지 URL은 `http://localhost:8000`로 설정합니다. "Register application"을 클릭합니다.
 
@@ -692,16 +692,16 @@ MCP inspector 시작...
 
 먼저 `Transport Type`을 `Streamable HTTP`로 설정하고 URL을 `http://localhost:8000/mcp`로 업데이트합니다. `Connect` 버튼을 클릭하여 연결을 설정합니다. OAuth 인증을 추가했으므로 MCP 서버는 처음에 401 상태 코드를 반환하고 `Inspector`는 사용자 동의를 요청하기 위해 GitHub의 인증 페이지로 리디렉션됩니다.
 
-![GitHub 인증](https://picdn.youdianzhishi.com/images/1749192782744.png)
+![GitHub 인증](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749192782744.png)
 
 인증 후, 도구는 `Inspector` 인터페이스로 다시 리디렉션됩니다.
 
 `Auth` 탭으로 전환하여 인증 성공 후의 인증 상태를 확인할 수 있습니다.
 
-![MCP Auth](https://picdn.youdianzhishi.com/images/1749196131391.png)
+![MCP Auth](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749196131391.png)
 
 `Tools` 탭으로 이동하면 인증된 사용자의 GitHub 프로필을 가져오는 `get_user_profile` 도구를 볼 수 있습니다. `Run Tool`을 클릭하면 사용자 이름, 이메일, 자기소개를 포함한 프로필 데이터를 가져와 표시합니다.
 
-![MCP Tools](https://picdn.youdianzhishi.com/images/1749196274345.png)
+![MCP Tools](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749196274345.png)
 
 이로써 OAuth 인증이 포함된 MCP 서버를 구현하고 `inspector` 도구를 사용하여 테스트했습니다. 물론, 이 서버와 상호 작용하기 위해 OAuth를 지원하는 자신만의 MCP 클라이언트를 개발할 수도 있습니다.

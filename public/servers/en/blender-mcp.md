@@ -19,7 +19,7 @@ featured: true
 
 [Blender](https://www.blender.org/) is a 3D modeling software used to create 3D models, 2D graphics, and even animations.
 
-![Blender](/images/blender.png)
+![Blender](https://static.claudemcp.com/images/blender.png)
 
 ## Installation and Configuration
 
@@ -74,7 +74,7 @@ For `Claude for Desktop`, open the client, go to `Settings` > `Developer` > `Edi
 
 After configuration, wait a moment, and you will see a hammer icon in the left toolbar of `Claude for Desktop`. Click it to access the Blender MCP tools.
 
-![Blender MCP On Claude Desktop](/images/blender-mcp-on-claude-desktop.png)
+![Blender MCP On Claude Desktop](https://static.claudemcp.com/images/blender-mcp-on-claude-desktop.png)
 
 **Cursor**
 
@@ -97,7 +97,7 @@ To apply this to a specific project only, add the configuration file to the `.cu
 
 Once configured, you can see the newly added Blender MCP server in the MCP tab of Cursor settings (remember to enable it).
 
-![Blender MCP On Cursor](/images/blender-mcp-on-cursor.png)
+![Blender MCP On Cursor](https://static.claudemcp.com/images/blender-mcp-on-cursor.png)
 
 ## Usage
 
@@ -105,15 +105,15 @@ After configuring the Blender MCP server, you need to install a plugin in Blende
 
 Open Blender, go to `Edit` > `Preferences` > `Add-ons`, click `Install from Disk...`, and select the downloaded `addon.py` file.
 
-![Blender install addon](/images/blender-install-addon.png)
+![Blender install addon](https://static.claudemcp.com/images/blender-install-addon.png)
 
 Ensure the `Blender MCP` option is checked for proper functionality.
 
-![Blender enable addon](/images/blender-enable-addon.png)
+![Blender enable addon](https://static.claudemcp.com/images/blender-enable-addon.png)
 
 Return to Blender, find the `BlenderMCP` tab in the 3D view sidebar (press `N` to display it), check `Poly Haven` (optional), and click the `Connect to MCP server` button.
 
-![Blender MCP Addon Connect](/images/blender-mcp-addon-connect.png)
+![Blender MCP Addon Connect](https://static.claudemcp.com/images/blender-mcp-addon-connect.png)
 
 With all preparations complete, you can now input commands in Claude Desktop or Cursor to control Blender. Current capabilities include:
 

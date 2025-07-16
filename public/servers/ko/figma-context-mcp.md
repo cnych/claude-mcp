@@ -18,7 +18,7 @@ featured: true
 
 [Figma Context MCP](/servers/figma-context-mcp)는 강력한 [MCP Server](/servers)로, 개발자가 Figma 디자인에서 직접 정보를 추출하고 AI 에이전트를 통해 빠르게 디자인을 구현할 수 있도록 도와줍니다. 예를 들어 Cursor에서 프롬프트를 사용해 AI 에이전트가 Figma 디자인 데이터에 접근하여 코드를 생성하도록 할 수 있습니다. 스크린샷을 직접 붙여넣는 것보다 훨씬 더 나은 결과를 얻을 수 있습니다.
 
-![Figma Context MCP](/images/figma-context-mcp.png)
+![Figma Context MCP](https://static.claudemcp.com/images/figma-context-mcp.png)
 
 ## Figma 액세스 토큰 획득
 
@@ -29,7 +29,7 @@ Figma Context MCP 서버를 사용하기 전에 Figma 액세스 토큰을 생성
 3. "개인 액세스 토큰"(`Personal access tokens`) 섹션으로 스크롤한 후 "새 토큰 생성"(`Generate new token`)을 클릭합니다.
 4. 토큰 이름(예: "Figma MCP")을 입력하고 `File content`와 `Dev resources`에 대한 읽기 권한이 있는지 확인합니다.
 
-   ![Figma 액세스 토큰 생성](/images/figma-context-mcp-generate-token.png)
+   ![Figma 액세스 토큰 생성](https://static.claudemcp.com/images/figma-context-mcp-generate-token.png)
 
 5. "토큰 생성"(`Generate token`) 버튼을 클릭합니다.
 
@@ -92,7 +92,7 @@ Figma Context MCP 서버를 사용하기 전에 Figma 액세스 토큰을 생성
 
 또한 프로젝트 루트 디렉토리에 `.cursor/mcp.json` 파일을 생성하고 위 구성을 추가하면 해당 MCP 서버는 현재 프로젝트에서만 활성화됩니다.
 
-![Cursor MCP 구성](/images/figma-context-mcp-cursor-settings.png)
+![Cursor MCP 구성](https://static.claudemcp.com/images/figma-context-mcp-cursor-settings.png)
 
 이제 MCP 서버 구성이 완료되었습니다.
 
@@ -108,7 +108,7 @@ MCP 서버는 Figma API에서 받은 데이터를 90%까지 압축하지만, 복
 
 구체적인 방법: **구현하려는 프레임 또는 그룹을 우클릭한 후 "복사/붙여넣기"(`Copy/Paste as`)를 선택하고 "선택 항목 링크 복사"(`Copy link to selection`)를 선택합니다.**
 
-![Figma 프레임 또는 그룹 링크 복사](/images/figma-context-mcp-copy-figma-link.png)
+![Figma 프레임 또는 그룹 링크 복사](https://static.claudemcp.com/images/figma-context-mcp-copy-figma-link.png)
 
 ### 링크를 에디터에 붙여넣기
 
@@ -116,15 +116,15 @@ Figma 프레임 또는 그룹의 링크를 얻은 후, 에디터의 AI 에이전
 
 예를 들어 Cursor에 `Implement this Figma frame for me. https://www.figma.com/design/....`라고 입력할 때, 앞서 얻은 Figma 링크를 Cursor 입력창에 직접 붙여넣으면 자동으로 링크로 인식되어 Cursor가 해당 링크의 페이지 내용을 직접 가져오려고 시도합니다. 이는 우리가 원하는 바가 아닙니다. 우리는 이 링크를 통해 MCP 서버가 Figma 디자인 데이터를 가져오기를 원할 뿐이므로, URL 링크 주소를 클릭한 후 `Unlink` 버튼을 클릭하여 Cursor가 이 링크를 일반 텍스트로 인식하도록 해야 합니다.
 
-![링크를 에디터에 붙여넣기](/images/figma-context-mcp-paste-link.png)
+![링크를 에디터에 붙여넣기](https://static.claudemcp.com/images/figma-context-mcp-paste-link.png)
 
 엔터를 누르면 Cursor는 의미 분석을 거쳐 MCP 서버의 `get_figma_data` 도구를 호출하여 해당 디자인 데이터를 가져옵니다. 이미지가 있는 경우 `download_figma_images` 도구를 호출하여 이미지를 다운로드한 후, 이 데이터를 기반으로 에이전트가 코드를 생성합니다.
 
-![Figma MCP 도구 호출](/images/figma-context-mcp-call-tool.png)
+![Figma MCP 도구 호출](https://static.claudemcp.com/images/figma-context-mcp-call-tool.png)
 
 최종적으로 생성된 페이지는 다음과 같습니다:
 
-![최종 생성된 페이지 효과](/images/figma-context-mcp-final-result.png)
+![최종 생성된 페이지 효과](https://static.claudemcp.com/images/figma-context-mcp-final-result.png)
 
 디자인과 매우 유사하지만, 몇 가지 세부 사항은 직접 조정해야 합니다.
 

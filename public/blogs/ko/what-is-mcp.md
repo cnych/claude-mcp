@@ -3,11 +3,11 @@ title: MCP란 무엇인가?
 excerpt: 이 글은 "AI 분야의 USB 인터페이스"로 불리는 혁신적인 기술인 MCP(Model Context Protocol, 모델 컨텍스트 프로토콜)의 작동 원리, 핵심 기능 및 실제 적용 사례를 상세히 분석하여 여러분이 이 기술을 종합적으로 이해할 수 있도록 도와줍니다.
 date: 2025-04-16
 slug: what-is-mcp
-coverImage: /images/blog/what-is-mcp-claude.jpg
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp-claude.jpg
 featured: true
 author:
   name: 양명
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 
@@ -31,7 +31,7 @@ Anthropic은 AI 어시스턴트의 주류 채택이 증가함에 따라 업계�
 
 ### 클라이언트-서버 아키텍처
 
-![MCP 아키텍처 다이어그램](/images/blog/what-is-mcp.png)
+![MCP 아키텍처 다이어그램](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 MCP는 전형적인 클라이언트-서버 아키텍처를 채택합니다:
 
@@ -56,7 +56,7 @@ MCP의 통신은 JSON-RPC 2.0을 기반으로 하며, 요청, 응답 및 알림 
 
 ## MCP의 네 가지 핵심 기능
 
-![MCP의 네 가지 핵심 구성 요소](/images/blog/mcp-core-components.png)
+![MCP의 네 가지 핵심 구성 요소](https://static.claudemcp.com/images/blog/mcp-core-components.png)
 
 MCP는 클라이언트와 서버 간의 상호작용을 규정하기 위해 네 가지 핵심 프리미티브(서버 측 프리미티브)를 제공합니다:
 

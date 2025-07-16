@@ -52,7 +52,7 @@ function parseBlogFromFile(filePath: string): BlogPost | null {
       id: data.slug,
       title: data.title,
       excerpt: data.excerpt || '',
-      coverImage: data.coverImage || `/images/blog/${data.slug}.jpg`,
+      coverImage: data.coverImage || `https://static.claudemcp.com/images/blog/${data.slug}.jpg`,
       category: data.category || '未分类',
       author: {
         name: data.author?.name || '匿名',
@@ -157,7 +157,7 @@ export async function getBlogPostDetails(slug: string, locale: string = 'zh'): P
         id: data.slug,
         title: data.title,
         excerpt: data.excerpt || '',
-        coverImage: data.coverImage || `/images/blog/${data.slug}.jpg`,
+        coverImage: data.coverImage || `https://static.claudemcp.com/images/blog/${data.slug}.jpg`,
         category: data.category || '未分类',
         author: {
           name: data.author?.name || '匿名',

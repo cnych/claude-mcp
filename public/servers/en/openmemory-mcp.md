@@ -19,7 +19,7 @@ featured: true
 
 OpenMemory is a local memory infrastructure powered by Mem0 that lets you carry your memory accross any AI app. It provides a unified memory layer that stays with you, enabling agents and assistants to remember what matters across applications.
 
-![openmemory-demo](/images/openmemory-mcp.png)
+![openmemory-demo](https://static.claudemcp.com/images/openmemory-mcp.png)
 
 Today, we’re launching the first building block: the [OpenMemory MCP Server](/servers/openmemory-mcp) - a private, local-first memory layer with a built-in UI, compatible with all MCP-clients.
 

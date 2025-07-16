@@ -19,7 +19,7 @@ featured: true
 
 OpenMemory는 Mem0으로 구동되는 로컬 메모리 인프라로, 어떤 AI 앱에서든 여러분의 메모리를 휴대할 수 있게 해줍니다. 애플리케이션 간에 중요한 것을 기억할 수 있도록 통합된 메모리 레이어를 제공합니다.
 
-![openmemory-demo](/images/openmemory-mcp.png)
+![openmemory-demo](https://static.claudemcp.com/images/openmemory-mcp.png)
 
 오늘, 우리는 첫 번째 구성 요소인 [OpenMemory MCP 서버](/ko/servers/openmemory-mcp)를 출시합니다. 이는 내장된 UI가 있는 프라이빗하고 로컬 우선의 메모리 레이어로, 모든 MCP 클라이언트와 호환됩니다.
 

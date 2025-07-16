@@ -3,11 +3,11 @@ title: MCP 是什么？与 API 相比有何优势
 excerpt: Claude MCP (Model Context Protocol) 是一个新的开放协议，旨在标准化如何向大型语言模型（LLMs）提供上下文。可以將 MCP 想象成 AI Agent 的 USB-C 接口：它为 AI Agent 连接各种工具和数据源提供了一种统一的方法。本文我们将详细介绍 MCP 的定义、架构、工作原理、优势和劣势，以及与传统 API 的对比。
 date: 2025-04-06
 slug: mcp-vs-api
-coverImage: /images/blog/what-is-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp.png
 featured: true
 author:
   name: 阳明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技术
 ---
 
@@ -31,7 +31,7 @@ Claude MCP 由 [Anthropic ↗](https://www.anthropic.com/news/model-context-prot
 
 MCP 遵循简单的客户端-服务器架构:
 
-![MCP 架构](/images/blog/what-is-mcp.png)
+![MCP 架构](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 - **MCP Hosts:** 这些是需要访问外部数据或工具的应用程序（如 Claude Desktop 或 AI 驱动的 IDE）
 - **MCP Clients:** 它们维护与 MCP 服务器的专用、一对一连接
@@ -53,7 +53,7 @@ MCP 遵循简单的客户端-服务器架构:
 
 **传统的 API 就像拥有每个门的单独钥匙，每个门都有自己的钥匙和规则**
 
-![为什么使用 MCP 而不是传统的 API?](/images/blog/api-own-keys.png)
+![为什么使用 MCP 而不是传统的 API?](https://static.claudemcp.com/images/blog/api-own-keys.png)
 
 传统 API 需要开发人员为每个服务或数据源编写自定义集成，这不仅增加了复杂性，还可能导致错误和维护问题。
 

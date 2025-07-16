@@ -22,7 +22,7 @@ createTime: 2025-04-05
 
 `Playwright` 是由微软开发的开源浏览器自动化工具，它使测试人员和开发者能够跨多种浏览器和平台自动化与 Web 应用的交互。与传统自动化工具不同，`Playwright` 专为现代 Web 应用设计，支持动态内容、实时交互甚至网络监控，帮助团队更快更有效地测试应用。
 
-![Playwright](/images/playwright.png)
+![Playwright](https://static.claudemcp.com/images/playwright.png)
 
 在现代软件开发中，自动化浏览器测试已成为不可或缺的环节，它确保 Web 应用能在不同浏览器和环境中流畅运行。如果你曾使用过 `Playwright`，你就了解它在自动化 Web 交互方面的强大能力。但当多个测试脚本、调试工具或自动化服务需要同时与同一 `Playwright` 实例交互时，`Playwright` 多客户端协议(MCP)服务器应运而生。
 
@@ -120,7 +120,7 @@ Node.js v22.8.0
 
 配置完成后在 Cursor 设置页面的 MCP 标签页中正常就可以看到 Playwright MCP 服务器已经配置成功：
 
-![](/images/cursor-playwright-mcp.png)
+![](https://static.claudemcp.com/images/cursor-playwright-mcp.png)
 
 ### VS Code 安装
 

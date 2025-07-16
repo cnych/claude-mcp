@@ -47,7 +47,7 @@ Build a weather query MCP server that:
 - Retrieves weather data as comprehensive as possible
 ```
 
-![](/images/cursor-prompts.png)
+![](https://static.claudemcp.com/images/cursor-prompts.png)
 
 Here, we'll select the `Cluade-3.7-sonnet` model and click the `Send` button. After a moment, we can see Cursor starting to generate code based on our requirements.
 
@@ -333,15 +333,15 @@ Next, we can create a `.cursor/mcp.json` file in the current directory and confi
 
 In the latest Cursor version (Version: 0.48.6), when we add the MCP configuration, it will automatically detect the addition of an MCP server and prompt us whether to enable it:
 
-![](/images/cursor-auto-deteched-mcp.png)
+![](https://static.claudemcp.com/images/cursor-auto-deteched-mcp.png)
 
 After enabling it, we can also see the two tools we added in the Cursor settings page:
 
-![](/images/cursor-mcp-tools-list.png)
+![](https://static.claudemcp.com/images/cursor-mcp-tools-list.png)
 
 Then we can ask weather information in Cursor:
 
-![](/images/cursor-test-weather-mcp-server.png)
+![](https://static.claudemcp.com/images/cursor-test-weather-mcp-server.png)
 
 ## Best Practices
 
