@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  * @param maxCount 最大推荐数量
  * @returns 推荐服务器列表
  */
-async function getRelatedServers(locale: string, currentServer: MCPServer, maxCount: number = 16): Promise<MCPServer[]> {
+async function getRelatedServers(locale: string, currentServer: MCPServer, maxCount: number = 20): Promise<MCPServer[]> {
   // 获取所有服务器
   const { servers: allServers } = await loadServersData(locale);
   
