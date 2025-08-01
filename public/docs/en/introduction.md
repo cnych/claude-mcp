@@ -11,7 +11,7 @@ order: 1
 
 [MCP](https://www.claudemcp.com/), or Model Context Protocol, is an open-source protocol from Anthropic Claude that aims to establish unified context interaction between AI models and development environments. By providing standardized access to contextual information, it enables AI models to better understand and process code. It acts like a bridge between them, allowing developers to connect AI applications and data sources through a single standard.
 
-[![Claude MCP Architecture](/images/claude-mcp.png "Claude MCP Architecture")](https://www.claudemcp.com/)
+[![Claude MCP Architecture](https://static.claudemcp.com/images/claude-mcp.png "Claude MCP Architecture")](https://www.claudemcp.com/)
 
 For example, in practical applications, through the Claude desktop application and with the help of the [MCP](https://www.claudemcp.com/) protocol, AI can help users manage GitHub projects, easily completing complex tasks from creating projects to submitting code requests, and doing so quickly. The emergence of this protocol promises to thoroughly solve the pain point of LLM (Large Language Model) applications struggling to connect with data, enabling cutting-edge models to generate better and more relevant responses, without needing custom integration code for each data source - a single [MCP](https://www.claudemcp.com/) protocol can handle connections to multiple data sources.
 

@@ -28,19 +28,19 @@ This lets you use Claude Desktop, or any MCP Client, to use natural language to 
 
 ## Demo
 
-[![Demonstrating the newly-released MCP server to explore Cloudflare properties, like Workers, KV, and D1.](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
+[![Demonstrating the newly-released MCP server to explore Cloudflare properties, like Workers, KV, and D1.](https://static.claudemcp.com/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
 
 ## Setup
 
 1. Run `npx @cloudflare/mcp-server-cloudflare init`
 
-![Example console output](/images/mcp-cloudflare-init.jpg)
+![Example console output](https://static.claudemcp.com/images/mcp-cloudflare-init.jpg)
 
 2. Restart Claude Desktop, you should see a small 🔨 icon that shows the following tools available for use:
 
-![Example tool icon](/images/mcp-cloudflare-tool-icon.jpg)
+![Example tool icon](https://static.claudemcp.com/images/mcp-cloudflare-tool-icon.jpg)
 
-![Example tool list](/images/mcp-cloudflare-tool-list.jpg)
+![Example tool list](https://static.claudemcp.com/images/mcp-cloudflare-tool-list.jpg)
 
 ## Features
 

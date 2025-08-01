@@ -3,11 +3,11 @@ title: LangChain MCP Adapter
 excerpt: LangChain MCP Adapter is a lightweight adapter for MCP tools to be compatible with LangChain and LangGraph.
 date: 2025-04-14
 slug: langchain-mcp-adapters
-coverImage: /images/blog/langchain-mcp-adapters.png
+coverImage: https://static.claudemcp.com/images/blog/langchain-mcp-adapters.png
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 

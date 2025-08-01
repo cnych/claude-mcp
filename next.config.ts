@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
     
     // 启用页面的静态优化
     staticPageGenerationTimeout: 180, // 增加静态生成超时时间（秒）
+
+    images: {
+        remotePatterns: [
+            new URL('https://static.claudemcp.com/**'), 
+            new URL('https://picdn.youdianzhishi.com/**')
+        ],
+    },
     
     // 设置缓存控制
     async headers() {

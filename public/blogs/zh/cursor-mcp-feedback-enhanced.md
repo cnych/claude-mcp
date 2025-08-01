@@ -3,11 +3,11 @@ title: 使用 MCP Feedback Enhanced 让 Cursor 500 次额度膨胀 N 倍
 excerpt: mcp-feedback-enhanced 是一个通过引导 AI 与用户确认而非进行推测性操作，可将多个工具调用整合为单个面向反馈的请求，大幅降低平台成本并提升开发效率的 MCP 服务器。
 date: 2025-06-11
 slug: cursor-mcp-feedback-enhanced
-coverImage: /images/blog/mcp-feedback-enhanced.jpg
+coverImage: https://static.claudemcp.com/images/blog/mcp-feedback-enhanced.jpg
 featured: true
 author:
   name: AI进修生
-  avatar: /images/avatars/Aitrainee.png
+  avatar: https://static.claudemcp.com/images/avatars/Aitrainee.png
 category: cursor
 ---
 
@@ -21,11 +21,11 @@ Cursor 的请求次数，一直是很多人心里的痛。
 
 就像网友 Ryo 吐槽的，145 块钱，问一次 3 毛，用起来肉疼。
 
-![Ryo 网友吐槽 Cursor 费用](/images/blog/mcp-feedback-enhanced-1.webp)
+![Ryo 网友吐槽 Cursor 费用](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-1.webp)
 
 然后，网友 ultrasev 分享了个很有意思的技巧，或者说，一个"咒语"。
 
-![ultrasev 分享的技巧](/images/blog/mcp-feedback-enhanced-2.webp)
+![ultrasev 分享的技巧](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-2.webp)
 
 他在提示词里加了这么一段：
 
@@ -61,23 +61,23 @@ AI 不再是闷头干完活就交差，而是每干一步，就通过终端工�
 
 我们按照正常对话给他提需求。或者你告诉他，我需要测试  mcp-feedback-enhanced MCP
 
-![MCP 测试效果](/images/blog/mcp-feedback-enhanced-3.webp)
+![MCP 测试效果](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-3.webp)
 
 他第 1 个需求解决完之后会调用这个 mcp，然后会打开一个 GUI 窗口，可以输入文字。
 
-![](/images/blog/mcp-feedback-enhanced-4.webp)
+![](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-4.webp)
 
 他得到你这个反馈之后会进行解答，解答完了之后再弹出这个窗口，以此往复。。
 
-![GUI 交互窗口](/images/blog/mcp-feedback-enhanced-5.webp)
+![GUI 交互窗口](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-5.webp)
 
 用这种方式我们就可以一次请求多次对话。你看我最终的对话，好长好长。
 
-![长对话展示](/images/blog/mcp-feedback-enhanced-6.gif)
+![长对话展示](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-6.gif)
 
 不过，Cursor agent 最多能连续调用 25 次工具。超过这个数，就得算一次新请求了。
 
-![25次工具调用限制](/images/blog/mcp-feedback-enhanced-7.webp)
+![25次工具调用限制](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-7.webp)
 
 我记得以前写过那种让 AI 主动思考的提示词。很多时候他一次对话就能把 Cursor 25 次工具调用用完。
 
@@ -87,29 +87,29 @@ AI 不再是闷头干完活就交差，而是每干一步，就通过终端工�
 
 主要用的就是这张图里介绍的：
 
-![MCP 使用界面](/images/blog/mcp-feedback-enhanced-10.webp)
+![MCP 使用界面](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-10.webp)
 
 这个摘要是他总结 Cursor 对话 AI 的摘要你不用管。只是做个显示作用。
 
-![对话摘要界面](/images/blog/mcp-feedback-enhanced-11.webp)
+![对话摘要界面](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-11.webp)
 
 同样的，这个命令界面也是显示作用。
 
-![命令界面](/images/blog/mcp-feedback-enhanced-12.webp)
+![命令界面](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-12.webp)
 
 这个设置里面呢，同样也是一些排版相关的，也不是什么太重要的。
 
-![设置界面](/images/blog/mcp-feedback-enhanced-13.webp)
+![设置界面](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-13.webp)
 
 所以这个 mcp 使用起来很简单。
 
 不过需要注意的是，它是可以用 web 和 qt 两种界面来交互的。
 
-![Web 和 QT 界面](/images/blog/mcp-feedback-enhanced-14.webp)
+![Web 和 QT 界面](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-14.webp)
 
 这个 qt 界面有问题的话。提醒 agent 修复
 
-![QT 界面问题修复](/images/blog/mcp-feedback-enhanced-15.webp)
+![QT 界面问题修复](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-15.webp)
 
 ## MCP 安装配置指南
 
@@ -125,17 +125,17 @@ Win             配置              完成安装流程 Windows 环
 
 把这个 mcp-feedback-enhanced mcp 的 Readme 文档（Github 下）和我以前写的这个实践: [Windows 下 MCP 报错的救星来了，1 分钟教你完美解决 Cursor 配置问题。](https://mp.weixin.qq.com/s?__biz=MzkyMzY1NTM0Mw==&mid=2247501961&idx=1&sn=70d538d8db272b2d317841887cdeeca6&scene=21#wechat_redirect)。
 
-![安装文档](/images/blog/mcp-feedback-enhanced-16.png)
+![安装文档](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-16.png)
 
 官方文档是用 uv 安装。我执行的时候 Cursor Agent 没有安装好 uv，然后他转头就用本地 Python 解释器：`C:\Python312\python.exe`  安装了。
 
 最后配置文件是这样的。
 
-![配置文件](/images/blog/mcp-feedback-enhanced-17.webp)
+![配置文件](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-17.webp)
 
 mac linux 呢，你直接按照他的官方文档做就行。如果你不会安装 uv 这些，直接把官方文档丢给 Cursor Agent，
 
-![官方文档](/images/blog/mcp-feedback-enhanced-18.webp)
+![官方文档](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-18.webp)
 
 ## 持续调用优化配置
 
@@ -161,10 +161,10 @@ MCP 持续调用
 
 放到设置规则里。
 
-![设置规则](/images/blog/mcp-feedback-enhanced-19.webp)
+![设置规则](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-19.webp)
 
 或者放到项目规则里
 
-![项目规则](/images/blog/mcp-feedback-enhanced-20.webp)
+![项目规则](https://static.claudemcp.com/images/blog/mcp-feedback-enhanced-20.webp)
 
 配置完成。

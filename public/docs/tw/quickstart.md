@@ -137,11 +137,11 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 當重新啟動 Claude Desktop 後，我們可以在首頁輸入框右下角發現會多一個如下圖所示的按鈕：
 
-![Claude Desktop 加載 SQLite MCP 伺服器](/images/claude-sqlite.png)
+![Claude Desktop 加載 SQLite MCP 伺服器](https://static.claudemcp.com/images/claude-sqlite.png)
 
 這裡其實表示 Claude Desktop 已經成功加載了 SQLite MCP 伺服器，並且可以正常使用。我們點擊這個按鈕後，就可以看到可用的 MCP Tools 工具列表，如下圖所示：
 
-![Claude Desktop 可用的 MCP Tools](/images/claude-sqlite-tools.png)
+![Claude Desktop 可用的 MCP Tools](https://static.claudemcp.com/images/claude-sqlite-tools.png)
 
 從上圖可以看到我們可以進行很多操作，比如查詢資料庫中的資料，創建新的資料，更新資料，刪除資料等。
 
@@ -153,15 +153,15 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 然後 Claude Desktop 就會根據我們的提示詞去查詢我們的 SQLite 資料庫，第一次會彈出一個授權的對話框，如下圖所示：
 
-![Claude Desktop 授權 SQLite MCP 伺服器](/images/claude-sqlite-auth.png)
+![Claude Desktop 授權 SQLite MCP 伺服器](https://static.claudemcp.com/images/claude-sqlite-auth.png)
 
 可以看到這裡會選擇使用 `list-tables` 的 MCP 工具，這裡需要我們點擊 `Allow for This Chat` 按鈕來授權，然後後續可能會使用到其他工具，同樣需要授權。
 
-![Claude Desktop 授權 SQLite MCP 伺服器](/images/claude-sqlite-auth2.png)
+![Claude Desktop 授權 SQLite MCP 伺服器](https://static.claudemcp.com/images/claude-sqlite-auth2.png)
 
 授權完成後，我們就可以看到查詢結果了，如下圖所示：
 
-![Claude Desktop 查詢 SQLite 資料庫結果](/images/claude-sqlite-result.png)
+![Claude Desktop 查詢 SQLite 資料庫結果](https://static.claudemcp.com/images/claude-sqlite-result.png)
 
 正常情況下，Claude Desktop 會根據我們的提示詞去查詢資料庫，並返回結果。如果這個過程遇到了一些問題，我們可以查看下 Claude Desktop 的日誌來排查問題。
 
@@ -215,7 +215,7 @@ MCP 與 Claude Desktop 交互的流程如下所示：
 
 這裡可能大家還有些疑問，就是 MCP 伺服器的部分，我們並沒有編寫任何程式碼啊？其實是因為 Claude Desktop 已經內建實作了一系列的 MCP 伺服器，其中就包含了 SQLite 的 MCP 伺服器，我們只需要設定好資料庫路徑即可。我們可以在官方的 git 倉庫中查看 [內建的 MCP 伺服器清單](https://github.com/modelcontextprotocol/servers/tree/main/src)。
 
-![內建的 MCP 伺服器清單](/images/claude-builtin-servers.png)
+![內建的 MCP 伺服器清單](https://static.claudemcp.com/images/claude-builtin-servers.png)
 
 可以看到其中就包含了一個 SQLite 的 MCP 伺服器。透過 SQLite 提供資料庫互動和智慧業務能力，該伺服器支援執行 SQL 查詢、分析業務資料等，所以我們直接設定即可使用。如果我們有自己的業務需求，也可以參考這些內建的實作來自訂一個 MCP 伺服器。
 
@@ -345,22 +345,22 @@ code ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 這裡我們指定的是 `/Users/cnych/src` 目錄，接著儲存設定檔並重新啟動 Claude Desktop 應用程式即可。我們可以在輸入框右下角看到現在變成了一個 `15` 的按鈕：
 
-![Claude Desktop 的檔案系統 MCP 伺服器](/images/claude-filesytem-mcp.png)
+![Claude Desktop 的檔案系統 MCP 伺服器](https://static.claudemcp.com/images/claude-filesytem-mcp.png)
 
 點擊後可以看到可用的 MCP 工具列表，如下圖所示：
 
-![Claude Desktop 的檔案系統 MCP 工具](/images/claude-filesytem-tools.png)
+![Claude Desktop 的檔案系統 MCP 工具](https://static.claudemcp.com/images/claude-filesytem-tools.png)
 
 可以看到我們這裡可以讀取檔案、建立檔案、列出目錄、移動檔案、搜尋檔案等功能。
 
 我們發送提示詞 `Can you list the contents of my src directory?` 後，Claude Desktop 就會列出我們指定目錄下的所有檔案和目錄，如下圖所示，當然過程也需要我們授權。
 
-![Claude Desktop 列出檔案系統目錄](/images/claude-filesytem-list-tools.png)
+![Claude Desktop 列出檔案系統目錄](https://static.claudemcp.com/images/claude-filesytem-list-tools.png)
 
 讓它幫我們寫一份 markdown 的使用指南，並儲存到 `markdown-usage.md` 檔案中 `Write a complete guide to markdown and save it to markdown-usage.md file`。
 
-![Claude Desktop 寫入檔案系統](/images/claude-filesytem-write.png)
+![Claude Desktop 寫入檔案系統](https://static.claudemcp.com/images/claude-filesytem-write.png)
 
 經過授權後，我們就可以看到 Claude Desktop 會自動將檔案寫入到我們本機的指定路徑了，如下圖所示：
 
-![Claude Desktop 寫入檔案系統成功](/images/claude-filesytem-write-result.png)
+![Claude Desktop 寫入檔案系統成功](https://static.claudemcp.com/images/claude-filesytem-write-result.png)

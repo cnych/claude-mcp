@@ -24,7 +24,7 @@ SSE mode is a communication method between MCP services and clients that uses th
 - Updating inventory levels in real time.
 - Providing ad-hoc analysis of order transactions through natural language queries.
 
-![Intelligent E-Commerce Assistant](https://picdn.youdianzhishi.com/images/1749089781344.png)
+![Intelligent E-Commerce Assistant](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749089781344.png)
 
 Here, we can adopt a microservices architecture. First, we need a product microservice to expose an API for product listings. Then, we provide an order microservice to expose APIs for order creation, inventory information, etc.
 
@@ -188,7 +188,7 @@ INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 
 We can then view the API documentation at `http://127.0.0.1:8000/docs` or in ReDoc format at `http://127.0.0.1:8000/redoc`.
 
-![API Docs](https://picdn.youdianzhishi.com/images/1749092558487.png)
+![API Docs](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749092558487.png)
 
 We can now expose these APIs using MCP tools. Next, we use the MCP Python SDK to develop the MCP service.
 
@@ -325,7 +325,7 @@ INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
 
 We can now test this MCP server using MCP Inspector. Select "SSE" as the Transport Type, enter the endpoint `http://localhost:8083/sse`, and click the "Connect" button to see the tools exposed by the MCP server.
 
-![MCP Inspector](https://picdn.youdianzhishi.com/images/1749105716600.png)
+![MCP Inspector](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749105716600.png)
 
 For example, we can select the `get_products` tool, click "Run Tool," and see the product list returned by the MCP server.
 
@@ -345,11 +345,11 @@ Next, we can use an MCP client to connect to the MCP SSE server. For example, we
 
 Returning to the MCP page, we can now see this MCP service and its provided tools:
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749105955597.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749105955597.png)
 
 This allows us to use the MCP service in Cursor.
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749106197834.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749106197834.png)
 
 If we want to use the MCP service in our own business system, we need to develop an MCP client. For example, we could develop a customer service system that integrates the MCP service.
 
@@ -702,7 +702,7 @@ $ uv run python web.py
 
 On the right side of the page, we list all available tools. When a question is entered in the chat interface, if the large model determines a tool is needed, it will call the tool and return the result. We then use this result to call the tool until a final answer is obtained. The tool call results are also displayed on the frontend, as shown below:
 
-![MCP WEB](https://picdn.youdianzhishi.com/images/1749110324295.png)
+![MCP WEB](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749110324295.png)
 
 This completes our development of a web-based SSE-type MCP server and client. This example shows that using MCP services allows us to conveniently integrate various tools into our business systems, thereby achieving more intelligent systems.
 
@@ -712,7 +712,7 @@ MCP officially launched the Streamable HTTP transport mechanism on March 26, 202
 
 ### Existing HTTP+SSE Transport Mechanism and Its Limitations
 
-![HTTP+SSE Transport Mechanism](https://picdn.youdianzhishi.com/images/1749111379973.png)
+![HTTP+SSE Transport Mechanism](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749111379973.png)
 
 In the original MCP implementation, clients and servers communicated through two main channels:
 
@@ -1009,11 +1009,11 @@ We can then access this MCP server at `http://localhost:8083/mcp`. For example, 
 
 Then we can use this MCP server in Cursor, as shown below:
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749112893794.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749112893794.png)
 
 Then we can use this MCP server in Cursor, as shown below:
 
-![Cursor MCP](https://picdn.youdianzhishi.com/images/1749113099093.png)
+![Cursor MCP](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749113099093.png)
 
 Similarly, on the client side, we can connect using Streamable HTTP mode, as shown below:
 

@@ -17,7 +17,7 @@ createTime: 2023-01-01
 
 # Cursor AI IDE: 혁신적인 지능형 프로그래밍 도구
 
-![Cursor AI IDE](/images/cursor-ui.webp)
+![Cursor AI IDE](https://static.claudemcp.com/images/cursor-ui.webp)
 
 ## 개요
 

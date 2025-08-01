@@ -107,7 +107,7 @@ EOF
 
 Next, download the latest [Cursor](https://www.cursor.com/cn/downloads) and install it. Open the Cursor Settings page, switch to the MCP tab, and click the **+ Add new global MCP server** button.
 
-![MCP Settings](https://picdn.youdianzhishi.com/images/1747981060263.png)
+![MCP Settings](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747981060263.png)
 
 You will be redirected to a global MCP configuration file in JSON format, where you can define all MCP servers. Add an MCP server named `mcp-server-sqlite` as shown below:
 
@@ -128,7 +128,7 @@ Replace `YOUR_USERNAME` with your actual username. The configuration above defin
 
 After saving the configuration, return to the MCP settings page in Cursor. Shortly, you should see the `sqlite` MCP server listed.
 
-![sqlite mcp](https://picdn.youdianzhishi.com/images/1747981362810.png)
+![sqlite mcp](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747981362810.png)
 
 All tools provided by this MCP server will be listed, and you can now use these tools directly in Cursor.
 
@@ -142,11 +142,11 @@ Can you connect to my SQLite database and tell me what products are available an
 
 Cursor will then query the SQLite database based on your prompt. It will first use the `list-tables` MCP tool to check which tables exist in the database, then call the `describe_table` tool to view the table structure.
 
-![Cursor Querying SQLite Database](https://picdn.youdianzhishi.com/images/1747981724500.png)
+![Cursor Querying SQLite Database](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747981724500.png)
 
 Next, it will query the database to retrieve products and their prices, even providing additional statistical information via the `read_query` tool.
 
-![Cursor Query Results](https://picdn.youdianzhishi.com/images/1747981836636.png)
+![Cursor Query Results](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747981836636.png)
 
 ### Analysis
 
@@ -183,7 +183,7 @@ The interaction flow between MCP and Cursor is as follows:
 
 You might wonder about the MCP server—we didn't write any code for it. This is because Cursor has built-in implementations of several MCP servers, including one for SQLite. We only need to configure the database path. You can view the [list of built-in MCP servers](https://github.com/modelcontextprotocol/servers/tree/main/src) in the official repository.
 
-![Built-in MCP Servers](https://picdn.youdianzhishi.com/images/1747982021937.png)
+![Built-in MCP Servers](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747982021937.png)
 
 The SQLite MCP server provides database interaction and intelligent business capabilities, supporting SQL queries and business data analysis. If you have custom business needs, you can refer to these built-in implementations to create your own MCP server.
 
@@ -566,11 +566,11 @@ New connection
 
 This command starts an MCP Inspector, accessible via `http://127.0.0.1:6274` in your browser. Click the `Connect` button on the left to connect to the current MCP server. Switch to the `Tools` tab and click `List Tools` to see all tools provided by the server.
 
-![MCP Inspector](https://picdn.youdianzhishi.com/images/1747987799024.png)
+![MCP Inspector](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747987799024.png)
 
 The current MCP server provides two tools: `get_current_weather` and `get_weather_forecast`. You can click on a tool, enter parameters, and click `Run Tool` to see the result.
 
-![Run Tool](https://picdn.youdianzhishi.com/images/1747987923331.png)
+![Run Tool](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747987923331.png)
 
 ### Testing in Cursor
 
@@ -594,12 +594,12 @@ In Cursor settings, go to the `MCP` tab, click `+ Add new global MCP server`, an
 
 After saving, you should see the MCP server and its two tools in Cursor.
 
-![Cursor MCP Test](https://picdn.youdianzhishi.com/images/1747988557742.png)
+![Cursor MCP Test](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747988557742.png)
 
 You can then ask weather-related questions in Cursor Agent mode.
 
-![Chengdu Today's Weather](https://picdn.youdianzhishi.com/images/1747988679505.png)  
-![Chengdu Future Weather](https://picdn.youdianzhishi.com/images/1747988971960.png)
+![Chengdu Today's Weather](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747988679505.png)  
+![Chengdu Future Weather](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1747988971960.png)
 
 When asking about today's weather, Cursor will call the `get_current_weather` tool. When asking about future weather, it will call the `get_weather_forecast` tool.
 

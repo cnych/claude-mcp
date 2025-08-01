@@ -3,7 +3,7 @@ name: Vlad's EXIF Metadata Retriever
 digest: Leverages Exiftool utility to retrieve some or all EXIF tags from a photo or a video.
 author: Vlad Hrybok
 homepage: https://github.com/vgribok/exiftool-mcp-server#readme
-repository: https://github.com/vgribok/exiftool-mcp-server 
+repository: https://github.com/vgribok/exiftool-mcp-server
 capabilities:
   prompts: false
   resources: false
@@ -13,9 +13,10 @@ tags:
   - filesystem
   - photo
   - video
-icon: https://raw.githubusercontent.com/vgribok/exiftool-mcp-server/refs/heads/main/docs/images/Proggy.128.png
+icon: https://raw.githubusercontent.com/vgribok/exiftool-mcp-server/refs/heads/main/docshttps://static.claudemcp.com/images/Proggy.128.png
 createTime: 2025-06-19
 ---
+
 This is an MCP Server (an MCP protocol compatible AI agent) for retrieving EXIF data from images (photos) and videos, using [ExifTool](https://exiftool.org/). This agent was tested with [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) and [Claude Desktop](https://claude.ai/download).
 
 > Note: the `exiftool` copyright belongs to its author, and not to the creators of this AI agent.
@@ -46,7 +47,6 @@ This project provides a command-line/stdio transport MCP (Model Context Protocol
 1. Ensure you have [Node.js](https://nodejs.org/) installed (version 14 or higher recommended).
 2. Install [ExifTool](https://exiftool.org/) on your system. This tool is required for extracting metadata.
 
-
 ## Supported MCP Tools:
 
 - **all_or_some**: Return all or some EXIF properties. If args are not supplied, return all. The `args` parameter is an optional array of strings representing EXIF property names to return.
@@ -57,12 +57,11 @@ This project provides a command-line/stdio transport MCP (Model Context Protocol
 
 - **location_and_timestamp**: Return both GPS and timestamp EXIF metadata. The `args` parameter is an optional array of additional arguments for exiftool.
 
-The server listens for JSON-RPC 2.0 requests on stdin. 
-
+The server listens for JSON-RPC 2.0 requests on stdin.
 
 # Usage
 
-## Testing with Claude Desktop 
+## Testing with Claude Desktop
 
 ### When Using Npmjs.org Package
 
@@ -92,7 +91,7 @@ Use the following development-time entry, in case you have cloned the source cod
 }
 ```
 
-![Claude Desktop with Exit tool agent](https://github.com/vgribok/exiftool-mcp-server/raw/main/docs/images/claude-desktop.png)
+![Claude Desktop with Exit tool agent](https://github.com/vgribok/exiftool-mcp-server/raw/main/docshttps://static.claudemcp.com/images/claude-desktop.png)
 
 ## Testing Locally With MCP Inspector
 
@@ -102,7 +101,6 @@ Before testing with the MCP Inspector, ensure the following are installed:
 
 - [Node.js](https://nodejs.org/) (version 14 or higher recommended)
 - [ExifTool](https://exiftool.org/)
-
 
 ### Testing With MCP Inspector
 
@@ -118,22 +116,22 @@ Before testing with the MCP Inspector, ensure the following are installed:
    Open inspector with token pre-filled:
       http://localhost:6274/?MCP_PROXY_AUTH_TOKEN=...
    ```
-  > If the launch.json has auth disabled, then simple point the browser to the http://localhost:6274/, and not to the 127.0.0.1, to work around what seems to be a bug in MCP Inspector (or MCP Proxy).
+
+   > If the launch.json has auth disabled, then simple point the browser to the http://localhost:6274/, and not to the 127.0.0.1, to work around what seems to be a bug in MCP Inspector (or MCP Proxy).
 
 5. Click the **Connect** button in the MCP Inspector UI to connect to your MCP server.
 
 6. Once connected, click the **List Tools** button to discover all available tools provided by the server.
 
-![MCP Inspector: List Tools](https://github.com/vgribok/exiftool-mcp-server/raw/main/docs/images/mcp-inspector-list-tools.png)
+![MCP Inspector: List Tools](https://github.com/vgribok/exiftool-mcp-server/raw/main/docshttps://static.claudemcp.com/images/mcp-inspector-list-tools.png)
 
 7. Select a tool from the list to view its input parameters and metadata.
 
 8. Use the UI to send test requests to the selected tool and observe the responses.
 
-![MCP Inspector: tool call](https://github.com/vgribok/exiftool-mcp-server/blob/main/docs/images/mcp-inspector-tool-call.png)
+![MCP Inspector: tool call](https://github.com/vgribok/exiftool-mcp-server/blob/main/docshttps://static.claudemcp.com/images/mcp-inspector-tool-call.png)
 
 9. Experiment with different parameters to explore the capabilities of the MCP server.
-
 
 ## Contribution Guidelines
 
@@ -154,4 +152,4 @@ Please ensure your code follows existing style and includes appropriate error ha
 
 ## License
 
-This project is licensed under the ISC License. 
+This project is licensed under the ISC License.

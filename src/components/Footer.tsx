@@ -16,11 +16,14 @@ export function Footer() {
       { name: '优点知识', lang: 'zh', href: 'https://youdianzhishi.com?ref=claude-mcp' },
       { name: 'ToMarkdown', href: 'https://www.tomarkdown.org?ref=claude-mcp' },
       { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
+      { name: 'ASMR Videos', href: 'https://www.asmr.so?ref=claude-mcp' },
+      { name: 'Desktop Extensions', href: 'https://www.desktopextensions.com?ref=claude-mcp' },
+      { name: 'Claude Code', href: 'https://www.claudecode.pro?ref=claude-mcp' },
+      { name: 'Calculator Online', href: 'https://www.calculatoronline.io?ref=claude-mcp' },
+      { name: 'Compress', href: 'https://www.compress.run?ref=claude-mcp' },
       { name: 'A2A', href: 'https://www.a2aprotocol.net?ref=claude-mcp' },
       { name: 'DeepSite', href: 'https://www.deepsite.app?ref=claude-mcp' },
-      { name: 'Liquid Glass', href: 'https://www.liquid-glass.org?ref=claude-mcp' },
       { name: 'Invincible Title Card', lang: 'en', href: 'https://www.invincibletitlecardgenerator.com/?ref=claude-mcp' },
-      { name: 'GPT 5', href: 'https://www.gpt-5.dev?ref=claude-mcp' },
       { name: 'Color Block Jam Level', href: 'https://www.colorblockjamlevel.app?ref=claude-mcp' },
     ],
     community: [
@@ -37,6 +40,7 @@ export function Footer() {
       { name: 'Github', href: 'https://github.com/cnych' },
       { name: 'Cal.com', href: 'https://cal.com/cnych' },
       { name: 'Linktree', href: 'https://linktr.ee/1mo' },
+      { name: 'Hugging Face', href: 'https://huggingface.co/1bo'}
     ],
     hotMcp: [
       { name: 'SEO MCP', href: '/servers/seo-mcp' },

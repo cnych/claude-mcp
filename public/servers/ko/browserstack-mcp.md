@@ -17,14 +17,14 @@ createTime: 2025-04-29
 
 # BrowserStack MCP 서버
 
-[![BrowserStack](/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
+[![BrowserStack](https://static.claudemcp.com/images/browserstack-mcp-thumbnail.jpg)](https://www.youtube.com/watch?v=sLA7K9v7qZc)
 
 팀의 모든 개발자와 테스터가 수동 테스트를 수행하거나 자동화 여정을 시작하거나 테스트 자동화를 확장할 수 있도록 지원합니다.
 BrowserStack MCP 서버를 사용하면 선호하는 AI 도구에서 바로 최첨단 [테스트 플랫폼](https://www.browserstack.com/test-platform)을 사용할 수 있습니다.
 
 ### BrowserStack을 선택해야 하는 이유
 
-![BrowserStack](/images/browserstack-overview.png)
+![BrowserStack](https://static.claudemcp.com/images/browserstack-overview.png)
 
 ## 💡 사용 예시
 
@@ -82,7 +82,7 @@ BrowserStack의 [테스트 플랫폼](https://www.browserstack.com/test-platform
 
    - ℹ️ 오픈소스 프로젝트가 있는 경우 [무료 플랜](https://www.browserstack.com/open-source)을 제공할 수 있습니다.
 
-![오픈소스](/images/browserstack-open-source.png)
+![오픈소스](https://static.claudemcp.com/images/browserstack-open-source.png)
 
 - 계정이 있고 적절한 플랜을 구매한 후 [계정 설정](https://www.browserstack.com/accounts/profile/details)에서 `username`과 `access_key`를 기록해 두세요.
 
@@ -107,7 +107,7 @@ BrowserStack의 [테스트 플랫폼](https://www.browserstack.com/test-platform
    ```
 
    - VSCode에서 MCP 서버의 `시작` 버튼을 클릭하여 서버를 시작하세요.
-     ![MCP 서버 시작](/images/browserstack-vscode.png)
+     ![MCP 서버 시작](https://static.claudemcp.com/images/browserstack-vscode.png)
 
    * Cursor: `.cursor/mcp.json`:
 

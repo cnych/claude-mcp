@@ -67,7 +67,7 @@ Ensure to add the `.env` file to the `.gitignore` file.
 
 After the project is created, we can see the project structure as follows:
 
-![MCP Server Project Structure](/images/claude-write-ts-server-layout.png)
+![MCP Server Project Structure](https://static.claudemcp.com/images/claude-write-ts-server-layout.png)
 
 ## Template Analysis
 
@@ -962,7 +962,7 @@ Where `args` is the path to the built file, and `env` is the OpenWeather API key
 
 Next, we can test it, click the number button on the bottom right of the Claude Desktop input box, and it will list the `get_forecast` tool we defined.
 
-![Claude Weather Tools](/images/claude-weather-tools.png)
+![Claude Weather Tools](https://static.claudemcp.com/images/claude-weather-tools.png)
 
 Next, we can test it, for example, we ask Claude for a 5-day weather forecast:
 
@@ -970,7 +970,7 @@ Next, we can test it, for example, we ask Claude for a 5-day weather forecast:
 Can you get me a 5-day forecast for Beijing and tell me if I should pack an umbrella?
 ```
 
-![Claude Weather Current](/images/claude-weather-forecast.png)
+![Claude Weather Current](https://static.claudemcp.com/images/claude-weather-forecast.png)
 
 We can see that it calls the `get_forecast` tool (requires authorization) and displays the result.
 
@@ -995,7 +995,7 @@ In addition to logs, we can also debug through `Chrome DevTools`, access the dev
 
 Then, use the shortcut `Command+Option+Shift+i` to open DevTools, just like debugging in Chrome.
 
-![Claude DevTools](/images/claude-devtools.png)
+![Claude DevTools](https://static.claudemcp.com/images/claude-devtools.png)
 
 In addition to the above conventional debugging methods, Claude MCP also provides an `Inspector` tool, **MCP Inspector** is an interactive developer tool for testing and debugging MCP servers.
 
@@ -1029,17 +1029,17 @@ npx @modelcontextprotocol/inspector node /Users/cnych/src/weather-server/build/i
 
 After the `Inspector` tool starts, it will start a Web page on `localhost:5173`, and we can test and debug our weather service on it.
 
-![MCP Inspector](/images/claude-inspector-ui.png)
+![MCP Inspector](https://static.claudemcp.com/images/claude-inspector-ui.png)
 
 Here, we need to click the `Environment Variables` button on the right, then add the `OPENWEATHER_API_KEY` environment variable, the value is the OpenWeather API key we applied for, then click the `Connect` button to connect to the weather service.
 
 After connecting successfully, we can see the resources and tools of the weather service on the right main window, and we can test and debug them, click the `List Resources` button to list the resources of the weather service, click the listed resources to read and display the resource contents.
 
-![MCP Inspector Resources](/images/claude-inspector-resources.png)
+![MCP Inspector Resources](https://static.claudemcp.com/images/claude-inspector-resources.png)
 
 Similarly, we can test Tools, click the `List Tools` button to list the tools of the weather service, then click a specific tool, input the parameters, and click the `Run Tool` button to call the tool and display the result.
 
-![MCP Inspector Tools](/images/claude-inspector-tools.png)
+![MCP Inspector Tools](https://static.claudemcp.com/images/claude-inspector-tools.png)
 
 Of course, besides Resources and Tools, we can also test Prompts and Sampling.
 

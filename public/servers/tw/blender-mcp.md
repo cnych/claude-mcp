@@ -19,7 +19,7 @@ featured: true
 
 [Blender](https://www.blender.org/) 是一個 3D 建模軟體，可用來建立 3D 模型、2D 圖形，甚至製作動畫。
 
-![Blender](/images/blender.png)
+![Blender](https://static.claudemcp.com/images/blender.png)
 
 ## 安裝與設定
 
@@ -72,7 +72,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 設定完成後，稍等片刻就能在`Claude for Desktop`左側工具列看到錘子圖示，點選即可看到 Blender MCP 工具。
 
-![Blender MCP On Claude Desktop](/images/blender-mcp-on-claude-desktop.png)
+![Blender MCP On Claude Desktop](https://static.claudemcp.com/images/blender-mcp-on-claude-desktop.png)
 
 **Cursor**
 
@@ -95,7 +95,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 設定完成後，在 Cursor 設定頁面的 MCP 分頁中就能看到新增的 Blender MCP 伺服器（記得啟用）。
 
-![Blender MCP On Cursor](/images/blender-mcp-on-cursor.png)
+![Blender MCP On Cursor](https://static.claudemcp.com/images/blender-mcp-on-cursor.png)
 
 ## 使用方式
 
@@ -103,15 +103,15 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 開啟 Blender，進入`Edit` > `Preferences` > `Add-ons`，點選`Install from Disk...`按鈕，選擇剛才下載的`addon.py`檔案。
 
-![Blender install addon](/images/blender-install-addon.png)
+![Blender install addon](https://static.claudemcp.com/images/blender-install-addon.png)
 
 記得勾選`Blender MCP`選項才能正常使用。
 
-![Blender enable addon](/images/blender-enable-addon.png)
+![Blender enable addon](https://static.claudemcp.com/images/blender-enable-addon.png)
 
 回到 Blender，在 3D 視圖側邊欄（可按`N`鍵顯示）找到`BlenderMCP`分頁，勾選`Poly Haven`（選用），然後點選`Connect to MCP server`按鈕。
 
-![Blender MCP Addon Connect](/images/blender-mcp-addon-connect.png)
+![Blender MCP Addon Connect](https://static.claudemcp.com/images/blender-mcp-addon-connect.png)
 
 完成所有準備工作後，就能在 Claude Desktop 或 Cursor 中輸入指令來控制 Blender 了。目前支援以下功能：
 

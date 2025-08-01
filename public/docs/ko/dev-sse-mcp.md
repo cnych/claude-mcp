@@ -24,7 +24,7 @@ order: 4
 - 실시간 재고 수준 업데이트를 제공합니다.
 - 자연어 쿼리를 통한 주문 거래의 임시 분석을 지원합니다.
 
-![](/images/shop-ai-with-mcp.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp.png)
 
 > 여기서는 MCP 서비스의 AI 도우미로 Anthropic Claude 3.5 Sonnet 모델을 사용하지만, 도구 호출을 지원하는 다른 모델도 사용할 수 있습니다.
 
@@ -654,7 +654,7 @@ apiRouter.post("/chat", async (req, res) => {
 
 다음은 명령줄 클라이언트를 사용하는 예제입니다:
 
-![](/images/shop-ai-with-mcp-cli.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cli.png)
 
 우리는 또한 Cursor에서 사용할 수 있으며, `.cursor/mcp.json` 파일을 생성하고 다음 내용을 추가할 수 있습니다:
 
@@ -670,13 +670,13 @@ apiRouter.post("/chat", async (req, res) => {
 
 그런 다음 우리는 Cursor 설정 페이지에서 이 MCP 서비스를 볼 수 있으며, 그런 다음 Cursor에서 이 MCP 서비스를 사용할 수 있습니다.
 
-![](/images/shop-ai-with-mcp-cursor.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cursor.png)
 
 다음은 우리가 개발한 웹 클라이언트를 사용하는 예제입니다:
 
-![](/images/shop-ai-with-mcp-web1.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web1.png)
 
-![](/images/shop-ai-with-mcp-web2.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web2.png)
 
 ## 디버깅
 
@@ -691,7 +691,7 @@ Starting MCP inspector...
 
 그런 다음 브라우저에서 위 주소를 열고, SSE를 선택하고, 우리의 SSE 주소를 구성하여 테스트할 수 있습니다:
 
-![](/images/shop-ai-with-mcp-inspector.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-inspector.png)
 
 ## 요약
 

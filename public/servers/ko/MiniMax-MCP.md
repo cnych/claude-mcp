@@ -17,7 +17,7 @@ icon: https://avatars.githubusercontent.com/u/194880281?v=4
 createTime: 2025-04-10
 ---
 
-![MiniMax Logo](/images/MiniMaxLogo-Light.png)
+![MiniMax Logo](https://static.claudemcp.com/images/MiniMaxLogo-Light.png)
 
 강력한 텍스트 음성 변환(TTS) 및 비디오/이미지 생성 API와 상호 작용할 수 있는 공식 MiniMax Model Context Protocol (MCP) 서버입니다. 이 서버를 통해 Claude Desktop, Cursor, Windsurf, OpenAI Agents 등의 MCP 클라이언트에서 음성 생성, 목소리 복제, 비디오 생성, 이미지 생성 등을 수행할 수 있습니다.
 

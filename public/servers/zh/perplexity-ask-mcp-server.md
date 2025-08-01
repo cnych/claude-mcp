@@ -18,7 +18,7 @@ featured: true
 
 一个集成了 Sonar API 的 MCP 服务器实现，为 Claude 提供无与伦比的实时全网研究能力。
 
-![演示](/images/perplexity_demo_screenshot.png)
+![演示](https://static.claudemcp.com/images/perplexity_demo_screenshot.png)
 
 ## 工具
 
@@ -113,11 +113,11 @@ docker build -t mcp/perplexity-ask:latest -f Dockerfile .
 
 确保 Claude 桌面端能识别工具（查看锤子图标）：
 
-![Claude工具视觉指示器](/images/perplexity-visual-indicator-mcp-tools.png)
+![Claude工具视觉指示器](https://static.claudemcp.com/images/perplexity-visual-indicator-mcp-tools.png)
 
 点击锤子图标后应看到可用工具：
 
-![可用集成](/images/perplexity_available_tools.png)
+![可用集成](https://static.claudemcp.com/images/perplexity_available_tools.png)
 
 ### 第六步：高级参数
 

@@ -24,7 +24,7 @@ npx @modelcontextprotocol/create-server streamable-demo
 
 Then, navigate to the project root directory and update the MCP SDK dependency version in `package.json` to `1.10.0`.
 
-![Update MCP SDK](/images/streamable-demo-update-sdk.png)
+![Update MCP SDK](https://static.claudemcp.com/images/streamable-demo-update-sdk.png)
 
 Next, install the dependencies:
 

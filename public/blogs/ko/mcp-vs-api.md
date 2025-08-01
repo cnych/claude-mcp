@@ -3,11 +3,11 @@ title: MCP란 무엇인가? API와 비교했을 때 어떤 장점이 있는가
 excerpt: 본문에서는 MCP의 정의, 아키텍처, 작동 원리, 장단점을 자세히 설명하고 전통적인 API와 비교할 것입니다.
 date: 2025-04-06
 slug: mcp-vs-api
-coverImage: /images/blog/what-is-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp.png
 featured: true
 author:
   name: 阳明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 
@@ -31,7 +31,7 @@ Claude MCP는 [Anthropic ↗](https://www.anthropic.com/news/model-context-proto
 
 MCP는 간단한 클라이언트-서버 아키텍처를 따릅니다:
 
-![MCP 아키텍처](/images/blog/what-is-mcp.png)
+![MCP 아키텍처](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 - **MCP 호스트:** 외부 데이터 또는 도구에 액세스해야 하는 애플리케이션(예: Claude Desktop 또는 AI 기반 IDE)
 - **MCP 클라이언트:** MCP 서버와의 전용 1:1 연결을 유지합니다
@@ -53,7 +53,7 @@ MCP를 다리로 생각하면 명확해집니다: MCP 자체는 복잡한 논리
 
 **전통적인 API는 각 문마다 별도의 열쇠를 가지고 있는 것과 같습니다. 각 문마다 고유한 열쇠와 규칙이 있습니다**
 
-![왜 전통적인 API 대신 MCP를 사용해야 하는가?](/images/blog/api-own-keys.png)
+![왜 전통적인 API 대신 MCP를 사용해야 하는가?](https://static.claudemcp.com/images/blog/api-own-keys.png)
 
 전통적인 API는 개발자가 각 서비스 또는 데이터 소스에 대해 사용자 정의 통합을 작성해야 하므로 복잡성이 증가하고 오류 및 유지 관리 문제가 발생할 수 있습니다.
 **MCP vs API: 빠른 비교**

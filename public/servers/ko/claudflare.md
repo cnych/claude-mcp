@@ -28,19 +28,19 @@ createTime: 2024-12-01T00:00:00Z
 
 ## 데모
 
-[![Workers, KV, D1과 같은 Cloudflare 속성을 탐색하기 위해 새로 출시된 MCP 서버 시연.](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
+[![Workers, KV, D1과 같은 Cloudflare 속성을 탐색하기 위해 새로 출시된 MCP 서버 시연.](https://static.claudemcp.com/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
 
 ## 설정
 
 1. `npx @cloudflare/mcp-server-cloudflare init` 실행
 
-![예제 콘솔 출력](/images/mcp-cloudflare-init.jpg)
+![예제 콘솔 출력](https://static.claudemcp.com/images/mcp-cloudflare-init.jpg)
 
 2. Claude Desktop를 다시 시작하면 다음과 같은 사용 가능한 도구를 보여주는 작은 🔨 아이콘이 표시됩니다:
 
-![예제 도구 아이콘](/images/mcp-cloudflare-tool-icon.jpg)
+![예제 도구 아이콘](https://static.claudemcp.com/images/mcp-cloudflare-tool-icon.jpg)
 
-![예제 도구 목록](/images/mcp-cloudflare-tool-list.jpg)
+![예제 도구 목록](https://static.claudemcp.com/images/mcp-cloudflare-tool-list.jpg)
 
 ## 기능
 

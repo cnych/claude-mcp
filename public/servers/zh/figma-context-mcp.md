@@ -18,7 +18,7 @@ featured: true
 
 [Figma Context MCP](/servers/figma-context-mcp) 是一个强大的 [MCP Server](/servers)，可以帮助开发者直接从 Figma 设计稿中提取信息，并通过 AI 代理快速实现设计。比如在 Cursor 中可以通过提示词让 AI Agent 访问你的 Figma 设计数据，并生成代码。与直接粘贴屏幕截图相比，它最终的表现结果要好得多。
 
-![Figma Context MCP](/images/figma-context-mcp.png)
+![Figma Context MCP](https://static.claudemcp.com/images/figma-context-mcp.png)
 
 ## 获取 Figma 访问令牌
 
@@ -29,7 +29,7 @@ featured: true
 3. 向下滚动到"个人访问令牌"（`Personal access tokens`）部分，点击"生成新令牌"（`Generate new token`）。
 4. 为令牌输入一个名称（如"Figma MCP"），并确保您拥有 `File content` 和 `Dev resources` 的读取权限。
 
-   ![生成 Figma 访问令牌](/images/figma-context-mcp-generate-token.png)
+   ![生成 Figma 访问令牌](https://static.claudemcp.com/images/figma-context-mcp-generate-token.png)
 
 5. 点击"生成令牌"（`Generate token`）按钮。
 
@@ -92,7 +92,7 @@ featured: true
 
 此外我们也可以在项目根目录下面创建 `.cursor/mcp.json` 文件，然后添加上面的配置，这样该 MCP Server 就只会对当前项目生效。
 
-![Cursor MCP 配置](/images/figma-context-mcp-cursor-settings.png)
+![Cursor MCP 配置](https://static.claudemcp.com/images/figma-context-mcp-cursor-settings.png)
 
 到这里我们就完成了该 MCP server 的配置。
 
@@ -108,7 +108,7 @@ MCP 服务器会将从 Figma API 接收到的数据压缩近 90%，尽管如此�
 
 具体操作方法：**右键点击您想要实现的框架或组，然后选择"复制/粘贴为"（`Copy/Paste as`），然后选择"复制所选内容的链接"（`Copy link to selection`）。**
 
-![复制 Figma 框架或组的链接](/images/figma-context-mcp-copy-figma-link.png)
+![复制 Figma 框架或组的链接](https://static.claudemcp.com/images/figma-context-mcp-copy-figma-link.png)
 
 ### 将链接粘贴到编辑器中
 
@@ -116,15 +116,15 @@ MCP 服务器会将从 Figma API 接收到的数据压缩近 90%，尽管如此�
 
 比如我们在 Cursor 里面输入 `Implement this Figma frame for me. https://www.figma.com/design/....`，注意我们将前面获取的 Figma 链接直接粘贴到 Cursor 输入框里面的时候，他会自动将其识别为一个链接，这样会导致 Cursor 去直接获取这个链接的页面内容，这显然不是我们期望的，我们只是希望将这个链接通过 MCP 服务器来获取 Figma 设计稿的数据，所以这里我们需要点击下这个 URL 链接地址，然后点击 `Unlink` 按钮，这样 Cursor 就会将这个链接识别为一个普通的文本。
 
-![将链接粘贴到编辑器中](/images/figma-context-mcp-paste-link.png)
+![将链接粘贴到编辑器中](https://static.claudemcp.com/images/figma-context-mcp-paste-link.png)
 
 然后回车后 Cursor 经过语意分析过后就会去调用 MCP 服务器的 `get_figma_data` 工具来获取对应的设计稿数据，如果有图片的话则会调用 `download_figma_images` 工具来下载图片，最后再根据获取的这些数据通过 Agent 生成对应的代码。
 
-![调用 Figma MCP 工具](/images/figma-context-mcp-call-tool.png)
+![调用 Figma MCP 工具](https://static.claudemcp.com/images/figma-context-mcp-call-tool.png)
 
 最终生成的页面效果如下所示：
 
-![最终生成的页面效果](/images/figma-context-mcp-final-result.png)
+![最终生成的页面效果](https://static.claudemcp.com/images/figma-context-mcp-final-result.png)
 
 和我们的设计图已经非常类似了，当然还有一些细节需要我们自己去调整了。
 

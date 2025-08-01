@@ -3,11 +3,11 @@ title: LangChain의 MCP 어댑터
 excerpt: LangChain MCP 어댑터는 MCP 도구를 LangChain 및 LangGraph와 호환되게 해주는 경량 어댑터입니다.
 date: 2025-04-14
 slug: langchain-mcp-adapters
-coverImage: /images/blog/langchain-mcp-adapters.png
+coverImage: https://static.claudemcp.com/images/blog/langchain-mcp-adapters.png
 featured: true
 author:
   name: 양밍
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 

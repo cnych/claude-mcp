@@ -21,7 +21,7 @@ createTime: 2023-11-28
 
 Claude 데스크톱 애플리케이션은 Anthropic 회사에서 출시한 공식 클라이언트 소프트웨어로, 모델 컨텍스트 프로토콜(MCP)을 통해 Claude AI 모델과 원활하게 상호작용합니다. 강력한 AI 어시스턴트 도구로서, 네이티브 데스크톱 경험을 제공할 뿐만 아니라 다양한 고급 기능을 지원하여 사용자가 일상 업무에서 효율성을 높일 수 있도록 도와줍니다.
 
-![Claude Desktop UI](/images/claude-desktop-ui.webp)
+![Claude Desktop UI](https://static.claudemcp.com/images/claude-desktop-ui.webp)
 
 ## 핵심 기능 상세 설명
 

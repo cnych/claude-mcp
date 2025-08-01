@@ -22,7 +22,7 @@ createTime: 2023-02-01
 
 Continue Dev is a revolutionary open-source project aimed at fundamentally transforming developers' programming experience through AI technology. As a powerful IDE extension tool, Continue seamlessly integrates artificial intelligence into the development environment, significantly improving coding efficiency and reducing development complexity. This article explores Continue Dev's core features, architectural design, use cases, and its tight integration with the Model Control Protocol (MCP).
 
-![continue dev plugin ui](/images/continuedev-ui.png)
+![continue dev plugin ui](https://static.claudemcp.com/images/continuedev-ui.png)
 
 ## Core Features and Capabilities
 
@@ -64,7 +64,7 @@ Continue possesses powerful code comprehension capabilities:
 
 Continue Dev is one of the earliest development tools to support the Model Control Protocol (MCP), an integration that brings developers powerful functional extensions and flexibility.
 
-![continue dev x mcp](/images/continue-x-mcp.png)
+![continue dev x mcp](https://static.claudemcp.com/images/continue-x-mcp.png)
 
 ## Technical Architecture
 

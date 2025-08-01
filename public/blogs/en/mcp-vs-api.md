@@ -3,11 +3,11 @@ title: What is MCP? How does it compare to API?
 excerpt: In this article, we will detail the definition, architecture, working principles, advantages and disadvantages of MCP, and compare it with traditional APIs.
 date: 2025-04-06
 slug: mcp-vs-api
-coverImage: /images/blog/what-is-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp.png
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 
@@ -31,7 +31,7 @@ It starts to look like a new standard for AI-tool interaction.
 
 MCP follows a simple client-server architecture:
 
-![MCP Architecture](/images/blog/what-is-mcp.png)
+![MCP Architecture](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 Image source: `https://norahsakal.com/blog/mcp-vs-api-model-context-protocol-explained/`
 
@@ -55,7 +55,7 @@ Traditionally, connecting AI systems to external tools involves integrating mult
 
 **Traditional APIs are like having separate keys for each door, each door has its own key and rules**
 
-![Why use MCP instead of traditional APIs?](/images/blog/api-own-keys.png)
+![Why use MCP instead of traditional APIs?](https://static.claudemcp.com/images/blog/api-own-keys.png)
 
 Traditional APIs require developers to write custom integrations for each service or data source, which not only increases complexity but also leads to errors and maintenance issues.
 

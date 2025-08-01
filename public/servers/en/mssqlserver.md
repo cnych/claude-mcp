@@ -1,29 +1,26 @@
-# MCPQL - SQL Server MCP Server
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)](https://www.typescriptlang.org/)
-[![npm version](https://img.shields.io/npm/v/mcpql.svg)](https://www.npmjs.com/package/mcpql)
-[![Downloads](https://img.shields.io/npm/dm/mcpql.svg)](https://www.npmjs.com/package/mcpql)
-[![GitHub stars](https://img.shields.io/github/stars/hendrickcastro/MCPQL.svg)](https://github.com/hendrickcastro/MCPQL/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/hendrickcastro/MCPQL.svg)](https://github.com/hendrickcastro/MCPQL/issues)
-[![GitHub forks](https://img.shields.io/github/forks/hendrickcastro/MCPQL.svg)](https://github.com/hendrickcastro/MCPQL/network)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/hendrickcastro/MCPQL/ci.yml?branch=main)](https://github.com/hendrickcastro/MCPQL/actions)
-[![Coverage Status](https://img.shields.io/codecov/c/github/hendrickcastro/MCPQL)](https://codecov.io/gh/hendrickcastro/MCPQL)
-[![SQL Server](https://img.shields.io/badge/SQL%20Server-2016%2B-red)](https://www.microsoft.com/sql-server)
-[![Azure SQL](https://img.shields.io/badge/Azure%20SQL-Supported-blue)](https://azure.microsoft.com/services/sql-database/)
-[![MCP Protocol](https://img.shields.io/badge/MCP-Protocol-purple)](https://github.com/modelcontextprotocol/sdk)
-[![Claude Desktop](https://img.shields.io/badge/Claude-Desktop-orange)](https://claude.ai/desktop)
-[![Cursor IDE](https://img.shields.io/badge/Cursor-IDE-green)](https://cursor.sh/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://hub.docker.com/r/hendrickcastro/mcpql)
-[![Security](https://img.shields.io/badge/Security-Audited-green)](https://github.com/hendrickcastro/MCPQL/security)
-[![Maintenance](https://img.shields.io/badge/Maintained-Yes-brightgreen)](https://github.com/hendrickcastro/MCPQL/graphs/commit-activity)
+---
+name: MCPQL - SQL Server MCP Server
+digest: A comprehensive Model Context Protocol server for SQL Server database operations. This server provides 10 powerful tools for database analysis, object discovery, and data manipulation through the MCP protocol.
+author: hendrickcastro
+repository: https://github.com/hendrickcastro/MCPQL
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - mssql
+  - sql
+  - database
+icon: https://avatars.githubusercontent.com/u/8320893?s=48&v=4
+createTime: 2025-07-10
+---
 
 A comprehensive **Model Context Protocol (MCP)** server for **SQL Server** database operations. This server provides 10 powerful tools for database analysis, object discovery, and data manipulation through the MCP protocol.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 - SQL Server database with appropriate connection credentials
 - MCP-compatible client (like Claude Desktop, Cursor IDE, or any MCP client)
@@ -31,9 +28,11 @@ A comprehensive **Model Context Protocol (MCP)** server for **SQL Server** datab
 ### Installation & Configuration
 
 #### Option 1: Using npx from GitHub (Recommended)
+
 No installation needed! Just configure your MCP client:
 
 **For Claude Desktop (`claude_desktop_config.json`):**
+
 ```json
 {
   "mcpServers": {
@@ -56,6 +55,7 @@ No installation needed! Just configure your MCP client:
 ```
 
 **For Cursor IDE:**
+
 ```json
 {
   "mcpServers": {
@@ -80,6 +80,7 @@ No installation needed! Just configure your MCP client:
 #### Option 2: Local Development Installation
 
 1. **Clone and setup:**
+
 ```bash
 git clone https://github.com/hendrickcastro/MCPQL.git
 cd MCPQL
@@ -88,7 +89,8 @@ npm run build
 ```
 
 2. **Configure database connection:**
-Create a `.env` file with your database credentials:
+   Create a `.env` file with your database credentials:
+
 ```bash
 # Basic SQL Server connection
 DB_AUTHENTICATION_TYPE=sql
@@ -102,6 +104,7 @@ DB_TRUST_SERVER_CERTIFICATE=true
 ```
 
 3. **Configure MCP client with local path:**
+
 ```json
 {
   "mcpServers": {
@@ -118,102 +121,116 @@ DB_TRUST_SERVER_CERTIFICATE=true
 MCPQL provides 10 comprehensive tools for SQL Server database operations:
 
 ### 1. 🏗️ **Table Analysis** - `mcp_table_analysis`
+
 Complete table structure analysis including columns, keys, indexes, and constraints.
 
 ### 2. 📋 **Stored Procedure Analysis** - `mcp_sp_structure`
+
 Analyze stored procedure structure including parameters, dependencies, and source code.
 
 ### 3. 👀 **Data Preview** - `mcp_preview_data`
+
 Preview table data with optional filtering and row limits.
 
 ### 4. 📊 **Column Statistics** - `mcp_get_column_stats`
+
 Get comprehensive statistics for a specific column.
 
 ### 5. ⚙️ **Execute Stored Procedure** - `mcp_execute_procedure`
+
 Execute stored procedures with parameters and return results.
 
 ### 6. 🔍 **Execute SQL Query** - `mcp_execute_query`
+
 Execute custom SQL queries with full error handling.
 
 ### 7. ⚡ **Quick Data Analysis** - `mcp_quick_data_analysis`
+
 Quick statistical analysis including row count, column distributions, and top values.
 
 ### 8. 🔎 **Comprehensive Search** - `mcp_search_comprehensive`
+
 Search across database objects by name and definition with configurable criteria.
 
 ### 9. 🔗 **Object Dependencies** - `mcp_get_dependencies`
+
 Get dependencies for database objects (tables, views, stored procedures, etc.).
 
 ### 10. 🎯 **Sample Values** - `mcp_get_sample_values`
+
 Get sample values from a specific column in a table.
 
 ## 📋 Usage Examples
 
 ### Analyzing a Table
+
 ```typescript
 // Get complete table structure
-const analysis = await mcp_table_analysis({ 
-  table_name: "dbo.Users" 
+const analysis = await mcp_table_analysis({
+  table_name: "dbo.Users",
 });
 
 // Get quick data overview
-const overview = await mcp_quick_data_analysis({ 
+const overview = await mcp_quick_data_analysis({
   table_name: "dbo.Users",
-  sample_size: 500
+  sample_size: 500,
 });
 
 // Preview table data with filters
 const data = await mcp_preview_data({
   table_name: "dbo.Users",
-  filters: { "Status": "Active", "Department": "IT" },
-  limit: 25
+  filters: { Status: "Active", Department: "IT" },
+  limit: 25,
 });
 ```
 
 ### Finding Database Objects
+
 ```typescript
 // Find all objects containing "User"
-const objects = await mcp_search_comprehensive({ 
+const objects = await mcp_search_comprehensive({
   pattern: "User",
   search_in_names: true,
-  search_in_definitions: false
+  search_in_definitions: false,
 });
 
 // Find procedures that query a specific table
-const procedures = await mcp_search_comprehensive({ 
+const procedures = await mcp_search_comprehensive({
   pattern: "FROM Users",
   object_types: ["PROCEDURE"],
-  search_in_definitions: true
+  search_in_definitions: true,
 });
 ```
 
 ### Analyzing Stored Procedures
+
 ```typescript
 // Get complete stored procedure analysis
-const spAnalysis = await mcp_sp_structure({ 
-  sp_name: "dbo.usp_GetUserData" 
+const spAnalysis = await mcp_sp_structure({
+  sp_name: "dbo.usp_GetUserData",
 });
 
 // Execute a stored procedure
 const result = await mcp_execute_procedure({
   sp_name: "dbo.usp_GetUserById",
-  params: { "UserId": 123, "IncludeDetails": true }
+  params: { UserId: 123, IncludeDetails: true },
 });
 ```
 
 ### Data Analysis
+
 ```typescript
 // Get column statistics
 const stats = await mcp_get_column_stats({
   table_name: "dbo.Users",
-  column_name: "Age"
+  column_name: "Age",
 });
 
 // Get sample values from a column
 const samples = await mcp_get_sample_values({
   table_name: "dbo.Users",
   column_name: "Department",
-  limit: 15
+  limit: 15,
 });
 ```
 
@@ -224,53 +241,55 @@ MCPQL supports multiple SQL Server connection types with comprehensive configura
 ### 🔐 Authentication Types
 
 Set `DB_AUTHENTICATION_TYPE` to one of:
+
 - `sql` - SQL Server Authentication (default)
 - `windows` - Windows Authentication
 - `azure-ad` - Azure Active Directory Authentication
 
 ### 📋 Complete Environment Variables
 
-| Variable | Description | Default | Required For |
-|----------|-------------|---------|--------------|
-| **Basic Connection** |
-| `DB_AUTHENTICATION_TYPE` | Authentication type (sql/windows/azure-ad) | sql | All |
-| `DB_SERVER` | SQL Server hostname/IP | - | All |
-| `DB_NAME` | Database name | - | All |
-| `DB_PORT` | SQL Server port | 1433 | All |
-| `DB_TIMEOUT` | Connection timeout (ms) | 30000 | All |
-| `DB_REQUEST_TIMEOUT` | Request timeout (ms) | 30000 | All |
+| Variable                      | Description                                | Default      | Required For                       |
+| ----------------------------- | ------------------------------------------ | ------------ | ---------------------------------- |
+| **Basic Connection**          |
+| `DB_AUTHENTICATION_TYPE`      | Authentication type (sql/windows/azure-ad) | sql          | All                                |
+| `DB_SERVER`                   | SQL Server hostname/IP                     | -            | All                                |
+| `DB_NAME`                     | Database name                              | -            | All                                |
+| `DB_PORT`                     | SQL Server port                            | 1433         | All                                |
+| `DB_TIMEOUT`                  | Connection timeout (ms)                    | 30000        | All                                |
+| `DB_REQUEST_TIMEOUT`          | Request timeout (ms)                       | 30000        | All                                |
 | **SQL Server Authentication** |
-| `DB_USER` | SQL Server username | - | SQL Auth |
-| `DB_PASSWORD` | SQL Server password | - | SQL Auth |
-| **Windows Authentication** |
-| `DB_DOMAIN` | Windows domain | - | Windows Auth |
-| `DB_USER` | Windows username | current user | Windows Auth |
-| `DB_PASSWORD` | Windows password | - | Windows Auth |
-| **Azure AD Authentication** |
-| `DB_USER` | Azure AD username | - | Azure AD (Password) |
-| `DB_PASSWORD` | Azure AD password | - | Azure AD (Password) |
-| `DB_AZURE_CLIENT_ID` | Azure AD App Client ID | - | Azure AD (Service Principal) |
-| `DB_AZURE_CLIENT_SECRET` | Azure AD App Client Secret | - | Azure AD (Service Principal) |
-| `DB_AZURE_TENANT_ID` | Azure AD Tenant ID | - | Azure AD (Service Principal) |
-| **SQL Server Express** |
-| `DB_INSTANCE_NAME` | Named instance (e.g., SQLEXPRESS) | - | Express instances |
-| **Security Settings** |
-| `DB_ENCRYPT` | Enable encryption | false | All |
-| `DB_TRUST_SERVER_CERTIFICATE` | Trust server certificate | false | All |
-| `DB_ENABLE_ARITH_ABORT` | Enable arithmetic abort | true | All |
-| `DB_USE_UTC` | Use UTC for dates | true | All |
-| **Connection Pool** |
-| `DB_POOL_MAX` | Maximum connections | 10 | All |
-| `DB_POOL_MIN` | Minimum connections | 0 | All |
-| `DB_POOL_IDLE_TIMEOUT` | Idle timeout (ms) | 30000 | All |
-| **Advanced Settings** |
-| `DB_CANCEL_TIMEOUT` | Cancel timeout (ms) | 5000 | All |
-| `DB_PACKET_SIZE` | Packet size (bytes) | 4096 | All |
-| `DB_CONNECTION_STRING` | Complete connection string | - | Alternative to individual settings |
+| `DB_USER`                     | SQL Server username                        | -            | SQL Auth                           |
+| `DB_PASSWORD`                 | SQL Server password                        | -            | SQL Auth                           |
+| **Windows Authentication**    |
+| `DB_DOMAIN`                   | Windows domain                             | -            | Windows Auth                       |
+| `DB_USER`                     | Windows username                           | current user | Windows Auth                       |
+| `DB_PASSWORD`                 | Windows password                           | -            | Windows Auth                       |
+| **Azure AD Authentication**   |
+| `DB_USER`                     | Azure AD username                          | -            | Azure AD (Password)                |
+| `DB_PASSWORD`                 | Azure AD password                          | -            | Azure AD (Password)                |
+| `DB_AZURE_CLIENT_ID`          | Azure AD App Client ID                     | -            | Azure AD (Service Principal)       |
+| `DB_AZURE_CLIENT_SECRET`      | Azure AD App Client Secret                 | -            | Azure AD (Service Principal)       |
+| `DB_AZURE_TENANT_ID`          | Azure AD Tenant ID                         | -            | Azure AD (Service Principal)       |
+| **SQL Server Express**        |
+| `DB_INSTANCE_NAME`            | Named instance (e.g., SQLEXPRESS)          | -            | Express instances                  |
+| **Security Settings**         |
+| `DB_ENCRYPT`                  | Enable encryption                          | false        | All                                |
+| `DB_TRUST_SERVER_CERTIFICATE` | Trust server certificate                   | false        | All                                |
+| `DB_ENABLE_ARITH_ABORT`       | Enable arithmetic abort                    | true         | All                                |
+| `DB_USE_UTC`                  | Use UTC for dates                          | true         | All                                |
+| **Connection Pool**           |
+| `DB_POOL_MAX`                 | Maximum connections                        | 10           | All                                |
+| `DB_POOL_MIN`                 | Minimum connections                        | 0            | All                                |
+| `DB_POOL_IDLE_TIMEOUT`        | Idle timeout (ms)                          | 30000        | All                                |
+| **Advanced Settings**         |
+| `DB_CANCEL_TIMEOUT`           | Cancel timeout (ms)                        | 5000         | All                                |
+| `DB_PACKET_SIZE`              | Packet size (bytes)                        | 4096         | All                                |
+| `DB_CONNECTION_STRING`        | Complete connection string                 | -            | Alternative to individual settings |
 
 ## 🔧 Connection Configuration Examples
 
 ### 1. 🏠 SQL Server Local (SQL Authentication)
+
 ```json
 {
   "mcpServers": {
@@ -293,6 +312,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ```
 
 ### 2. 🏢 SQL Server Express (Named Instance)
+
 ```json
 {
   "mcpServers": {
@@ -315,6 +335,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ```
 
 ### 3. 🪟 Windows Authentication
+
 ```json
 {
   "mcpServers": {
@@ -337,6 +358,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ```
 
 ### 4. ☁️ Azure SQL Database (Azure AD Password)
+
 ```json
 {
   "mcpServers": {
@@ -359,6 +381,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ```
 
 ### 5. 🔐 Azure SQL Database (Service Principal)
+
 ```json
 {
   "mcpServers": {
@@ -382,6 +405,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ```
 
 ### 6. 🔗 Using Connection String
+
 ```json
 {
   "mcpServers": {
@@ -399,18 +423,21 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ## 🚨 Troubleshooting Common Issues
 
 ### Connection Issues
+
 - **"Login failed"**: Check username/password. For Windows auth, ensure `DB_AUTHENTICATION_TYPE=windows`
 - **"Server was not found"**: Verify server name and port. For SQL Express, add `DB_INSTANCE_NAME`
 - **"Certificate" errors**: For local development, set `DB_TRUST_SERVER_CERTIFICATE=true`
 - **Timeout errors**: Increase `DB_TIMEOUT` or check network connectivity
 
 ### SQL Server Express Setup
+
 1. Enable TCP/IP protocol in SQL Server Configuration Manager
 2. Set a static port (usually 1433) or use dynamic port with Browser Service
 3. Configure Windows Firewall to allow SQL Server traffic
 4. Use `DB_INSTANCE_NAME=SQLEXPRESS` for default Express installations
 
 ### Azure SQL Database Setup
+
 1. Create server firewall rules to allow client IP
 2. Use format: `server.database.windows.net` for server name
 3. Always set `DB_ENCRYPT=true` and `DB_TRUST_SERVER_CERTIFICATE=false`
@@ -419,6 +446,7 @@ Set `DB_AUTHENTICATION_TYPE` to one of:
 ## 🧪 Testing
 
 Run the comprehensive test suite:
+
 ```bash
 npm test
 ```
@@ -428,6 +456,7 @@ The test suite includes comprehensive testing of all 10 tools with real database
 ## 🏗️ Architecture
 
 ### Project Structure
+
 ```
 MCPQL/
 ├── src/
@@ -448,6 +477,7 @@ MCPQL/
 ```
 
 ### Key Features
+
 - ⚡ **Connection Pooling**: Efficient database connection management
 - 🛡️ **Robust Error Handling**: Comprehensive error handling and validation
 - 📋 **Rich Metadata**: Detailed results with comprehensive database information

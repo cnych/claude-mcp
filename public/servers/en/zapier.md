@@ -10,14 +10,14 @@ capabilities:
 tags:
   - zapier
   - automation
-icon: /images/zapier-icon.png
+icon: https://static.claudemcp.com/images/zapier-icon.png
 createTime: 2025-04-06
 featured: true
 ---
 
 [Zapier](https://zapier.com) is a cloud-based automation tool that allows users to connect their favorite applications through "Zaps" (automated workflows). Each Zap consists of a trigger (an event that initiates the workflow) and one or more actions (tasks to be executed). It supports over 7,000 applications and more than 30,000 actions, making it ideal for integrating various services and streamlining business processes.
 
-![Zapier](/images/zapier-mcp.jpg)
+![Zapier](https://static.claudemcp.com/images/zapier-mcp.jpg)
 
 ## What is Zapier MCP?
 
@@ -77,7 +77,7 @@ To generate your Zapier MCP endpoint, follow these steps:
 1. Log in to your Zapier account.
 2. Navigate to the settings page: [https://actions.zapier.com/settings/mcp/](https://actions.zapier.com/settings/mcp/)
 
-   ![Zapier MCP Settings](/images/zapier-mcp-settings.jpg)
+   ![Zapier MCP Settings](https://static.claudemcp.com/images/zapier-mcp-settings.jpg)
 
    Click the `Generate URL` button to create your Zapier MCP endpoint. A URL like `https://actions.zapier.com/mcp/sk-ak-xxxxx/sse` will be generated—this is your Zapier MCP endpoint.
 
@@ -85,11 +85,11 @@ To generate your Zapier MCP endpoint, follow these steps:
 
 On the same page where your Zapier MCP endpoint was generated, below the URL, you'll find an `Edit MCP Actions` button. Click it to access the [Actions Configuration Page](https://actions.zapier.com/mcp/actions/). Here, you can view all available actions and enable those you wish to use.
 
-![Zapier MCP Actions](/images/zapier-mcp-actions.jpg)
+![Zapier MCP Actions](https://static.claudemcp.com/images/zapier-mcp-actions.jpg)
 
 You can also click the `Add a new Action` button to create a new action.
 
-![Zapier MCP Actions](/images/zapier-add-action.jpg)
+![Zapier MCP Actions](https://static.claudemcp.com/images/zapier-add-action.jpg)
 
 ### Step 3: Connect Your AI Assistant
 
@@ -111,17 +111,17 @@ For project-specific use, create a `.cursor/mcp.json` file in your project's roo
 
 Once configured, the Zapier tab will appear in Cursor MCP. Ensure it's enabled to view the list of tools provided by Zapier.
 
-![Zapier MCP Connect](/images/zapier-cursor-settings.png)
+![Zapier MCP Connect](https://static.claudemcp.com/images/zapier-cursor-settings.png)
 
 ### Step 4: Test and Monitor
 
 Now, you can test your Zapier MCP integration in Cursor. For instance, you can summarize an article and send it to a specified email address.
 
-![Zapier MCP Test](/images/zapier-test.png)
+![Zapier MCP Test](https://static.claudemcp.com/images/zapier-test.png)
 
 When this task is complete, you will receive an email from Zapier containing the summary of the article you tested.
 
-![Zapier MCP Test Result](/images/zapier-result.png)
+![Zapier MCP Test Result](https://static.claudemcp.com/images/zapier-result.png)
 
 ## Conclusion
 

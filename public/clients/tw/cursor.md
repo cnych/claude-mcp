@@ -17,7 +17,7 @@ createTime: 2023-01-01
 
 # Cursor AI IDE：革命性的智能程式設計工具
 
-![Cursor AI IDE](/images/cursor-ui.webp)
+![Cursor AI IDE](https://static.claudemcp.com/images/cursor-ui.webp)
 
 ## 概述
 

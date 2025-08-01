@@ -19,7 +19,7 @@ featured: true
 
 OpenMemory 是由 Mem0 驱动的本地记忆基础设施，让您的记忆数据能在任意 AI 应用间流转。它提供与您相伴的统一记忆层，使智能代理和助手能在跨应用场景中记住重要信息。
 
-![OpenMemory MCP](/images/openmemory-mcp.png)
+![OpenMemory MCP](https://static.claudemcp.com/images/openmemory-mcp.png)
 
 今日我们发布首个核心组件：[OpenMemory MCP 服务器](/zh/servers/openmemory-mcp)——这是一款内置可视化界面的私有化本地优先记忆层，兼容所有 MCP 协议客户端。
 

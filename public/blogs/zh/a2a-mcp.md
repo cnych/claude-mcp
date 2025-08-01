@@ -3,11 +3,11 @@ title: A2A 协议与 MCP 协议：智能代理生态系统的双轮驱动
 excerpt: A2A 和 MCP 两种协议正在塑造智能体系统的未来。本文将探讨 A2A 协议与 MCP 协议的特点、区别及协同作用，帮助开发者和产品设计师更好地理解这一新兴技术领域。
 date: 2025-04-11
 slug: a2a-mcp
-coverImage: /images/blog/a2a-vs-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/a2a-vs-mcp.png
 featured: true
 author:
   name: 阳明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技术
 ---
 

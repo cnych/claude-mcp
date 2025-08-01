@@ -10,14 +10,14 @@ capabilities:
 tags:
   - zapier
   - 自動化
-icon: /images/zapier-icon.png
+icon: https://static.claudemcp.com/images/zapier-icon.png
 createTime: 2025-04-06
 featured: true
 ---
 
 [Zapier](https://zapier.com) 是一個基於雲端的自動化工具，允許使用者透過「Zap」（自動化工作流程）串接喜愛的應用程式。每個 Zap 包含一個觸發器（啟動工作流程的事件）與一個或多個動作（執行的任務）。它支援超過 7,000 個應用程式與 30,000 多種 actions，適合整合各類服務，簡化業務流程。
 
-![Zapier](/images/zapier-mcp.jpg)
+![Zapier](https://static.claudemcp.com/images/zapier-mcp.jpg)
 
 ## 什麼是 Zapier MCP？
 
@@ -75,7 +75,7 @@ Zapier MCP 的整體資料流回應流程如下所示：
 1. 登入你的 Zapier 帳戶。
 2. 導航至設定頁面：[https://actions.zapier.com/settings/mcp/](https://actions.zapier.com/settings/mcp/)
 
-   ![Zapier MCP Settings](/images/zapier-mcp-settings.jpg)
+   ![Zapier MCP Settings](https://static.claudemcp.com/images/zapier-mcp-settings.jpg)
 
    點擊 `Generate URL` 按鈕即可產生你的 Zapier MCP 端點。會產生一個類似 `https://actions.zapier.com/mcp/sk-ak-xxxxx/sse` 的 URL，這就是你的 Zapier MCP 端點。
 
@@ -83,11 +83,11 @@ Zapier MCP 的整體資料流回應流程如下所示：
 
 在上面產生的 Zapier MCP 端點頁面，URL 位址下方有一個 `Edit MCP Actions` 按鈕，點擊即可進入 [Actions 設定頁面](https://actions.zapier.com/mcp/actions/)。在 Actions 設定頁面，你可以看到所有可用的 Actions，選擇你想要啟用的 Action。
 
-![Zapier MCP Actions](/images/zapier-mcp-actions.jpg)
+![Zapier MCP Actions](https://static.claudemcp.com/images/zapier-mcp-actions.jpg)
 
 也可以點擊 `Add a new Action` 按鈕新增 Action
 
-![Zapier MCP Actions](/images/zapier-add-action.jpg)
+![Zapier MCP Actions](https://static.claudemcp.com/images/zapier-add-action.jpg)
 
 ### 第三步：連接你的 AI 助手
 
@@ -109,17 +109,17 @@ Zapier MCP 的整體資料流回應流程如下所示：
 
 設定完成後，在 Cursor MCP 中就可以看到 Zapier 標籤頁，記得要開啟，然後我們就可以看到 Zapier 提供的工具清單了。
 
-![Zapier MCP Connect](/images/zapier-cursor-settings.png)
+![Zapier MCP Connect](https://static.claudemcp.com/images/zapier-cursor-settings.png)
 
 ### 第四步：測試與監控
 
 現在我們就可以在 Cursor 中去測試我們的 Zapier MCP 了，例如我們這裡讓其將一篇文章的內容進行總結並傳送到指定的信箱。
 
-![Zapier MCP Test](/images/zapier-test.png)
+![Zapier MCP Test](https://static.claudemcp.com/images/zapier-test.png)
 
 這時候我們的信箱就會收到一封來自 Zapier 的郵件，內容就是我們剛剛測試的那篇文章的總結。
 
-![Zapier MCP Test Result](/images/zapier-result.png)
+![Zapier MCP Test Result](https://static.claudemcp.com/images/zapier-result.png)
 
 ## 總結
 

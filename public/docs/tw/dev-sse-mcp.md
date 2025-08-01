@@ -24,7 +24,7 @@ order: 4
 - 即時更新庫存水平。
 - 通過自然語言查詢提供訂單交易的臨時分析。
 
-![](/images/shop-ai-with-mcp.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp.png)
 
 > 這裡我們使用 Anthropic Claude 3.5 Sonnet 模型作為 MCP 服務的 AI 助手，當然也可以選擇其他支援工具調用的模型。
 
@@ -623,7 +623,7 @@ apiRouter.post("/chat", async (req, res) => {
 
 下面是命令行客戶端的使用示例：
 
-![](/images/shop-ai-with-mcp-cli.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cli.png)
 
 當然我們也可以在 Cursor 中來使用，創建 `.cursor/mcp.json` 文件，然後添加如下內容：
 
@@ -639,13 +639,13 @@ apiRouter.post("/chat", async (req, res) => {
 
 然後在 Cursor 的設置頁面我們就可以看到這個 MCP 服務，然後就可以在 Cursor 中來使用這個 MCP 服務了。
 
-![](/images/shop-ai-with-mcp-cursor.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cursor.png)
 
 下面是我們開發的 Web 客戶端的使用示例：
 
-![](/images/shop-ai-with-mcp-web1.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web1.png)
 
-![](/images/shop-ai-with-mcp-web2.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web2.png)
 
 ## 調試
 
@@ -660,7 +660,7 @@ Starting MCP inspector...
 
 然後在瀏覽器中打開上面地址即可，選擇 SSE，配置上我們的 SSE 地址即可測試：
 
-![](/images/shop-ai-with-mcp-inspector.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-inspector.png)
 
 ## 總結
 

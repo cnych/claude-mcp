@@ -3,15 +3,15 @@ title: 10 awesome MCP Servers
 excerpt: MCP (Model Context Protocol) servers seamlessly connect AI models with real-world data and tools. Whether you're a developer, AI enthusiast, or enterprise user looking to boost automation efficiency, these 10 MCP Servers are worth exploring!
 date: 2025-04-28
 slug: 10-awesome-mcp-servers
-coverImage: /images/blog/mcp-servers-10awesome.jpg
+coverImage: https://static.claudemcp.com/images/blog/mcp-servers-10awesome.jpg
 featured: true
 author:
-  name: 阳明
-  avatar: /images/avatars/yangming.png
+  name: Yangming
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: Technology
 ---
 
-[MCP (Model Context Protocol)](/en) servers enable seamless integration of AI models with various tools and platforms, significantly expanding AI's practical applications. Below are 10 representative MCP Servers we've carefully selected, covering fields such as design, automation, SEO, payments, and content management.
+[MCP (Model Context Protocol)](https://www.claudemcp.com) servers enable seamless integration of AI models with various tools and platforms, significantly expanding AI's practical applications. Below are 10 representative MCP Servers we've carefully selected, covering fields such as design, automation, SEO, payments, and content management.
 
 ---
 
@@ -23,7 +23,7 @@ The SEO MCP Server is designed for SEO optimization scenarios, allowing AI to au
 - Generates SEO optimization recommendation reports
 - Typical use cases: Website SEO audits, content optimization, competitor analysis
 
-* For details, see [SEO MCP Server](/en/servers/seo-mcp)
+* For details, see [SEO MCP Server](https://www.claudemcp.com/servers/seo-mcp)
 * Repository: [https://github.com/cnych/seo-mcp](https://github.com/cnych/seo-mcp)
 
 ## 2. Context7 MCP Server
@@ -52,7 +52,7 @@ Context7 feeds the latest code examples and documentation directly into the LLM'
 - 2️⃣ Add the `use context7` directive
 - 3️⃣ Get runnable code answers
 
-* For details, see [Context7 MCP Server](/en/servers/context7)
+* For details, see [Context7 MCP Server](https://www.claudemcp.com/servers/context7)
 * Repository: [https://github.com/upstash/context7](https://github.com/upstash/context7)
 
 ---
@@ -65,7 +65,7 @@ The Figma Context MCP Server enables AI to interact directly with Figma, automat
 - Automatically generates design documentation and batch-exports assets
 - Typical use cases: Design automation, UI asset management, design review assistance
 
-* For details, see [Figma Context MCP Server](/en/servers/figma-context-mcp)
+* For details, see [Figma Context MCP Server](https://www.claudemcp.com/servers/figma-context-mcp)
 * Repository: [https://github.com/glips/figma-context-mcp](https://github.com/glips/figma-context-mcp)
 
 ---
@@ -78,7 +78,7 @@ The Blender MCP Server integrates AI with the 3D modeling tool Blender, enabling
 - Automatically generates animation scripts
 - Typical use cases: Batch 3D asset generation, animation automation, virtual scene setup
 
-* For details, see [Blender MCP Server](/en/servers/blender-mcp)
+* For details, see [Blender MCP Server](https://www.claudemcp.com/servers/blender-mcp)
 * Repository: [https://github.com/ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp)
 
 ---
@@ -91,7 +91,7 @@ The Windows Control MCP Server empowers AI to remotely operate Windows systems, 
 - Simulates mouse clicks and keyboard input
 - Enables clipboard operations and screen capture
 
-* For details, see [Windows Control MCP Server](/en/servers/MCPControl)
+* For details, see [Windows Control MCP Server](https://www.claudemcp.com/servers/MCPControl)
 * Repository: [https://github.com/Cheffromspace/MCPControl](https://github.com/Cheffromspace/MCPControl)
 
 ---
@@ -104,7 +104,7 @@ The Browser-use MCP Server automates browser operations for tasks like web scrap
 - Automates logins, data submissions, and content scraping
 - Typical use cases: Automated testing, webpage monitoring, information collection
 
-* For details, see [Browser-use MCP Server](/en/servers/browser-use-mcp-server)
+* For details, see [Browser-use MCP Server](https://www.claudemcp.com/servers/browser-use-mcp-server)
 * Repository: [https://github.com/co-browser/browser-use-mcp-server](https://github.com/co-browser/browser-use-mcp-server)
 
 ---
@@ -117,7 +117,7 @@ The Zapier MCP Server integrates AI with the Zapier platform to trigger and mana
 - Connects with hundreds of SaaS tools
 - Typical use cases: Automated emails, calendar syncs, data synchronization
 
-* For details, see [Zapier MCP Server](/en/servers/zapier)
+* For details, see [Zapier MCP Server](https://www.claudemcp.com/servers/zapier)
 * Project homepage: [https://zapier.com/mcp](https://zapier.com/mcp)
 
 ---
@@ -130,7 +130,7 @@ The MarkItDown MCP Server is designed for content creation and document manageme
 - Enables batch import/export of documents
 - Typical use cases: Automated blog publishing, team knowledge base management
 
-* For details, see [MarkItDown MCP Server](/en/servers/markitdown-mcp)
+* For details, see [MarkItDown MCP Server](https://www.claudemcp.com/servers/markitdown-mcp)
 * Repository: [https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp](https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp)
 
 ---
@@ -143,7 +143,7 @@ The Alipay MCP Server enables AI to interact with the Alipay platform for automa
 - Seamlessly integrates with business systems
 - Typical use cases: Automated collections, financial reconciliation, smart payment assistants
 
-* For details, see [Alipay MCP Server](/en/servers/mcp-server-alipay)
+* For details, see [Alipay MCP Server](https://www.claudemcp.com/servers/mcp-server-alipay)
 
 ---
 
@@ -155,7 +155,7 @@ The Notion MCP Server automates the management of tasks, notes, and databases in
 - Automatically organizes notes and generates daily reports
 - Typical use cases: Personal GTD, team collaboration, knowledge management
 
-* For details, see [Notion MCP Server](/en/servers/notion-mcp-server)
+* For details, see [Notion MCP Server](https://www.claudemcp.com/servers/notion-mcp-server)
 * Repository: [https://github.com/makenotion/notion-mcp-server](https://github.com/makenotion/notion-mcp-server)
 
 ---

@@ -10,7 +10,7 @@ capabilities:
 tags:
   - Alipay
   - Payment
-icon: /images/alipay.png
+icon: https://static.claudemcp.com/images/alipay.png
 createTime: 2025-04-15
 featured: true
 ---

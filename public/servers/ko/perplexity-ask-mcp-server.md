@@ -18,7 +18,7 @@ featured: true
 
 Sonar API를 통합하여 Claude에게 탁월한 실시간 웹 전역 연구 기능을 제공하는 MCP 서버 구현.
 
-![데모](/images/perplexity_demo_screenshot.png)
+![데모](https://static.claudemcp.com/images/perplexity_demo_screenshot.png)
 
 ## 도구
 
@@ -113,11 +113,11 @@ docker build -t mcp/perplexity-ask:latest -f Dockerfile .
 
 Claude 데스크톱이 `perplexity-ask` 서버에서 노출한 두 도구를 인식하는지 확인합니다. 망치 아이콘을 찾아 확인할 수 있습니다:
 
-![Claude 시각적 도구](/images/perplexity-visual-indicator-mcp-tools.png)
+![Claude 시각적 도구](https://static.claudemcp.com/images/perplexity-visual-indicator-mcp-tools.png)
 
 망치 아이콘을 클릭한 후 Filesystem MCP 서버와 함께 제공되는 도구를 볼 수 있어야 합니다:
 
-![사용 가능한 통합](/images/perplexity_available_tools.png)
+![사용 가능한 통합](https://static.claudemcp.com/images/perplexity_available_tools.png)
 
 ### 6단계: 고급 매개변수
 

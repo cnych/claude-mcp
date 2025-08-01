@@ -24,7 +24,7 @@ npx @modelcontextprotocol/create-server streamable-demo
 
 然后进入项目根目录，修改 `package.json` 文件中的 MCP SDK 依赖版本为 `1.10.0`。
 
-![Update MCP SDK](/images/streamable-demo-update-sdk.png)
+![Update MCP SDK](https://static.claudemcp.com/images/streamable-demo-update-sdk.png)
 
 然后接下来安装依赖：
 

@@ -3,11 +3,11 @@ title: 什麼是 MCP？
 excerpt: 本文將詳細解析 MCP（Model Context Protocol，模型上下文協議）的工作原理、核心功能與實際應用，幫助你全面了解這項被譽為「AI 領域 USB 介面」的革命性技術。
 date: 2025-04-16
 slug: what-is-mcp
-coverImage: /images/blog/what-is-mcp-claude.jpg
+coverImage: https://static.claudemcp.com/images/blog/what-is-mcp-claude.jpg
 featured: true
 author:
   name: 陽明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技術
 ---
 
@@ -31,7 +31,7 @@ Anthropic 認為，隨著 AI 助理獲得主要採用，業界在模型功能上
 
 ### 客戶端-伺服器架構
 
-![MCP 架構圖](/images/blog/what-is-mcp.png)
+![MCP 架構圖](https://static.claudemcp.com/images/blog/what-is-mcp.png)
 
 MCP 採用經典的客戶端-伺服器架構：
 
@@ -56,7 +56,7 @@ MCP 的通訊基於 JSON-RPC 2.0，支援請求、回應和通知三種訊息類
 
 ## MCP 的四大核心功能
 
-![MCP 四大核心功能](/images/blog/mcp-core-components.png)
+![MCP 四大核心功能](https://static.claudemcp.com/images/blog/mcp-core-components.png)
 
 MCP 提供了四種核心原語（伺服器端原語），用於規範客戶端和伺服器之間的互動：
 

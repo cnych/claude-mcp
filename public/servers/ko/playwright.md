@@ -22,7 +22,7 @@ createTime: 2025-04-05
 
 `Playwright`는 마이크로소프트가 개발한 오픈 소스 브라우저 자동화 도구로, 테스터와 개발자가 다양한 브라우저와 플랫폼에서 웹 애플리케이션과의 상호작용을 자동화할 수 있게 합니다. 기존 자동화 도구와 달리 `Playwright`는 현대적인 웹 애플리케이션을 위해 설계되어 동적 콘텐츠, 실시간 상호작용, 심지어 네트워크 모니터링까지 지원하여 팀이 애플리케이션을 더 빠르고 효율적으로 테스트할 수 있도록 돕습니다.
 
-![Playwright](/images/playwright.png)
+![Playwright](https://static.claudemcp.com/images/playwright.png)
 
 현대 소프트웨어 개발에서 자동화된 브라우저 테스트는 웹 애플리케이션이 다양한 브라우저와 환경에서 원활하게 실행되도록 보장하는 필수적인 요소가 되었습니다. `Playwright`를 사용해 본 적이 있다면 웹 상호작용 자동화에서의 강력한 능력을 잘 알고 있을 것입니다. 하지만 여러 테스트 스크립트, 디버깅 도구 또는 자동화 서비스가 동일한 `Playwright` 인스턴스와 상호작용해야 할 때 `Playwright` 다중 클라이언트 프로토콜(MCP) 서버가 필요합니다.
 
@@ -120,7 +120,7 @@ Node.js v22.8.0
 
 구성이 완료되면 Cursor 설정 페이지의 MCP 탭에서 Playwright MCP 서버가 성공적으로 구성된 것을 확인할 수 있습니다:
 
-![](/images/cursor-playwright-mcp.png)
+![](https://static.claudemcp.com/images/cursor-playwright-mcp.png)
 
 ### VS Code 설치
 

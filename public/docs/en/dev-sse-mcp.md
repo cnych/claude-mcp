@@ -24,7 +24,7 @@ Next, we'll develop an MCP-based intelligent shopping service assistant using an
 - Real-time inventory level updates.
 - Ad-hoc analysis of order transactions through natural language queries.
 
-![](/images/shop-ai-with-mcp.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp.png)
 
 > Here we use the Anthropic Claude 3.5 Sonnet model as the AI assistant for the MCP service, though other models that support tool calling can also be used.
 
@@ -654,7 +654,7 @@ The core implementation is also relatively simple, and is basically the same as 
 
 Here is an example of using the command line client:
 
-![](/images/shop-ai-with-mcp-cli.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cli.png)
 
 We can also use it in Cursor, create a `.cursor/mcp.json` file, and add the following content:
 
@@ -670,13 +670,13 @@ We can also use it in Cursor, create a `.cursor/mcp.json` file, and add the foll
 
 Then we can see this MCP service in the Cursor settings page, and then we can use this MCP service in Cursor.
 
-![](/images/shop-ai-with-mcp-cursor.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-cursor.png)
 
 Here is an example of using the web client we developed:
 
-![](/images/shop-ai-with-mcp-web1.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web1.png)
 
-![](/images/shop-ai-with-mcp-web2.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-web2.png)
 
 ## Debugging
 
@@ -691,7 +691,7 @@ Starting MCP inspector...
 
 Then o8pen the above address in the browser, select SSE, and configure our SSE address to test:
 
-![](/images/shop-ai-with-mcp-inspector.png)
+![](https://static.claudemcp.com/images/shop-ai-with-mcp-inspector.png)
 
 ## Summary
 

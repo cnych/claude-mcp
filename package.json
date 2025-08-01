@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "get-server": "source scripts/loadEnv.sh && node scripts/generate-server-doc.js",
-    "indexnow": "node scripts/indexNow.js --sitemap https://www.claudemcp.com/sitemap.xml"
+    "indexnow": "node scripts/indexNow.js --sitemap https://www.claudemcp.com/sitemap.xml",
+    "upload-images": "node scripts/upload-to-r2.js",
+    "upload-images-dry": "node scripts/upload-to-r2.js --dry-run"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.787.0",
@@ -26,6 +28,7 @@
     "clsx": "^2.1.1",
     "country-flag-icons": "^1.5.18",
     "critters": "^0.0.23",
+    "dotenv": "^17.2.0",
     "framer-motion": "^11.12.0",
     "fs-extra": "^11.3.0",
     "gray-matter": "^4.0.3",
@@ -35,8 +38,9 @@
     "marked-highlight": "^2.2.1",
     "marked-react": "^3.0.0",
     "mermaid": "^11.4.1",
+    "mime-types": "^3.0.1",
     "negotiator": "^1.0.0",
-    "next": "^15.2.4",
+    "next": "^15.4.1",
     "next-i18next": "^15.4.0",
     "next-intl": "^3.25.3",
     "next-themes": "^0.4.3",

@@ -25,7 +25,7 @@ export function PlaygroundInspectorSection() {
             <div className="overflow-hidden h-full duration-300 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-md hover:scale-105 transition-all group">
               <div className="h-96 overflow-hidden">
                 <div className="w-full h-full relative">
-                  <img src="/images/mcp-playground.jpg" alt={t("playground.title")} className="w-full h-full object-cover" />
+                  <img src="https://static.claudemcp.com/images/mcp-playground.jpg" alt={t("playground.title")} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="p-6">
@@ -56,7 +56,7 @@ export function PlaygroundInspectorSection() {
             <div className="overflow-hidden h-full duration-300 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-md hover:scale-105 transition-all group">
               <div className="h-96 overflow-hidden">
                 <div className="w-full h-full relative">
-                  <img src="/images/mcp-inspector.jpg" alt={t("inspector.title")} className="w-full h-full object-cover" />
+                  <img src="https://static.claudemcp.com/images/mcp-inspector.jpg" alt={t("inspector.title")} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="p-6">

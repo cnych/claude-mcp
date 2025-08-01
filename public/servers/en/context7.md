@@ -78,11 +78,11 @@ Pasting the following configuration into your Cursor `~/.cursor/mcp.json` file i
 ```
 
 Then enable Context7 MCP in Cursor.
-![Context7 MCP in Cursor](/images/context7-cursor-settings.png)
+![Context7 MCP in Cursor](https://static.claudemcp.com/images/context7-cursor-settings.png)
 
 Then, you can use Context7 MCP in Cursor by adding `use context7` to your prompt.
 
-![Use Context7 MCP in Cursor](/images/context7-use-in-cursor.png)
+![Use Context7 MCP in Cursor](https://static.claudemcp.com/images/context7-use-in-cursor.png)
 
 ### Install in Windsurf
 

@@ -3,11 +3,11 @@ title: "A2A 프로토콜과 MCP 프로토콜: 지능형 에이전트 생태계�
 excerpt: A2A와 MCP 두 가지 프로토콜이 에이전트 시스템의 미래를 형성하고 있습니다. 본 글은 A2A 프로토콜과 MCP 프로토콜의 특징, 차이점, 시너지 효과를 탐구하여 개발자와 제품 디자이너가 이 신기술 분야를 더 잘 이해할 수 있도록 돕습니다.
 date: 2025-04-11
 slug: a2a-mcp
-coverImage: /images/blog/a2a-vs-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/a2a-vs-mcp.png
 featured: true
 author:
   name: 양명
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 기술
 ---
 

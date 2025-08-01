@@ -18,7 +18,7 @@ featured: true
 
 OpenMemory 是由 Mem0 驅動的本地記憶體基礎架構，讓您能在任何 AI 應用中攜帶記憶。它提供一個與您相伴的統一記憶層，使代理和助手能跨應用記住重要事項。
 
-![openmemory-demo](/images/openmemory-mcp.png)
+![openmemory-demo](https://static.claudemcp.com/images/openmemory-mcp.png)
 
 今日，我們推出首個基礎組件：[OpenMemory MCP 伺服器](/tw/servers/openmemory-mcp)——一個私密、本地優先的記憶層，內建使用者介面，兼容所有 MCP 客戶端。
 

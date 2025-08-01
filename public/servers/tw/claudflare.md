@@ -28,19 +28,19 @@ createTime: 2024-12-01T00:00:00Z
 
 ## 演示
 
-[![演示新發布的 MCP 伺服器以探索 Cloudflare 屬性，如 Workers、KV 和 D1。](/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
+[![演示新發布的 MCP 伺服器以探索 Cloudflare 屬性，如 Workers、KV 和 D1。](https://static.claudemcp.com/images/mcp-cloudflare-cover.jpg)](https://www.youtube.com/watch?v=vGajZpl_9yA)
 
 ## 設定
 
 1. 執行 `npx @cloudflare/mcp-server-cloudflare init`
 
-![範例控制台輸出](/images/mcp-cloudflare-init.jpg)
+![範例控制台輸出](https://static.claudemcp.com/images/mcp-cloudflare-init.jpg)
 
 2. 重新啟動 Claude Desktop，您應該會看到一個小 🔨 圖示，顯示以下可用工具：
 
-![範例工具圖示](/images/mcp-cloudflare-tool-icon.jpg)
+![範例工具圖示](https://static.claudemcp.com/images/mcp-cloudflare-tool-icon.jpg)
 
-![範例工具清單](/images/mcp-cloudflare-tool-list.jpg)
+![範例工具清單](https://static.claudemcp.com/images/mcp-cloudflare-tool-list.jpg)
 
 ## 功能
 
@@ -225,7 +225,7 @@ d1_create_database({ name: "my-database" });
 // 刪除資料庫
 d1_delete_database({ databaseId: "your_database_id" });
 
-// 执行单个查询 
+// 执行单个查询
 d1_query({
   databaseId: "your_database_id",
   query: "SELECT * FROM users WHERE age > ?",
@@ -246,7 +246,7 @@ d1_query({
 });
 ```
 
-### 分析 
+### 分析
 
 ```javascript
 // 取得今日的分析資料

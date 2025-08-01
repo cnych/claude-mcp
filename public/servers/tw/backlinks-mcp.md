@@ -114,7 +114,7 @@ fastmcp dev src/backlinks_mcp/server.py
 
 接下來，我們可在 Cursor 中使用此 MCP:
 
-![在 Cursor 使用反向連結 MCP](/images/backlinks-mcp-on-cursor.png)
+![在 Cursor 使用反向連結 MCP](https://static.claudemcp.com/images/backlinks-mcp-on-cursor.png)
 
 ### API 參考
 

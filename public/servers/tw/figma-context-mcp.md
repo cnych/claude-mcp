@@ -18,7 +18,7 @@ featured: true
 
 [Figma Context MCP](/servers/figma-context-mcp) 是一個強大的 [MCP Server](/servers)，能幫助開發者直接從 Figma 設計稿提取資訊，並透過 AI 代理快速實現設計。例如在 Cursor 中可透過提示詞讓 AI Agent 存取您的 Figma 設計資料，並產生程式碼。比起直接貼上螢幕截圖，最終呈現效果要好得多。
 
-![Figma Context MCP](/images/figma-context-mcp.png)
+![Figma Context MCP](https://static.claudemcp.com/images/figma-context-mcp.png)
 
 ## 取得 Figma 存取權杖
 
@@ -29,7 +29,7 @@ featured: true
 3. 向下捲動至「個人存取權杖」(Personal access tokens) 區塊，點擊「產生新權杖」(Generate new token)。
 4. 為權杖輸入名稱（如「Figma MCP」），並確保您擁有 File content 和 Dev resources 的讀取權限。
 
-   ![產生 Figma 存取權杖](/images/figma-context-mcp-generate-token.png)
+   ![產生 Figma 存取權杖](https://static.claudemcp.com/images/figma-context-mcp-generate-token.png)
 
 5. 點擊「產生權杖」(Generate token) 按鈕。
 
@@ -92,7 +92,7 @@ featured: true
 
 此外也可在專案根目錄建立 .cursor/mcp.json 檔案，新增上述設定，這樣該 MCP Server 就只會對當前專案生效。
 
-![Cursor MCP 設定](/images/figma-context-mcp-cursor-settings.png)
+![Cursor MCP 設定](https://static.claudemcp.com/images/figma-context-mcp-cursor-settings.png)
 
 至此我們已完成該 MCP server 的設定。
 
@@ -108,7 +108,7 @@ MCP 伺服器會將從 Figma API 接收的資料壓縮近 90%，但複雜設計�
 
 具體操作方法：**右鍵點擊您想實現的框架或群組，選擇「複製/貼上為」(Copy/Paste as)，然後選擇「複製選取內容的連結」(Copy link to selection)。**
 
-![複製 Figma 框架或群組的連結](/images/figma-context-mcp-copy-figma-link.png)
+![複製 Figma 框架或群組的連結](https://static.claudemcp.com/images/figma-context-mcp-copy-figma-link.png)
 
 ### 將連結貼到編輯器中
 
@@ -116,15 +116,15 @@ MCP 伺服器會將從 Figma API 接收的資料壓縮近 90%，但複雜設計�
 
 例如在 Cursor 輸入 Implement this Figma frame for me. https://www.figma.com/design/....，注意將 Figma 連結直接貼到 Cursor 輸入框時，它會自動識別為連結，導致 Cursor 直接獲取該連結頁面內容，這並非我們期望的。我們希望透過 MCP 伺服器獲取 Figma 設計稿資料，因此需要點擊 URL 連結，然後點擊 Unlink 按鈕，讓 Cursor 將連結識別為普通文字。
 
-![將連結貼到編輯器中](/images/figma-context-mcp-paste-link.png)
+![將連結貼到編輯器中](https://static.claudemcp.com/images/figma-context-mcp-paste-link.png)
 
 按 Enter 後 Cursor 會透過語意分析呼叫 MCP 伺服器的 get_figma_data 工具獲取設計稿資料，若有圖片則呼叫 download_figma_images 工具下載圖片，最後根據這些資料透過 Agent 產生對應程式碼。
 
-![呼叫 Figma MCP 工具](/images/figma-context-mcp-call-tool.png)
+![呼叫 Figma MCP 工具](https://static.claudemcp.com/images/figma-context-mcp-call-tool.png)
 
 最終產生的頁面效果如下：
 
-![最終產生的頁面效果](/images/figma-context-mcp-final-result.png)
+![最終產生的頁面效果](https://static.claudemcp.com/images/figma-context-mcp-final-result.png)
 
 與設計圖已非常相似，當然還有一些細節需要自行調整。
 

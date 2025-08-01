@@ -79,11 +79,11 @@ npx -y @smithery/cli install @upstash/context7-mcp --client claude
 
 在 Cursor 中启用 Context7 MCP。
 
-![Context7 MCP in Cursor](/images/context7-cursor-settings.png)
+![Context7 MCP in Cursor](https://static.claudemcp.com/images/context7-cursor-settings.png)
 
 然后，您可以通过在提示词中添加 `use context7` 来在 Cursor 中使用 Context7 MCP。
 
-![Use Context7 MCP in Cursor](/images/context7-use-in-cursor.png)
+![Use Context7 MCP in Cursor](https://static.claudemcp.com/images/context7-use-in-cursor.png)
 
 ### 在 Windsurf 中安装
 

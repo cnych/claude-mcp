@@ -18,7 +18,7 @@ featured: true
 
 [Figma Context MCP](/servers/figma-context-mcp) is a powerful [MCP Server](/servers) that helps developers extract information directly from Figma designs and rapidly implement them via AI agents. For example, in Cursor, you can prompt an AI Agent to access your Figma design data and generate code. Compared to directly pasting screenshots, the final output is significantly better.
 
-![Figma Context MCP](/images/figma-context-mcp.png)
+![Figma Context MCP](https://static.claudemcp.com/images/figma-context-mcp.png)
 
 ## Obtaining a Figma Access Token
 
@@ -29,7 +29,7 @@ Before using the Figma Context MCP server, you need to generate a Figma access t
 3. Scroll down to the "Personal access tokens" section and click "Generate new token."
 4. Enter a name for the token (e.g., "Figma MCP") and ensure you have read permissions for `File content` and `Dev resources`.
 
-   ![Generate Figma Access Token](/images/figma-context-mcp-generate-token.png)
+   ![Generate Figma Access Token](https://static.claudemcp.com/images/figma-context-mcp-generate-token.png)
 
 5. Click the "Generate token" button.
 
@@ -92,7 +92,7 @@ Configuration steps may vary slightly across different [MCP clients](/clients). 
 
 Alternatively, you can create a `.cursor/mcp.json` file in your project's root directory and add the configuration there. This ensures the MCP Server only applies to the current project.
 
-![Cursor MCP Configuration](/images/figma-context-mcp-cursor-settings.png)
+![Cursor MCP Configuration](https://static.claudemcp.com/images/figma-context-mcp-cursor-settings.png)
 
 At this point, the MCP server setup is complete.
 
@@ -108,7 +108,7 @@ The MCP server compresses data received from the Figma API by nearly 90%. Howeve
 
 To do this: **Right-click the frame or group you want to implement, select "Copy/Paste as," and then choose "Copy link to selection."**
 
-![Copy Link to Figma Frame or Group](/images/figma-context-mcp-copy-figma-link.png)
+![Copy Link to Figma Frame or Group](https://static.claudemcp.com/images/figma-context-mcp-copy-figma-link.png)
 
 ### Paste the Link into the Editor
 
@@ -116,15 +116,15 @@ After obtaining the link, prompt the editor's AI agent to process it.
 
 For example, in Cursor, you might enter: `Implement this Figma frame for me. https://www.figma.com/design/....`. Note that when pasting the link directly into Cursor, it may automatically recognize it as a hyperlink and attempt to fetch the page content. To prevent this, click the URL, then select `Unlink` to treat it as plain text.
 
-![Paste Link into Editor](/images/figma-context-mcp-paste-link.png)
+![Paste Link into Editor](https://static.claudemcp.com/images/figma-context-mcp-paste-link.png)
 
 After pressing Enter, Cursor will analyze the request and invoke the MCP server's `get_figma_data` tool to retrieve the design data. If images are involved, it will use the `download_figma_images` tool to fetch them. Finally, the AI agent generates the corresponding code based on this data.
 
-![Calling Figma MCP Tools](/images/figma-context-mcp-call-tool.png)
+![Calling Figma MCP Tools](https://static.claudemcp.com/images/figma-context-mcp-call-tool.png)
 
 The resulting page will look something like this:
 
-![Final Generated Page](/images/figma-context-mcp-final-result.png)
+![Final Generated Page](https://static.claudemcp.com/images/figma-context-mcp-final-result.png)
 
 It closely matches the design, though some fine-tuning may still be needed.
 

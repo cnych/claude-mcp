@@ -3,11 +3,11 @@ title: "A2A 協定與 MCP 協定：智能代理生態系統的雙輪驅動"
 excerpt: A2A 和 MCP 兩種協定正在塑造智能體系統的未來。本文將探討 A2A 協定與 MCP 協定的特點、區別及協同作用，幫助開發者和產品設計師更好地理解這一新興技術領域。
 date: 2025-04-11
 slug: a2a-mcp
-coverImage: /images/blog/a2a-vs-mcp.png
+coverImage: https://static.claudemcp.com/images/blog/a2a-vs-mcp.png
 featured: true
 author:
   name: 陽明
-  avatar: /images/avatars/yangming.png
+  avatar: https://static.claudemcp.com/images/avatars/yangming.png
 category: 技術
 ---
 

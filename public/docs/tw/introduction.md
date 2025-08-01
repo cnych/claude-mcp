@@ -11,7 +11,7 @@ order: 1
 
 Claude [MCP](https://www.claudemcp.com/tw)，即模型上下文協議（Model Context Protocol），是 Anthropic Claude 的一個開源開放協議，旨在建立 AI 模型和開發環境之間的統一上下文互動，透過提供標準化的上下文資訊存取，使 AI 模型能夠更好地理解和處理程式碼。就像給它們之間搭建了一座橋樑，使得開發者可以透過一套標準將 AI 應用程式和資料來源連接起來。
 
-[![Claude MCP 架構圖](/images/claude-mcp.png "Claude MCP 架構圖")](https://www.claudemcp.com/tw)
+[![Claude MCP 架構圖](https://static.claudemcp.com/images/claude-mcp.png "Claude MCP 架構圖")](https://www.claudemcp.com/tw)
 
 例如，在實際應用中，透過 Claude 桌面應用程式，藉助 [MCP](https://www.claudemcp.com/tw) 協議，AI 可以幫用戶管理 GitHub 專案，從建立專案到提交程式碼請求等複雜任務都能輕鬆完成，而且速度很快。這一協議的出現，有望徹底解決 LLM（大型語言模型）應用程式連接資料難的痛點，讓前沿模型生成更好、更相關的回應，不再需要為每個資料來源寫客製化的整合程式碼，一個 [MCP](https://www.claudemcp.com/tw) 協議就可以搞定與多種資料來源的連接。
 

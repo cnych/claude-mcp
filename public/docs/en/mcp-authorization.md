@@ -11,7 +11,7 @@ order: 9
 
 The initial version of MCP released on 2024-11-05 did not support authorization. However, in the 2025-03-26 update, the MCP protocol introduced an OAuth 2.1-based authorization mechanism. In the latest MCP Draft, the community has refined the OAuth 2.1-based authorization protocol to accommodate HTTP, SSE, Streamable HTTP, and other transmission modes. Through authorization, MCP clients can securely access restricted MCP tools and resources on behalf of users or applications.
 
-![MCP Authorization Mechanism](https://picdn.youdianzhishi.com/images/1749124426146.png)
+![MCP Authorization Mechanism](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749124426146.png)
 
 ## MCP Authorization Specification
 
@@ -28,11 +28,11 @@ To implement the OAuth 2.1 authentication process, the protocol requires MCP ser
 
 The authentication process is illustrated below:
 
-![MCP Authentication Flow](https://picdn.youdianzhishi.com/images/1749174953530.png)
+![MCP Authentication Flow](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749174953530.png)
 
 The specification also outlines how MCP servers can support delegated authorization via third-party authorization servers. An example flow is shown below:
 
-![Example Flow](https://picdn.youdianzhishi.com/images/1749174989488.png)
+![Example Flow](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749174989488.png)
 
 In this scenario, even if the MCP server delegates authorization to a third-party server, it still acts as the authorization server for the MCP client because it must issue its own access tokens.
 
@@ -53,7 +53,7 @@ The required authorization endpoints mean the MCP server must implement an autho
 
 The protocol does not restrict the MCP server to self-implementing this functionality. Developers can redirect or proxy these endpoints to third-party authorization servers. For MCP clients, this is indistinguishable from the MCP server handling authorization itself.
 
-![](https://picdn.youdianzhishi.com/images/1749175316319.png)
+![](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749175316319.png)
 
 You might wonder whether this approach should use the delegated third-party authorization method mentioned earlier.
 
@@ -193,7 +193,7 @@ Next, we will use the MCP Python SDK to test OAuth authentication via the Stream
 
 First, we need to create a GitHub OAuth application by visiting [https://github.com/settings/applications/new](https://github.com/settings/applications/new) to register a new OAuth application.
 
-![Register OAuth Application](https://picdn.youdianzhishi.com/images/1749193577507.png)
+![Register OAuth Application](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749193577507.png)
 
 The most important field here is the `Authorization callback URL`, which we set to `http://localhost:8000/github/callback`. This means we need to handle GitHub's OAuth callback requests on this endpoint. The homepage URL is `http://localhost:8000`. Click "Register application."
 
@@ -694,16 +694,16 @@ Open `http://127.0.0.1:6274` in a browser to access the MCP Inspector interface.
 
 First, set `Transport Type` to `Streamable HTTP` and update the URL to `http://localhost:8000/mcp`. Click the `Connect` button to establish a connection. Since we've added OAuth authentication, the MCP server will initially return a 401 status code, and the `Inspector` will redirect to GitHub's authorization page for user consent.
 
-![GitHub Authorization](https://picdn.youdianzhishi.com/images/1749192782744.png)
+![GitHub Authorization](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749192782744.png)
 
 After granting authorization, the tool will redirect back to the `Inspector` interface.
 
 Switch to the `Auth` tab to view the authentication status after successful authorization.
 
-![MCP Auth](https://picdn.youdianzhishi.com/images/1749196131391.png)
+![MCP Auth](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749196131391.png)
 
 Navigate to the `Tools` tab to see our `get_user_profile` tool, which retrieves the authenticated user's GitHub profile. Click `Run Tool` to fetch and display the profile data, including username, email, and bio.
 
-![MCP Tools](https://picdn.youdianzhishi.com/images/1749196274345.png)
+![MCP Tools](https://picdn.youdianzhishi.comhttps://static.claudemcp.com/images/1749196274345.png)
 
 We have now implemented an MCP server with OAuth authentication and tested it using the `inspector` tool. Alternatively, you could develop your own MCP client with OAuth support to interact with this server.

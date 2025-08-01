@@ -17,7 +17,7 @@ icon: https://avatars.githubusercontent.com/u/194880281?v=4
 createTime: 2025-04-10
 ---
 
-![MiniMax Logo](/images/MiniMaxLogo-Light.png)
+![MiniMax Logo](https://static.claudemcp.com/images/MiniMaxLogo-Light.png)
 
 Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech and video/image generation APIs. This server allows MCP clients like Claude Desktop, Cursor, Windsurf, OpenAI Agents and others to generate speech, clone voices, generate video, generate image and more.
 

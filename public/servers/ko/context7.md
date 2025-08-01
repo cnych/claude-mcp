@@ -79,11 +79,11 @@ Cursor의 `~/.cursor/mcp.json` 파일에 다음 구성을 붙여넣는 것이 �
 
 Cursor에서 Context7 MCP를 활성화하세요.
 
-![Cursor에서의 Context7 MCP 설정](/images/context7-cursor-settings.png)
+![Cursor에서의 Context7 MCP 설정](https://static.claudemcp.com/images/context7-cursor-settings.png)
 
 이제 프롬프트에 `use context7`를 추가하여 Cursor에서 Context7 MCP를 사용할 수 있습니다.
 
-![Cursor에서 Context7 MCP 사용 예시](/images/context7-use-in-cursor.png)
+![Cursor에서 Context7 MCP 사용 예시](https://static.claudemcp.com/images/context7-use-in-cursor.png)
 
 ### Windsurf에 설치
 
