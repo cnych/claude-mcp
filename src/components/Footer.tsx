@@ -18,7 +18,7 @@ export function Footer() {
       { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
       { name: 'ASMR Videos', href: 'https://www.asmr.so?ref=claude-mcp' },
       { name: 'Desktop Extensions', href: 'https://www.desktopextensions.com?ref=claude-mcp' },
-      { name: 'Claude Code', href: 'https://www.claudecode.pro?ref=claude-mcp' },
+      { name: 'AI Rooms', href: 'https://www.rooms.so?ref=claude-mcp' },
       { name: 'Calculator Online', href: 'https://www.calculatoronline.io?ref=claude-mcp' },
       { name: 'Compress', href: 'https://www.compress.run?ref=claude-mcp' },
       { name: 'A2A', href: 'https://www.a2aprotocol.net?ref=claude-mcp' },

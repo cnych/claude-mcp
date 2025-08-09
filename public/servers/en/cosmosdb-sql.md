@@ -1,18 +1,25 @@
-# MCP CosmosDB - Azure CosmosDB MCP Server
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)](https://www.typescriptlang.org/)
-[![Azure CosmosDB](https://img.shields.io/badge/Azure-CosmosDB-blue)](https://azure.microsoft.com/services/cosmos-db/)
-[![MCP Protocol](https://img.shields.io/badge/MCP-Protocol-purple)](https://github.com/modelcontextprotocol/sdk)
-[![Claude Desktop](https://img.shields.io/badge/Claude-Desktop-orange)](https://claude.ai/desktop)
-[![Cursor IDE](https://img.shields.io/badge/Cursor-IDE-green)](https://cursor.sh/)
+---
+name: MCP CosmosDB - Azure CosmosDB MCP Server
+digest: A comprehensive MCP server for Azure CosmosDB database operations.
+author: Hendrick Castro
+tags:
+  - database
+  - nosql
+  - azure
+repository: https://github.com/hendrickcastro/MCPCosmosDB
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+createTime: 2025-07-09T00:00:00Z
+---
 
 A comprehensive **Model Context Protocol (MCP)** server for **Azure CosmosDB** database operations. This server provides 8 powerful tools for document database analysis, container discovery, and data querying through the MCP protocol.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 - Azure CosmosDB database with connection string
 - MCP-compatible client (like Claude Desktop, Cursor IDE, or any MCP client)
@@ -20,9 +27,11 @@ A comprehensive **Model Context Protocol (MCP)** server for **Azure CosmosDB** d
 ### Installation & Configuration
 
 #### Option 1: Using npx from GitHub (Recommended)
+
 No installation needed! Just configure your MCP client to run directly from the GitHub repository:
 
 **For Claude Desktop (`claude_desktop_config.json`):**
+
 ```json
 {
   "mcpServers": {
@@ -39,14 +48,12 @@ No installation needed! Just configure your MCP client to run directly from the 
 ```
 
 **For Cursor IDE (`~/.cursor/mcp.json`):**
+
 ```json
 {
   "mcp-cosmosdb": {
     "command": "npx",
-    "args": [
-      "-y",
-      "hendrickcastro/MCPCosmosDB"
-    ],
+    "args": ["-y", "hendrickcastro/MCPCosmosDB"],
     "description": "Servidor MCP para interactuar con Azure CosmosDB.",
     "disabled": false,
     "env": {
@@ -60,6 +67,7 @@ No installation needed! Just configure your MCP client to run directly from the 
 #### Option 2: Local Development Installation
 
 1. **Clone and setup:**
+
 ```bash
 git clone <your-repo-url>
 cd MCPCosmosDB
@@ -68,7 +76,8 @@ npm run build
 ```
 
 2. **Configure CosmosDB connection:**
-Create a `.env` file with your CosmosDB credentials:
+   Create a `.env` file with your CosmosDB credentials:
+
 ```bash
 # CosmosDB Connection String from Azure Portal
 OCONNSTRING=AccountEndpoint=https://your-cosmos-account.documents.azure.com:443/;AccountKey=your-account-key-here;
@@ -78,6 +87,7 @@ COSMOS_DATABASE_ID=your-database-name
 ```
 
 3. **Configure MCP client with local path:**
+
 ```json
 {
   "mcpServers": {
@@ -98,79 +108,90 @@ COSMOS_DATABASE_ID=your-database-name
 MCP CosmosDB provides 8 comprehensive tools for Azure CosmosDB operations:
 
 ### 1. 🗄️ **List Databases** - `mcp_list_databases`
+
 List all databases in the CosmosDB account.
 
 ### 2. 📦 **List Containers** - `mcp_list_containers`
+
 List all containers in the current database.
 
 ### 3. 📋 **Container Information** - `mcp_container_info`
+
 Get detailed information about a specific container including partition key, indexing policy, and throughput settings.
 
 ### 4. 📊 **Container Statistics** - `mcp_container_stats`
+
 Get statistics about a container including document count, size estimation, and partition key distribution.
 
 ### 5. 🔍 **Execute SQL Query** - `mcp_execute_query`
+
 Execute SQL queries against CosmosDB containers with parameters and performance metrics.
 
 ### 6. 📄 **Get Documents** - `mcp_get_documents`
+
 Retrieve documents from containers with optional filtering and partition key targeting.
 
 ### 7. 🎯 **Get Document by ID** - `mcp_get_document_by_id`
+
 Retrieve a specific document by its ID and partition key.
 
 ### 8. 🏗️ **Schema Analysis** - `mcp_analyze_schema`
+
 Analyze document schema structure in containers to understand data patterns.
 
 ## 📋 Usage Examples
 
 ### Container Analysis
+
 ```typescript
 // List all containers
 const containers = await mcp_list_containers();
 
 // Get container information
-const containerInfo = await mcp_container_info({ 
-  container_id: "users" 
+const containerInfo = await mcp_container_info({
+  container_id: "users",
 });
 
 // Get container statistics
-const stats = await mcp_container_stats({ 
+const stats = await mcp_container_stats({
   container_id: "users",
-  sample_size: 1000
+  sample_size: 1000,
 });
 ```
 
 ### Querying Data
+
 ```typescript
 // Execute SQL query
 const result = await mcp_execute_query({
   container_id: "products",
   query: "SELECT * FROM c WHERE c.category = @category AND c.price > @minPrice",
-  parameters: { "category": "electronics", "minPrice": 100 },
-  max_items: 50
+  parameters: { category: "electronics", minPrice: 100 },
+  max_items: 50,
 });
 
 // Get documents with filters
 const documents = await mcp_get_documents({
   container_id: "orders",
-  filter_conditions: { "status": "completed", "year": 2024 },
-  limit: 100
+  filter_conditions: { status: "completed", year: 2024 },
+  limit: 100,
 });
 ```
 
 ### Document Operations
+
 ```typescript
 // Get specific document
 const document = await mcp_get_document_by_id({
   container_id: "users",
   document_id: "user-123",
-  partition_key: "user-123"
+  partition_key: "user-123",
 });
 
 // Analyze schema
 const schema = await mcp_analyze_schema({
   container_id: "products",
-  sample_size: 500
+  sample_size: 500,
 });
 ```
 
@@ -178,23 +199,24 @@ const schema = await mcp_analyze_schema({
 
 ### Required Environment Variables
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `OCONNSTRING` | CosmosDB connection string from Azure Portal | `AccountEndpoint=https://...;AccountKey=...;` |
-| `COSMOS_DATABASE_ID` | Database ID to connect to | `MyDatabase` |
+| Variable             | Description                                  | Example                                       |
+| -------------------- | -------------------------------------------- | --------------------------------------------- |
+| `OCONNSTRING`        | CosmosDB connection string from Azure Portal | `AccountEndpoint=https://...;AccountKey=...;` |
+| `COSMOS_DATABASE_ID` | Database ID to connect to                    | `MyDatabase`                                  |
 
 ### Optional Configuration
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `COSMOS_ENABLE_ENDPOINT_DISCOVERY` | Enable automatic endpoint discovery | `true` |
-| `COSMOS_MAX_RETRY_ATTEMPTS` | Maximum retry attempts for requests | `9` |
-| `COSMOS_MAX_RETRY_WAIT_TIME` | Maximum retry wait time (ms) | `30000` |
-| `COSMOS_ENABLE_CROSS_PARTITION_QUERY` | Enable cross-partition queries | `true` |
+| Variable                              | Description                         | Default |
+| ------------------------------------- | ----------------------------------- | ------- |
+| `COSMOS_ENABLE_ENDPOINT_DISCOVERY`    | Enable automatic endpoint discovery | `true`  |
+| `COSMOS_MAX_RETRY_ATTEMPTS`           | Maximum retry attempts for requests | `9`     |
+| `COSMOS_MAX_RETRY_WAIT_TIME`          | Maximum retry wait time (ms)        | `30000` |
+| `COSMOS_ENABLE_CROSS_PARTITION_QUERY` | Enable cross-partition queries      | `true`  |
 
 ## 🔧 Configuration Examples
 
 ### 1. 🌐 Azure CosmosDB (Production)
+
 ```json
 {
   "mcpServers": {
@@ -211,6 +233,7 @@ const schema = await mcp_analyze_schema({
 ```
 
 ### 2. 🏠 CosmosDB Emulator (Local Development)
+
 ```json
 {
   "mcpServers": {
@@ -227,6 +250,7 @@ const schema = await mcp_analyze_schema({
 ```
 
 ### 3. ⚙️ Advanced Configuration
+
 ```json
 {
   "mcpServers": {
@@ -248,16 +272,19 @@ const schema = await mcp_analyze_schema({
 ## 🚨 Troubleshooting Common Issues
 
 ### Connection Issues
+
 - **"Invalid connection string"**: Verify your OCONNSTRING format and ensure it contains both AccountEndpoint and AccountKey
 - **"Database not found"**: Check that COSMOS_DATABASE_ID matches an existing database
 - **"Request timeout"**: Increase COSMOS_MAX_RETRY_WAIT_TIME or check network connectivity
 
 ### Query Issues
+
 - **"Cross partition query required"**: Set `enable_cross_partition: true` in query parameters
 - **"Query timeout"**: Reduce sample sizes or add more specific filters
 - **"Partition key required"**: Specify partition_key parameter for single-partition operations
 
 ### CosmosDB Emulator Setup
+
 1. Download and install Azure CosmosDB Emulator
 2. Start the emulator and ensure it's running on default port 8081
 3. Use the default emulator connection string in your configuration
@@ -266,16 +293,19 @@ const schema = await mcp_analyze_schema({
 ## 🧪 Testing
 
 Run the test suite:
+
 ```bash
 npm test
 ```
 
 Build the project:
+
 ```bash
 npm run build
 ```
 
 Start in development mode:
+
 ```bash
 npm start
 ```
@@ -283,6 +313,7 @@ npm start
 ## 🏗️ Architecture
 
 ### Project Structure
+
 ```
 MCPCosmosDB/
 ├── src/
@@ -302,6 +333,7 @@ MCPCosmosDB/
 ```
 
 ### Key Features
+
 - ⚡ **Connection Management**: Efficient CosmosDB client management with retry logic
 - 🛡️ **Error Handling**: Comprehensive error handling and validation
 - 📊 **Performance Metrics**: Query performance tracking with request charges

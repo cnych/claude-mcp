@@ -23,10 +23,10 @@ const sponsors: Sponsor[] = [
     arrowColor: 'bg-pink-500'
   },
   {
-    id: 'brightdata',
-    name: 'Bright Data',
-    description: 'AI Data Platform for Developers.',
-    url: 'https://get.brightdata.com/uwsgq3m6w81q?utm_source=claudemcp',
+    id: 'rooms-so',
+    name: 'Rooms.so',
+    description: 'AI Room Design Assistant.',
+    url: 'https://www.rooms.so/?utm_source=claudemcp',
     color: 'text-blue-400',
     arrowColor: 'bg-blue-500'
   }
@@ -38,7 +38,10 @@ const Banner = (): JSX.Element | null => {
 
   // 组件挂载时随机选择一个赞助商
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * sponsors.length);
+    // 使用 crypto.getRandomValues 生成更随机的数值
+    const array = new Uint32Array(1);
+    crypto.getRandomValues(array);
+    const randomIndex = array[0] % sponsors.length;
     setCurrentSponsor(sponsors[randomIndex]);
   }, []);
 

@@ -31,6 +31,7 @@ Transform linear problem-solving into rich, multi-dimensional exploration with t
 ## Why Cascade Thinking?
 
 Traditional problem-solving tools break under ambiguity. Cascade Thinking MCP lets you:
+
 - Explore alternatives with true branching that creates separate sequences
 - Revise previous thoughts with full traceability
 - Maintain context across agents and tools with persistent state
@@ -54,18 +55,23 @@ Traditional problem-solving tools break under ambiguity. Cascade Thinking MCP le
 ## Unique Features
 
 ### Dual Numbering System
+
 - **S{n}**: Sequence-relative position (resets per branch)
 - **A{n}**: Absolute position across all thoughts (never resets)
 
 ### True Branching
+
 When you branch, the tool:
+
 1. Creates a new sequence automatically
 2. Resets numbering to S1 in the new branch
 3. Copies relevant context from the parent sequence
 4. Tracks the branch relationship for navigation
 
 ### Dynamic Expansion
+
 When you set `needsMoreThoughts: true`:
+
 1. Increases totalThoughts by 50% or minimum 3 thoughts
 2. Shows visual indicators including ⚡ emoji
 3. Updates response with new total
@@ -80,10 +86,7 @@ Add this to your `claude_desktop_config.json`:
   "mcpServers": {
     "cascade-thinking": {
       "command": "npx",
-      "args": [
-        "-y",
-        "cascade-thinking-mcp"
-      ]
+      "args": ["-y", "cascade-thinking-mcp"]
     }
   }
 }
@@ -96,12 +99,7 @@ Add this to your `claude_desktop_config.json`:
   "mcpServers": {
     "cascade-thinking": {
       "command": "docker",
-      "args": [
-        "run",
-        "--rm",
-        "-i",
-        "mcp/cascade-thinking"
-      ]
+      "args": ["run", "--rm", "-i", "mcp/cascade-thinking"]
     }
   }
 }
@@ -110,6 +108,7 @@ Add this to your `claude_desktop_config.json`:
 ## Example Usage
 
 Start exploring:
+
 ```json
 {
   "thought": "Analyzing authentication options for our API",
@@ -120,6 +119,7 @@ Start exploring:
 ```
 
 Branch to explore OAuth:
+
 ```json
 {
   "thought": "Let me explore OAuth2 implementation",

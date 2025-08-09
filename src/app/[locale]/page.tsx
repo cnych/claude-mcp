@@ -92,13 +92,13 @@ export default async function Home({ params }: PageProps) {
     <main className="flex min-h-screen flex-col antialiased overflow-x-hidden">
       {/* 首屏立即加载关键内容 */}
       <HeroSection />
-      
+
       <Suspense fallback={<SectionPlaceholder />}>
-        <LatestDocs docs={latestDocs} />
+        <FeaturedServers servers={featuredServers} />
       </Suspense>
       
       <Suspense fallback={<SectionPlaceholder />}>
-        <FeaturedServers servers={featuredServers} />
+        <LatestDocs docs={latestDocs} />
       </Suspense>
       
       <Suspense fallback={<SectionPlaceholder />}>

@@ -19,7 +19,6 @@ featured: true
 
 [Knit](https://www.getknit.dev) is an embedded integrations platform that lets developers and AI systems connect with 200+ business apps — including HRIS, CRM, ATS, Payroll, Accounting, Ticketing, Calendar and more. With **Knit MCP**, AI agents like Claude, GPT, Cursor or any custom agent gain instant, secure access to these integrations using the Model Context Protocol.
 
-
 ## What is Knit MCP?
 
 **Knit MCP** is Knit’s remote MCP server offering that allows you to create and package your own mcp servers that you can plug into your AI assistants to directly execute real-world tasks like:
@@ -43,7 +42,6 @@ Visit the MCP Hub at https://mcphub.getknit.dev, and log in using Google, Micros
 
 ![Knit MCP Hub Login](https://cdn.prod.website-files.com/6347ea26001f0287c592ff91/6881fc4463f5b5ec9e9e69b1_knit%20mcp%20login.png)
 
-
 ⚙️ Step 2: Create a New MCP Server
 Click Create new MCP server.
 
@@ -53,10 +51,9 @@ Choose which applications/tools to include (e.g., BambooHR, QuickBooks).
 
 Click Next.
 
-
 ✏️ Step 3: Configure Your Server
 Fill in the server details:
-For example 
+For example
 
 Name: My Company ATS Server
 Description: Tools for recruiting workflows
@@ -80,7 +77,6 @@ Custom client
 
 This choice tailors instructions accordingly.
 
-
 🚀 Step 5: Grab Endpoint & Token
 After deployment, you’ll get:
 
@@ -95,27 +91,24 @@ Step 6: Connect Your AI Agent
 Using JSON config (e.g., for OpenAI clients)
 
 {
-  "mcpServers": {
-    "Knit": {
-      "url": "https://mcp.getknit.dev/agents/<your-server-id>/sse",
-      "auth": {
-        "header": "Authorization",
-        "token": "<YOUR_SERVER_TOKEN>"
-      }
-    }
-  }
+"mcpServers": {
+"Knit": {
+"url": "https://mcp.getknit.dev/agents/<your-server-id>/sse",
+"auth": {
+"header": "Authorization",
+"token": "<YOUR_SERVER_TOKEN>"
 }
-
+}
+}
+}
 
 Or run via CLI (example for Claude Remote)
 
 mcp-remote \
-  --url https://mcp.getknit.dev/agents/<your-server-id>/sse \
-  --header "Authorization: Bearer <YOUR_SERVER_TOKEN>"
+ --url https://mcp.getknit.dev/agents/<your-server-id>/sse \
+ --header "Authorization: Bearer <YOUR_SERVER_TOKEN>"
 
 Once connected, your AI will see defined tools and can start invoking them (e.g., getEmployee, createInvoice).
 
 🤝 Need Help?
 If you hit any roadblocks, reach out via email at mcp-support@getknit.dev We’re here to get you up and running smoothly.
-
-
