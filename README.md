@@ -10,6 +10,7 @@ This repository contains the source code for [claudemcp.com](https://www.claudem
 
 The following MCP servers are currently documented on the website:
 
+- **[Apify MCP](https://www.claudemcp.com/servers/apify-mcp)** - Deploy and interact with Apify Actors for web scraping, data extraction, and automation tasks through the Model Context Protocol
 - **[Backlinks MCP](https://www.claudemcp.com/servers/backlinks-mcp)** - Server for retrieving backlinks information for domains
 - **[Blender MCP](https://github.com/ahujasid/blender-mcp)** - Integration with Blender 3D modeling software
 - **[Brave Search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)** - Web search capabilities using Brave's search engine
@@ -21,6 +22,7 @@ The following MCP servers are currently documented on the website:
 - **Git** - Git repository operations and management
 - **GitHub** - GitHub API integration for repository management
 - **Google Drive** - Access and management of Google Drive files
+- **[Keboola MCP](https://www.claudemcp.com/servers/keboola-mcp)** - 
 - **Playwright** - Browser automation and testing
 - **PostgreSQL** - PostgreSQL database interactions
 - **Puppeteer** - Headless browser automation
