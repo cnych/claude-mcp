@@ -1,4 +1,20 @@
-# Keboola MCP Server
+---
+name: Keboola MCP Server
+digest: Keboola 환경에서 Model Context Protocol을 통해 데이터 처리를 위한 상호 작용
+author: Keboola
+repository: https://github.com/keboola/keboola-mcp-server
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - 데이터 처리
+  - 비즈니스 인텔리전스
+  - ETL
+  - 자동화
+icon: https://avatars.githubusercontent.com/u/1424387?s=200&v=4
+createTime: 2025-08-21
+---
 
 > AI 에이전트, MCP 클라이언트(**Cursor**, **Claude**, **Windsurf**, **VS Code** ...)와 다른 AI 어시스턴트를 Keboola에 연결하세요. 데이터, 변환, SQL 쿼리, 작업 트리거를 노출하고—접착 코드 없이. 에이전트가 필요할 때 필요한 곳에서 올바른 데이터를 제공합니다.
 
@@ -53,7 +69,7 @@ Keboola MCP Server를 사용하는 가장 쉬운 방법은 **원격 MCP 서버**
 
 **uv 설치하기**:
 
-*macOS/Linux*:
+_macOS/Linux_:
 
 ```bash
 # homebrew가 설치되지 않은 경우 사용:
@@ -63,7 +79,7 @@ Keboola MCP Server를 사용하는 가장 쉬운 방법은 **원격 MCP 서버**
 brew install uv
 ```
 
-*Windows*:
+_Windows_:
 
 ```powershell
 # 설치 스크립트 사용
@@ -103,13 +119,13 @@ Storage API 토큰을 생성하고 관리하는 방법에 대한 지침은 [공�
 
 Keboola API URL은 배포 지역에 따라 다릅니다. Keboola 프로젝트에 로그인했을 때 브라우저의 URL을 보면 지역을 확인할 수 있습니다:
 
-| 지역 | API URL |
-|--------|---------|
-| AWS 북미 | `https://connection.keboola.com` |
-| AWS 유럽 | `https://connection.eu-central-1.keboola.com` |
-| Google Cloud EU | `https://connection.europe-west3.gcp.keboola.com` |
-| Google Cloud US | `https://connection.us-east4.gcp.keboola.com` |
-| Azure EU | `https://connection.north-europe.azure.keboola.com` |
+| 지역            | API URL                                             |
+| --------------- | --------------------------------------------------- |
+| AWS 북미        | `https://connection.keboola.com`                    |
+| AWS 유럽        | `https://connection.eu-central-1.keboola.com`       |
+| Google Cloud EU | `https://connection.europe-west3.gcp.keboola.com`   |
+| Google Cloud US | `https://connection.us-east4.gcp.keboola.com`       |
+| Azure EU        | `https://connection.north-europe.azure.keboola.com` |
 
 ## Keboola MCP Server 실행
 
@@ -180,16 +196,16 @@ Windows Subsystem for Linux에서 Cursor AI로 MCP 서버를 실행할 때 이 �
 ```json
 {
   "mcpServers": {
-    "keboola":{
+    "keboola": {
       "command": "wsl.exe",
       "args": [
-          "bash",
-          "-c '",
-          "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
-          "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
-          "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
-          "/snap/bin/uvx keboola_mcp_server",
-          "'"
+        "bash",
+        "-c '",
+        "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
+        "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
+        "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
+        "/snap/bin/uvx keboola_mcp_server",
+        "'"
       ]
     }
   }
@@ -208,10 +224,7 @@ MCP 서버 코드 자체를 작업하는 개발자를 위해:
   "mcpServers": {
     "keboola": {
       "command": "/absolute/path/to/.venv/bin/python",
-      "args": [
-        "-m",
-        "keboola_mcp_server"
-      ],
+      "args": ["-m", "keboola_mcp_server"],
       "env": {
         "KBC_STORAGE_API_URL": "https://connection.YOUR_REGION.keboola.com",
         "KBC_STORAGE_TOKEN": "your_keboola_storage_token",
@@ -261,12 +274,12 @@ docker run \
 
 ### 서버를 직접 시작해야 하나요?
 
-| 시나리오 | 수동 실행 필요? | 이 설정 사용 |
-|----------|----------------------|----------------|
-| Claude/Cursor 사용 | 아니오 | 앱 설정에서 MCP 구성 |
-| 로컬에서 MCP 개발 | 아니오 (Claude가 시작) | 구성을 python 경로로 지정 |
-| CLI 수동 테스트 | 예 | 터미널에서 실행 |
-| Docker 사용 | 예 | Docker 컨테이너 실행 |
+| 시나리오           | 수동 실행 필요?        | 이 설정 사용              |
+| ------------------ | ---------------------- | ------------------------- |
+| Claude/Cursor 사용 | 아니오                 | 앱 설정에서 MCP 구성      |
+| 로컬에서 MCP 개발  | 아니오 (Claude가 시작) | 구성을 python 경로로 지정 |
+| CLI 수동 테스트    | 예                     | 터미널에서 실행           |
+| Docker 사용        | 예                     | Docker 컨테이너 실행      |
 
 ## MCP Server 사용
 
@@ -301,62 +314,62 @@ MCP 클라이언트 (Claude/Cursor)가 구성되고 실행되면 Keboola 데이�
 
 ### MCP 클라이언트 지원
 
-| **MCP 클라이언트** | **지원 상태** | **연결 방법** |
-|----------------|-------------------|----------------------|
-| Claude (데스크탑 및 웹) | ✅ 지원됨 | stdio |
-| Cursor | ✅ 지원됨 | stdio |
-| Windsurf, Zed, Replit | ✅ 지원됨 | stdio |
-| Codeium, Sourcegraph | ✅ 지원됨 | HTTP+SSE |
-| 사용자 정의 MCP 클라이언트 | ✅ 지원됨 | HTTP+SSE 또는 stdio |
+| **MCP 클라이언트**         | **지원 상태** | **연결 방법**       |
+| -------------------------- | ------------- | ------------------- |
+| Claude (데스크탑 및 웹)    | ✅ 지원됨     | stdio               |
+| Cursor                     | ✅ 지원됨     | stdio               |
+| Windsurf, Zed, Replit      | ✅ 지원됨     | stdio               |
+| Codeium, Sourcegraph       | ✅ 지원됨     | HTTP+SSE            |
+| 사용자 정의 MCP 클라이언트 | ✅ 지원됨     | HTTP+SSE 또는 stdio |
 
 ## 지원되는 도구
 
 **참고:** AI 에이전트는 새로운 도구에 자동으로 적응합니다.
 
-| 카테고리 | 도구 | 설명 |
-|----------|------|-------------|
-| **프로젝트** | `get_project_info` | Keboola 프로젝트에 대한 구조화된 정보 반환 |
-| **스토리지** | `get_bucket` | 특정 버킷에 대한 자세한 정보 가져오기 |
-| | `get_table` | DB 식별자와 열을 포함하여 특정 테이블에 대한 자세한 정보 가져오기 |
-| | `list_buckets` | 프로젝트의 모든 버킷 검색 |
-| | `list_tables` | 특정 버킷의 모든 테이블 검색 |
-| | `update_description` | 버킷, 테이블 또는 열의 설명 업데이트 |
-| **SQL** | `query_data` | 기본 데이터베이스에 대해 SELECT 쿼리 실행 |
-| **구성 요소** | `add_config_row` | 구성 요소 구성에 대한 구성 행 생성 |
-| | `create_config` | 루트 구성 요소 구성 생성 |
-| | `create_sql_transformation` | 하나 이상의 SQL 코드 블록에서 SQL 변환 생성 |
-| | `find_component_id` | 자연어 쿼리와 일치하는 구성 요소 ID 찾기 |
-| | `get_component` | ID로 구성 요소의 세부 정보 검색 |
-| | `get_config` | 특정 구성 요소/변환 구성 검색 |
-| | `get_config_examples` | 구성 요소에 대한 예제 구성 검색 |
-| | `list_configs` | 프로젝트의 구성을 나열하고 선택적으로 필터링 |
-| | `list_transformations` | 프로젝트의 변환 구성 나열 |
-| | `update_config` | 루트 구성 요소 구성 업데이트 |
-| | `update_config_row` | 구성 요소 구성 행 업데이트 |
-| | `update_sql_transformation` | 기존 SQL 변환 구성 업데이트 |
-| **플로우** | `create_conditional_flow` | 조건부 플로우 생성 (`keboola.flow`) |
-| | `create_flow` | 레거시 플로우 생성 (`keboola.orchestrator`) |
-| | `get_flow` | 특정 플로우 구성의 세부 정보 검색 |
-| | `get_flow_examples` | 유효한 플로우 구성의 예제 검색 |
-| | `get_flow_schema` | 지정된 플로우 유형에 대한 JSON 스키마 반환 |
-| | `list_flows` | 프로젝트의 플로우 구성 나열 |
-| | `update_flow` | 기존 플로우 구성 업데이트 |
-| **작업** | `get_job` | 특정 작업에 대한 자세한 정보 검색 |
-| | `list_jobs` | 선택적 필터링, 정렬 및 페이지네이션으로 작업 나열 |
-| | `run_job` | 구성 요소 또는 변환에 대한 작업 시작 |
-| **문서** | `docs_query` | Keboola 문서를 소스로 사용하여 질문에 답변 |
-| **기타** | `create_oauth_url` | 구성 요소 구성에 대한 OAuth 인증 URL 생성 |
-| | `search` | 이름 접두사로 프로젝트의 항목 검색 |
+| 카테고리      | 도구                        | 설명                                                              |
+| ------------- | --------------------------- | ----------------------------------------------------------------- |
+| **프로젝트**  | `get_project_info`          | Keboola 프로젝트에 대한 구조화된 정보 반환                        |
+| **스토리지**  | `get_bucket`                | 특정 버킷에 대한 자세한 정보 가져오기                             |
+|               | `get_table`                 | DB 식별자와 열을 포함하여 특정 테이블에 대한 자세한 정보 가져오기 |
+|               | `list_buckets`              | 프로젝트의 모든 버킷 검색                                         |
+|               | `list_tables`               | 특정 버킷의 모든 테이블 검색                                      |
+|               | `update_description`        | 버킷, 테이블 또는 열의 설명 업데이트                              |
+| **SQL**       | `query_data`                | 기본 데이터베이스에 대해 SELECT 쿼리 실행                         |
+| **구성 요소** | `add_config_row`            | 구성 요소 구성에 대한 구성 행 생성                                |
+|               | `create_config`             | 루트 구성 요소 구성 생성                                          |
+|               | `create_sql_transformation` | 하나 이상의 SQL 코드 블록에서 SQL 변환 생성                       |
+|               | `find_component_id`         | 자연어 쿼리와 일치하는 구성 요소 ID 찾기                          |
+|               | `get_component`             | ID로 구성 요소의 세부 정보 검색                                   |
+|               | `get_config`                | 특정 구성 요소/변환 구성 검색                                     |
+|               | `get_config_examples`       | 구성 요소에 대한 예제 구성 검색                                   |
+|               | `list_configs`              | 프로젝트의 구성을 나열하고 선택적으로 필터링                      |
+|               | `list_transformations`      | 프로젝트의 변환 구성 나열                                         |
+|               | `update_config`             | 루트 구성 요소 구성 업데이트                                      |
+|               | `update_config_row`         | 구성 요소 구성 행 업데이트                                        |
+|               | `update_sql_transformation` | 기존 SQL 변환 구성 업데이트                                       |
+| **플로우**    | `create_conditional_flow`   | 조건부 플로우 생성 (`keboola.flow`)                               |
+|               | `create_flow`               | 레거시 플로우 생성 (`keboola.orchestrator`)                       |
+|               | `get_flow`                  | 특정 플로우 구성의 세부 정보 검색                                 |
+|               | `get_flow_examples`         | 유효한 플로우 구성의 예제 검색                                    |
+|               | `get_flow_schema`           | 지정된 플로우 유형에 대한 JSON 스키마 반환                        |
+|               | `list_flows`                | 프로젝트의 플로우 구성 나열                                       |
+|               | `update_flow`               | 기존 플로우 구성 업데이트                                         |
+| **작업**      | `get_job`                   | 특정 작업에 대한 자세한 정보 검색                                 |
+|               | `list_jobs`                 | 선택적 필터링, 정렬 및 페이지네이션으로 작업 나열                 |
+|               | `run_job`                   | 구성 요소 또는 변환에 대한 작업 시작                              |
+| **문서**      | `docs_query`                | Keboola 문서를 소스로 사용하여 질문에 답변                        |
+| **기타**      | `create_oauth_url`          | 구성 요소 구성에 대한 OAuth 인증 URL 생성                         |
+|               | `search`                    | 이름 접두사로 프로젝트의 항목 검색                                |
 
 ## 문제 해결
 
 ### 일반적인 문제
 
-| 문제 | 해결책 |
-|-------|----------|
-| **인증 오류** | `KBC_STORAGE_TOKEN`이 유효한지 확인 |
+| 문제               | 해결책                                 |
+| ------------------ | -------------------------------------- |
+| **인증 오류**      | `KBC_STORAGE_TOKEN`이 유효한지 확인    |
 | **작업 공간 문제** | `KBC_WORKSPACE_SCHEMA`가 올바른지 확인 |
-| **연결 시간 초과** | 네트워크 연결 확인 |
+| **연결 시간 초과** | 네트워크 연결 확인                     |
 
 ## 개발
 

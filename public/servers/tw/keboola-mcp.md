@@ -1,4 +1,20 @@
-# Keboola MCP Server
+---
+name: Keboola MCP Server
+digest: 將您的 AI 代理、MCP 客戶端（**Cursor**、**Claude**、**Windsurf**、**VS Code**...）和其他 AI 助手連接到 Keboola。公開數據、轉換、SQL 查詢和作業觸發器——無需黏合代碼。在代理需要時，為其提供正確的數據。
+author: Keboola
+repository: https://github.com/keboola/keboola-mcp-server
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - 資料處理
+  - 商業智慧
+  - ETL
+  - 自動化
+icon: https://avatars.githubusercontent.com/u/1424387?s=200&v=4
+createTime: 2025-08-21
+---
 
 > 將您的 AI 代理、MCP 客戶端（**Cursor**、**Claude**、**Windsurf**、**VS Code**...）和其他 AI 助手連接到 Keboola。公開數據、轉換、SQL 查詢和作業觸發器——無需黏合代碼。在代理需要時，為其提供正確的數據。
 
@@ -53,7 +69,7 @@ Keboola MCP Server 是您的 Keboola 專案與現代 AI 工具之間的開源橋
 
 **安裝 uv**：
 
-*macOS/Linux*：
+_macOS/Linux_：
 
 ```bash
 # 如果您的機器上未安裝 homebrew，請使用：
@@ -63,7 +79,7 @@ Keboola MCP Server 是您的 Keboola 專案與現代 AI 工具之間的開源橋
 brew install uv
 ```
 
-*Windows*：
+_Windows_：
 
 ```powershell
 # 使用安裝程式腳本
@@ -103,13 +119,13 @@ winget install --id=astral-sh.uv -e
 
 您的 Keboola API URL 取決於您的部署地區。您可以透過登入 Keboola 專案時瀏覽器中的 URL 來確定您的地區：
 
-| 地區 | API URL |
-|--------|---------|
-| AWS 北美 | `https://connection.keboola.com` |
-| AWS 歐洲 | `https://connection.eu-central-1.keboola.com` |
-| Google Cloud EU | `https://connection.europe-west3.gcp.keboola.com` |
-| Google Cloud US | `https://connection.us-east4.gcp.keboola.com` |
-| Azure EU | `https://connection.north-europe.azure.keboola.com` |
+| 地區            | API URL                                             |
+| --------------- | --------------------------------------------------- |
+| AWS 北美        | `https://connection.keboola.com`                    |
+| AWS 歐洲        | `https://connection.eu-central-1.keboola.com`       |
+| Google Cloud EU | `https://connection.europe-west3.gcp.keboola.com`   |
+| Google Cloud US | `https://connection.us-east4.gcp.keboola.com`       |
+| Azure EU        | `https://connection.north-europe.azure.keboola.com` |
 
 ## 執行 Keboola MCP Server
 
@@ -180,16 +196,16 @@ winget install --id=astral-sh.uv -e
 ```json
 {
   "mcpServers": {
-    "keboola":{
+    "keboola": {
       "command": "wsl.exe",
       "args": [
-          "bash",
-          "-c '",
-          "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
-          "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
-          "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
-          "/snap/bin/uvx keboola_mcp_server",
-          "'"
+        "bash",
+        "-c '",
+        "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
+        "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
+        "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
+        "/snap/bin/uvx keboola_mcp_server",
+        "'"
       ]
     }
   }
@@ -208,10 +224,7 @@ winget install --id=astral-sh.uv -e
   "mcpServers": {
     "keboola": {
       "command": "/absolute/path/to/.venv/bin/python",
-      "args": [
-        "-m",
-        "keboola_mcp_server"
-      ],
+      "args": ["-m", "keboola_mcp_server"],
       "env": {
         "KBC_STORAGE_API_URL": "https://connection.YOUR_REGION.keboola.com",
         "KBC_STORAGE_TOKEN": "your_keboola_storage_token",
@@ -261,12 +274,12 @@ docker run \
 
 ### 我需要自己啟動伺服器嗎？
 
-| 情境 | 需要手動執行？ | 使用此設定 |
-|----------|----------------------|----------------|
-| 使用 Claude/Cursor | 否 | 在應用程式設定中配置 MCP |
-| 本地開發 MCP | 否（Claude 會啟動） | 將配置指向 python 路徑 |
-| 手動測試 CLI | 是 | 使用終端機執行 |
-| 使用 Docker | 是 | 執行 docker 容器 |
+| 情境               | 需要手動執行？      | 使用此設定               |
+| ------------------ | ------------------- | ------------------------ |
+| 使用 Claude/Cursor | 否                  | 在應用程式設定中配置 MCP |
+| 本地開發 MCP       | 否（Claude 會啟動） | 將配置指向 python 路徑   |
+| 手動測試 CLI       | 是                  | 使用終端機執行           |
+| 使用 Docker        | 是                  | 執行 docker 容器         |
 
 ## 使用 MCP Server
 
@@ -301,62 +314,62 @@ docker run \
 
 ### MCP 客戶端支援
 
-| **MCP 客戶端** | **支援狀態** | **連接方法** |
-|----------------|-------------------|----------------------|
-| Claude（桌面版和網頁版） | ✅ 支援 | stdio |
-| Cursor | ✅ 支援 | stdio |
-| Windsurf、Zed、Replit | ✅ 支援 | stdio |
-| Codeium、Sourcegraph | ✅ 支援 | HTTP+SSE |
-| 自訂 MCP 客戶端 | ✅ 支援 | HTTP+SSE 或 stdio |
+| **MCP 客戶端**           | **支援狀態** | **連接方法**      |
+| ------------------------ | ------------ | ----------------- |
+| Claude（桌面版和網頁版） | ✅ 支援      | stdio             |
+| Cursor                   | ✅ 支援      | stdio             |
+| Windsurf、Zed、Replit    | ✅ 支援      | stdio             |
+| Codeium、Sourcegraph     | ✅ 支援      | HTTP+SSE          |
+| 自訂 MCP 客戶端          | ✅ 支援      | HTTP+SSE 或 stdio |
 
 ## 支援的工具
 
 **注意：** 您的 AI 代理將自動適應新工具。
 
-| 類別 | 工具 | 描述 |
-|----------|------|-------------|
-| **專案** | `get_project_info` | 返回關於您 Keboola 專案的結構化資訊 |
-| **儲存** | `get_bucket` | 取得特定儲存桶的詳細資訊 |
-| | `get_table` | 取得特定表格的詳細資訊，包括 DB 識別符和欄位 |
-| | `list_buckets` | 檢索專案中的所有儲存桶 |
-| | `list_tables` | 檢索特定儲存桶中的所有表格 |
-| | `update_description` | 更新儲存桶、表格或欄位的描述 |
-| **SQL** | `query_data` | 對底層資料庫執行 SELECT 查詢 |
-| **元件** | `add_config_row` | 為元件配置建立配置行 |
-| | `create_config` | 建立根元件配置 |
-| | `create_sql_transformation` | 從一個或多個 SQL 程式碼區塊建立 SQL 轉換 |
-| | `find_component_id` | 找出符合自然語言查詢的元件 ID |
-| | `get_component` | 透過 ID 檢索元件詳細資訊 |
-| | `get_config` | 檢索特定元件/轉換配置 |
-| | `get_config_examples` | 檢索元件的範例配置 |
-| | `list_configs` | 列出專案中的配置，可選擇性過濾 |
-| | `list_transformations` | 列出專案中的轉換配置 |
-| | `update_config` | 更新根元件配置 |
-| | `update_config_row` | 更新元件配置行 |
-| | `update_sql_transformation` | 更新現有的 SQL 轉換配置 |
-| **流程** | `create_conditional_flow` | 建立條件流程（`keboola.flow`） |
-| | `create_flow` | 建立舊版流程（`keboola.orchestrator`） |
-| | `get_flow` | 檢索特定流程配置的詳細資訊 |
-| | `get_flow_examples` | 檢索有效流程配置的範例 |
-| | `get_flow_schema` | 返回指定流程類型的 JSON 模式 |
-| | `list_flows` | 列出專案中的流程配置 |
-| | `update_flow` | 更新現有的流程配置 |
-| **作業** | `get_job` | 檢索特定作業的詳細資訊 |
-| | `list_jobs` | 列出作業，可選擇性過濾、排序和分頁 |
-| | `run_job` | 為元件或轉換啟動作業 |
-| **文件** | `docs_query` | 使用 Keboola 文件作為來源回答問題 |
-| **其他** | `create_oauth_url` | 為元件配置生成 OAuth 授權 URL |
-| | `search` | 透過名稱前綴搜尋專案中的項目 |
+| 類別     | 工具                        | 描述                                         |
+| -------- | --------------------------- | -------------------------------------------- |
+| **專案** | `get_project_info`          | 返回關於您 Keboola 專案的結構化資訊          |
+| **儲存** | `get_bucket`                | 取得特定儲存桶的詳細資訊                     |
+|          | `get_table`                 | 取得特定表格的詳細資訊，包括 DB 識別符和欄位 |
+|          | `list_buckets`              | 檢索專案中的所有儲存桶                       |
+|          | `list_tables`               | 檢索特定儲存桶中的所有表格                   |
+|          | `update_description`        | 更新儲存桶、表格或欄位的描述                 |
+| **SQL**  | `query_data`                | 對底層資料庫執行 SELECT 查詢                 |
+| **元件** | `add_config_row`            | 為元件配置建立配置行                         |
+|          | `create_config`             | 建立根元件配置                               |
+|          | `create_sql_transformation` | 從一個或多個 SQL 程式碼區塊建立 SQL 轉換     |
+|          | `find_component_id`         | 找出符合自然語言查詢的元件 ID                |
+|          | `get_component`             | 透過 ID 檢索元件詳細資訊                     |
+|          | `get_config`                | 檢索特定元件/轉換配置                        |
+|          | `get_config_examples`       | 檢索元件的範例配置                           |
+|          | `list_configs`              | 列出專案中的配置，可選擇性過濾               |
+|          | `list_transformations`      | 列出專案中的轉換配置                         |
+|          | `update_config`             | 更新根元件配置                               |
+|          | `update_config_row`         | 更新元件配置行                               |
+|          | `update_sql_transformation` | 更新現有的 SQL 轉換配置                      |
+| **流程** | `create_conditional_flow`   | 建立條件流程（`keboola.flow`）               |
+|          | `create_flow`               | 建立舊版流程（`keboola.orchestrator`）       |
+|          | `get_flow`                  | 檢索特定流程配置的詳細資訊                   |
+|          | `get_flow_examples`         | 檢索有效流程配置的範例                       |
+|          | `get_flow_schema`           | 返回指定流程類型的 JSON 模式                 |
+|          | `list_flows`                | 列出專案中的流程配置                         |
+|          | `update_flow`               | 更新現有的流程配置                           |
+| **作業** | `get_job`                   | 檢索特定作業的詳細資訊                       |
+|          | `list_jobs`                 | 列出作業，可選擇性過濾、排序和分頁           |
+|          | `run_job`                   | 為元件或轉換啟動作業                         |
+| **文件** | `docs_query`                | 使用 Keboola 文件作為來源回答問題            |
+| **其他** | `create_oauth_url`          | 為元件配置生成 OAuth 授權 URL                |
+|          | `search`                    | 透過名稱前綴搜尋專案中的項目                 |
 
 ## 疑難排解
 
 ### 常見問題
 
-| 問題 | 解決方案 |
-|-------|----------|
-| **身份驗證錯誤** | 驗證 `KBC_STORAGE_TOKEN` 是否有效 |
-| **工作區問題** | 確認 `KBC_WORKSPACE_SCHEMA` 是否正確 |
-| **連接逾時** | 檢查網路連接 |
+| 問題             | 解決方案                             |
+| ---------------- | ------------------------------------ |
+| **身份驗證錯誤** | 驗證 `KBC_STORAGE_TOKEN` 是否有效    |
+| **工作區問題**   | 確認 `KBC_WORKSPACE_SCHEMA` 是否正確 |
+| **連接逾時**     | 檢查網路連接                         |
 
 ## 開發
 

@@ -23,12 +23,20 @@ const sponsors: Sponsor[] = [
     arrowColor: 'bg-pink-500'
   },
   {
-    id: 'rooms-so',
-    name: 'Rooms.so',
-    description: 'AI Room Design Assistant.',
-    url: 'https://www.rooms.so/?utm_source=claudemcp',
+    id: 'avoid-so',
+    name: 'Avoid.so',
+    description: 'Humanize AI Assistant.',
+    url: 'https://www.avoid.so/?utm_source=claudemcp',
     color: 'text-blue-400',
     arrowColor: 'bg-blue-500'
+  },
+  {
+    id: 'dripo-ai',
+    name: 'Dripo.ai',
+    description: 'ALL IN ONE AI Image & Video Generator.',
+    url: 'https://www.dripo.ai/?utm_source=claudemcp',
+    color: 'text-lime-400',
+    arrowColor: 'bg-lime-500'
   }
 ];
 

@@ -1,4 +1,20 @@
-# Keboola MCP 服务器
+---
+name: Keboola MCP Server
+digest: 将您的 AI 代理、MCP 客户端（**Cursor**、**Claude**、**Windsurf**、**VS Code**...）和其他 AI 助手连接到 Keboola。公开数据、转换、SQL 查询和作业触发器——无需胶水代码。在代理需要时，为它提供正确的数据。
+author: Keboola
+repository: https://github.com/keboola/keboola-mcp-server
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - 数据处理
+  - 商业智能
+  - ETL
+  - 自动化
+icon: https://avatars.githubusercontent.com/u/1424387?s=200&v=4
+createTime: 2025-08-21
+---
 
 > 连接您的 AI 智能体、MCP 客户端（**Cursor**、**Claude**、**Windsurf**、**VS Code** 等）和其他 AI 助手到 Keboola。公开数据、转换、SQL 查询和作业触发器——无需胶水代码。在需要时将正确的数据传递给智能体。
 
@@ -54,7 +70,7 @@ Keboola MCP 服务器是您的 Keboola 项目与现代 AI 工具之间的开源�
 
 **安装 uv**：
 
-*macOS/Linux*：
+_macOS/Linux_：
 
 ```bash
 # 如果您的机器上未安装 homebrew，请使用：
@@ -64,7 +80,7 @@ Keboola MCP 服务器是您的 Keboola 项目与现代 AI 工具之间的开源�
 brew install uv
 ```
 
-*Windows*：
+_Windows_：
 
 ```powershell
 # 使用安装程序脚本
@@ -104,13 +120,13 @@ winget install --id=astral-sh.uv -e
 
 您的 Keboola API URL 取决于您的部署区域。您可以通过登录 Keboola 项目时浏览器中的 URL 来确定您的区域：
 
-| 区域 | API URL |
-|--------|---------|
-| AWS 北美 | `https://connection.keboola.com` |
-| AWS 欧洲 | `https://connection.eu-central-1.keboola.com` |
-| Google Cloud 欧盟 | `https://connection.europe-west3.gcp.keboola.com` |
-| Google Cloud 美国 | `https://connection.us-east4.gcp.keboola.com` |
-| Azure 欧盟 | `https://connection.north-europe.azure.keboola.com` |
+| 区域              | API URL                                             |
+| ----------------- | --------------------------------------------------- |
+| AWS 北美          | `https://connection.keboola.com`                    |
+| AWS 欧洲          | `https://connection.eu-central-1.keboola.com`       |
+| Google Cloud 欧盟 | `https://connection.europe-west3.gcp.keboola.com`   |
+| Google Cloud 美国 | `https://connection.us-east4.gcp.keboola.com`       |
+| Azure 欧盟        | `https://connection.north-europe.azure.keboola.com` |
 
 ## 运行 Keboola MCP 服务器
 
@@ -181,16 +197,16 @@ winget install --id=astral-sh.uv -e
 ```json
 {
   "mcpServers": {
-    "keboola":{
+    "keboola": {
       "command": "wsl.exe",
       "args": [
-          "bash",
-          "-c '",
-          "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
-          "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
-          "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
-          "/snap/bin/uvx keboola_mcp_server",
-          "'"
+        "bash",
+        "-c '",
+        "export KBC_STORAGE_API_URL=https://connection.YOUR_REGION.keboola.com &&",
+        "export KBC_STORAGE_TOKEN=your_keboola_storage_token &&",
+        "export KBC_WORKSPACE_SCHEMA=your_workspace_schema &&",
+        "/snap/bin/uvx keboola_mcp_server",
+        "'"
       ]
     }
   }
@@ -209,10 +225,7 @@ winget install --id=astral-sh.uv -e
   "mcpServers": {
     "keboola": {
       "command": "/absolute/path/to/.venv/bin/python",
-      "args": [
-        "-m",
-        "keboola_mcp_server"
-      ],
+      "args": ["-m", "keboola_mcp_server"],
       "env": {
         "KBC_STORAGE_API_URL": "https://connection.YOUR_REGION.keboola.com",
         "KBC_STORAGE_TOKEN": "your_keboola_storage_token",
@@ -262,12 +275,12 @@ docker run \
 
 ### 我需要自己启动服务器吗？
 
-| 场景 | 需要手动运行？ | 使用此设置 |
-|----------|----------------------|----------------|
-| 使用 Claude/Cursor | 否 | 在应用设置中配置 MCP |
-| 本地开发 MCP | 否（Claude 启动它） | 将配置指向 python 路径 |
-| 手动测试 CLI | 是 | 使用终端运行 |
-| 使用 Docker | 是 | 运行 docker 容器 |
+| 场景               | 需要手动运行？      | 使用此设置             |
+| ------------------ | ------------------- | ---------------------- |
+| 使用 Claude/Cursor | 否                  | 在应用设置中配置 MCP   |
+| 本地开发 MCP       | 否（Claude 启动它） | 将配置指向 python 路径 |
+| 手动测试 CLI       | 是                  | 使用终端运行           |
+| 使用 Docker        | 是                  | 运行 docker 容器       |
 
 ## 使用 MCP 服务器
 
@@ -302,62 +315,62 @@ docker run \
 
 ### MCP 客户端支持
 
-| **MCP 客户端** | **支持状态** | **连接方法** |
-|----------------|-------------------|----------------------|
-| Claude（桌面和 Web） | ✅ 已支持 | stdio |
-| Cursor | ✅ 已支持 | stdio |
-| Windsurf、Zed、Replit | ✅ 已支持 | stdio |
-| Codeium、Sourcegraph | ✅ 已支持 | HTTP+SSE |
-| 自定义 MCP 客户端 | ✅ 已支持 | HTTP+SSE 或 stdio |
+| **MCP 客户端**        | **支持状态** | **连接方法**      |
+| --------------------- | ------------ | ----------------- |
+| Claude（桌面和 Web）  | ✅ 已支持    | stdio             |
+| Cursor                | ✅ 已支持    | stdio             |
+| Windsurf、Zed、Replit | ✅ 已支持    | stdio             |
+| Codeium、Sourcegraph  | ✅ 已支持    | HTTP+SSE          |
+| 自定义 MCP 客户端     | ✅ 已支持    | HTTP+SSE 或 stdio |
 
 ## 支持的工具
 
 **注意：** 您的 AI 智能体将自动适应新工具。
 
-| 类别 | 工具 | 描述 |
-|----------|------|-------------|
-| **项目** | `get_project_info` | 返回关于您的 Keboola 项目的结构化信息 |
-| **存储** | `get_bucket` | 获取特定存储桶的详细信息 |
-| | `get_table` | 获取特定表的详细信息，包括数据库标识符和列 |
-| | `list_buckets` | 检索项目中的所有存储桶 |
-| | `list_tables` | 检索特定存储桶中的所有表 |
-| | `update_description` | 更新存储桶、表或列的描述 |
-| **SQL** | `query_data` | 对底层数据库执行 SELECT 查询 |
-| **组件** | `add_config_row` | 为组件配置创建配置行 |
-| | `create_config` | 创建根组件配置 |
-| | `create_sql_transformation` | 从一个或多个 SQL 代码块创建 SQL 转换 |
-| | `find_component_id` | 查找匹配自然语言查询的组件 ID |
-| | `get_component` | 通过 ID 检索组件的详细信息 |
-| | `get_config` | 检索特定的组件/转换配置 |
-| | `get_config_examples` | 检索组件的示例配置 |
-| | `list_configs` | 列出项目中的配置，可选过滤 |
-| | `list_transformations` | 列出项目中的转换配置 |
-| | `update_config` | 更新根组件配置 |
-| | `update_config_row` | 更新组件配置行 |
-| | `update_sql_transformation` | 更新现有 SQL 转换配置 |
-| **流程** | `create_conditional_flow` | 创建条件流程 (`keboola.flow`) |
-| | `create_flow` | 创建传统流程 (`keboola.orchestrator`) |
-| | `get_flow` | 检索特定流程配置的详细信息 |
-| | `get_flow_examples` | 检索有效流程配置的示例 |
-| | `get_flow_schema` | 返回指定流程类型的 JSON 架构 |
-| | `list_flows` | 列出项目中的流程配置 |
-| | `update_flow` | 更新现有流程配置 |
-| **作业** | `get_job` | 检索特定作业的详细信息 |
-| | `list_jobs` | 列出作业，可选过滤、排序和分页 |
-| | `run_job` | 为组件或转换启动作业 |
-| **文档** | `docs_query` | 使用 Keboola 文档作为源回答问题 |
-| **其他** | `create_oauth_url` | 为组件配置生成 OAuth 授权 URL |
-| | `search` | 按名称前缀在项目中搜索项目 |
+| 类别     | 工具                        | 描述                                       |
+| -------- | --------------------------- | ------------------------------------------ |
+| **项目** | `get_project_info`          | 返回关于您的 Keboola 项目的结构化信息      |
+| **存储** | `get_bucket`                | 获取特定存储桶的详细信息                   |
+|          | `get_table`                 | 获取特定表的详细信息，包括数据库标识符和列 |
+|          | `list_buckets`              | 检索项目中的所有存储桶                     |
+|          | `list_tables`               | 检索特定存储桶中的所有表                   |
+|          | `update_description`        | 更新存储桶、表或列的描述                   |
+| **SQL**  | `query_data`                | 对底层数据库执行 SELECT 查询               |
+| **组件** | `add_config_row`            | 为组件配置创建配置行                       |
+|          | `create_config`             | 创建根组件配置                             |
+|          | `create_sql_transformation` | 从一个或多个 SQL 代码块创建 SQL 转换       |
+|          | `find_component_id`         | 查找匹配自然语言查询的组件 ID              |
+|          | `get_component`             | 通过 ID 检索组件的详细信息                 |
+|          | `get_config`                | 检索特定的组件/转换配置                    |
+|          | `get_config_examples`       | 检索组件的示例配置                         |
+|          | `list_configs`              | 列出项目中的配置，可选过滤                 |
+|          | `list_transformations`      | 列出项目中的转换配置                       |
+|          | `update_config`             | 更新根组件配置                             |
+|          | `update_config_row`         | 更新组件配置行                             |
+|          | `update_sql_transformation` | 更新现有 SQL 转换配置                      |
+| **流程** | `create_conditional_flow`   | 创建条件流程 (`keboola.flow`)              |
+|          | `create_flow`               | 创建传统流程 (`keboola.orchestrator`)      |
+|          | `get_flow`                  | 检索特定流程配置的详细信息                 |
+|          | `get_flow_examples`         | 检索有效流程配置的示例                     |
+|          | `get_flow_schema`           | 返回指定流程类型的 JSON 架构               |
+|          | `list_flows`                | 列出项目中的流程配置                       |
+|          | `update_flow`               | 更新现有流程配置                           |
+| **作业** | `get_job`                   | 检索特定作业的详细信息                     |
+|          | `list_jobs`                 | 列出作业，可选过滤、排序和分页             |
+|          | `run_job`                   | 为组件或转换启动作业                       |
+| **文档** | `docs_query`                | 使用 Keboola 文档作为源回答问题            |
+| **其他** | `create_oauth_url`          | 为组件配置生成 OAuth 授权 URL              |
+|          | `search`                    | 按名称前缀在项目中搜索项目                 |
 
 ## 故障排除
 
 ### 常见问题
 
-| 问题 | 解决方案 |
-|-------|----------|
-| **身份验证错误** | 验证 `KBC_STORAGE_TOKEN` 是否有效 |
+| 问题             | 解决方案                             |
+| ---------------- | ------------------------------------ |
+| **身份验证错误** | 验证 `KBC_STORAGE_TOKEN` 是否有效    |
 | **工作空间问题** | 确认 `KBC_WORKSPACE_SCHEMA` 是否正确 |
-| **连接超时** | 检查网络连接 |
+| **连接超时**     | 检查网络连接                         |
 
 ## 开发
 

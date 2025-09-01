@@ -12,13 +12,13 @@ export function Footer() {
 
   const navigation = {
     product: [
-      { name: '快课星球', lang: 'zh', href: 'https://fastclass.cn?ref=claude-mcp' },
-      { name: '优点知识', lang: 'zh', href: 'https://youdianzhishi.com?ref=claude-mcp' },
+      { name: 'AI ASMR Videos', href: 'https://www.asmr.so?ref=claude-mcp' },
+      { name: 'Dripo AI', href: 'https://www.dripo.ai?ref=claude-mcp'},
       { name: 'ToMarkdown', href: 'https://www.tomarkdown.org?ref=claude-mcp' },
-      { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
-      { name: 'ASMR Videos', href: 'https://www.asmr.so?ref=claude-mcp' },
-      { name: 'Desktop Extensions', href: 'https://www.desktopextensions.com?ref=claude-mcp' },
       { name: 'AI Rooms', href: 'https://www.rooms.so?ref=claude-mcp' },
+      { name: 'Humanize AI', href: 'https://www.avoid.so?ref=claude-mcp' },
+      { name: 'Manus AI', href: 'https://www.manusai.io?ref=claude-mcp' },
+      { name: 'Desktop Extensions', href: 'https://www.desktopextensions.com?ref=claude-mcp' },
       { name: 'Calculator Online', href: 'https://www.calculatoronline.io?ref=claude-mcp' },
       { name: 'Compress', href: 'https://www.compress.run?ref=claude-mcp' },
       { name: 'A2A', href: 'https://www.a2aprotocol.net?ref=claude-mcp' },

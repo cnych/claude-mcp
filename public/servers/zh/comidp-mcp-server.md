@@ -18,7 +18,6 @@ createTime: 2025-06-13
 
 该工具可让您从 PDF 中提取关键信息，或通过支持 Model Context Protocol (MCP) 的应用（如 Claude）解析并提取文档关键信息，从而提升文档处理效率。
 
-
 # ComIDP MCP Server
 
 **ComIDP MCP** 服务器是一款轻量级的 Model Context Protocol (MCP) 服务器，旨在将 [ComIDP](https://www.compdf.com/solutions/intelligent-document-processing)与 AI 聊天机器人无缝集成，提供非结构化文档处理功能，例如从 PDF 文件中提取数据。该服务以结构化的纯文本格式返回结果，便于后续处理或归档。
@@ -33,55 +32,58 @@ createTime: 2025-06-13
 
 1. 智能文档抽取
 
-  - 支持从上传的 PDF 文档中提取文本内容。
-  - 批量处理及多文件支持。
+- 支持从上传的 PDF 文档中提取文本内容。
+- 批量处理及多文件支持。
 
 2. 未来增强功能
-  - 支持更多文档格式（例如JPG,PNG等）。
-  - 与其他ComIDP工具集成以实现高级处理。
 
+- 支持更多文档格式（例如 JPG,PNG 等）。
+- 与其他 ComIDP 工具集成以实现高级处理。
 
 ## 如何将 ComIDP MCP 服务器用于 Claude 桌面？
 
 ### 设置
 
 1. 依赖项：
+
 - 确保已安装以下依赖项：
-        
-    - Python 3.10 或更高版本。
 
-    - pip (Python包安装程序)
+  - Python 3.10 或更高版本。
 
-    - uv
-    
-        ```bash
-        pip install uv 
-        ```
+  - pip (Python 包安装程序)
+
+  - uv
+
+    ```bash
+    pip install uv
+    ```
 
 - 创建虚拟环境并安装所需的包：
-    - Windows:
 
-    ```bash
-    cd comidp-mcp\\src
-    python -m venv .venv
-    .venv\\Scripts\\activate
-    pip install -r requirements.txt
-    ```
+  - Windows:
 
-    - Linux / MacOS:
+  ```bash
+  cd comidp-mcp\\src
+  python -m venv .venv
+  .venv\\Scripts\\activate
+  pip install -r requirements.txt
+  ```
 
-    ```bash
-    cd comidp-mcp/src
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    ```
+  - Linux / MacOS:
 
-2. 配置Claude桌面
+  ```bash
+  cd comidp-mcp/src
+  python -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+2. 配置 Claude 桌面
 
 要配置与 Claude Desktop 的集成，您需要编辑 claude_desktop_config.json 文件。
 
 如果该文件尚不存在，您可以按照以下步骤从 Claude Desktop 直接创建并打开它：
+
 - 打开 Claude 桌面。
 - 单击窗口左上角的 Claude 图标。
 - 导航至文件 → 设置 → 开发人员 → 编辑配置。
@@ -92,11 +94,11 @@ createTime: 2025-06-13
 
     ```json
     {
-        "mcpServers": { 
-            "comidp-mcp": {     
-                "command": "uv", 
+        "mcpServers": {
+            "comidp-mcp": {
+                "command": "uv",
                 "args": [
-                        "run", 
+                        "run",
                         "PATH/TO/comidp-mcp/src/virtual environment python",
                         "PATH/TO/comidp-mcp/src/comidp_tools.py"
                 ],
@@ -108,7 +110,7 @@ createTime: 2025-06-13
     }
     ```
     - Note:
-        1. The virtual environment python path should point to the Python executable in your virtual environment. It should look like 
+        1. The virtual environment python path should point to the Python executable in your virtual environment. It should look like
             -  For Windows `C:\\path\\to\\comidp-mcp\\.venv\\Scripts\\python.exe`.
             -  For Linux/MacOS `/path/to/comidp-mcp/.venv/bin/python`.
         2. All paths should be absolute paths.
@@ -116,7 +118,7 @@ createTime: 2025-06-13
 
 3. 重新启动 Claude Desktop。
 
-### API参考
+### API 参考
 
 **数据提取**
 
