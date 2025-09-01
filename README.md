@@ -22,6 +22,7 @@ The following MCP servers are currently documented on the website:
 - **Git** - Git repository operations and management
 - **GitHub** - GitHub API integration for repository management
 - **Google Drive** - Access and management of Google Drive files
+- **[Linked API MCP](https://github.com/Linked-API/linkedapi-mcp)** - MCP server that lets AI assistants control LinkedIn accounts and retrieve real-time data
 - **[Keboola MCP](https://www.claudemcp.com/servers/keboola-mcp)** - 
 - **Playwright** - Browser automation and testing
 - **PostgreSQL** - PostgreSQL database interactions
