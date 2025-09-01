@@ -15,6 +15,7 @@ The following MCP servers are currently documented on the website:
 - **[Blender MCP](https://github.com/ahujasid/blender-mcp)** - Integration with Blender 3D modeling software
 - **[Brave Search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)** - Web search capabilities using Brave's search engine
 - **[Claudflare](https://www.claudemcp.com/servers/cloudflare)** - Integration with Cloudflare services
+- **[Crawlbase MCP](https://github.com/crawlbase/crawlbase-mcp)** - Connects AI agents and LLMs with real-time web data using Crawlbase’s battle-tested scraping, JavaScript rendering, and anti-bot protection. Supports `crawl`, `crawl_markdown`, and `crawl_screenshot` commands. SDKs available in Node.js, Python, Java, PHP, and .NET.
 - **[Fetch](https://www.claudemcp.com/servers/fetch)** - Web content fetching and processing
 - **[Figma Context](https://github.com/glips/figma-context-mcp)** - Access and manipulation of Figma designs
 - **[Firecrawl](https://github.com/mendableai/firecrawl-mcp-server)** - Advanced web scraping and crawling capabilities
