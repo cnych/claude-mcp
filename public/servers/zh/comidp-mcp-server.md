@@ -1,5 +1,5 @@
 ---
-name: ComIDP MCP
+name: 智能文档抽取-ComIDP
 digest: ComIDP MCP 服务器旨在无缝集成 ComIDP 与 AI 聊天机器人，提供非结构化文档处理功能，例如从 PDF 文件中提取数据。
 author: ComPDF
 repository: https://github.com/ComPDFKit/ComIDP-MCP-Server
@@ -18,72 +18,63 @@ createTime: 2025-06-13
 
 该工具可让您从 PDF 中提取关键信息，或通过支持 Model Context Protocol (MCP) 的应用（如 Claude）解析并提取文档关键信息，从而提升文档处理效率。
 
-# ComIDP MCP Server
+## 支持功能：智能文档提取
+ComIDP 的**智能文档提取**功能可自动从您上传的非结构化文档（例如 PDF）中提取关键信息，将其转换为结构化数据，并支持批量处理，从而显著提升文档处理效率。
 
-**ComIDP MCP** 服务器是一款轻量级的 Model Context Protocol (MCP) 服务器，旨在将 [ComIDP](https://www.compdf.com/solutions/intelligent-document-processing)与 AI 聊天机器人无缝集成，提供非结构化文档处理功能，例如从 PDF 文件中提取数据。该服务以结构化的纯文本格式返回结果，便于后续处理或归档。
+未来，我们将支持更多文档格式（例如 JPG、PNG 等），并与其他 ComIDP 工具集成以实现高级处理。
+
+# 什么是ComIDP MCP Server？
+
+**ComIDP MCP** 服务器是一款轻量级的 Model Context Protocol (MCP) 服务器，旨在将 [ComIDP](https://www.compdf.com/solutions/intelligent-document-processing?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHub)与 AI 聊天机器人无缝集成，提供非结构化文档处理功能，例如从 PDF 文件中提取数据。该服务以结构化的纯文本格式返回结果，便于后续处理或归档。
 
 <img src="https://github.com/user-attachments/assets/0588f0e8-8692-4480-ad36-720a4de90d01" alt="2.4" width="50%" height="50%"/>
 
 ## 许可证
 
-本项目基于 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)许可协议发布。请[联系我们](https://www.compdf.com/contact-sales) 获取免费试用的许可证密钥。
+本项目基于 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)许可协议发布。请[联系我们](https://www.compdf.com/contact-sales?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHub) 获取免费试用的许可证密钥。
 
-## 功能
-
-1. 智能文档抽取
-
-- 支持从上传的 PDF 文档中提取文本内容。
-- 批量处理及多文件支持。
-
-2. 未来增强功能
-
-- 支持更多文档格式（例如 JPG,PNG 等）。
-- 与其他 ComIDP 工具集成以实现高级处理。
 
 ## 如何将 ComIDP MCP 服务器用于 Claude 桌面？
 
 ### 设置
 
 1. 依赖项：
-
 - 确保已安装以下依赖项：
+        
+    - Python 3.10 或更高版本。
 
-  - Python 3.10 或更高版本。
+    - pip (Python包安装程序)
 
-  - pip (Python 包安装程序)
-
-  - uv
-
-    ```bash
-    pip install uv
-    ```
+    - uv
+    
+        ```bash
+        pip install uv 
+        ```
 
 - 创建虚拟环境并安装所需的包：
+    - Windows:
 
-  - Windows:
+    ```bash
+    cd comidp-mcp\\src
+    python -m venv .venv
+    .venv\\Scripts\\activate
+    pip install -r requirements.txt
+    ```
 
-  ```bash
-  cd comidp-mcp\\src
-  python -m venv .venv
-  .venv\\Scripts\\activate
-  pip install -r requirements.txt
-  ```
+    - Linux / MacOS:
 
-  - Linux / MacOS:
+    ```bash
+    cd comidp-mcp/src
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    ```
 
-  ```bash
-  cd comidp-mcp/src
-  python -m venv .venv
-  source .venv/bin/activate
-  pip install -r requirements.txt
-  ```
-
-2. 配置 Claude 桌面
+2. 配置Claude桌面
 
 要配置与 Claude Desktop 的集成，您需要编辑 claude_desktop_config.json 文件。
 
 如果该文件尚不存在，您可以按照以下步骤从 Claude Desktop 直接创建并打开它：
-
 - 打开 Claude 桌面。
 - 单击窗口左上角的 Claude 图标。
 - 导航至文件 → 设置 → 开发人员 → 编辑配置。
@@ -94,11 +85,11 @@ createTime: 2025-06-13
 
     ```json
     {
-        "mcpServers": {
-            "comidp-mcp": {
-                "command": "uv",
+        "mcpServers": { 
+            "comidp-mcp": {     
+                "command": "uv", 
                 "args": [
-                        "run",
+                        "run", 
                         "PATH/TO/comidp-mcp/src/virtual environment python",
                         "PATH/TO/comidp-mcp/src/comidp_tools.py"
                 ],
@@ -110,7 +101,7 @@ createTime: 2025-06-13
     }
     ```
     - Note:
-        1. The virtual environment python path should point to the Python executable in your virtual environment. It should look like
+        1. The virtual environment python path should point to the Python executable in your virtual environment. It should look like 
             -  For Windows `C:\\path\\to\\comidp-mcp\\.venv\\Scripts\\python.exe`.
             -  For Linux/MacOS `/path/to/comidp-mcp/.venv/bin/python`.
         2. All paths should be absolute paths.
@@ -118,7 +109,7 @@ createTime: 2025-06-13
 
 3. 重新启动 Claude Desktop。
 
-### API 参考
+### API参考
 
 **数据提取**
 
@@ -157,4 +148,4 @@ def data_extraction_from_folder(folder: str, save_dir_path: str, recursive: bool
 
 ## Support
 
-如果您遇到任何问题或需要支持，请[联系我们的研发团队](https://www.compdf.com/support)。
+如果您遇到任何问题或需要支持，请[联系我们的研发团队](https://www.compdf.com/support?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHub)。
