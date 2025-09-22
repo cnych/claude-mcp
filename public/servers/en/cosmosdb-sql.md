@@ -7,6 +7,7 @@ tags:
   - nosql
   - azure
 repository: https://github.com/hendrickcastro/MCPCosmosDB
+icon: https://avatars.githubusercontent.com/u/8320893?s=48&v=4
 capabilities:
   prompts: false
   resources: false
