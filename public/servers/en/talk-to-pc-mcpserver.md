@@ -1,4 +1,18 @@
-# Talk to Your PC MCP Server
+---
+name: Talk to Your PC MCP Server
+digest: A Model Context Protocol (MCP) server that helps troubleshooting and diagnosis of your PC through AI assistants like Claude, ChatGPT, or any MCP-compatible tool.
+author: Irene-123
+homepage: https://github.com/Irene-123/talk-to-your-pc-mcp-server
+repository: https://github.com/Irene-123/talk-to-your-pc-mcp-server
+capabilities:
+  prompts: false
+  resources: false
+  tools: true
+tags:
+  - pc
+icon: https://avatars.githubusercontent.com/u/58950467?s=48&v=4
+createTime: 2025-09-16T00:00:00Z
+---
 
 A Model Context Protocol (MCP) server that helps troubleshooting and diagnosis of your PC through AI assistants like Claude, ChatGPT, or any MCP-compatible tool.
 
@@ -14,26 +28,32 @@ A Model Context Protocol (MCP) server that helps troubleshooting and diagnosis o
 ## Tools
 
 ### `run_diagnosis`
+
 Run system diagnosis to identify probable issues with your computer.
 
 **Example usage:**
+
 - "Why is my computer running slow?"
 - "Check my network connectivity"
 - "Diagnose memory usage problems"
 
 ### `get_pc_settings`
+
 Get PC settings and system information like volume, WiFi, battery, etc.
 
 **Example usage:**
+
 - "What WiFi network am I connected to?"
 - "Show me my battery percentage"
 - "What's my current IP address?"
 - "Check my disk space"
 
 ### `execute_troubleshooting`
+
 Execute troubleshooting commands to fix system issues safely.
 
 **Example usage:**
+
 - "Fix my DNS issues"
 - "Reset my network adapter"
 - "Clear system cache"
@@ -62,18 +82,21 @@ pip install -e .
 Set up your preferred LLM provider by setting the appropriate environment variables:
 
 #### OpenAI
+
 ```bash
 export OPENAI_API_KEY="sk-..."
 export OPENAI_MODEL="gpt-4"  # optional, defaults to gpt-3.5-turbo
 ```
 
 #### Claude/Anthropic
+
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
 export ANTHROPIC_MODEL="claude-3-haiku-20240307"  # optional
 ```
 
 #### Azure OpenAI
+
 ```bash
 export AZURE_OPENAI_API_KEY="your-key"
 export AZURE_OPENAI_ENDPOINT="https://your-resource.openai.azure.com/"
@@ -120,17 +143,20 @@ For VS Code with GitHub Copilot, add to your VS Code settings or MCP configurati
 Once configured, you can interact with your PC using natural language through your AI assistant:
 
 ### System Diagnosis
+
 - "My computer is running slowly, can you diagnose the issue?"
 - "Check why my internet connection is unstable"
 - "Analyze my system performance"
 
 ### PC Settings
+
 - "What WiFi networks are available?"
 - "Show me my current system specs"
 - "What's my battery level?"
 - "Check my audio volume settings"
 
 ### Troubleshooting
+
 - "My WiFi isn't working, please fix it"
 - "Clear my DNS cache"
 - "Restart my audio services"
@@ -147,11 +173,13 @@ Once configured, you can interact with your PC using natural language through yo
 ## Platform-Specific Behavior
 
 ### Windows
+
 - Uses PowerShell for command execution
 - Supports Windows-specific diagnostics (Event Viewer, WMI, etc.)
 - Network management via `netsh` commands
 
 ### macOS/Linux
+
 - Uses bash for command execution
 - Supports Unix-style system tools (`ps`, `netstat`, `iwconfig`, etc.)
 - Package manager integration where appropriate
@@ -207,6 +235,5 @@ Enable debug logging to troubleshoot issues:
 export LOG_LEVEL=DEBUG
 python server.py
 ```
-
 
 **Note**: This MCP server executes system commands on your local machine. While comprehensive safety measures are in place, always review the commands being executed and ensure you trust the AI assistant you're using with system-level access.

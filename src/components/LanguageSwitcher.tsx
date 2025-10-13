@@ -66,6 +66,13 @@ export default function LanguageSwitcher() {
         params: undefined
       }
     }
+
+    if (path.startsWith('/resources')) {
+      return {
+        pathname: '/resources' as keyof Pathnames,
+        params: undefined
+      }
+    }
     
     // 检查是否是 /servers/xxx 格式的路径
     if (path.startsWith('/servers/') && path !== '/servers') {

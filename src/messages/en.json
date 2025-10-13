@@ -228,7 +228,8 @@
       "community": "Community",
       "contact": "Contact",
       "hotMcp": "Hot MCP",
-      "legal": "Legal"
+      "legal": "Legal",
+      "resources": "Resources"
     },
     "links": {
       "docs": "Documentation",
@@ -950,5 +951,31 @@
     },
     "openPlayground": "Open Playground",
     "openInspector": "Open Inspector"
+  },
+  "Resources": {
+    "meta": {
+      "title": "Resources - Claude MCP",
+      "description": "Explore related products and useful tools from the Claude MCP community"
+    },
+    "title": "Community Resources",
+    "description": "Discover useful products and tools created by the Claude MCP community members",
+    "products": {
+      "gptsora": "Create stunning, realistic videos from simple text descriptions in seconds using openai's sora 2 model.",
+      "genspark": "The All-in-One Super Agent AI Workspace That Does Everything",
+      "asmr": "Create relaxing AI-generated ASMR videos",
+      "dripo": "AI-powered content creation platform",
+      "tomarkdown": "Convert any document to Markdown format",
+      "rooms": "AI-powered virtual room design tool",
+      "humanize": "Make AI-generated text more natural and human-like",
+      "manus": "AI assistant for writing and content creation",
+      "extensions": "Enhance your desktop experience with powerful extensions",
+      "calculator": "Comprehensive online calculator for various calculations",
+      "compress": "Fast and efficient file compression tool",
+      "a2a": "Agent-to-Agent communication protocol",
+      "deepsite": "AI-powered website builder",
+      "invincible": "Generate custom Invincible-style title cards",
+      "colorblock": "Color Block Jam puzzle game level generator"
+    },
+    "disclaimer": "These resources are provided by community members. Visit each site to learn more about their offerings."
   }
 }

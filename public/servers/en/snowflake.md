@@ -14,7 +14,6 @@ tags:
   - data-warehouse
   - analytics
   - sql
-  - business-intelligence
 icon: https://cdn.simpleicons.org/snowflake
 createTime: 2025-09-16T00:00:00Z
 ---
@@ -47,16 +46,19 @@ The server provides five essential tools for Snowflake interaction:
 #### Schema Exploration Tools
 
 - `list_databases`
+
   - List all available databases in the Snowflake account
   - Returns: Array of database names
 
 - `list_schemas`
+
   - List all schemas in a specified database
   - Input:
     - `database` (string, optional): Database name (uses current if not specified)
   - Returns: Array of schema names
 
 - `list_tables`
+
   - List all tables in a specified schema
   - Input:
     - `database` (string, optional): Database name
@@ -167,12 +169,12 @@ await list_schemas({ database: "SALES_DB" });
 // List tables in a schema
 await list_tables({
   database: "SALES_DB",
-  schema: "TRANSACTIONS"
+  schema: "TRANSACTIONS",
 });
 
 // Get table structure
 await describe_table({
-  table_name: "SALES_DB.TRANSACTIONS.ORDERS"
+  table_name: "SALES_DB.TRANSACTIONS.ORDERS",
 });
 ```
 
@@ -218,6 +220,7 @@ ORDER BY 1 DESC;
 ### Debug Mode
 
 Enable debug logging by setting:
+
 ```env
 DEBUG=mcp:snowflake
 ```

@@ -7,6 +7,7 @@ export const defaultLocale = 'en' as const
 export const pathnames = {
   '/': '/',
   '/docs': '/docs',
+  '/resources': '/resources',
   '/docs/[slug]': '/docs/[slug]',
   '/blog': '/blog',
   '/community': '/community',

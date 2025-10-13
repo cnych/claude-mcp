@@ -228,7 +228,8 @@
         "community": "커뮤니티",
         "contact": "연락처",
         "hotMcp": "인기 MCP",
-        "legal": "법률"
+        "legal": "법률",
+        "resources": "리소스"
       },
       "links": {
         "docs": "문서",
@@ -945,5 +946,31 @@
       },
       "openPlayground": "실험실 열기",
       "openInspector": "인스펙터 열기"
+    },
+    "Resources": {
+      "meta": {
+        "title": "리소스 - Claude MCP",
+        "description": "Claude MCP 커뮤니티의 관련 제품 및 유용한 도구 탐색"
+      },
+      "title": "커뮤니티 리소스",
+      "description": "Claude MCP 커뮤니티 회원들이 만든 유용한 제품과 도구를 발견하세요",
+      "products": {
+        "gptsora": "OpenAI의 Sora 2 모델을 사용하여 간단한 텍스트 설명으로 충격적인, 실제 비디오를 몇 초 만에 만듭니다.",
+        "genspark": "모든 것을 다 할 수 있는 슈퍼 에이전트 AI 워크스페이스",
+        "asmr": "편안한 AI 생성 ASMR 비디오 제작",
+        "dripo": "AI 기반 콘텐츠 제작 플랫폼",
+        "tomarkdown": "모든 문서를 Markdown 형식으로 변환",
+        "rooms": "AI 기반 가상 공간 디자인 도구",
+        "humanize": "AI 생성 텍스트를 더 자연스럽고 인간적으로 만들기",
+        "manus": "글쓰기 및 콘텐츠 제작을 위한 AI 어시스턴트",
+        "extensions": "강력한 확장 프로그램으로 데스크톱 경험 향상",
+        "calculator": "다양한 계산을 지원하는 종합 온라인 계산기",
+        "compress": "빠르고 효율적인 파일 압축 도구",
+        "a2a": "에이전트 간 통신 프로토콜",
+        "deepsite": "AI 기반 웹사이트 빌더",
+        "invincible": "맞춤형 Invincible 스타일 타이틀 카드 생성",
+        "colorblock": "Color Block Jam 퍼즐 게임 레벨 생성기"
+      },
+      "disclaimer": "이러한 리소스는 커뮤니티 회원들이 제공합니다. 각 사이트를 방문하여 제공 내용에 대해 자세히 알아보세요."
     }
   }

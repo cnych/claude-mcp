@@ -41,7 +41,7 @@ export default function Navbar() {
     { href: '/clients' as const, label: t('clients') },
     { href: '/playground' as const, label: t('playground') },
     { href: '/inspector' as const, label: t('inspector') },
-    { href: '/specification' as const, label: t('specification') },
+    // { href: '/specification' as const, label: t('specification') },
     { href: '/blog' as const, label: t('blog') },
   ]
   

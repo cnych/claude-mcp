@@ -68,6 +68,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 1,
   }));
 
+  const resourcesUrl = locales.map((locale) => ({
+    url: locale === "en" ? `${baseUrl}/resources` : `${baseUrl}/${locale}/resources`,
+    lastModified: new Date(),
+    changeFrequency: "daily" as const,
+    priority: 1,
+  }));
+
+
   // 生成客户端列表页 URLs
   const clientListUrls = locales.map((locale) => ({
     url: locale === "en" ? `${baseUrl}/clients` : `${baseUrl}/${locale}/clients`,
@@ -164,6 +172,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...homeUrls,
+    ...resourcesUrl,
     ...serverListUrls,
     ...serverDetailUrls,
     ...clientListUrls,

@@ -228,7 +228,8 @@
       "community": "社群",
       "contact": "聯絡",
       "hotMcp": "熱門 MCP",
-      "legal": "法律"
+      "legal": "法律",
+      "resources": "資源"
     },
     "links": {
       "docs": "文件",
@@ -925,5 +926,31 @@
     },
     "openPlayground": "開啟實驗場",
     "openInspector": "開啟調試器"
+  },
+  "Resources": {
+    "meta": {
+      "title": "資源 - Claude MCP",
+      "description": "探索來自 Claude MCP 社群的相關產品和實用工具"
+    },
+    "title": "社群資源",
+    "description": "探索由 Claude MCP 社群成員創建的實用產品和工具",
+    "products": {
+      "gptsora": "使用 OpenAI 的 Sora 2 模型，通過簡單文本描述創建令人驚嘆的、逼真的視頻",
+      "genspark": "全能超級代理 AI 工作空間，無所不能",
+      "asmr": "創建令人放鬆的 AI 生成 ASMR 影片",
+      "dripo": "AI 驅動的內容創作平台",
+      "tomarkdown": "將任何文件轉換為 Markdown 格式",
+      "rooms": "AI 驅動的虛擬房間設計工具",
+      "humanize": "讓 AI 生成的文字更自然、更人性化",
+      "manus": "用於寫作和內容創作的 AI 助手",
+      "extensions": "透過強大的擴展增強桌面體驗",
+      "calculator": "支援各種計算的綜合線上計算器",
+      "compress": "快速高效的檔案壓縮工具",
+      "a2a": "代理到代理通訊協定",
+      "deepsite": "AI 驅動的網站建構器",
+      "invincible": "生成自訂 Invincible 風格標題卡",
+      "colorblock": "Color Block Jam 拼圖遊戲關卡生成器"
+    },
+    "disclaimer": "這些資源由社群成員提供。訪問每個網站了解更多關於他們的產品。"
   }
 }
