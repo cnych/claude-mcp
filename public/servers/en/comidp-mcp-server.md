@@ -1,5 +1,5 @@
 ---
-name: ComIDP MCP
+name: Intelligent Document Extraction - ComIDP
 digest: ComIDP MCP Server is designed for seamless integrating ComIDP with AI chatbots, providing unstructured document processing functionalities, such as extracting data from PDF files. 、
 author: ComPDF
 repository: https://github.com/ComPDFKit/ComIDP-MCP-Server
@@ -21,15 +21,20 @@ This tool allows you to extract key information from PDFs or parse and extract k
 
 
 
-# ComIDP MCP Server
+## Supported Feature: Intelligent Document Extraction
+ComIDP **Intelligent Document Extraction** automatically extracts key information from your uploaded unstructured documents, like PDF, converts it into structured data, and supports batch processing to significantly improve document handling efficiency.
+ 
+In the future, we will support more document formats (e.g., JPG, PNG etc.) and integrate with other ComIDP tools for advanced processing
 
-**ComIDP MCP Server** is a lightweight Model Context Protocol (MCP) server designed for seamless integrating [ComIDP](https://www.compdf.com/solutions/intelligent-document-processing) with AI chatbots, providing unstructured document processing functionalities, such as extracting data from PDF files. The service returns results in structured plain-text format, enabling downstream processing or archival.
+## What is ComIDP MCP Server
+
+**ComIDP MCP Server** is a lightweight Model Context Protocol (MCP) server designed for seamless integrating [ComIDP](https://www.compdf.com/solutions/intelligent-document-processing?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHub) with AI chatbots, providing unstructured document processing functionalities, such as extracting data from PDF files. The service returns results in structured plain-text format, enabling downstream processing or archival.
 
 <img src="https://github.com/user-attachments/assets/0588f0e8-8692-4480-ad36-720a4de90d01" alt="2.4" width="50%" height="50%"/>
 
 ## License
 
-This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Please [contact us](https://www.compdf.com/contact-sales) for a trial license key.
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Please [contact us](https://www.compdf.com/contact-sales?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHub) for a trial license key.
 
 ## Features
 
@@ -162,4 +167,4 @@ def data_extraction_from_folder(folder: str, save_dir_path: str, recursive: bool
 
 ## Support
 
-If you encounter any issues or need support, please open an issue or [contact our R&D team](https://www.compdf.com/support).
+If you encounter any issues or need support, please open an issue or [contact our R&D team](https://www.compdf.com/solutions/intelligent-document-processing?utm_source=Code&utm_campaign=github_mcpserver_20250912&utm_medium=GitHubt).
