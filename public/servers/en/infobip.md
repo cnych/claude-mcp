@@ -1,6 +1,6 @@
 ---
 name: Infobip MCP
-digest: Infobip MCP server for integrating with Infobip's omnichannel communication platform. Enables AI assistants to send and receive SMS, WhatsApp, RCS, and other channel messages and automate communication workflows through the Model Context Protocol.
+digest: Equip AI agents with communication superpowers, allowing them to send and receive multichannel messages, automate communication workflows, and manage customer data, all in a production-ready environment.
 author: Infobip
 homepage: https://github.com/infobip/mcp/blob/main/README.md
 capabilities:
@@ -8,10 +8,15 @@ capabilities:
   resources: false
   tools: true
 tags:
-  - SMS
-  - RCS
-  - WhatsApp
-  - omnichannel
+  - sms
+  - rcs
+  - whatsapp
+  - viber
+  - 2fa
+  - tfa
+  - communication
+  - cpass
+  - people
 icon: https://cdn-web.infobip.com/uploads/2025/05/infobip-logo-horizontal-orange.png
 createTime: 2025-10-13
 ---
