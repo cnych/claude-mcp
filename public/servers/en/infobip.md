@@ -17,8 +17,9 @@ tags:
   - communication
   - cpass
   - people
-icon: https://cdn-web.infobip.com/uploads/2025/05/infobip-logo-horizontal-orange.png
+icon: https://cdn-web.infobip.com/uploads/2025/05/infobip-symbol-orange.png
 createTime: 2025-10-13
+featured: true
 ---
 <img src="https://cdn-web.infobip.com/uploads/2025/05/infobip-logo-horizontal-orange.png" alt="Infobip Logo" height="48" style="display:inline;vertical-align:middle;">
 
