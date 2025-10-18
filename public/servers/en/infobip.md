@@ -12,11 +12,6 @@ tags:
   - rcs
   - whatsapp
   - viber
-  - 2fa
-  - tfa
-  - communication
-  - cpass
-  - people
 icon: https://cdn-web.infobip.com/uploads/2025/05/infobip-symbol-orange.png
 createTime: 2025-10-13
 featured: true

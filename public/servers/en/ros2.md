@@ -12,7 +12,6 @@ tags:
   - ros2
   - automation
   - messaging
-  - services
 icon: https://avatars.githubusercontent.com/u/85994630?v=4
 createTime: 2025-01-15
 featured: true
@@ -57,12 +56,7 @@ Add the following configuration to your MCP-compatible client:
   "mcpServers": {
     "ros2": {
       "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/ros2"
-      ]
+      "args": ["run", "-i", "--rm", "mcp/ros2"]
     }
   }
 }
@@ -72,38 +66,31 @@ Add the following configuration to your MCP-compatible client:
 
 1. Open **Claude Desktop** → **Settings** → **Developer** → **Edit Config**
 2. Add the server configuration to your `claude_desktop_config.json`:
+
 ```json
 {
   "mcpServers": {
     "ros2": {
       "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/ros2"
-      ]
+      "args": ["run", "-i", "--rm", "mcp/ros2"]
     }
   }
 }
 ```
+
 3. Restart Claude Desktop and the ROS2 tools will be available
 
 ### VS Code Integration
 
 1. Install the MCP extension for VS Code
 2. Add the server to your VS Code settings:
+
 ```json
 {
   "mcp.servers": {
     "ros2": {
       "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "mcp/ros2"
-      ]
+      "args": ["run", "-i", "--rm", "mcp/ros2"]
     }
   }
 }
@@ -114,19 +101,23 @@ Add the following configuration to your MCP-compatible client:
 The ROS2 MCP Server provides the following capabilities:
 
 ### Topic Management
+
 - **List Topics** – Discover all available ROS2 topics and their message types
 - **Subscribe to Topics** – Collect real-time messages from sensors, cameras, and other robot components
 - **Publish Messages** – Send commands to actuators, motors, and control systems
 
 ### Service Management
+
 - **List Services** – Browse available ROS2 services and their request/response types
 - **Call Services** – Execute robot functions like navigation goals, arm movements, or system configurations
 
 ### Message Analysis
+
 - **Get Message Fields** – Inspect the structure of any ROS2 message type
 - **Historical Data Retrieval** – Access stored sensor data and logs from InfluxDB
 
 ### Interface Discovery
+
 - **List Interfaces** – Explore all available message, service, and action types in your ROS2 environment
 
 ## Using ROS2 MCP Server
@@ -134,11 +125,13 @@ The ROS2 MCP Server provides the following capabilities:
 ### Basic Robot Interaction
 
 1. **Query robot status:**
+
    - "What topics are available on this robot?"
    - "Show me the current battery level"
    - "List all active sensors"
 
 2. **Control robot movement:**
+
    - "Move the robot forward at 0.5 m/s"
    - "Turn the robot left by 90 degrees"
    - "Stop all robot movement"
@@ -151,11 +144,13 @@ The ROS2 MCP Server provides the following capabilities:
 ### Advanced Robotics Tasks
 
 1. **Navigation and mapping:**
+
    - "Set a navigation goal to coordinates (5, 3)"
    - "Start SLAM mapping"
    - "Save the current map"
 
 2. **Manipulation and control:**
+
    - "Move the robot arm to home position"
    - "Grasp the object in front of the robot"
    - "Set joint angles for the gripper"
@@ -168,21 +163,25 @@ The ROS2 MCP Server provides the following capabilities:
 ## Example Commands
 
 ### Publishing a Twist Message
+
 ```
 "Publish a twist message to /cmd_vel with linear velocity 1.0 m/s forward"
 ```
 
 ### Subscribing to Sensor Data
+
 ```
 "Subscribe to /scan topic for 30 seconds and show me the laser data"
 ```
 
 ### Calling a Service
+
 ```
 "Call the /set_parameters service to update the robot's max speed to 2.0"
 ```
 
 ### Historical Data Queries
+
 ```
 "Get battery voltage readings from the past hour stored in InfluxDB"
 ```
