@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       apple: "/apple-touch-icon.png",
     },
     openGraph: {
-      url: locale === 'en' ? `https://www.claudemcp.com/inspector` : `https://www.claudemcp.com/${locale}/inspector`,
+      url: locale === 'en' ? `https://www.claube.ai/inspector` : `https://www.claube.ai/${locale}/inspector`,
       title: title,
       description: description,
       images: ['/og.png'],
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ['/og.png'],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/inspector` : `https://www.claudemcp.com/${locale}/inspector`,
+      canonical: locale === 'en' ? `https://www.claube.ai/inspector` : `https://www.claube.ai/${locale}/inspector`,
     },
     manifest: "/site.webmanifest",
   };

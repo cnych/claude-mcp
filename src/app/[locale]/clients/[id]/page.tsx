@@ -67,8 +67,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: description,
       images: client.icon ? [client.icon] : ['/og.png'],
       url: locale === 'en' 
-        ? `https://www.claudemcp.com/clients/${id}` 
-        : `https://www.claudemcp.com/${locale}/clients/${id}`,
+        ? `https://www.claube.ai/clients/${id}` 
+        : `https://www.claube.ai/${locale}/clients/${id}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -78,8 +78,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical: locale === 'en' 
-        ? `https://www.claudemcp.com/clients/${id}` 
-        : `https://www.claudemcp.com/${locale}/clients/${id}`,
+        ? `https://www.claube.ai/clients/${id}` 
+        : `https://www.claube.ai/${locale}/clients/${id}`,
     },
   };
 }

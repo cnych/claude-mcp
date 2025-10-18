@@ -80,13 +80,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${t(`nav.items.${slug}`)} - ${t('meta.title')}`,
     description: description,
     openGraph: {
-      url: locale === 'en' ? `https://www.claudemcp.com/docs/${slug}` : `https://www.claudemcp.com/${locale}/docs/${slug}`,
+      url: locale === 'en' ? `https://www.claube.ai/docs/${slug}` : `https://www.claube.ai/${locale}/docs/${slug}`,
       title: `${t(`nav.items.${slug}`)} - ${t('meta.og.title')}`,
       description: description,
       images: ['/og.png'],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/docs/${slug}` : `https://www.claudemcp.com/${locale}/docs/${slug}`,
+      canonical: locale === 'en' ? `https://www.claube.ai/docs/${slug}` : `https://www.claube.ai/${locale}/docs/${slug}`,
     },  
   };
 }

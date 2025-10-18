@@ -28,7 +28,7 @@ export async function generateMetadata({ params, searchParams }: PageProps): Pro
   // 从URL参数创建过滤函数
   const awaitedSearchParams = await searchParams || {};
   const tags = awaitedSearchParams.tags;
-  let url = locale === 'en' ? `https://www.claudemcp.com/servers` : `https://www.claudemcp.com/${locale}/servers`;
+  let url = locale === 'en' ? `https://www.claube.ai/servers` : `https://www.claube.ai/${locale}/servers`;
   if (tags) {
     url += `?tags=${tags}`;
   }

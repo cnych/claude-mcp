@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],
-      url: locale === 'en' ? `https://www.claudemcp.com/blog/${slug}` : `https://www.claudemcp.com/${locale}/blog/${slug}`,
+      url: locale === 'en' ? `https://www.claube.ai/blog/${slug}` : `https://www.claube.ai/${locale}/blog/${slug}`,
       images: post.coverImage ? [
         {
           url: post.coverImage,
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       ] : [],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/blog/${slug}` : `https://www.claudemcp.com/${locale}/blog/${slug}`,
+      canonical: locale === 'en' ? `https://www.claube.ai/blog/${slug}` : `https://www.claube.ai/${locale}/blog/${slug}`,
     },
   };
 }

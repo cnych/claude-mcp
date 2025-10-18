@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       images: ['/og.png'],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/blog` : `https://www.claudemcp.com/${locale}/blog`,
+      canonical: locale === 'en' ? `https://www.claube.ai/blog` : `https://www.claube.ai/${locale}/blog`,
     },
     manifest: "/site.webmanifest",
   };

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('meta.title'),
     description: t('meta.description'),
     alternates: {
-      canonical: locale === 'en' ? 'https://www.claudemcp.com/docs' : `https://www.claudemcp.com/${locale}/docs`,
+      canonical: locale === 'en' ? 'https://www.claube.ai/docs' : `https://www.claube.ai/${locale}/docs`,
     },
   };
 }

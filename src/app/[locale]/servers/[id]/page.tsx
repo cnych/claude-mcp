@@ -69,8 +69,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: description,
     openGraph: {
       url: locale === 'en' 
-        ? `https://www.claudemcp.com/servers/${id}` 
-        : `https://www.claudemcp.com/${locale}/servers/${id}`,
+        ? `https://www.claube.ai/servers/${id}` 
+        : `https://www.claube.ai/${locale}/servers/${id}`,
       title: title,
       description: description,
       images: server.icon ? [server.icon] : ['/og.png'],
@@ -83,8 +83,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical: locale === 'en' 
-        ? `https://www.claudemcp.com/servers/${id}` 
-        : `https://www.claudemcp.com/${locale}/servers/${id}`,
+        ? `https://www.claube.ai/servers/${id}` 
+        : `https://www.claube.ai/${locale}/servers/${id}`,
     },
   };
 }

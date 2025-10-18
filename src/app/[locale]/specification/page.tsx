@@ -30,13 +30,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: t('meta.title'),
     description: description,
     openGraph: {
-      url: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,
+      url: locale === 'en' ? `https://www.claube.ai/specification` : `https://www.claube.ai/${locale}/specification`,
       title: t('meta.title'),
       description: description,
       images: ['/og.png'],
     },
     alternates: {
-      canonical: locale === 'en' ? `https://www.claudemcp.com/specification` : `https://www.claudemcp.com/${locale}/specification`,
+      canonical: locale === 'en' ? `https://www.claube.ai/specification` : `https://www.claube.ai/${locale}/specification`,
     },  
   }
 }
