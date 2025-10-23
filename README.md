@@ -31,6 +31,7 @@ The following MCP servers are currently documented on the website:
 - **Puppeteer** - Headless browser automation
 - **SQLite** - SQLite database interactions
 - **Zapier** - Integration with thousands of web services through Zapier
+- **[Oracle OCI](https://github.com/jopsis/mcp-server-oci)** - Implements a MCP server for Oracle Cloud Infrastructure, allowing to interact directly with OCI resources
 
 ### Featured MCP Clients
 
