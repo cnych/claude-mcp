@@ -31,6 +31,7 @@ The following MCP servers are currently documented on the website:
 - **Puppeteer** - Headless browser automation
 - **SQLite** - SQLite database interactions
 - **Zapier** - Integration with thousands of web services through Zapier
+-  **[TestDino MCP](https://github.com/testdino-hq/testdino-mcp)** - An MCP server that lets AI agents work with your TestDino test data via natural language.
 
 ### Featured MCP Clients
 
