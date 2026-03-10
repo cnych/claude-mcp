@@ -1,6 +1,6 @@
 ---
 name: Roundtable
-digest: Your AI Board of Directors — run multi-model debates and get synthesized insights
+digest: Multi-model AI debates — GPT-4o, Claude, Gemini & 200+ models discuss, then synthesize insight
 author: Deadpixel
 homepage: https://roundtable.now
 repository: https://github.com/deadpixel/roundtable-dashboard
@@ -30,8 +30,8 @@ An MCP server that gives you access to a multi-model AI board of directors. Run 
 
 ## Tools
 
-- **consult**
-  - Run a full roundtable debate with multiple AI models
+- **consult_council**
+  - Get perspectives from multiple AI models on any topic through structured multi-model debate
   - Inputs:
     - `prompt` (string): Your question or topic for discussion
 
@@ -41,14 +41,14 @@ An MCP server that gives you access to a multi-model AI board of directors. Run 
     - `code` (string): The code to review
     - `context` (string, optional): Additional context about the code
 
-- **debug**
-  - Collaborative multi-model debugging session
+- **debug_issue**
+  - Debug issues using multiple AI models to analyze the problem from different angles
   - Inputs:
     - `issue` (string): Description of the bug or issue
     - `code` (string, optional): Relevant code snippets
 
-- **architect**
-  - Multi-model system design discussion
+- **design_architecture**
+  - Get architectural recommendations from multiple AI models for system design decisions
   - Inputs:
     - `requirements` (string): System requirements and constraints
 
