@@ -23,7 +23,7 @@ The following MCP servers are currently documented on the website:
 - **Git** - Git repository operations and management
 - **GitHub** - GitHub API integration for repository management
 - **Google Drive** - Access and management of Google Drive files
-- **[Hive Intelligence](https://github.com/hive-intel/hive-crypto-mcp)** - Ultimate cryptocurrency MCP for AI assistants with unified access to crypto, DeFi, and Web3 analytics
+- **[Hive Intelligence](https://github.com/hive-intel/hive-crypto-mcp)** - Institutional-grade crypto market infrastructure for AI — live prices, DeFi, wallets, and token risk through a managed MCP, REST API, or CLI.
 - **[Linked API MCP](https://github.com/Linked-API/linkedapi-mcp)** - MCP server that lets AI assistants control LinkedIn accounts and retrieve real-time data
 - **[Keboola MCP](https://www.claudemcp.com/servers/keboola-mcp)** - 
 - **Playwright** - Browser automation and testing
