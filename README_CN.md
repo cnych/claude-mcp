@@ -98,7 +98,7 @@ yarn dev
 ### 贡献服务器
 
 1. Fork 仓库
-2. 在 `/servers/{locale}` 目录下创建一个新文件，遵循现有格式
+2. 在 `/public/servers/{locale}` 目录下创建一个新文件，遵循现有格式
 3. 提交一个包含您的服务器信息的 PR 请求
 
 或者，使用 [Servers 页面](https://www.claudemcp.com/servers) 上的 "Submit a Server" 按钮直接创建一个 PR。
