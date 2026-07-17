@@ -57,3 +57,5 @@ configuration. Do not commit it to a repository.
 - [MCP setup documentation](https://docs.xquik.com/mcp/overview)
 - [MCP discovery metadata](https://xquik.com/.well-known/mcp.json)
 - [Source repository](https://github.com/Xquik-dev/x-twitter-scraper)
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
