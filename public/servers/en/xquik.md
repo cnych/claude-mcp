@@ -33,7 +33,7 @@ Use the remote endpoint with an Xquik API key:
     "xquik": {
       "url": "https://xquik.com/mcp",
       "headers": {
-        "Authorization": "Bearer ${XQUIK_API_KEY}"
+        "x-api-key": "${XQUIK_API_KEY}"
       }
     }
   }
