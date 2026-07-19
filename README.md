@@ -103,7 +103,7 @@ We welcome contributions to the Claude MCP Community website! Here are ways you 
 ### Contributing Servers
 
 1. Fork the repository
-2. Create a new file in the `/servers/{locale}` directory following the existing format
+2. Create a new file in the `/public/servers/{locale}` directory following the existing format
 3. Submit a pull request with your server information
 
 Alternatively, use the "Submit a Server" button on the [Servers page](https://www.claudemcp.com/servers) to create a pull request directly.

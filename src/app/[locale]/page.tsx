@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: ['/og.png'],
     },
     alternates: {
-        canonical: locale === 'en' ? `https://www.claube.ai` : `https://www.www.claube.ai/${locale}`,
+      canonical: locale === 'en' ? `https://www.claube.ai` : `https://www.claube.ai/${locale}`,
     },
     manifest: "/site.webmanifest",
   };
@@ -130,4 +130,4 @@ export default async function Home({ params }: PageProps) {
       </Suspense>
     </main>
   );
-} 
+}
